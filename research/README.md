@@ -3,7 +3,20 @@
 Recherche nach Unternehmen mit konkretem Bedarf an **Data Labeling / Data Annotation / Reasoning-Work (RLHF)**, für gezieltes personalisiertes Outreach.
 
 **Datei:** [`data-labeling-leads.csv`](./data-labeling-leads.csv) — Trennzeichen `;` (öffnet direkt in deutschem Excel).
-**Stand:** 15.07.2026
+**Stand:** 15.07.2026 — 92 Firmen, gemergt inkl. Ausschreibungs-Link + Ansprechpartnern
+
+### Spalten
+`Prioritaet | Firma | Segment | Standort | Bedarf/Rolle | Ausschreibung_live | Ausschreibung_Link | Typ | Kontaktperson | Kontakt_Rolle | Kontakt_Email | Email_Typ | Telefon | Kontakt_LinkedIn | Firmen_Email | Website | Firmen_LinkedIn | Notiz`
+
+> **Email_Typ:** `verifiziert` = bestätigte Adresse · `Muster` = aus Firmen-Pattern abgeleitet (vor Erstkontakt verifizieren) · `allg.` = generisches Postfach.
+> Die Prio-A-Firmen haben recherchierte, oft **namentliche** Ansprechpartner (Gründer/CTO/Head of AI/Recruiter). Prio-B haben Firmen-Email/Website/LinkedIn → Entscheider dort per LinkedIn ansprechen.
+
+### Wichtige Funde beim Öffnen der Ausschreibungen
+- **Nucs AI** (Berlin) sucht **selbst Annotatoren** (Physician Annotator + Clinical Ops Lead) → heißester Lead.
+- **Smart Reporting** ist zu **„Jacobian"** fusioniert (mit Fluency for Imaging); Domain leitet auf jacobian.com um, neuer CEO Michael Finke.
+- **Rohde & Schwarz** nennt die Recruiterin **Verena Kral** direkt im Posting (LinkedIn/XING-Kontakt empfohlen).
+- **Bosch**-Posting nennt Betreuer **Thirunavukarasu Sivagnanam** + Direkt-Telefon.
+- **BMW** (Req 182343) und **Go Autonomous** (Data Annotator) sind bereits **abgelaufen** — verwandte Rollen/Kontakte in der CSV.
 
 ## Wie die Liste priorisiert ist
 
