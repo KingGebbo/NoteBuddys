@@ -27,14 +27,14 @@ eigener Webspace) ausliefern.
 index.html          Seiteninhalt (Marketing- und Kontakt-Ansicht)
 assets/styles.css   Design (Logo-Türkis + Orange als Kontrast)
 assets/script.js    Interaktionen, Targeting-Explorer, Funnel, Mailversand
-assets/gabriel.jpg  Foto von Gabriel Hilbrig  ← siehe unten
+assets/gabriel.png  Foto von Gabriel Hilbrig  ← siehe unten
 ```
 
 ## Foto von Gabriel hinzufügen
 
-Auf der Kontakt-Seite wird `assets/gabriel.jpg` im Kreis angezeigt. Solange die
+Auf der Kontakt-Seite wird `assets/gabriel.png` im Kreis angezeigt. Solange die
 Datei fehlt, erscheinen automatisch die Initialen „GH". Einfach das Portraitfoto
-als `assets/gabriel.jpg` ablegen (quadratisch sieht am besten aus).
+als `assets/gabriel.png` ablegen (quadratisch sieht am besten aus).
 
 ## Mailversand des Formulars
 

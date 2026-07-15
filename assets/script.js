@@ -215,7 +215,9 @@
     var reach = data.base;
     var tags = [];
     data.criteria.forEach(function (c) {
-      if (act[c.k]) { reach *= c.f; tags.push(c.t); }
+      // Defensive reach model: each active filter cuts reach only half as
+      // much as its raw selectivity would (1 - f) → halved to (1 - f) / 2.
+      if (act[c.k]) { reach *= (1 + c.f) / 2; tags.push(c.t); }
     });
     reach = Math.max(Math.round(reach / 100) * 100, 800);
 
