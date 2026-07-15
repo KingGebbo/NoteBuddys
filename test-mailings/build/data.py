@@ -124,3 +124,23 @@ COMPANIES = {
     pay=("1.000 €", "1.100 €", "1.200 €"),
  ),
 }
+
+# Persönliche E-Mail-Ansprache (wie AppelrathCüpper: "Liebe Nadia, bist du gerade auf der Suche nach ...").
+# salut = Beispiel-Vorname für die Vorschau (im Versand Merge-Feld {Vorname}).
+PERSONAL = {
+ 1: dict(salut="Lena",
+    hook="bist du gerade auf der Suche nach einer Ausbildung, die wirklich Sinn ergibt – mit echten Bio-Produkten statt Massenware? Dann sollten wir uns kennenlernen.",
+    signoff="Wir freuen uns darauf, dich kennenzulernen.<br><strong>Dein Ausbildungsteam von denn’s Biomarkt</strong>"),
+ 2: dict(salut="Jonas",
+    hook="hast du Lust, deine Ausbildung dort zu machen, wo sich alles um die guten Dinge des Lebens dreht? Dann bist du bei Manufactum genau richtig.",
+    signoff="Wir freuen uns auf deine Bewerbung.<br><strong>Dein Ausbildungsteam von Manufactum</strong>"),
+ 3: dict(salut="Marie",
+    hook="möchtest du in deiner Ausbildung echte Warenströme rund um den Globus organisieren? Dann starte mit uns in die Welt der Logistik.",
+    signoff="Wir freuen uns darauf, dich kennenzulernen.<br><strong>Dein Ausbildungsteam von CEVA Logistics</strong>"),
+ 4: dict(salut="Elias",
+    hook="bist du gerade auf der Suche nach einer Ausbildung in der Welt der Mode – in einem echten Familienunternehmen? Dann werde ein Teil von uns.",
+    signoff="Wir freuen uns darauf, dich kennenzulernen.<br><strong>Dein Ausbildungsteam von Hirmer</strong>"),
+ 5: dict(salut="Sophie",
+    hook="suchst du eine Ausbildung im Einzelhandel mit echten Perspektiven und starken Marken im Rücken? Dann bist du bei uns richtig.",
+    signoff="Wir freuen uns auf deine Bewerbung.<br><strong>Dein Ausbildungsteam der Unternehmensgruppe Dr. Eckert</strong>"),
+}

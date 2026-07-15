@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import base64, sys, colorsys, os
-from data import COMPANIES
+from data import COMPANIES, PERSONAL
 from playwright.sync_api import sync_playwright
 
 CHROME='/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
@@ -28,6 +28,7 @@ def build_html(c):
     hdr_bg=c['header_bg']; hdr_ink=c['header_ink']
     ink=c['ink']
     hfont=c['headline_font']
+    pers=PERSONAL[c['_n']]
     # benefit rows
     checks=''.join(
         f'''<tr><td style="vertical-align:top;padding:7px 12px 7px 0;width:26px">
@@ -64,8 +65,16 @@ def build_html(c):
         </td>
       </tr>
 
+      <!-- persönliche Ansprache -->
+      <tr><td style="padding:34px 34px 6px 34px;background:#ffffff">
+        <div style="font-size:16.5px;line-height:1.6;color:{ink}">
+          <div style="margin-bottom:12px">Liebe/r <strong>{pers['salut']}</strong>,</div>
+          <div>{pers['hook']}</div>
+        </div>
+      </td></tr>
+
       <!-- hero -->
-      <tr><td style="padding:40px 34px 30px 34px;background:#ffffff">
+      <tr><td style="padding:26px 34px 30px 34px;background:#ffffff">
         <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:{primary};margin-bottom:16px">{c['tagline']}</div>
         <div style="font-family:{hfont};font-size:40px;line-height:1.08;font-weight:700;color:{ink};letter-spacing:-.01em">{c['headline']}</div>
         <div style="width:54px;height:4px;background:{primary};border-radius:2px;margin:22px 0"></div>
@@ -117,6 +126,11 @@ def build_html(c):
         </tr></table>
       </td></tr>
 
+      <!-- persönlicher Abschluss -->
+      <tr><td style="padding:4px 34px 20px 34px">
+        <div style="font-size:15.5px;line-height:1.6;color:{ink}">{pers['signoff']}</div>
+      </td></tr>
+
       <!-- footer -->
       <tr><td style="padding:6px 34px 34px 34px">
         <div style="border-top:1px solid #ececec;padding-top:18px;font-size:12px;line-height:1.6;color:#9a9a9a">
@@ -130,7 +144,7 @@ def build_html(c):
     return html
 
 def render(n):
-    c=COMPANIES[n]
+    c=COMPANIES[n]; c['_n']=n
     html=build_html(c)
     slug=c['firma'].replace(' ','-').replace('/','-').replace("'",'').replace('’','')
     base=f"Mailing-{n:02d}-{slug}"
