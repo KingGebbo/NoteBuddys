@@ -1,0 +1,77 @@
+Prioritaet;Firma;Segment;Email;Erste_Mail_gesendet;Zustellung;Ansprechpartner;Notiz
+A;NEURA Robotics GmbH;Robotik;info@neura-robotics.com;x;zugestellt;David Reger (CEO);
+A;Nucs AI GmbH;Medical AI;support@nucs.ai;x;zugestellt;Nijat Ahmadov (CEO);
+A;cureVision GmbH;Medical AI;info@cureVision.de;x;zugestellt;Richard Fobo (CEO);
+A;IUNA AI Systems GmbH;Industrielle Bildinspektion;info@iuna.ai;x;zugestellt;Jan Nabatian (CEO);
+A;metamorphosis GmbH;Surgical AI;info@metamorphosis.ai;x;zugestellt;Arno Blau (CTO);
+A;Mindpeak GmbH;Digitale Pathologie;info@mindpeak.ai;x;zugestellt;Tobias Lang (CTO);
+A;VisiConsult X-ray Systems;Roentgen/CT-Inspektion;communication@visiconsult.de;x;zugestellt;Sophie Bessert (HR);
+A;WeSort.AI GmbH;Computer Vision;contact@wesort.ai;x;zugestellt;Nathanael Laier (CEO);
+A;Merantix Momentum GmbH;Computer Vision;info@merantix-momentum.com;x;zugestellt;Rasmus Rothe (CTO);
+A;Quantum-Systems GmbH;Defense/Drohnen;info@quantum-systems.com;x;zugestellt;Florian Seibel (Co-CEO);
+A;Agile Robots SE;Robotik;careers@agile-robots.com;x;zugestellt;Karan Sharma (Head of AI Solutions);
+A;neoshare AG;Real-Estate/Fintech AI;info@neoshare.de;x;zugestellt;Jonas Hohmann (CTO);
+A;Gini GmbH;Fintech Document AI;hello@gini.net;x;zugestellt;Alexander Jaeger (CEO);
+A;voize GmbH;Healthcare Speech AI;info@voize.de;x;zugestellt;Fabio Schmidberger (CEO);
+A;Smart Reporting GmbH (Jacobian);Digital Health/LLM;info@smartreporting.de;x;zugestellt;Detlef Koll (CTO);
+A;meinestadt.de GmbH;Speech AI;info@meinestadt.de;x;zugestellt;Mark Hoffmann (GF);
+A;Sonia Solutions GmbH;Healthcare Speech/ASR;info@sonia.so;x;zugestellt;Johannes Jacubeit (CTO);
+A;Die Lautmaler GmbH;Conversational AI/NLP;kontakt@lautmaler.de;x;zugestellt;Manja Baudis (GF);
+A;Rohde & Schwarz;Test&Measurement/Defense;career@rohde-schwarz.com;x;zugestellt;Verena Kral (Recruiting);
+A;FORVIA HELLA;Automotive AD;info@forvia.com;x;zugestellt;Benedict Stratmann;
+A;Bliq GmbH;Autonomous Driving;hello@bliq.ai;x;zugestellt;Julian Glaab (CEO);
+A;LUMA Vision GmbH;Medical Imaging;info@lumavision.com;x;zugestellt;Christoph Hennersperger (CTO);
+A;BMW Group;Automotive ADAS;info@bmwgroup.com;x;zugestellt;;Team-Anschrift
+A;Delivery Hero SE;Food Delivery/Logistics AI;info@deliveryhero.com;x;zugestellt;;Team-Anschrift
+A;Kaufland;Retail Robotics;info@kaufland.de;x;zugestellt;;Team-Anschrift
+B;Vay Technology GmbH;Autonomous Driving/Teledriving;info@vay.io;x;zugestellt;;
+B;Aignostics GmbH;Medical AI/Pathologie;info@aignostics.com;x;zugestellt;Viktor Matyas;
+B;deepc GmbH;Medical AI/Radiologie;contact@deepc.ai;x;zugestellt;;
+B;Floy GmbH;Medical AI/Radiologie;info@floy.com;x;zugestellt;Benedikt Schneider;
+B;Helsing GmbH;Defense;contact@helsing.ai;x;zugestellt;;
+B;Aleph Alpha GmbH;LLM/GenAI;info@aleph-alpha.com;x;zugestellt;Jonas Andrulis;
+B;Black Forest Labs;GenAI;info@blackforestlabs.ai;x;zugestellt;;Auto-Antwort erhalten (Eingang bestaetigt)
+B;deepset GmbH;NLP/LLM;info@deepset.ai;x;zugestellt;;
+B;Parloa GmbH;Voice AI;malte@parloa.com;x;zugestellt;Malte Kosub (CEO);
+B;natif.ai GmbH;Document AI;contact@natif.ai;x;zugestellt;Johannes Korves;
+B;LiveEO GmbH;Geodaten;info@live-eo.com;x;zugestellt;;
+B;Fernride GmbH;Autonomes Fahren/Logistik;info@fernride.com;x;zugestellt;Hendrik Kramer;
+B;Sereact GmbH;Robotik;contact@sereact.ai;x;zugestellt;Marc Tuscher;
+B;Wandelbots GmbH;Robotik;contact@wandelbots.com;x;zugestellt;;
+B;Micropsi Industries;Robotik;contact@micropsi-industries.com;x;zugestellt;Ronnie Vuine;
+B;RobCo GmbH;Robotik;info@robco.de;x;zugestellt;Roman Hoelzl;
+B;Magazino GmbH;Robotik;info@magazino.eu;x;zugestellt;;
+B;Stark Defence;Defense;contact@stark-defence.com;x;zugestellt;;
+B;DeepScenario;Autonomous Driving;info@deepscenario.com;x;zugestellt;Holger Banzhaf;
+B;Kopernikus Automotive;Autonomous Driving;talkto@kopernikusauto.com;x;zugestellt;;
+B;MotorAI GmbH;Autonomous Driving;info@motor-ai.com;x;zugestellt;Roy Uhlmann;
+B;Blickfeld GmbH;Autonomous Driving/LiDAR;info@blickfeld.com;x;zugestellt;;
+B;MOIA GmbH;Autonomous Driving;info@moia.io;x;zugestellt;;
+B;Cariad SE;Automotive Software;info@cariad.technology;x;zugestellt;;
+B;Continental;Automotive/ADAS;mail_service@conti.de;x;zugestellt;;
+B;ZF Friedrichshafen AG;Automotive/ADAS;internetservice@zf.com;x;zugestellt;;
+B;dSPACE GmbH;AD Simulation;info@dspace.de;x;zugestellt;;
+B;TrustMotion (ex TTTech Auto);Autonomous Driving;contact@trustmotion.com;x;zugestellt;;
+B;Beagle Systems GmbH;Drohnen/Geodaten;info@beaglesystems.com;x;zugestellt;Oliver Lichtenstein;
+B;Vara;Medical AI;info@vara.ai;x;zugestellt;Jonas Muff;
+B;Mediaire GmbH;Medical AI;info@mediaire.de;x;zugestellt;Andreas Lemke;
+B;Ada Health GmbH;Medical AI;legal_ext@ada.com;x;zugestellt;Daniel Nathrath;Legal-Postfach
+B;Siemens Healthineers AG;Medical Imaging;kontakt@siemens-healthineers.com;x;zugestellt;;
+B;DeepL SE;NLP/Uebersetzung;info@deepl.com;x;zugestellt;;
+B;Cognigy GmbH;Conversational AI;info@cognigy.com;x;zugestellt;;
+B;Workist GmbH;Document AI;info@workist.com;x;zugestellt;;
+B;OroraTech GmbH;Geodaten;info@ororatech.com;x;zugestellt;Martin Langer;
+B;PEAT GmbH (Plantix);CV/Agrar;contact@plantix.net;x;zugestellt;Simone Strey;
+B;Wingcopter GmbH;Drohnen;info@wingcopter.com;x;zugestellt;;
+B;36ZERO Vision GmbH;CV/Fertigung;info@36zerovision.com;x;zugestellt;Heiko Huber;
+B;Signatrix GmbH;CV/Retail;info@signatrix.com;x;zugestellt;;
+B;Advertima AG;CV/Retail;future@advertima.com;x;zugestellt;Iman Nahvi;
+A;mpathic;Health NLP/LLM Eval;;;OFFEN;Grin Lord (CEO);Englischsprachig (US) - braucht EN-Mail; keine verifizierte Adresse
+A;Go Autonomous;B2B Procurement NLP;;;OFFEN;Jacob Ramlov Jensen;Englischsprachig (DK); Zielrolle inaktiv; greta@goautonomous.io verifiziert
+A;Canva;GenAI/Design;;;OFFEN;;Englischsprachig; keine Direkt-Mail (nur SmartRecruiters)
+A;xAI;AI Lab;;;OFFEN;;Englischsprachig; keine Direkt-Mail (nur Greenhouse)
+B;Emotion3D GmbH;AD In-Cabin CV;office@emotion3d.ai;;OFFEN;;Adresse nicht direkt verifiziert - vor Versand pruefen
+B;Scandit AG;CV/Retail;;;OFFEN;;Nur privacy@ belegt - kein Sales-Postfach
+B;Hypatos GmbH;Document AI;;;OFFEN;Ulrich Erxleben;Keine belegte Mail (nur Muster)
+B;ANYbotics AG;Robotik;;;OFFEN;;Keine belegte Mail (nur Kontaktformular)
+B;Jina AI GmbH;GenAI/Embeddings;;;OFFEN;;Von Elastic uebernommen - keine @jina.ai-Mail belegt
