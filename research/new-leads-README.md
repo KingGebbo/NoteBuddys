@@ -1,7 +1,7 @@
 # Pathwize — Neue Data-Labeling-Leads (Welle 2)
 
 **Datei:** [`new-leads-200plus.csv`](./new-leads-200plus.csv) — Trennzeichen `;`
-**Stand:** 17.07.2026 · **233 neue, einzigartige Firmen** mit **verifizierter** E-Mail.
+**Stand:** 17.07.2026 · **244 neue, einzigartige Firmen** mit **verifizierter** E-Mail.
 
 ## Regeln, die eingehalten wurden
 - **Nur echte Mails**, wörtlich aus Impressum/Kontakt/Legal-Notice der Firmenseite gelesen (per WebFetch). Maskierte Adressen (`info(at)`, Cloudflare) nur bei **eindeutigem Beweis** sauber entschlüsselt. **Kein Raten, kein Halluzinieren.**
