@@ -1,7 +1,15 @@
 # Pathwize — Neue Data-Labeling-Leads (Welle 2)
 
 **Datei:** [`new-leads-200plus.csv`](./new-leads-200plus.csv) — Trennzeichen `;`
-**Stand:** 17.07.2026 · **244 neue, einzigartige Firmen** mit **verifizierter** E-Mail.
+**Stand:** 20.07.2026 · **244 neue, einzigartige Firmen** mit **verifizierter** E-Mail.
+
+## Update 20.07.2026 — Entscheider-Anker recherchiert
+Für die Kaltakquise braucht jede Firma einen namentlichen Ansprechpartner (für den Betreff „Für [Name]:" bzw. die Anrede), damit auch Großkonzerne wie VW/Audi/Porsche nicht nur an die Impressums-Mail ohne Anker gehen.
+- **196 zusätzliche Entscheider** recherchiert und in Spalte `Ansprechpartner` ergänzt (Rollen-Priorität: Head of AI / ML / Data / Perception → CTO → Founder-CEO; bei Konzernen der/die Leiter:in der ADAS-/AD-/KI-Einheit, nicht der Konzern-CEO).
+- Neue Spalte **`Kontakt_LinkedIn`** (113 verifizierte LinkedIn-/TheOrg-Profil-URLs, sonst leer — kein Raten).
+- Quellen: Firmen-Team-/Impressumsseiten, LinkedIn-Treffer, TheOrg, Crunchbase, NorthData. **Nur echte, belegte Namen** — nichts erfunden.
+- **Nur 3 Firmen ohne Anker** (bewusst leer gelassen, da nicht sauber belegbar): `Robofunktion Vision GmbH` (kein Entscheider auffindbar), `Scantinel Photonics GmbH` (Insolvenz seit Aug 2025 — vor Ansprache prüfen), `custo med GmbH` (kein AI-Verantwortlicher öffentlich benannt). Für diese ggf. „Liebes Team" verwenden.
+- Hinweis: Umlaute in den Namen sind ASCII-transkribiert (ue/oe/ae) für maximale CSV-Kompatibilität — vor dem Versand ggf. zurücksetzen (z. B. „Muenchhoff" → „Münchhoff").
 
 ## Regeln, die eingehalten wurden
 - **Nur echte Mails**, wörtlich aus Impressum/Kontakt/Legal-Notice der Firmenseite gelesen (per WebFetch). Maskierte Adressen (`info(at)`, Cloudflare) nur bei **eindeutigem Beweis** sauber entschlüsselt. **Kein Raten, kein Halluzinieren.**

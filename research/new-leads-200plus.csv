@@ -1,245 +1,245 @@
-Lane;Firma;Standort;Land;Email_verifiziert;Ansprechpartner;Email_Quelle;Segment/Bedarf
-Genomik/Pathologie;CeGaT GmbH;Tübingen;DE;info@cegat.de;Dr. Dirk Biskup, Dr. Saskia Biskup;cegat.com/imprint;Genomics
-Genomik/Pathologie;Nostos Genomics GmbH;Berlin;DE;team@nostos-genomics.com;Dr. Ben Liesfeld;nostos-genomics.com/imprint;Genomics
-Genomik/Pathologie;Molecular Health GmbH;Heidelberg;DE;media@molecularhealth.com;(nur Medien-Mail);molecularhealth.com/legal-notice;Genomics
-Genomik/Pathologie;Smart In Media AG (PathoZoom);Köln;DE;contact@smartinmedia.com;Dr. Detlef Finkler;smartinmedia.com/imprint;Digital Pathology
-Genomik/Pathologie;jung diagnostics GmbH;Hamburg;DE;info@jung-diagnostics.de;Dr. Lothar Spies;jung-diagnostics.de/imprint;Neuroimaging
-Genomik/Pathologie;Limbus Medical Technologies GmbH;Rostock;DE;info@limbus-medtec.com;Dr. Ben Liesfeld;varvis.com/imprint.html;Genomics
-Genomik/Pathologie;Epitype GmbH (vorm. oncgnostics);Dresden/Jena;DE;contact@epitype.de;Dr. Timm Zörgiebel;epitype.de/en/imprint;Genomics/Epigenetik
-Derma/Ophthalmologie;FotoFinder Systems GmbH;Bad Birnbach;DE;info@fotofinder.de;Tammy Noll, Dr. Markowsky;fotofinder.com/impressum;Dermatologie
-Derma/Ophthalmologie;Magnosco GmbH;Berlin;DE;info@magnosco.com;Thomas Diepold;magnosco.com/impressum;Dermatologie
-Derma/Ophthalmologie;medaia GmbH (SkinScreener);Graz AT;AT;office@medaia.at;Michael Tripolt;skinscreener.com/legal;Dermatologie
-Derma/Ophthalmologie;Nia Health GmbH;Berlin;DE;contact@niahealth.ai;Tobias Seidl;niahealth.ai/imprint;Dermatologie
-Derma/Ophthalmologie;RetInSight GmbH;Wien AT;AT;contact@retinsight.com;(GF-Team);retinsight.com/legal-information;Ophthalmologie
-Derma/Ophthalmologie;contextflow GmbH;Wien AT;AT;office@contextflow.com;;contextflow.com/impressum;Radiologie/CT
-OEM/Tier-1/Mobility;AUDI AG;Ingolstadt;DE;imprint@audi.de;;audi.com/de/legal-notice;OEM ADAS/AD
-OEM/Tier-1/Mobility;Volkswagen AG;Wolfsburg;DE;vw@volkswagen.de;;volkswagen-group.com/de/impressum-15695;OEM AD
-OEM/Tier-1/Mobility;Porsche AG;Stuttgart;DE;info@porsche.de;;christophorus.porsche.com/de/impressum;OEM ADAS/AD
-OEM/Tier-1/Mobility;Elektrobit Automotive GmbH;Erlangen;DE;inquiries@elektrobit.com;GF Maria Anhalt;elektrobit.com/legal-notice;Automotive SW/ADAS
-OEM/Tier-1/Mobility;Schaeffler AG;Herzogenaurach;DE;info@schaeffler.com;;schaeffler.com/de/meta/impressum;Tier-1 E-Mobility (inkl Vitesco)
-OEM/Tier-1/Mobility;Knorr-Bremse AG;München;DE;info@knorr-bremse.com;;knorr-bremse.com/en/footer/imprint;Truck Tier-1
-OEM/Tier-1/Mobility;Webasto SE;Stockdorf;DE;info@webasto.com;;webasto.com/.../impressum;Tier-1 Sensor-Integration
-OEM/Tier-1/Mobility;MAN Truck & Bus SE;München;DE;presse-man@man.eu;Gregor Jentzsch;press.mantruckandbus.com;Truck AV
-OEM/Tier-1/Mobility;Daimler Truck AG;Leinfelden;DE;contact@daimlertruck.com;;daimlertruck.com/anbieter-rechtliche-hinweise;Truck AV (Torc)
-OEM/Tier-1/Mobility;MAHLE GmbH;Stuttgart;DE;info@mahle.com;Manuela Höhne;mahle.com/de/imprint;Tier-1 Mechatronik/Vision
-OEM/Tier-1/Mobility;Brose SE;Coburg;DE;info@brose.com;;brose.com/de-de/rechtliche-hinweise;Tier-1 In-Cabin CV
-OEM/Tier-1/Mobility;IAV GmbH;Berlin;DE;impressum@iav.com;;iav.com/imprint;ADAS/AD-Dienstleister
-OEM/Tier-1/Mobility;Bertrandt AG;Ehningen;DE;info@bertrandt.com;;bertrandt.com/en/imprint;ADAS/AD-Engineering
-OEM/Tier-1/Mobility;Flix SE (FlixBus);München;DE;globalpress@flixbus.com;Iris Brand;corporate.flix.com;Mobility KI
-OEM/Tier-1/Mobility;MILES Mobility GmbH;Berlin;DE;impressum@miles-mobility.com;GF Oliver Mackprang;abo.miles-mobility.com/en/impressum;Car-Sharing KI
-Forschungsinstitute/Spinoffs;DFKI;Kaiserslautern/Saarbrücken/Berlin;DE;info@dfki.de;;dfki.de locations-contact;KI-Forschung
-Forschungsinstitute/Spinoffs;Fraunhofer IAIS;Sankt Augustin;DE;pr@iais.fraunhofer.de;;iais.fraunhofer.de/de/impressum;Angewandte KI
-Forschungsinstitute/Spinoffs;Fraunhofer HHI;Berlin;DE;elzem.kaya@hhi.fraunhofer.de;;hhi.fraunhofer.de/impressum;Video/Vision KI
-Forschungsinstitute/Spinoffs;Fraunhofer MEVIS;Bremen;DE;office@mevis.fraunhofer.de;;mevis.fraunhofer.de/en/contact;Med. KI
-Forschungsinstitute/Spinoffs;Fraunhofer IOSB;Karlsruhe;DE;info@iosb.fraunhofer.de;;iosb.fraunhofer.de/en/contact;Bild/Signal KI
-Forschungsinstitute/Spinoffs;Fraunhofer IGD;Darmstadt;DE;info@igd.fraunhofer.de;;igd.fraunhofer.de/impressum;Visual Computing
-Forschungsinstitute/Spinoffs;Fraunhofer IPA;Stuttgart;DE;industrieanfragen@ipa.fraunhofer.de;;ipa.fraunhofer.de/de/kontakt;Produktions/Robotik-KI
-Forschungsinstitute/Spinoffs;Fraunhofer IPM;Freiburg;DE;info@ipm.fraunhofer.de;;ipm.fraunhofer.de/de/kontakt;Mess/Sensor-KI
-Forschungsinstitute/Spinoffs;Fraunhofer FKIE;Wachtberg/Bonn;DE;kontakt@fkie.fraunhofer.de;;fkie.fraunhofer.de/de/impressum;KI/Defense
-Forschungsinstitute/Spinoffs;Fraunhofer IMS;Duisburg;DE;presse@ims.fraunhofer.de;;ims.fraunhofer.de/de/impressum;Edge-KI
-Forschungsinstitute/Spinoffs;Fraunhofer IKS;München;DE;eva.wardenburg@iks.fraunhofer.de;;iks.fraunhofer.de/de/impressum;Safe AI
-Forschungsinstitute/Spinoffs;Tübingen AI Center;Tübingen;DE;info@tuebingen.ai;Prof. Bethge;tuebingen.ai/imprint;KI-Zentrum
-Forschungsinstitute/Spinoffs;fortiss;München;DE;info@fortiss.org;;fortiss.org/impressum;KI/SW-Institut
-Forschungsinstitute/Spinoffs;CISPA Helmholtz;Saarbrücken;DE;info@cispa.de;;cispa.de/de/impressum;KI-Sicherheit
-Forschungsinstitute/Spinoffs;L3S Research Center;Hannover;DE;info@l3s.de;;l3s.de/contact;KI-Forschung
-Forschungsinstitute/Spinoffs;ScaDS.AI;Dresden/Leipzig;DE;scads.ai@tu-dresden.de;;scads.ai/imprint;KI-Zentrum
-Forschungsinstitute/Spinoffs;BIFOLD (TU Berlin);Berlin;DE;pr@bifold.berlin;;bifold.berlin/imprint;KI/Big-Data
-Forschungsinstitute/Spinoffs;appliedAI Initiative;München;DE;info@appliedai.de;;appliedai.de/en/imprint;Angewandte KI
-Speech/Voice;VIER GmbH;Hannover;DE;info@vier.ai;Rainer Holler;vier.ai/impressum;Conversational/Voice
-Speech/Voice;Aristech GmbH;Heidelberg;DE;sprache@aristech.de;;aristech.ai/imprint;TTS/ASR
-Speech/Voice;Linguwerk GmbH;Dresden;DE;info@linguwerk.de;;linguwerk.de/impressum;Embedded ASR
-Speech/Voice;VITAS GmbH;Regensburg;DE;kontakt@vitas.ai;;vitas.ai/impressum;Voicebot Praxen
-Speech/Voice;audEERING GmbH;Gilching;DE;info@audeering.com;;audeering.com/imprint;Emotion/Sound AI
-Speech/Voice;Loudly GmbH;Berlin;DE;help@loudly.com;;loudly.com/imprint;KI-Musik
-Speech/Voice;MediaInterface GmbH;Dresden;DE;info@mediainterface.de;;mediainterface.de/impressum;Med. Diktier-KI
-Speech/Voice;i2x GmbH;Mönchengladbach;DE;hello@i2x.ai;;i2x.ai/imprint;Echtzeit-Sprachanalyse
-Speech/Voice;Onlim GmbH;Innsbruck AT;AT;office@onlim.com;;onlim.com/en/imprint;Conversational AI
-Speech/Voice;Retorio GmbH;München;DE;contact@retorio.com;;retorio.com/imprint;Behavioral/Voice AI
-Speech/Voice;novomind AG;Hamburg;DE;info@novomind.com;;novomind.com/de/impressum;Customer-Service-KI
-Speech/Voice;moin.ai (knowhere GmbH);Hamburg;DE;team@moin.ai;;moin.ai/impressum;Chatbot
-Speech/Voice;kauz GmbH;Düsseldorf;DE;info@kauz.ai;;kauz.ai/impressum;NLU/Chatbot
-Speech/Voice;Charamel GmbH;Köln;DE;info@charamel.com;;charamel.com/impressum.html;Avatar/Voice
-Speech/Voice;semvox GmbH;Saarbrücken;DE;info@semvox.de;;semvox.de/impressum;Voice Assistants
-Speech/Voice;Endel Sound GmbH;Berlin;DE;ask@endel.io;;endel.io/impressum;Generative Audio
-Speech/Voice;assono GmbH;Kiel;DE;kontakt@assono.de;;assono.de/impressum;Chatbot
-Speech/Voice;Cyanite (elceedee UG);Mannheim;DE;mail@cyanite.ai;;cyanite.ai/legal-notice;Musik-KI/MIR
-Speech/Voice;melibo GmbH;München;DE;info@melibo.de;;melibo.de/impressum;Chatbot
-Speech/Voice;Convaise GmbH;München;DE;kontakt@convaise.com;;convaise.com/impressum;Conversational AI
-Drohnen/Maritime;SEA.AI GmbH;Linz AT;AT;contact@sea.ai;Marcus Warrelmann;sea.ai/imprint;Maritime CV
-Drohnen/Maritime;FlyNex GmbH;Leipzig/Hamburg;DE;info@flynex.de;;flynex.io/imprint;Inspektionsdrohnen
-Drohnen/Maritime;Zeabuz AS;Trondheim NO;NO;contact@zeabuz.com;;zeabuz.com/contact;Autonome Fähren
-Drohnen/Maritime;Blueye Robotics AS;Trondheim NO;NO;contact@blueye.no;;blueyerobotics.com/contact;Unterwasser-ROV
-Drohnen/Maritime;Avy B.V.;Amsterdam NL;NL;fly@avy.eu;;avy.eu/contact;Lieferdrohnen
-Drohnen/Maritime;Dronamics;Sofia BG;BG;info@dronamics.com;;dronamics.com/contact;Cargo-Drohne
-Drohnen/Maritime;Captain AI;Rotterdam NL;NL;info@captainai.com;;captainai.com/contact;Autonome Schifffahrt
-Drohnen/Maritime;Nordic Unmanned;Sandnes NO;NO;post@nordicunmanned.com;;nordicunmanned.com/contact;UAV-Services
-Drohnen/Maritime;Delair;Toulouse FR;FR;contact@delair.aero;;delair.aero/contact-us;Mapping-Drohnen
-Drohnen/Maritime;EOMAP GmbH;Seefeld;DE;info@eomap.de;;eomap.com/imprint;Gewässer-Monitoring
-Drohnen/Maritime;everwave GmbH;Aachen;DE;info@everwave.de;;everwave.de/impressum;Plastikdetektion
-Drohnen/Maritime;Hydromea SA;Lausanne CH;CH;legal@hydromea.com;;hydromea.com/privacy-policy;Unterwasser-Drohnen
-Drohnen/Maritime;Germandrones GmbH;Berlin;DE;takeoff@germandrones.com;;germandrones.com/en/imprint;Sicherheitsdrohnen
-Drohnen/Maritime;north.io GmbH;Kiel;DE;info@north.io;;north.io/imprint;Marine Geodaten
-Drohnen/Maritime;Dedrone;Kassel;DE;privacy@dedrone.com;;dedrone.com/legal/imprint;Counter-UAS
-Drohnen/Maritime;Airteam Aerial Intelligence GmbH;Berlin;DE;info@airteam.ai;;airteam.ai/en/imprint;Luftbild-Analytik
-Drohnen/Maritime;Maritime Robotics AS;Trondheim NO;NO;info@maritimerobotics.com;;maritimerobotics.com/contact;USV
-Drohnen/Maritime;Toqua;Gent BE;BE;hello@toqua.ai;;toqua.ai/contact;Schiffs-KI
-Defense/Space;Alpine Eagle GmbH;München;DE;contact@alpineeagle.com;;alpineeagle.com/imprint;C-UAS
-Defense/Space;TYTAN Technologies GmbH;München;DE;info@tytan-technologies.com;;tytan-technologies.com;C-UAS/Interceptor
-Defense/Space;SATIM;Kraków PL;PL;hello@satim.co;;satim.co;SAR-Analytik
-Defense/Space;SE3 Labs GmbH;München;DE;contact@se3.ai;;se3.ai;Spatial AI/ISR
-Defense/Space;Mayday.ai GmbH;Darmstadt;DE;info@mayday.ai;;mayday.ai/contact;Geo-Intelligence
-Defense/Space;Traversals Analytics GmbH;Uttenreuth;DE;info@traversals.com;Dr. Dirk Kolb;traversals.com/contact;OSINT
-Defense/Space;TEKEVER;Lissabon PT;DE;info@tekever.com;;tekever.com/contact;ISR-Drohnen
-Defense/Space;ICEYE;Espoo FI;FI;ir@iceye.fi;(nur IR-Mail);iceye.com/contact;SAR-Aufklärung
-Defense/Space;Kuva Space;Espoo FI;FI;contact@kuvaspace.com;;kuvaspace.com/contact;Hyperspektral EO
-Defense/Space;Vyoma GmbH;München;DE;contact@vyoma.space;;vyoma.space;Space Situational Awareness
-Defense/Space;OKAPI:Orbits GmbH;Braunschweig;DE;contact@okapiorbits.com;;okapiorbits.space/contact;Space Traffic Mgmt
-Defense/Space;blackshark.ai;Graz AT;AT;careers@blackshark.ai;(nur Careers-Mail);blackshark.ai;Geospatial 3D (defense)
-Document/Fintech AI;Insiders Technologies GmbH;Kaiserslautern;DE;info@insiders-technologies.de;;insiders-technologies.com/impressum;Document AI
-Document/Fintech AI;Helm & Nagel GmbH (Konfuzio);Aßlar;DE;info@konfuzio.com;;konfuzio.com/de/impressum;Document AI
-Document/Fintech AI;Intelligent NLU GmbH (Otera/ex-DeepOpinion);Innsbruck AT;AT;hello@otera.ai;;otera.ai/legal/imprint;Doc/NLU
-Document/Fintech AI;ExB Labs GmbH;München;DE;contact@exb.de;;exb.de/impressum;Document AI
-Document/Fintech AI;Empolis Information Mgmt GmbH;Kaiserslautern;DE;info@empolis.com;;empolis.com/impressum;Knowledge/Doc AI
-Document/Fintech AI;USU GmbH;Möglingen;DE;info@usu.com;;usu.com/de-de/impressum;Knowledge/Doc AI
-Document/Fintech AI;IDnow GmbH;München;DE;info@idnow.io;;idnow.io/imprint;KYC/ID-OCR
-Document/Fintech AI;Nect GmbH;Hamburg;DE;hello@nect.com;;nect.com/en/imprint;KYC/ID-OCR
-Document/Fintech AI;WebID Solutions GmbH;Berlin;DE;service@webid-solutions.de;;webid-solutions.com/impressum;KYC/ID-OCR
-Document/Fintech AI;PXL Vision AG;Zürich CH;CH;info@pxl-vision.com;;pxl-vision.com/en/imprint;KYC/ID-OCR
-Document/Fintech AI;Legartis Technology AG;Zürich CH;CH;info@legartis.ai;;legartis.ai/legal-notice;LegalTech
-Document/Fintech AI;BRYTER GmbH;Frankfurt;DE;info@bryter.io;;bryter.com/imprint;LegalTech
-Document/Fintech AI;Cognotekt GmbH;Köln;DE;info@cognotekt.com;;cognotekt.com/de/impressum;InsurTech/Doc AI
-Document/Fintech AI;ACTICO GmbH;Friedrichshafen;DE;info@actico.com;;actico.com/imprint;Compliance/FinTech
-Document/Fintech AI;Taxy.io GmbH;Aachen;DE;info@taxy.io;;taxy.io/impressum;Steuer/LegalTech
-Document/Fintech AI;Candis GmbH;Berlin;DE;info@candis.io;;candis.io/impressum;Rechnungs-KI
-Document/Fintech AI;BuchhaltungsButler GmbH;Berlin;DE;administration@buchhaltungsbutler.de;;buchhaltungsbutler.de/impressum;Beleg-KI
-Document/Fintech AI;fino run GmbH;Kassel;DE;hello@fino.digital;;fino.digital/impressum;Banking-Doc-AI
-Document/Fintech AI;ONDEWO GmbH;Wien AT;AT;office@ondewo.com;;ondewo.com/en/imprint;NLU/Finance
-Retail/Logistik CV;auvisus GmbH;Karlsruhe;DE;info@auvisus.com;GF Schweikardt/Gauthier;auvisus.com/impressum;Retail Self-Checkout
-Retail/Logistik CV;snabble GmbH;Bonn;DE;info@snabble.io;GF Mancke/Queisler;snabble.io/en/imprint;Smart Store
-Retail/Logistik CV;Crosscan GmbH;Witten;DE;hello@crosscan.com;Benjamin Schilp;crosscan.com/impressum;Personenzählung
-Retail/Logistik CV;Dallmeier electronic GmbH;Regensburg;DE;info@dallmeier.com;Thomas Dallmeier;dallmeier.com/de/impressum;Video-Analytics
-Retail/Logistik CV;Swarm Analytics GmbH;Innsbruck AT;AT;office@swarm-analytics.com;;swarm-analytics.com/imprint;Smart City/Verkehr
-Retail/Logistik CV;Vitracom GmbH;Karlsruhe;DE;info@vitracom.de;Ralph Majer;vitracom.de/impressum;Personen-/Verkehrszählung
-Retail/Logistik CV;vialytics GmbH;Stuttgart;DE;info@vialytics.com;;vialytics.com/imprint;Straßenzustand
-Retail/Logistik CV;Peter Park System GmbH;München;DE;info@peter-park.de;;peter-park.de/impressum;Parkraum/LPR
-Retail/Logistik CV;Ai-PARKING GmbH;Hamburg;DE;info@ai-parking.de;Moritz Dohna;ai-parking.de/impressum;Parkraum/LPR
-Retail/Logistik CV;ParkRaum-Management PRM GmbH;Erlangen;DE;info@prm-parking.com;;prm-parken.de/impressum;Parkraum/LPR
-Retail/Logistik CV;zone14 GmbH;Wien AT;AT;hello@zone14.ai;;zone14.ai/en/get-in-touch;Sport-Tracking
-Retail/Logistik CV;Staige GmbH (soccerwatch);Essen;DE;info@staige.com;GF Taube/Baudewig;staige.com/impressum;Sport-Video-KI
-Retail/Logistik CV;robominds GmbH;München;DE;info@robominds.de;;robominds.de/footer/impressum;Industrie-Robotik CV
-Retail/Logistik CV;Logivations GmbH;München;DE;info@logivations.com;;logivations.com/imprint;Warenerkennung
-Retail/Logistik CV;CARGOMETER GmbH;Wien AT;AT;info@cargometer.com;;cargometer.com/imprint;Frachtvermessung
-Retail/Logistik CV;oculai GmbH;München;DE;kontakt@oculai.de;;en.oculai.de/kontakt;Baustellen-Monitoring
-Robotics;farming revolution GmbH;Böhmenkirch;DE;info@farming-revolution.com;;farming-revolution.com/de/impressum;Agrar-Robotik
-Robotics;Energy Robotics GmbH (Korial);Darmstadt;DE;info@korial.com;Marc Dassler;korial.com/imprint;Inspektions-Robotik
-Robotics;sensmore GmbH;Berlin;DE;info@sensmore.ai;;sensmore.ai/legal/imprint;Bau-/Schwermaschinen-Robotik
-Robotics;Organifarms GmbH;Konstanz;DE;info@organifarms.de;;organifarms.de/impressum;Agrar-Ernte-Robotik
-Robotics;Nature Robots GmbH;Osnabrück;DE;info@nature-robots.de;;naturerobots.com/de/imprint;Agrar-Feldroboter
-Robotics;EHT Eternal Horticulture Technologies GmbH;Köln;DE;hello@eternal.ag;;eternal.ag/en/imprint;Agrar-Ernte-Robotik
-Robotics;Landhouz GmbH (AI.Land);Krefeld;DE;info@a-i.land;;landhouz.de/contactus;Agrar-Feldroboter
-Robotics;fruitcore robotics GmbH;Konstanz;DE;info@fruitcore.de;;fruitcore-robotics.com/en/imprint;Industrie-Cobot/Vision
-Robotics;Gravis Robotics AG;Zürich CH;CH;contact@gravisrobotics.com;;gravisrobotics.com/contact;Bau-Robotik
-Robotics;sewts GmbH;München;DE;info@sewts.de;;sewts.com/imprint;Textil-Manipulation
-Robotics;cellumation GmbH;Bremen;DE;info@cellumation.com;;cellumation.com/en/imprint;Intralogistik
-Robotics;ESCARDA Technologies GmbH;Berlin;DE;sales@escarda.tech;;escarda.tech/imprint;Agrar-Laser-Weeding
-Robotics;ConBotics GmbH;Berlin;DE;info@ConBotics.com;;conbotics.com/impressum;Bau-Robotik
-Robotics;IDEALworks GmbH;München;DE;hello@idealworks.com;;idealworks.com/de/legal/impressum;Lager-AMR
-Robotics;Voliro AG;Zürich CH;CH;contact@voliro.com;;voliro.com/contact;Inspektions-Drohnen NDT
-LLM/GenAI;Langdock GmbH;Berlin;DE;support@langdock.com;;langdock.com/imprint;Enterprise-LLM/Agents
-LLM/GenAI;neuroflash GmbH;Hamburg;DE;magicpen@neuroflash.com;;neuroflash.com/impressum;GenAI Content
-LLM/GenAI;Retresco GmbH;Berlin;DE;kontakt@retresco.de;;retresco.de/impressum;NLG
-LLM/GenAI;Unique AG;Zürich CH;CH;info@unique.ai;;unique.ai/contact-us;GenAI Finance/Agents
-LLM/GenAI;Prior Labs GmbH;Freiburg;DE;hello@priorlabs.ai;Frank Hutter;priorlabs.ai/imprint;Foundation Models (Tabular)
-LLM/GenAI;Noxtua AG (ex-Xayn);Berlin;DE;hello@noxtua.com;Leif-Nissen Lundbæk;noxtua.com/legal/imprint;Legal-LLM
-LLM/GenAI;Tucan Systeme (tucan.ai);Berlin;DE;team@tucan.ai;;tucan.ai/impressum;Meeting/Document NLP
-LLM/GenAI;Seedbox Ventures (seedbox.ai);Stuttgart;DE;office@seedbox.ai;;seedbox.ai/legal-notice;GenAI-Plattform
-LLM/GenAI;thingsTHINKING GmbH (semantha);Karlsruhe;DE;contact@semantha.de;;semantha.de/de/impressum;Semantic AI
-LLM/GenAI;SUMM AI GmbH;München;DE;team@summ-ai.com;;summ-ai.com/impressum;LLM Leichte Sprache
-LLM/GenAI;Charles GmbH (hello-charles);Berlin;DE;info@hello-charles.com;;hello-charles.com/imprint;Conversational Commerce
-LLM/GenAI;ellamind GmbH;Bremen/Berlin;DE;info@ellamind.com;;ellamind.com/legal-notice;Custom-LLM Finetuning
-Geospatial/EO/Agrar;OCELL GmbH;München;DE;info@ocell.io;;ocell.io/impressum;Forst-KI
-Geospatial/EO/Agrar;ExoLabs GmbH;Zürich CH;CH;contact@exolabs.ch;;exolabs.ch/contact;Satelliten-Analytik
-Geospatial/EO/Agrar;GAF AG;München;DE;info@gaf.de;;gaf.de/imprint;Fernerkundung
-Geospatial/EO/Agrar;Overstory;Amsterdam NL;NL;support@overstory.com;;overstory.com/contact-us;Satelliten-Vegetation
-Geospatial/EO/Agrar;Remote Sensing Solutions GmbH;München;DE;info@rssgmbh.de;;remote-sensing-solutions.com;EO Wald
-Geospatial/EO/Agrar;Cubert GmbH;Ulm;DE;info@cubert-gmbh.de;;cubert-hyperspectral.com/imprint;Hyperspektral
-Geospatial/EO/Agrar;Agvolution GmbH;Göttingen;DE;contact@agvolution.com;;agvolution.com/en/contact-us;Precision Ag
-Geospatial/EO/Agrar;Kanop;Paris FR;FR;hello@kanop.io;;kanop.io/contact;Forst-Carbon MRV
-Geospatial/EO/Agrar;mundialis GmbH;Bonn;DE;info@mundialis.de;;mundialis.de/impressum;Fernerkundung/GIS
-Geospatial/EO/Agrar;Vista GmbH (Vista Geo);München;DE;mail@vista-geo.de;;vista-geo.de;Satelliten-Ag
-Geospatial/EO/Agrar;Space4Good B.V.;Den Haag NL;NL;hello@space4good.com;;space4good.com/contact;EO Umwelt
-Geospatial/EO/Agrar;geocledian GmbH;Bayern;DE;info@geocledian.com;;geocledian.com/legal-notice;Satelliten-Ag
-Geospatial/EO/Agrar;Dryad Networks GmbH;Eberswalde;DE;info@dryad.net;;dryad.net;Waldbrand-Sensorik
-Geospatial/EO/Agrar;Kermap;Rennes FR;FR;hello@kermap.com;;kermap.com/en/contact;Satelliten-Vegetation
-Geospatial/EO/Agrar;GeoVille GmbH;Innsbruck AT;AT;info@geoville.com;;geoville.com/imprint;EO Landmonitoring
-Geospatial/EO/Agrar;Brockmann Consult GmbH;Geesthacht;DE;info@brockmann-consult.de;;brockmann-consult.de/imprint;EO Wasser
-Geospatial/EO/Agrar;EFTAS GmbH;Münster;DE;info@eftas.com;;eftas.de/impressum.php;Fernerkundung Agrar
-Geospatial/EO/Agrar;Restor Foundation;Zürich CH;CH;contact@restor.eco;;about.restor.eco/contact;Biodiversität EO
-Geospatial/EO/Agrar;Hydrosat;Luxembourg;DE;hr@hydrosat.com;;hydrosat.com;Thermal-Satellit Agrar
-Industrielle CV;elunic AG;München;DE;info@elunic.com;;elunic.com/de/impressum;KI-Sichtprüfung
-Industrielle CV;Data Spree GmbH;Berlin;DE;info@data-spree.com;;data-spree.com/imprint;MV/DL-Plattform
-Industrielle CV;sentin GmbH;Bochum;DE;contact@sentin.ai;;sentin.ai/impressum;KI-NDT
-Industrielle CV;maXerial AG;Vaduz LI;LI;info@maxerial.io;;maxerial.io/about/contact;Elektronik-Inspektion
-Industrielle CV;Quintina GmbH;Frankenberg;DE;info@quintina.eu;;quintina.eu/impressum;Textilinspektion
-Industrielle CV;QualiVision AG;Horgen CH;CH;info@qualivision.ch;;qualivision.ch/location;Pharma/Food-Inspektion
-Industrielle CV;Robotec Solutions AG;Seon CH;CH;info@robotec.swiss;;robotec.swiss/de/impressum-datenschutz;Visuelle Inspektion
-Industrielle CV;PSI Technics GmbH;Winningen;DE;info@psi-technics.com;;psi-technics.com/impressum;CV Fertigung/Pharma
-Industrielle CV;EEP-Robotics GmbH;Zeiselmauer AT;AT;office@eep-robotics.com;;eep-robotics.com/impressum;Bin-Picking
-Industrielle CV;Robofunktion Vision GmbH;Wolfsburg;DE;kontakt@robofunktion-vision.de;;robovision.de/kontakt;Bin-Picking Automotive
-Industrielle CV;senswork GmbH;Burghausen;DE;info@senswork.com;;senswork.com/kontakt;MV+DL Inspektion
-Industrielle CV;The MoonVision GmbH;Wien AT;AT;office@moonvision.io;;moonvision.io/en/imprint;KI-Sichtprüfung
-Industrielle CV;Optonic GmbH;Freiburg;DE;info@optonic.com;;optonic.com/impressum;3D-MV+DL
-Industrielle CV;NeuroCheck GmbH;Remseck;DE;info@neurocheck.com;;neurocheck.com/imprint_engl;MV-Software+DL
-Industrielle CV;IMAGO Technologies GmbH;Friedberg;DE;info@imago-technologies.com;;imago-technologies.com/de/impressum;Embedded Vision
-EU-weit;Kepler Vision Technologies;Amsterdam NL;NL;info@keplervision.eu;;keplervision.eu/contact;Care-AI CV
-EU-weit;Aiir Innovations;Amsterdam NL;NL;hello@aiir.nl;;aiir.nl;Aviation MRO Vision
-EU-weit;Avular;Eindhoven NL;NL;info@avular.com;;avular.com/contact;Autonome Robotik
-EU-weit;Furhat Robotics;Stockholm SE;SE;hello@furhatrobotics.com;;furhatrobotics.com/contact;Soziale Roboter
-EU-weit;Cerebriu;Kopenhagen DK;DK;info@cerebriu.com;;cerebriu.com/privacy-policy;Medical Imaging MRT
-EU-weit;Distran;Zürich CH;CH;sales@distran.ch;;distran.swiss/en/contact;Akustik-Imaging
-EU-weit;Flyability;Lausanne CH;CH;info@flyability.com;;flyability.com/contact;Inspektionsdrohnen
-EU-weit;Therapixel;Paris FR;FR;contact@therapixel.com;;therapixel.com/contact;Mammographie-AI
-EU-weit;Scortex;Paris FR;FR;contact@scortex.io;;scortex.io/contact;Industrielle QC
-EU-weit;Tractable;London UK;UK;information@tractable.ai;;tractable.ai/en/contact;Insurance Vision-AI
-EU-weit;Vivacity Labs;London UK;UK;contact@vivacitylabs.com;;vivacitylabs.com/contact;Verkehrssensorik CV
-EU-weit;Speechmatics;Cambridge UK;UK;media@speechmatics.com;;speechmatics.com/contact;Speech-to-Text
-EU-weit;Brainomix;Oxford UK;UK;info@brainomix.com;;brainomix.com/contact;Medical Imaging
-EU-weit;pixolus GmbH;Köln;DE;info@pixolus.de;;pixolus.de/impressum;Mobile OCR/CV
-EU-weit;Kinexon GmbH;München;DE;info@kinexon.com;;kinexon.com/imprint;RTLS/Sport-Tracking
-Autonomous Driving;driveblocks GmbH;Garching;DE;contact@driveblocks.ai;Dr. Alexander Wischnewski;driveblocks.ai/imprint;Off-Highway L4
-Autonomous Driving;Embotech AG;Zürich CH/München;CH;info@embotech.com;;embotech.com/contact;Autonome Yard-Traktoren
-Autonomous Driving;EYYES GmbH;Gedersdorf AT/Aachen;AT;office@eyyes.com;Johannes Traxler;eyyes.com/en/imprint;KI-Perzeption Nutzfahrzeug/Bahn
-Autonomous Driving;FUTURAIL GmbH;München;DE;info@futurail.com;;futurail.com;Autonomer Schienenverkehr
-Autonomous Driving;LOXO AG;Bern CH;CH;relations@loxo.ch;;loxo.ch;L4 Lieferfahrzeuge
-Autonomous Driving;Roboauto;Brno CZ;CZ;info@roboauto.tech;;roboauto.tech;Autonomie/Sensing SW
-Autonomous Driving;Terranet/BlincVision;Lund SE;SE;info@blincvision.com;Markus Johansson;terranet.se/contact;Vision-Perzeption ADAS
-Autonomous Driving;Scantinel Photonics GmbH;Ulm;DE;info@scantinel.com;;scantinel.com/imprint;FMCW-LiDAR
-Autonomous Driving;ANavS GmbH;München;DE;info@anavs.de;;anavs.com;GNSS/INS-Sensorfusion
-Autonomous Driving;Einride;Berlin;DE;de-info@einride.tech;;einride.tech/impressum;Autonome E-Trucks
-Autonomous Driving;AVL List GmbH;Graz AT;AT;info@avl.com;;avl.com/en/imprint;ADAS/AD Engineering
-Autonomous Driving;FEV Group GmbH;Aachen;DE;imprint@fev.com;;fev.com/en/imprint;ADAS/AD Engineering
-Autonomous Driving;Oxa;Oxford UK;UK;hello@oxa.tech;;oxa.tech/contact;AV-Softwarestack
-Autonomous Driving;NavVis GmbH;München;DE;info@navvis.com;;navvis.com/imprint;Reality Capture/SLAM
-Radiologie/Pathologie;b-rayZ AG;Zürich CH;CH;contact@b-rayz.ch;;b-rayz.com/de/kontakt;Mammographie-KI
-Radiologie/Pathologie;FUSE-AI GmbH;Hamburg;DE;info@fuse-ai.de;Matthias Steffen;fuse-ai.de/impressum;Prostata-MRT-KI
-Radiologie/Pathologie;HS Analysis GmbH;Karlsruhe;DE;info@hs-analysis.com;Sergey Biniaminov;hs-analysis.com/impressum;Digitale Pathologie
-Radiologie/Pathologie;AIRAmed GmbH;Tübingen;DE;info@airamed.de;Dr. Tobias Lindig;arzt.airamed.de/de/impressum;Neuroradiologie-KI
-Radiologie/Pathologie;IB Lab GmbH (ImageBiopsy);Wien AT;AT;info@imagebiopsy.com;;imagebiopsy.com/legals/legal-notice;MSK/Röntgen-KI
-Radiologie/Pathologie;PIUR imaging GmbH;Wien AT;AT;info@piurimaging.com;GF Bender/Bauer;piurimaging.com/imprint;3D-Ultraschall-KI
-Radiologie/Pathologie;deepeye Medical GmbH;München;DE;office@deepeye-medical.com;;deepeye-medical.com/imprint;Ophthalmologie OCT-KI
-Radiologie/Pathologie;Mint Medical GmbH;Heidelberg;DE;info@mint-medical.de;;mint-medical.com/the-company/contact;Radiologie Reading/Annotation
-Radiologie/Pathologie;MetaSystems GmbH;Altlußheim;DE;info@metasystems.de;;metasystems-international.com/en/contact;Zytogenetik-Bildanalyse
-Radiologie/Pathologie;Dermanostic GmbH;Solingen;DE;info@dermanostic.com;Dr. Ole Martin;dermanostic.com/impressum;Teledermatologie-KI
-Radiologie/Pathologie;ThinkSono GmbH;Potsdam;DE;hello@thinksono.com;;thinksono.com;Thrombose-Ultraschall-KI
-Radiologie/Pathologie;Spear UG (ex-iThera);München;DE;info@spear-ug.com;;spear-scientific.com/imprint;Optoakustische Bildgebung
-Digital Health;Cardisio GmbH;Frankfurt;DE;info@cardis.io;Meik Baumeister;cardis.io/en/legal-notice;Kardiologie EKG-KI
-Digital Health;Preventicus GmbH;Jena;DE;info@preventicus.com;;preventicus.com/impressum;Wearables/Biosignal
-Digital Health;cosinuss GmbH;München;DE;info@cosinuss.com;;cosinuss.com/en/imprint;Wearables/Biosignal
-Digital Health;custo med GmbH;Ottobrunn;DE;info@customed.de;;customed.de/impressum;Kardiologie Holter-KI
-Digital Health;corvolution GmbH;Ettlingen;DE;info@corvolution.com;;mesana.com/impressum;Wearables/Biosignal
-Digital Health;Aktiia SA (Hilo);Neuchâtel CH;CH;support@aktiia.com;;hilo.com/impressum;Wearables/Biosignal
-Digital Health;SmartCardia SA;Lausanne CH;CH;contact@smartcardia.com;;smartcardia.com/contact;Kardiologie EKG-Patch
-Digital Health;Averbis GmbH;Freiburg;DE;info@averbis.com;GF Daumke/Markó;averbis.com/de/kontakt;Klinisches NLP
-Digital Health;Nyra Health GmbH;Wien AT;AT;info@nyra.health;;nyra.health/impressum;Reha Sprach-KI
-Digital Health;Lindera GmbH;Berlin;DE;hello@lindera.de;Diana Heinrichs;lindera.de/impressum;Reha Bewegungsanalyse
-Digital Health;apoQlar GmbH;Hamburg;DE;contact@apoQlar.com;Sirko Pelzl;apoqlar.com/imprint.html;Medical Imaging XR
+Lane;Firma;Standort;Land;Email_verifiziert;Ansprechpartner;Email_Quelle;Segment/Bedarf;Kontakt_LinkedIn
+Genomik/Pathologie;CeGaT GmbH;Tübingen;DE;info@cegat.de;Dr. Dirk Biskup, Dr. Saskia Biskup;cegat.com/imprint;Genomics;
+Genomik/Pathologie;Nostos Genomics GmbH;Berlin;DE;team@nostos-genomics.com;Dr. Ben Liesfeld;nostos-genomics.com/imprint;Genomics;
+Genomik/Pathologie;Molecular Health GmbH;Heidelberg;DE;media@molecularhealth.com;(nur Medien-Mail);molecularhealth.com/legal-notice;Genomics;linkedin.com/in/stephan-brock-6958a65/
+Genomik/Pathologie;Smart In Media AG (PathoZoom);Köln;DE;contact@smartinmedia.com;Dr. Detlef Finkler;smartinmedia.com/imprint;Digital Pathology;
+Genomik/Pathologie;jung diagnostics GmbH;Hamburg;DE;info@jung-diagnostics.de;Dr. Lothar Spies;jung-diagnostics.de/imprint;Neuroimaging;
+Genomik/Pathologie;Limbus Medical Technologies GmbH;Rostock;DE;info@limbus-medtec.com;Dr. Ben Liesfeld;varvis.com/imprint.html;Genomics;
+Genomik/Pathologie;Epitype GmbH (vorm. oncgnostics);Dresden/Jena;DE;contact@epitype.de;Dr. Timm Zörgiebel;epitype.de/en/imprint;Genomics/Epigenetik;
+Derma/Ophthalmologie;FotoFinder Systems GmbH;Bad Birnbach;DE;info@fotofinder.de;Tammy Noll, Dr. Markowsky;fotofinder.com/impressum;Dermatologie;
+Derma/Ophthalmologie;Magnosco GmbH;Berlin;DE;info@magnosco.com;Thomas Diepold;magnosco.com/impressum;Dermatologie;
+Derma/Ophthalmologie;medaia GmbH (SkinScreener);Graz AT;AT;office@medaia.at;Michael Tripolt;skinscreener.com/legal;Dermatologie;
+Derma/Ophthalmologie;Nia Health GmbH;Berlin;DE;contact@niahealth.ai;Tobias Seidl;niahealth.ai/imprint;Dermatologie;
+Derma/Ophthalmologie;RetInSight GmbH;Wien AT;AT;contact@retinsight.com;(GF-Team);retinsight.com/legal-information;Ophthalmologie;
+Derma/Ophthalmologie;contextflow GmbH;Wien AT;AT;office@contextflow.com;Markus Holzer (CEO & Co-Founder);contextflow.com/impressum;Radiologie/CT;linkedin.com/in/markus-holzer/
+OEM/Tier-1/Mobility;AUDI AG;Ingolstadt;DE;imprint@audi.de;Jan Muenchhoff (Director Driver Assistance & Automated Driving);audi.com/de/legal-notice;OEM ADAS/AD;linkedin.com/in/jan-m%C3%BCnchhoff-79067115
+OEM/Tier-1/Mobility;Volkswagen AG;Wolfsburg;DE;vw@volkswagen.de;Cristina Rico Garcia (Head of AI Functions, CARIAD);volkswagen-group.com/de/impressum-15695;OEM AD;linkedin.com/in/cristinaricogarcia
+OEM/Tier-1/Mobility;Porsche AG;Stuttgart;DE;info@porsche.de;Dr. Juergen Bortolazzi (Director Driver Assistance & Automated Driving);christophorus.porsche.com/de/impressum;OEM ADAS/AD;linkedin.com/in/juergen-bortolazzi-37133427
+OEM/Tier-1/Mobility;Elektrobit Automotive GmbH;Erlangen;DE;inquiries@elektrobit.com;GF Maria Anhalt;elektrobit.com/legal-notice;Automotive SW/ADAS;linkedin.com/in/demetrioaiello/
+OEM/Tier-1/Mobility;Schaeffler AG;Herzogenaurach;DE;info@schaeffler.com;Thomas Stierle (Vorstand E-Mobility / ADAS);schaeffler.com/de/meta/impressum;Tier-1 E-Mobility (inkl Vitesco);linkedin.com/in/thomas-stierle-b56421110/
+OEM/Tier-1/Mobility;Knorr-Bremse AG;München;DE;info@knorr-bremse.com;Dr. Christoph Huber (VP CoC ADAS/HAD);knorr-bremse.com/en/footer/imprint;Truck Tier-1;linkedin.com/in/dr-christoph-huber-5a2047156/
+OEM/Tier-1/Mobility;Webasto SE;Stockdorf;DE;info@webasto.com;Thomas Schuett (VP R&D Roof / Sensor-Integration AD);webasto.com/.../impressum;Tier-1 Sensor-Integration;
+OEM/Tier-1/Mobility;MAN Truck & Bus SE;München;DE;presse-man@man.eu;Gregor Jentzsch;press.mantruckandbus.com;Truck AV;linkedin.com/in/sebastian-v%C3%B6ll-a7517814a/
+OEM/Tier-1/Mobility;Daimler Truck AG;Leinfelden;DE;contact@daimlertruck.com;Joanna Buttler (Head of Global Autonomous Technology Group);daimlertruck.com/anbieter-rechtliche-hinweise;Truck AV (Torc);
+OEM/Tier-1/Mobility;MAHLE GmbH;Stuttgart;DE;info@mahle.com;Manuela Höhne;mahle.com/de/imprint;Tier-1 Mechatronik/Vision;
+OEM/Tier-1/Mobility;Brose SE;Coburg;DE;info@brose.com;Bernd Schemer (CTO Zentrale Entwicklung);brose.com/de-de/rechtliche-hinweise;Tier-1 In-Cabin CV;
+OEM/Tier-1/Mobility;IAV GmbH;Berlin;DE;impressum@iav.com;Elmar Matthes (Head of Camera-based ADAS & ITS);iav.com/imprint;ADAS/AD-Dienstleister;
+OEM/Tier-1/Mobility;Bertrandt AG;Ehningen;DE;info@bertrandt.com;Manuel Rivoir (Head of Dept Autonomous Driving);bertrandt.com/en/imprint;ADAS/AD-Engineering;linkedin.com/in/manuel-rivoir-21937219a
+OEM/Tier-1/Mobility;Flix SE (FlixBus);München;DE;globalpress@flixbus.com;Iris Brand;corporate.flix.com;Mobility KI;linkedin.com/in/danielmkrauss
+OEM/Tier-1/Mobility;MILES Mobility GmbH;Berlin;DE;impressum@miles-mobility.com;GF Oliver Mackprang;abo.miles-mobility.com/en/impressum;Car-Sharing KI;linkedin.com/in/fahd-lemhaider/
+Forschungsinstitute/Spinoffs;DFKI;Kaiserslautern/Saarbrücken/Berlin;DE;info@dfki.de;Prof. Dr. Didier Stricker (Leiter Augmented Vision);dfki.de locations-contact;KI-Forschung;av.dfki.de/members/stricker/
+Forschungsinstitute/Spinoffs;Fraunhofer IAIS;Sankt Augustin;DE;pr@iais.fraunhofer.de;Prof. Dr. Rafet Sifa (Head of Hybrid Intelligence);iais.fraunhofer.de/de/impressum;Angewandte KI;linkedin.com/in/rafetsifa
+Forschungsinstitute/Spinoffs;Fraunhofer HHI;Berlin;DE;elzem.kaya@hhi.fraunhofer.de;Prof. Dr. Wojciech Samek (Head of AI);hhi.fraunhofer.de/impressum;Video/Vision KI;linkedin.com/in/wojciech-samek-78336a157/
+Forschungsinstitute/Spinoffs;Fraunhofer MEVIS;Bremen;DE;office@mevis.fraunhofer.de;Prof. Dr.-Ing. Horst K. Hahn (Institutsleiter);mevis.fraunhofer.de/en/contact;Med. KI;linkedin.com/in/horst-hahn-7491a7106
+Forschungsinstitute/Spinoffs;Fraunhofer IOSB;Karlsruhe;DE;info@iosb.fraunhofer.de;Dr. Michael Arens (Head of Object Recognition);iosb.fraunhofer.de/en/contact;Bild/Signal KI;
+Forschungsinstitute/Spinoffs;Fraunhofer IGD;Darmstadt;DE;info@igd.fraunhofer.de;Felix Wagner (Head of Smart Living & Biometric Tech);igd.fraunhofer.de/impressum;Visual Computing;
+Forschungsinstitute/Spinoffs;Fraunhofer IPA;Stuttgart;DE;industrieanfragen@ipa.fraunhofer.de;Prof. Dr.-Ing. Marco Huber (Head Machine Vision & Signal Processing);ipa.fraunhofer.de/de/kontakt;Produktions/Robotik-KI;
+Forschungsinstitute/Spinoffs;Fraunhofer IPM;Freiburg;DE;info@ipm.fraunhofer.de;Prof. Dr.-Ing. Alexander Reiterer (Leiter Objekt-/Formerfassung);ipm.fraunhofer.de/de/kontakt;Mess/Sensor-KI;linkedin.com/in/alexander-reiterer
+Forschungsinstitute/Spinoffs;Fraunhofer FKIE;Wachtberg/Bonn;DE;kontakt@fkie.fraunhofer.de;Prof. Dr. Wolfgang Koch (Leiter Sensordaten-/Informationsfusion);fkie.fraunhofer.de/de/impressum;KI/Defense;
+Forschungsinstitute/Spinoffs;Fraunhofer IMS;Duisburg;DE;presse@ims.fraunhofer.de;Dr. Christian Wiede (Head of Embedded/Edge AI);ims.fraunhofer.de/de/impressum;Edge-KI;
+Forschungsinstitute/Spinoffs;Fraunhofer IKS;München;DE;eva.wardenburg@iks.fraunhofer.de;Prof. Dr. Mario Trapp (Institutsleiter);iks.fraunhofer.de/de/impressum;Safe AI;
+Forschungsinstitute/Spinoffs;Tübingen AI Center;Tübingen;DE;info@tuebingen.ai;Prof. Bethge;tuebingen.ai/imprint;KI-Zentrum;
+Forschungsinstitute/Spinoffs;fortiss;München;DE;info@fortiss.org;Dr. Hao Shen (Leiter Machine Learning);fortiss.org/impressum;KI/SW-Institut;
+Forschungsinstitute/Spinoffs;CISPA Helmholtz;Saarbrücken;DE;info@cispa.de;Prof. Dr. Mario Fritz (Trustworthy AI & ML);cispa.de/de/impressum;KI-Sicherheit;
+Forschungsinstitute/Spinoffs;L3S Research Center;Hannover;DE;info@l3s.de;Dr. Claudia Niederee (Managing Director);l3s.de/contact;KI-Forschung;
+Forschungsinstitute/Spinoffs;ScaDS.AI;Dresden/Leipzig;DE;scads.ai@tu-dresden.de;Prof. Gerik Scheuermann (Managing Director);scads.ai/imprint;KI-Zentrum;
+Forschungsinstitute/Spinoffs;BIFOLD (TU Berlin);Berlin;DE;pr@bifold.berlin;Prof. Volker Markl (Director);bifold.berlin/imprint;KI/Big-Data;bifold.berlin/people
+Forschungsinstitute/Spinoffs;appliedAI Initiative;München;DE;info@appliedai.de;Dr. Andreas Liebl (Managing Director);appliedai.de/en/imprint;Angewandte KI;
+Speech/Voice;VIER GmbH;Hannover;DE;info@vier.ai;Rainer Holler;vier.ai/impressum;Conversational/Voice;
+Speech/Voice;Aristech GmbH;Heidelberg;DE;sprache@aristech.de;Carolin Edler-Mende (CEO & Founder);aristech.ai/imprint;TTS/ASR;linkedin.com/in/carolin-edler-mende-b513b77b
+Speech/Voice;Linguwerk GmbH;Dresden;DE;info@linguwerk.de;Dr. Rico Petrick (CEO & Founder);linguwerk.de/impressum;Embedded ASR;linkedin.com/in/rico-petrick-2651149
+Speech/Voice;VITAS GmbH;Regensburg;DE;kontakt@vitas.ai;Thomas Abend (Founder & CEO);vitas.ai/impressum;Voicebot Praxen;linkedin.com/in/thomas-abend
+Speech/Voice;audEERING GmbH;Gilching;DE;info@audeering.com;Dr. Florian Eyben (CTO & Co-Founder);audeering.com/imprint;Emotion/Sound AI;linkedin.com/in/florian-eyben-54324864
+Speech/Voice;Loudly GmbH;Berlin;DE;help@loudly.com;Rory Kenny (Co-Founder & CEO);loudly.com/imprint;KI-Musik;linkedin.com/in/rorykenny
+Speech/Voice;MediaInterface GmbH;Dresden;DE;info@mediainterface.de;Robert Groeber (Geschaeftsfuehrer);mediainterface.de/impressum;Med. Diktier-KI;linkedin.com/in/robertgroeber
+Speech/Voice;i2x GmbH;Mönchengladbach;DE;hello@i2x.ai;Michael Brehm (Founder & CEO);i2x.ai/imprint;Echtzeit-Sprachanalyse;
+Speech/Voice;Onlim GmbH;Innsbruck AT;AT;office@onlim.com;Ioan Toma (Chief AI Officer & Co-Founder);onlim.com/en/imprint;Conversational AI;linkedin.com/in/ioantoma
+Speech/Voice;Retorio GmbH;München;DE;contact@retorio.com;Florian Abicht (Chief AI Officer);retorio.com/imprint;Behavioral/Voice AI;linkedin.com/in/florian-abicht-62168680/
+Speech/Voice;novomind AG;Hamburg;DE;info@novomind.com;Thomas Koehler (Managing Partner & CPTO);novomind.com/de/impressum;Customer-Service-KI;linkedin.com/in/thomasnovomind
+Speech/Voice;moin.ai (knowhere GmbH);Hamburg;DE;team@moin.ai;Florian Nommensen (Mitgruender & CTO);moin.ai/impressum;Chatbot;linkedin.com/in/florian-nommensen-6a5bbb73/
+Speech/Voice;kauz GmbH;Düsseldorf;DE;info@kauz.ai;Dr. Thomas Ruedel (Gruender & CEO);kauz.ai/impressum;NLU/Chatbot;linkedin.com/in/thomas-ruedel-92980985/
+Speech/Voice;Charamel GmbH;Köln;DE;info@charamel.com;Alexander Stricker (Gruender & CEO);charamel.com/impressum.html;Avatar/Voice;linkedin.com/in/alexander-stricker
+Speech/Voice;semvox GmbH;Saarbrücken;DE;info@semvox.de;Alexander Pfalzgraf (Mitgruender & CTO);semvox.de/impressum;Voice Assistants;linkedin.com/in/alexander-pfalzgraf-b0522865/
+Speech/Voice;Endel Sound GmbH;Berlin;DE;ask@endel.io;Kirill Bulatsev (Co-Founder & CTO);endel.io/impressum;Generative Audio;
+Speech/Voice;assono GmbH;Kiel;DE;kontakt@assono.de;Thomas Bahn (Mitgruender & GF);assono.de/impressum;Chatbot;linkedin.com/in/thomasbahn
+Speech/Voice;Cyanite (elceedee UG);Mannheim;DE;mail@cyanite.ai;Joshua Weikert (Co-Founder & CTO);cyanite.ai/legal-notice;Musik-KI/MIR;linkedin.com/in/joshua-weikert-315258104
+Speech/Voice;melibo GmbH;München;DE;info@melibo.de;Felix Stelzer (Mitgruender & CEO);melibo.de/impressum;Chatbot;linkedin.com/in/felix-stelzer-11bb69164
+Speech/Voice;Convaise GmbH;München;DE;kontakt@convaise.com;Stefan Zitzlsperger (Mitgruender & CTO);convaise.com/impressum;Conversational AI;linkedin.com/in/zitzlsperger/
+Drohnen/Maritime;SEA.AI GmbH;Linz AT;AT;contact@sea.ai;Marcus Warrelmann;sea.ai/imprint;Maritime CV;
+Drohnen/Maritime;FlyNex GmbH;Leipzig/Hamburg;DE;info@flynex.de;Holger Dirksen (Co-Founder & CTO);flynex.io/imprint;Inspektionsdrohnen;linkedin.com/in/holger-dirksen-060aa816a
+Drohnen/Maritime;Zeabuz AS;Trondheim NO;NO;contact@zeabuz.com;Oyvind Smogeli (CTO & Co-Founder);zeabuz.com/contact;Autonome Fähren;linkedin.com/in/oyvind-smogeli-81063b26/
+Drohnen/Maritime;Blueye Robotics AS;Trondheim NO;NO;contact@blueye.no;Jonas Folleso (CTO & Co-Founder);blueyerobotics.com/contact;Unterwasser-ROV;linkedin.com/in/follesoe/
+Drohnen/Maritime;Avy B.V.;Amsterdam NL;NL;fly@avy.eu;Matthijs Damen (CTO);avy.eu/contact;Lieferdrohnen;linkedin.com/in/mfadamen/
+Drohnen/Maritime;Dronamics;Sofia BG;BG;info@dronamics.com;Konstantin Rangelov (Co-Founder & CTO);dronamics.com/contact;Cargo-Drohne;bg.linkedin.com/in/konstantinrangelov
+Drohnen/Maritime;Captain AI;Rotterdam NL;NL;info@captainai.com;Gerard Kruisheer (Co-Founder & CTO);captainai.com/contact;Autonome Schifffahrt;
+Drohnen/Maritime;Nordic Unmanned;Sandnes NO;NO;post@nordicunmanned.com;Ole Benjamin Wike (CEO);nordicunmanned.com/contact;UAV-Services;
+Drohnen/Maritime;Delair;Toulouse FR;FR;contact@delair.aero;Bastien Mancini (CEO & Co-Founder);delair.aero/contact-us;Mapping-Drohnen;fr.linkedin.com/in/bastien-mancini-199749137
+Drohnen/Maritime;EOMAP GmbH;Seefeld;DE;info@eomap.de;Dr. Thomas Heege (CEO & Gruender);eomap.com/imprint;Gewässer-Monitoring;linkedin.com/in/thomas-heege-15216b3b/
+Drohnen/Maritime;everwave GmbH;Aachen;DE;info@everwave.de;Dr. Tilman Floehr (Co-Founder & CTO);everwave.de/impressum;Plastikdetektion;linkedin.com/in/dr-tilman-floehr-36005b11b
+Drohnen/Maritime;Hydromea SA;Lausanne CH;CH;legal@hydromea.com;Felix Schill (Co-Founder & CTO);hydromea.com/privacy-policy;Unterwasser-Drohnen;ch.linkedin.com/in/felixschill
+Drohnen/Maritime;Germandrones GmbH;Berlin;DE;takeoff@germandrones.com;Dr. Klaus Scho (CEO);germandrones.com/en/imprint;Sicherheitsdrohnen;linkedin.com/in/dr-klaus-scho-9a28035
+Drohnen/Maritime;north.io GmbH;Kiel;DE;info@north.io;Dmitry Lazutkin (CTO);north.io/imprint;Marine Geodaten;
+Drohnen/Maritime;Dedrone;Kassel;DE;privacy@dedrone.com;Rene Seeber (Co-Founder & CTO);dedrone.com/legal/imprint;Counter-UAS;linkedin.com/in/ren%C3%A9-seeber-6a9715
+Drohnen/Maritime;Airteam Aerial Intelligence GmbH;Berlin;DE;info@airteam.ai;Gautier Chapuis (Co-Founder & CTO);airteam.ai/en/imprint;Luftbild-Analytik;
+Drohnen/Maritime;Maritime Robotics AS;Trondheim NO;NO;info@maritimerobotics.com;Arild Hepso (CTO);maritimerobotics.com/contact;USV;
+Drohnen/Maritime;Toqua;Gent BE;BE;hello@toqua.ai;Casimir Morobe (Founder & CEO);toqua.ai/contact;Schiffs-KI;be.linkedin.com/in/casimir-morob%C3%A9-680b72142
+Defense/Space;Alpine Eagle GmbH;München;DE;contact@alpineeagle.com;Jan-Hendrik Boelens (Founder & CEO);alpineeagle.com/imprint;C-UAS;
+Defense/Space;TYTAN Technologies GmbH;München;DE;info@tytan-technologies.com;Batuhan Yumurtaci (Co-Founder & CTO);tytan-technologies.com;C-UAS/Interceptor;
+Defense/Space;SATIM;Kraków PL;PL;hello@satim.co;Stanislawa Porzycka-Strzelczyk (Co-Founder & CTO);satim.co;SAR-Analytik;pl.linkedin.com/in/stanislawa-porzycka-strzelczyk
+Defense/Space;SE3 Labs GmbH;München;DE;contact@se3.ai;Simon Klenk (Co-Founder & CTO);se3.ai;Spatial AI/ISR;linkedin.com/in/simon-klenk-327225170/
+Defense/Space;Mayday.ai GmbH;Darmstadt;DE;info@mayday.ai;Kian Mirshahi (Founder & CEO);mayday.ai/contact;Geo-Intelligence;linkedin.com/in/kianmirshahi/
+Defense/Space;Traversals Analytics GmbH;Uttenreuth;DE;info@traversals.com;Dr. Dirk Kolb;traversals.com/contact;OSINT;
+Defense/Space;TEKEVER;Lissabon PT;DE;info@tekever.com;Nicolas van Hanxleden Houwert (Global Head of Data & AI);tekever.com/contact;ISR-Drohnen;linkedin.com/in/hanxleden/
+Defense/Space;ICEYE;Espoo FI;FI;ir@iceye.fi;(nur IR-Mail);iceye.com/contact;SAR-Aufklärung;linkedin.com/in/shay-strong/
+Defense/Space;Kuva Space;Espoo FI;FI;contact@kuvaspace.com;Dr. Michal Shimoni (Head of Analytics & Applications);kuvaspace.com/contact;Hyperspektral EO;fi.linkedin.com/in/michal-shimoni-b5b62b2a
+Defense/Space;Vyoma GmbH;München;DE;contact@vyoma.space;Stefan Frey (Co-Founder & CEO);vyoma.space;Space Situational Awareness;linkedin.com/in/stefanjfrey/
+Defense/Space;OKAPI:Orbits GmbH;Braunschweig;DE;contact@okapiorbits.com;Christopher Kebschull (CTO & Co-Founder);okapiorbits.space/contact;Space Traffic Mgmt;linkedin.com/in/christopher-kebschull-215331157/
+Defense/Space;blackshark.ai;Graz AT;AT;careers@blackshark.ai;(nur Careers-Mail);blackshark.ai;Geospatial 3D (defense);linkedin.com/in/michaelputz/
+Document/Fintech AI;Insiders Technologies GmbH;Kaiserslautern;DE;info@insiders-technologies.de;Werner Weiss (Gruender & Geschaeftsfuehrer);insiders-technologies.com/impressum;Document AI;
+Document/Fintech AI;Helm & Nagel GmbH (Konfuzio);Aßlar;DE;info@konfuzio.com;Florian Zyprian (CTO & Co-Founder);konfuzio.com/de/impressum;Document AI;
+Document/Fintech AI;Intelligent NLU GmbH (Otera/ex-DeepOpinion);Innsbruck AT;AT;hello@otera.ai;Stefan Engl (CEO & Co-Founder);otera.ai/legal/imprint;Doc/NLU;
+Document/Fintech AI;ExB Labs GmbH;München;DE;contact@exb.de;Holger Trittenbach (Head of Product & Machine Learning);exb.de/impressum;Document AI;
+Document/Fintech AI;Empolis Information Mgmt GmbH;Kaiserslautern;DE;info@empolis.com;Stefan Schumacher (CTO & VP Product Development);empolis.com/impressum;Knowledge/Doc AI;
+Document/Fintech AI;USU GmbH;Möglingen;DE;info@usu.com;Matthias Grabellus (Chief Product & Technology Officer);usu.com/de-de/impressum;Knowledge/Doc AI;
+Document/Fintech AI;IDnow GmbH;München;DE;info@idnow.io;Daniel Keller (Chief Product & Technology Officer);idnow.io/imprint;KYC/ID-OCR;
+Document/Fintech AI;Nect GmbH;Hamburg;DE;hello@nect.com;Benny Bennet Juergens (Founder & CEO);nect.com/en/imprint;KYC/ID-OCR;
+Document/Fintech AI;WebID Solutions GmbH;Berlin;DE;service@webid-solutions.de;Sven Jorga (CTO & Mitgruender);webid-solutions.com/impressum;KYC/ID-OCR;
+Document/Fintech AI;PXL Vision AG;Zürich CH;CH;info@pxl-vision.com;Michael Born (Founder & CEO);pxl-vision.com/en/imprint;KYC/ID-OCR;linkedin.com/in/michael-born-10744517/
+Document/Fintech AI;Legartis Technology AG;Zürich CH;CH;info@legartis.ai;David Alain Bloch (CEO & Co-Founder);legartis.ai/legal-notice;LegalTech;ch.linkedin.com/in/davidabloch
+Document/Fintech AI;BRYTER GmbH;Frankfurt;DE;info@bryter.io;Michael Grupp (CEO & Co-Founder);bryter.com/imprint;LegalTech;linkedin.com/in/michael-grupp/
+Document/Fintech AI;Cognotekt GmbH;Köln;DE;info@cognotekt.com;Jobst Landgrebe (Founder & Managing Director);cognotekt.com/de/impressum;InsurTech/Doc AI;
+Document/Fintech AI;ACTICO GmbH;Friedrichshafen;DE;info@actico.com;Timo Jakob (CTO);actico.com/imprint;Compliance/FinTech;
+Document/Fintech AI;Taxy.io GmbH;Aachen;DE;info@taxy.io;Steffen Kirchhoff (Co-Founder & CTO);taxy.io/impressum;Steuer/LegalTech;
+Document/Fintech AI;Candis GmbH;Berlin;DE;info@candis.io;Aleksander Heimrath (CTO);candis.io/impressum;Rechnungs-KI;linkedin.com/in/aleksander-heimrath-3503b229/
+Document/Fintech AI;BuchhaltungsButler GmbH;Berlin;DE;administration@buchhaltungsbutler.de;Konrad Nerger (Co-Founder & CTO);buchhaltungsbutler.de/impressum;Beleg-KI;
+Document/Fintech AI;fino run GmbH;Kassel;DE;hello@fino.digital;Bjoern Kahle (Co-Founder / COO);fino.digital/impressum;Banking-Doc-AI;de.linkedin.com/in/bjoern-kahle
+Document/Fintech AI;ONDEWO GmbH;Wien AT;AT;office@ondewo.com;Andreas S. Rath (Co-Founder, CEO & CTO);ondewo.com/en/imprint;NLU/Finance;at.linkedin.com/in/asrath
+Retail/Logistik CV;auvisus GmbH;Karlsruhe;DE;info@auvisus.com;GF Schweikardt/Gauthier;auvisus.com/impressum;Retail Self-Checkout;
+Retail/Logistik CV;snabble GmbH;Bonn;DE;info@snabble.io;GF Mancke/Queisler;snabble.io/en/imprint;Smart Store;
+Retail/Logistik CV;Crosscan GmbH;Witten;DE;hello@crosscan.com;Benjamin Schilp;crosscan.com/impressum;Personenzählung;
+Retail/Logistik CV;Dallmeier electronic GmbH;Regensburg;DE;info@dallmeier.com;Thomas Dallmeier;dallmeier.com/de/impressum;Video-Analytics;
+Retail/Logistik CV;Swarm Analytics GmbH;Innsbruck AT;AT;office@swarm-analytics.com;Michael Bredehorn (Co-Founder & CEO);swarm-analytics.com/imprint;Smart City/Verkehr;at.linkedin.com/in/michael-bredehorn-36a329112
+Retail/Logistik CV;Vitracom GmbH;Karlsruhe;DE;info@vitracom.de;Ralph Majer;vitracom.de/impressum;Personen-/Verkehrszählung;
+Retail/Logistik CV;vialytics GmbH;Stuttgart;DE;info@vialytics.com;Achim Hoth (Co-Founder & CTO);vialytics.com/imprint;Straßenzustand;linkedin.com/in/achim-hoth/
+Retail/Logistik CV;Peter Park System GmbH;München;DE;info@peter-park.de;Christoph Heinle (CTO);peter-park.de/impressum;Parkraum/LPR;de.linkedin.com/in/christoph-heinle-84225bb3
+Retail/Logistik CV;Ai-PARKING GmbH;Hamburg;DE;info@ai-parking.de;Moritz Dohna;ai-parking.de/impressum;Parkraum/LPR;
+Retail/Logistik CV;ParkRaum-Management PRM GmbH;Erlangen;DE;info@prm-parking.com;Klaus Gumpp (Geschaeftsfuehrer);prm-parken.de/impressum;Parkraum/LPR;
+Retail/Logistik CV;zone14 GmbH;Wien AT;AT;hello@zone14.ai;Lukas Groemer (Co-Founder & Co-CEO, Head of AI);zone14.ai/en/get-in-touch;Sport-Tracking;linkedin.com/in/lukas-groemer
+Retail/Logistik CV;Staige GmbH (soccerwatch);Essen;DE;info@staige.com;GF Taube/Baudewig;staige.com/impressum;Sport-Video-KI;
+Retail/Logistik CV;robominds GmbH;München;DE;info@robominds.de;Andreas Daeubler (Co-Founder & CTO);robominds.de/footer/impressum;Industrie-Robotik CV;
+Retail/Logistik CV;Logivations GmbH;München;DE;info@logivations.com;Christoph-U. Plapp (Managing Partner);logivations.com/imprint;Warenerkennung;linkedin.com/in/christoph-plapp-55775724/
+Retail/Logistik CV;CARGOMETER GmbH;Wien AT;AT;info@cargometer.com;Bernhard Obermaier (Co-Founder & GF, Dr.-Ing.);cargometer.com/imprint;Frachtvermessung;linkedin.com/in/bernhard-obermaier-37000a12/
+Retail/Logistik CV;oculai GmbH;München;DE;kontakt@oculai.de;Tim Sippl (Co-Founder & CTO);en.oculai.de/kontakt;Baustellen-Monitoring;linkedin.com/in/tim-sippl
+Robotics;farming revolution GmbH;Böhmenkirch;DE;info@farming-revolution.com;Maurice Gohlke (Co-Founder & Co-CEO);farming-revolution.com/de/impressum;Agrar-Robotik;de.linkedin.com/in/maurice-gohlke-999784b3
+Robotics;Energy Robotics GmbH (Korial);Darmstadt;DE;info@korial.com;Marc Dassler;korial.com/imprint;Inspektions-Robotik;
+Robotics;sensmore GmbH;Berlin;DE;info@sensmore.ai;Bjarne Johannsen (Co-Founder & CTO);sensmore.ai/legal/imprint;Bau-/Schwermaschinen-Robotik;linkedin.com/in/bjarne-johannsen/
+Robotics;Organifarms GmbH;Konstanz;DE;info@organifarms.de;Marian Bolz (Co-Founder & CTO);organifarms.de/impressum;Agrar-Ernte-Robotik;linkedin.com/in/marian-bolz-3539431a7
+Robotics;Nature Robots GmbH;Osnabrück;DE;info@nature-robots.de;Malte kleine Piening (Co-Founder & CTO);naturerobots.com/de/imprint;Agrar-Feldroboter;linkedin.com/in/malte-kleine-piening-b87462231
+Robotics;EHT Eternal Horticulture Technologies GmbH;Köln;DE;hello@eternal.ag;Renji Kuncheria John (Co-Founder & CEO);eternal.ag/en/imprint;Agrar-Ernte-Robotik;
+Robotics;Landhouz GmbH (AI.Land);Krefeld;DE;info@a-i.land;Dr.-Ing. Josef Franko (Founder & Geschaeftsfuehrer);landhouz.de/contactus;Agrar-Feldroboter;
+Robotics;fruitcore robotics GmbH;Konstanz;DE;info@fruitcore.de;Manuel Frey (Co-Founder & CTO);fruitcore-robotics.com/en/imprint;Industrie-Cobot/Vision;linkedin.com/in/manuel-frey-a016951bb
+Robotics;Gravis Robotics AG;Zürich CH;CH;contact@gravisrobotics.com;Dominic Jud (Co-Founder & CTO);gravisrobotics.com/contact;Bau-Robotik;ch.linkedin.com/in/dominic-jud-3a0990231
+Robotics;sewts GmbH;München;DE;info@sewts.de;Tim Doerks (Co-Founder & CTO);sewts.com/imprint;Textil-Manipulation;linkedin.com/in/doerkstim/
+Robotics;cellumation GmbH;Bremen;DE;info@cellumation.com;Claudio Uriarte (Co-Founder & CTO);cellumation.com/en/imprint;Intralogistik;de.linkedin.com/in/uriarte
+Robotics;ESCARDA Technologies GmbH;Berlin;DE;sales@escarda.tech;Julio Pastrana (Founder & CEO);escarda.tech/imprint;Agrar-Laser-Weeding;de.linkedin.com/in/julio-pastrana-2091476b
+Robotics;ConBotics GmbH;Berlin;DE;info@ConBotics.com;Cristian Amaya Gomez (Co-Founder & CEO);conbotics.com/impressum;Bau-Robotik;de.linkedin.com/in/cristian-amaya-g%C3%B3mez-3b89441b0
+Robotics;IDEALworks GmbH;München;DE;hello@idealworks.com;Jimmy Nassif (Co-Founder & CTO);idealworks.com/de/legal/impressum;Lager-AMR;linkedin.com/in/jimmy-nassif-muc
+Robotics;Voliro AG;Zürich CH;CH;contact@voliro.com;Marius Fehr (Co-Founder & CTO);voliro.com/contact;Inspektions-Drohnen NDT;linkedin.com/in/mariusfehr
+LLM/GenAI;Langdock GmbH;Berlin;DE;support@langdock.com;Lennard Schmidt (Co-Founder & CEO);langdock.com/imprint;Enterprise-LLM/Agents;crunchbase.com/person/lennard-schmidt
+LLM/GenAI;neuroflash GmbH;Hamburg;DE;magicpen@neuroflash.com;Dr. Jonathan T. Mall (Co-Founder & CIO);neuroflash.com/impressum;GenAI Content;de.linkedin.com/in/drjonathanmall
+LLM/GenAI;Retresco GmbH;Berlin;DE;kontakt@retresco.de;Alexander Siebert (Founder & CEO);retresco.de/impressum;NLG;de.linkedin.com/in/alexander-siebert-12346889
+LLM/GenAI;Unique AG;Zürich CH;CH;info@unique.ai;Andreas Hauri (Co-Founder & CTO);unique.ai/contact-us;GenAI Finance/Agents;linkedin.com/in/andreashauri
+LLM/GenAI;Prior Labs GmbH;Freiburg;DE;hello@priorlabs.ai;Frank Hutter;priorlabs.ai/imprint;Foundation Models (Tabular);
+LLM/GenAI;Noxtua AG (ex-Xayn);Berlin;DE;hello@noxtua.com;Leif-Nissen Lundbæk;noxtua.com/legal/imprint;Legal-LLM;
+LLM/GenAI;Tucan Systeme (tucan.ai);Berlin;DE;team@tucan.ai;Michael Schramm (Co-Founder & CTO);tucan.ai/impressum;Meeting/Document NLP;at.linkedin.com/in/ms07at
+LLM/GenAI;Seedbox Ventures (seedbox.ai);Stuttgart;DE;office@seedbox.ai;Dennis Dickmann (Co-Founder & CTO);seedbox.ai/legal-notice;GenAI-Plattform;
+LLM/GenAI;thingsTHINKING GmbH (semantha);Karlsruhe;DE;contact@semantha.de;Dr. Sven Koerner (CEO & Co-Founder);semantha.de/de/impressum;Semantic AI;
+LLM/GenAI;SUMM AI GmbH;München;DE;team@summ-ai.com;Nicholas Wolf (Co-Founder & CTO);summ-ai.com/impressum;LLM Leichte Sprache;
+LLM/GenAI;Charles GmbH (hello-charles);Berlin;DE;info@hello-charles.com;Andreas Tussing (CEO);hello-charles.com/imprint;Conversational Commerce;
+LLM/GenAI;ellamind GmbH;Bremen/Berlin;DE;info@ellamind.com;Bjoern Pluester (CTO);ellamind.com/legal-notice;Custom-LLM Finetuning;
+Geospatial/EO/Agrar;OCELL GmbH;München;DE;info@ocell.io;Felix Horvat (CTO);ocell.io/impressum;Forst-KI;
+Geospatial/EO/Agrar;ExoLabs GmbH;Zürich CH;CH;contact@exolabs.ch;Reik Leiterer (CEO & Co-Founder);exolabs.ch/contact;Satelliten-Analytik;ch.linkedin.com/in/reik-leiterer-81276056
+Geospatial/EO/Agrar;GAF AG;München;DE;info@gaf.de;Dr. Gernot Ramminger (CTO);gaf.de/imprint;Fernerkundung;
+Geospatial/EO/Agrar;Overstory;Amsterdam NL;NL;support@overstory.com;Fiona Spruill (CEO);overstory.com/contact-us;Satelliten-Vegetation;
+Geospatial/EO/Agrar;Remote Sensing Solutions GmbH;München;DE;info@rssgmbh.de;Prof. Florian Siegert (CEO & Founder);remote-sensing-solutions.com;EO Wald;
+Geospatial/EO/Agrar;Cubert GmbH;Ulm;DE;info@cubert-gmbh.de;Dr. Rene Heine (Co-Founder & CEO);cubert-hyperspectral.com/imprint;Hyperspektral;
+Geospatial/EO/Agrar;Agvolution GmbH;Göttingen;DE;contact@agvolution.com;Andreas Heckmann (CEO / Geschaeftsfuehrer);agvolution.com/en/contact-us;Precision Ag;
+Geospatial/EO/Agrar;Kanop;Paris FR;FR;hello@kanop.io;Louis de Vitry (CTO & Co-Founder);kanop.io/contact;Forst-Carbon MRV;linkedin.com/in/louis-de-vitry/
+Geospatial/EO/Agrar;mundialis GmbH;Bonn;DE;info@mundialis.de;Markus Neteler (Co-Founder / Tech-Lead);mundialis.de/impressum;Fernerkundung/GIS;
+Geospatial/EO/Agrar;Vista GmbH (Vista Geo);München;DE;mail@vista-geo.de;Silke Migdall (Geschaeftsfuehrerin / COO);vista-geo.de;Satelliten-Ag;
+Geospatial/EO/Agrar;Space4Good B.V.;Den Haag NL;NL;hello@space4good.com;Alexander Gunkel (Founder & Managing Director);space4good.com/contact;EO Umwelt;linkedin.com/in/alexandergunkel/
+Geospatial/EO/Agrar;geocledian GmbH;Bayern;DE;info@geocledian.com;Stefan Scherer (Founder & Managing Director);geocledian.com/legal-notice;Satelliten-Ag;linkedin.com/in/scherergeocledian/
+Geospatial/EO/Agrar;Dryad Networks GmbH;Eberswalde;DE;info@dryad.net;Carsten Brinkschulte (Co-Founder & CEO);dryad.net;Waldbrand-Sensorik;
+Geospatial/EO/Agrar;Kermap;Rennes FR;FR;hello@kermap.com;Antoine Lefebvre (CEO & Co-Founder);kermap.com/en/contact;Satelliten-Vegetation;fr.linkedin.com/in/antoine-lefebvre-kermap
+Geospatial/EO/Agrar;GeoVille GmbH;Innsbruck AT;AT;info@geoville.com;Dr. Andreas Walli (Founder & CEO);geoville.com/imprint;EO Landmonitoring;
+Geospatial/EO/Agrar;Brockmann Consult GmbH;Geesthacht;DE;info@brockmann-consult.de;Carsten Brockmann (Managing Director);brockmann-consult.de/imprint;EO Wasser;
+Geospatial/EO/Agrar;EFTAS GmbH;Münster;DE;info@eftas.com;Olaf Buescher (Geschaeftsfuehrer);eftas.de/impressum.php;Fernerkundung Agrar;
+Geospatial/EO/Agrar;Restor Foundation;Zürich CH;CH;contact@restor.eco;Lukas Dusek (Data & Technical Engagement Lead);about.restor.eco/contact;Biodiversität EO;
+Geospatial/EO/Agrar;Hydrosat;Luxembourg;DE;hr@hydrosat.com;Pieter Fossel (CEO & Co-Founder);hydrosat.com;Thermal-Satellit Agrar;lu.linkedin.com/in/pieter-fossel-6277ab35
+Industrielle CV;elunic AG;München;DE;info@elunic.com;Jonas Schaub (Vorstand / Co-CEO, Gruender);elunic.com/de/impressum;KI-Sichtprüfung;de.linkedin.com/in/jonasschaub
+Industrielle CV;Data Spree GmbH;Berlin;DE;info@data-spree.com;Eric Doerheit (Co-Founder & Geschaeftsfuehrer);data-spree.com/imprint;MV/DL-Plattform;
+Industrielle CV;sentin GmbH;Bochum;DE;contact@sentin.ai;Arkadius Gombos (CTO);sentin.ai/impressum;KI-NDT;de.linkedin.com/in/arkadius-gombos-ba7b05170
+Industrielle CV;maXerial AG;Vaduz LI;LI;info@maxerial.io;Thorsten Wiege (CTO & Co-Founder);maxerial.io/about/contact;Elektronik-Inspektion;
+Industrielle CV;Quintina GmbH;Frankenberg;DE;info@quintina.eu;Norman Thieme (Geschaeftsfuehrer);quintina.eu/impressum;Textilinspektion;
+Industrielle CV;QualiVision AG;Horgen CH;CH;info@qualivision.ch;Dr. Oliver Vietze (Verwaltungsratspraesident);qualivision.ch/location;Pharma/Food-Inspektion;
+Industrielle CV;Robotec Solutions AG;Seon CH;CH;info@robotec.swiss;Nick Koch (Founder & CEO);robotec.swiss/de/impressum-datenschutz;Visuelle Inspektion;ch.linkedin.com/in/nick-koch-407a2291
+Industrielle CV;PSI Technics GmbH;Winningen;DE;info@psi-technics.com;Karl-Heinz Foerderer (Geschaeftsfuehrender Gesellschafter / CEO);psi-technics.com/impressum;CV Fertigung/Pharma;
+Industrielle CV;EEP-Robotics GmbH;Zeiselmauer AT;AT;office@eep-robotics.com;Horst Hoermann (Geschaeftsfuehrer);eep-robotics.com/impressum;Bin-Picking;
+Industrielle CV;Robofunktion Vision GmbH;Wolfsburg;DE;kontakt@robofunktion-vision.de;;robovision.de/kontakt;Bin-Picking Automotive;
+Industrielle CV;senswork GmbH;Burghausen;DE;info@senswork.com;Rainer Obergrussberger (CEO);senswork.com/kontakt;MV+DL Inspektion;
+Industrielle CV;The MoonVision GmbH;Wien AT;AT;office@moonvision.io;Alexander Hirner (Co-Founder & CTO);moonvision.io/en/imprint;KI-Sichtprüfung;
+Industrielle CV;Optonic GmbH;Freiburg;DE;info@optonic.com;Rainer Voigt (CEO);optonic.com/impressum;3D-MV+DL;
+Industrielle CV;NeuroCheck GmbH;Remseck;DE;info@neurocheck.com;Christian Demant (Geschaeftsfuehrer);neurocheck.com/imprint_engl;MV-Software+DL;
+Industrielle CV;IMAGO Technologies GmbH;Friedberg;DE;info@imago-technologies.com;Christoph Siemon (Geschaeftsfuehrer);imago-technologies.com/de/impressum;Embedded Vision;
+EU-weit;Kepler Vision Technologies;Amsterdam NL;NL;info@keplervision.eu;Harro Stokman (CEO);keplervision.eu/contact;Care-AI CV;
+EU-weit;Aiir Innovations;Amsterdam NL;NL;hello@aiir.nl;Miriam Huijser (CTO);aiir.nl;Aviation MRO Vision;
+EU-weit;Avular;Eindhoven NL;NL;info@avular.com;Albert Maas (CEO);avular.com/contact;Autonome Robotik;
+EU-weit;Furhat Robotics;Stockholm SE;SE;hello@furhatrobotics.com;Gabriel Skantze (Co-Founder & Chief Scientist);furhatrobotics.com/contact;Soziale Roboter;linkedin.com/in/gabriel-skantze
+EU-weit;Cerebriu;Kopenhagen DK;DK;info@cerebriu.com;Akshay Pai (Co-Founder & CTO);cerebriu.com/privacy-policy;Medical Imaging MRT;dk.linkedin.com/in/akshaypai
+EU-weit;Distran;Zürich CH;CH;sales@distran.ch;Florian Perrodin (Co-Founder & CEO);distran.swiss/en/contact;Akustik-Imaging;linkedin.com/in/florian-perrodin
+EU-weit;Flyability;Lausanne CH;CH;info@flyability.com;Adrien Briod (Co-Founder & CTO);flyability.com/contact;Inspektionsdrohnen;ch.linkedin.com/in/abriod
+EU-weit;Therapixel;Paris FR;FR;contact@therapixel.com;Pierre Fillard (Co-Founder & CSO/CTO);therapixel.com/contact;Mammographie-AI;fr.linkedin.com/in/pfillard
+EU-weit;Scortex;Paris FR;FR;contact@scortex.io;Serge Zloto (Co-Founder & CTO);scortex.io/contact;Industrielle QC;fr.linkedin.com/in/sergezloto
+EU-weit;Tractable;London UK;UK;information@tractable.ai;Razvan Ranca (Co-Founder & CTO);tractable.ai/en/contact;Insurance Vision-AI;uk.linkedin.com/in/razvan-ranca-ab81b727
+EU-weit;Vivacity Labs;London UK;UK;contact@vivacitylabs.com;Yang Lu (Co-Founder & CTO);vivacitylabs.com/contact;Verkehrssensorik CV;
+EU-weit;Speechmatics;Cambridge UK;UK;media@speechmatics.com;Will Williams (VP Machine Learning / CTO);speechmatics.com/contact;Speech-to-Text;
+EU-weit;Brainomix;Oxford UK;UK;info@brainomix.com;Eric Greveson (CTO);brainomix.com/contact;Medical Imaging;uk.linkedin.com/in/ericgreveson
+EU-weit;pixolus GmbH;Köln;DE;info@pixolus.de;Mark Asbach (CEO/CTO & Co-Founder);pixolus.de/impressum;Mobile OCR/CV;linkedin.com/in/markasbach/
+EU-weit;Kinexon GmbH;München;DE;info@kinexon.com;Dr. Alexander Huettenbrink (Co-Founder & Co-CEO);kinexon.com/imprint;RTLS/Sport-Tracking;
+Autonomous Driving;driveblocks GmbH;Garching;DE;contact@driveblocks.ai;Dr. Alexander Wischnewski;driveblocks.ai/imprint;Off-Highway L4;
+Autonomous Driving;Embotech AG;Zürich CH/München;CH;info@embotech.com;Dr. Alexander Domahidi (CTO & Founder);embotech.com/contact;Autonome Yard-Traktoren;
+Autonomous Driving;EYYES GmbH;Gedersdorf AT/Aachen;AT;office@eyyes.com;Johannes Traxler;eyyes.com/en/imprint;KI-Perzeption Nutzfahrzeug/Bahn;
+Autonomous Driving;FUTURAIL GmbH;München;DE;info@futurail.com;Dr. Patrick Dendorfer (Co-Founder & CTO);futurail.com;Autonomer Schienenverkehr;
+Autonomous Driving;LOXO AG;Bern CH;CH;relations@loxo.ch;Claudio Panizza (CTO);loxo.ch;L4 Lieferfahrzeuge;
+Autonomous Driving;Roboauto;Brno CZ;CZ;info@roboauto.tech;Jakub Juza (CEO);roboauto.tech;Autonomie/Sensing SW;
+Autonomous Driving;Terranet/BlincVision;Lund SE;SE;info@blincvision.com;Markus Johansson;terranet.se/contact;Vision-Perzeption ADAS;
+Autonomous Driving;Scantinel Photonics GmbH;Ulm;DE;info@scantinel.com;;scantinel.com/imprint;FMCW-LiDAR;
+Autonomous Driving;ANavS GmbH;München;DE;info@anavs.de;Prof. Patrick Henkel (CEO);anavs.com;GNSS/INS-Sensorfusion;
+Autonomous Driving;Einride;Berlin;DE;de-info@einride.tech;Henrik Green (CTO);einride.tech/impressum;Autonome E-Trucks;
+Autonomous Driving;AVL List GmbH;Graz AT;AT;info@avl.com;Mihai Nica (Global Head of ADAS/AD & Connectivity);avl.com/en/imprint;ADAS/AD Engineering;
+Autonomous Driving;FEV Group GmbH;Aachen;DE;imprint@fev.com;Thomas Huelshorst (GVP Intelligent Mobility);fev.com/en/imprint;ADAS/AD Engineering;
+Autonomous Driving;Oxa;Oxford UK;UK;hello@oxa.tech;Paul Newman (Founder & CTO);oxa.tech/contact;AV-Softwarestack;
+Autonomous Driving;NavVis GmbH;München;DE;info@navvis.com;Dr. Georg Schroth (CTO & Co-Founder);navvis.com/imprint;Reality Capture/SLAM;theorg.com/org/navvis-com/org-chart/georg-schroth
+Radiologie/Pathologie;b-rayZ AG;Zürich CH;CH;contact@b-rayz.ch;PD Dr. Alexander Ciritsis (CTO & Co-Founder);b-rayz.com/de/kontakt;Mammographie-KI;
+Radiologie/Pathologie;FUSE-AI GmbH;Hamburg;DE;info@fuse-ai.de;Matthias Steffen;fuse-ai.de/impressum;Prostata-MRT-KI;
+Radiologie/Pathologie;HS Analysis GmbH;Karlsruhe;DE;info@hs-analysis.com;Sergey Biniaminov;hs-analysis.com/impressum;Digitale Pathologie;
+Radiologie/Pathologie;AIRAmed GmbH;Tübingen;DE;info@airamed.de;Dr. Tobias Lindig;arzt.airamed.de/de/impressum;Neuroradiologie-KI;
+Radiologie/Pathologie;IB Lab GmbH (ImageBiopsy);Wien AT;AT;info@imagebiopsy.com;Zsolt Bertalan (CTO);imagebiopsy.com/legals/legal-notice;MSK/Röntgen-KI;linkedin.com/in/zsolt-bertalan-0560a0a7/
+Radiologie/Pathologie;PIUR imaging GmbH;Wien AT;AT;info@piurimaging.com;GF Bender/Bauer;piurimaging.com/imprint;3D-Ultraschall-KI;
+Radiologie/Pathologie;deepeye Medical GmbH;München;DE;office@deepeye-medical.com;Ratko Petrovic (CTO & Co-Founder);deepeye-medical.com/imprint;Ophthalmologie OCT-KI;
+Radiologie/Pathologie;Mint Medical GmbH;Heidelberg;DE;info@mint-medical.de;Matthias Baumhauer (Managing Director / CEO);mint-medical.com/the-company/contact;Radiologie Reading/Annotation;
+Radiologie/Pathologie;MetaSystems GmbH;Altlußheim;DE;info@metasystems.de;Harshawardhan Banda (CEO & President);metasystems-international.com/en/contact;Zytogenetik-Bildanalyse;linkedin.com/in/harshabanda/
+Radiologie/Pathologie;Dermanostic GmbH;Solingen;DE;info@dermanostic.com;Dr. Ole Martin;dermanostic.com/impressum;Teledermatologie-KI;
+Radiologie/Pathologie;ThinkSono GmbH;Potsdam;DE;hello@thinksono.com;Sven Mischkewitz (Co-Founder & CTO);thinksono.com;Thrombose-Ultraschall-KI;
+Radiologie/Pathologie;Spear UG (ex-iThera);München;DE;info@spear-ug.com;Prof. Vasilis Ntziachristos (Founder & Geschaeftsfuehrer);spear-scientific.com/imprint;Optoakustische Bildgebung;
+Digital Health;Cardisio GmbH;Frankfurt;DE;info@cardis.io;Meik Baumeister;cardis.io/en/legal-notice;Kardiologie EKG-KI;
+Digital Health;Preventicus GmbH;Jena;DE;info@preventicus.com;Dr. Thomas Huebner (Founder & CEO);preventicus.com/impressum;Wearables/Biosignal;linkedin.com/in/thomas-huebner-753a8a139/
+Digital Health;cosinuss GmbH;München;DE;info@cosinuss.com;Dr. Johannes Kreuzer (Founder & Managing Director);cosinuss.com/en/imprint;Wearables/Biosignal;linkedin.com/in/johannes-kreuzer-4a217b5b
+Digital Health;custo med GmbH;Ottobrunn;DE;info@customed.de;;customed.de/impressum;Kardiologie Holter-KI;
+Digital Health;corvolution GmbH;Ettlingen;DE;info@corvolution.com;Dr. Silvester Fuhrhop (Founder & CEO);mesana.com/impressum;Wearables/Biosignal;linkedin.com/in/silvester-fuhrhop/
+Digital Health;Aktiia SA (Hilo);Neuchâtel CH;CH;support@aktiia.com;Josep Sola (Co-Founder & CTO);hilo.com/impressum;Wearables/Biosignal;linkedin.com/in/josepsola/
+Digital Health;SmartCardia SA;Lausanne CH;CH;contact@smartcardia.com;Dr. Francisco Rincon (Co-Founder & CTO);smartcardia.com/contact;Kardiologie EKG-Patch;linkedin.com/in/francisco-rincon-8821862a
+Digital Health;Averbis GmbH;Freiburg;DE;info@averbis.com;GF Daumke/Markó;averbis.com/de/kontakt;Klinisches NLP;
+Digital Health;Nyra Health GmbH;Wien AT;AT;info@nyra.health;Mario Zusag (Co-Founder & CTO);nyra.health/impressum;Reha Sprach-KI;linkedin.com/in/mario-zusag-22399b10a/
+Digital Health;Lindera GmbH;Berlin;DE;hello@lindera.de;Diana Heinrichs;lindera.de/impressum;Reha Bewegungsanalyse;
+Digital Health;apoQlar GmbH;Hamburg;DE;contact@apoQlar.com;Sirko Pelzl;apoqlar.com/imprint.html;Medical Imaging XR;
