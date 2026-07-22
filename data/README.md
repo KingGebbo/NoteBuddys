@@ -24,3 +24,18 @@ Pro Unternehmen wurde die Website recherchiert und die CSV um zwei Auswertungssp
 
 ## Hinweis
 Die Einschätzungen basieren auf öffentlich zugänglichen Website-Informationen und Web-Recherche zum Analysezeitpunkt und sind als Priorisierungshilfe für die Ansprache (Lead-Qualifizierung) gedacht, nicht als abschließende Bewertung. Bei einzelnen nicht erreichbaren Websites wurde per Web-Suche ergänzt.
+
+
+## Update: Kontaktdaten für Ja- & Vielleicht-Firmen (461)
+
+Für die 461 als **Ja** oder **Vielleicht** eingestuften Firmen wurde zusätzlich das Impressum (sowie Kontakt/Team/Über-uns) recherchiert. Neue Spalten:
+- **Geschäftsführung** – Name(n) laut Impressum
+- **Gefundene E-Mails** – alle auf der Website belegten Adressen
+- **GF-Mail (belegt/rekonstruiert)** – persönliche Mail des GF, sofern belegt; sonst aus erkanntem Muster rekonstruiert (mit Kennzeichnung „(rekonstruiert)")
+- **Impressum-Quelle/Hinweis** – Herkunft/Anmerkung
+
+Zusätzliche Datei: `kiverband_leads_ja_vielleicht_de.csv` – kompakte Lead-Liste nur mit diesen 461 Firmen.
+
+**Abdeckung:** Geschäftsführung 393/461 · mind. 1 E-Mail 385/461 · persönliche GF-Mail 30/461.
+
+**Keine Halluzination:** Nur E-Mails, die wörtlich auf der Website standen, wurden übernommen (verschleierte wie „info(at)…" dekodiert). Fehlt eine persönliche GF-Mail, wurde sie nur dann rekonstruiert, wenn ein klares Muster aus einer echten Mitarbeiter-Adresse belegt war – entsprechend gekennzeichnet. Ansonsten bleibt das Feld leer.
