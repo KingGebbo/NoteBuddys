@@ -39,3 +39,19 @@ Zusätzliche Datei: `kiverband_leads_ja_vielleicht_de.csv` – kompakte Lead-Lis
 **Abdeckung:** Geschäftsführung 393/461 · mind. 1 E-Mail 385/461 · persönliche GF-Mail 30/461.
 
 **Keine Halluzination:** Nur E-Mails, die wörtlich auf der Website standen, wurden übernommen (verschleierte wie „info(at)…" dekodiert). Fehlt eine persönliche GF-Mail, wurde sie nur dann rekonstruiert, wenn ein klares Muster aus einer echten Mitarbeiter-Adresse belegt war – entsprechend gekennzeichnet. Ansonsten bleibt das Feld leer.
+
+## Update: Personalisierte PathWize-Ansprache (461 Mails)
+
+Auf Basis der Ja/Vielleicht-Firmen wurden versandfertige, personalisierte Kalt-Mails erzeugt: `pathwize_outreach_de.csv` (Semikolon, dt. Excel) bzw. `pathwize_outreach.csv` (Komma).
+
+Spalten u.a.: Empfänger-Mail, Mail-Typ, Betreff, Anrede, Mailtext (Plain), Mailtext (HTML).
+
+**Logik**
+- **Betreff/Empfänger:** Liegt eine persönliche GF-Mail vor (belegt oder rekonstruiert) → *direkter* Betreff und Versand an den GF. Sonst funktionale Mailbox (info@/kontakt@ …) → Betreff mit *„z.Hd. [GF-Name]"*.
+- **Anrede:** „Hallo Herr/Frau [Nachname]" – Geschlecht aus dem Vornamen. Bei mehrdeutigem/unbekanntem Vornamen neutrale Anrede „Hallo [Vorname Nachname]" (bewusst kein Fehlgendern).
+- **Link:** Das Wort **PathWize** ist in der HTML-Variante auf https://www.gopathwize.com verlinkt; im Text steht kein roher Link.
+
+**Verteilung Mail-Typ:** direkt belegt 22 · direkt rekonstruiert 8 · funktional 319 · Mitarbeiter-Mail 36 · keine Mail 76.
+**Anrede:** Herr 338 · Frau 33 · neutral 90.
+
+Signatur ist als Platzhalter `[Ihr Name]` hinterlegt und vor Versand zu ersetzen.
