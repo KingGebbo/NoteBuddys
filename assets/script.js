@@ -40,6 +40,12 @@
       b.classList.toggle("active", on);
       b.setAttribute("aria-selected", on ? "true" : "false");
     });
+    // aktiven Reiter in der Hauptnavigation markieren
+    $$(".nav-links a[data-nav]").forEach(function (a) {
+      var on = a.dataset.nav === name;
+      a.classList.toggle("is-current", on);
+      if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
     mnav.classList.remove("open");
     if (!opts.keepScroll) window.scrollTo({ top: 0, behavior: "smooth" });
     // re-trigger reveals for newly shown view
@@ -622,6 +628,163 @@
   }
 
   render();
+
+  /* =====================================================
+     AUSWERTUNGEN: Benchmarks, Verteilung, Funnel, Slider
+  ===================================================== */
+
+  /* Benchmark data (Quelle: Kampagnen-Report).
+     "Branchendurchschnitt" ist eine neutrale Referenz, keine Serie:
+     eigener Musterfüllung + immer direkt beschriftet. */
+  var BENCH = [
+    { metric: "Social-Media-Reposts", ref: 0.2,  nb: 0.8, you: 3.1 },
+    { metric: "Landingpage-Aufrufe",  ref: 0.3,  nb: 0.9, you: 2.1 },
+    { metric: "QR-Code-Scans",        ref: 0.05, nb: 0.6, you: 2.5 }
+  ];
+
+  var DIST = {
+    regionen: [
+      { n: "Ort 4", v: 34.5 }, { n: "Ort 2", v: 32.7 },
+      { n: "Ort 1", v: 21.8 }, { n: "Ort 3", v: 10.9 }
+    ],
+    fach: [
+      { n: "Energietechnik", v: 35.6 }, { n: "Elektrotechnik", v: 32.9 },
+      { n: "Energiesystemtechnik", v: 28.8 }, { n: "Sonstiges", v: 2.7 }
+    ]
+  };
+
+  function pct(v) { return String(v).replace(".", ",") + " %"; }
+
+  function renderBench() {
+    var host = $("#benchRows");
+    if (!host) return;
+    var max = 3.4; // gemeinsame Skala für alle Metriken (eine Achse)
+    BENCH.forEach(function (m) {
+      var box = document.createElement("div");
+      box.className = "bench-metric";
+      var rows = [
+        { cls: "ref", name: "Branchendurchschnitt", v: m.ref },
+        { cls: "nb",  name: "Note Buddy's-Ø",       v: m.nb },
+        { cls: "you", name: "Ihr Wert",             v: m.you }
+      ];
+      var html = "<h4>" + m.metric + "</h4>";
+      rows.forEach(function (r) {
+        html +=
+          '<div class="bench-bar-row">' +
+            '<span class="bbr-name">' + r.name + "</span>" +
+            '<span class="bbr-track">' +
+              '<i class="bbr-fill ' + r.cls + '" data-w="' + (r.v / max * 100) + '"></i>' +
+              '<span class="bbr-val">' + pct(r.v) + "</span>" +
+            "</span>" +
+          "</div>";
+      });
+      box.innerHTML = html;
+      host.appendChild(box);
+    });
+  }
+
+  function renderDist() {
+    $$("[data-dist]").forEach(function (host) {
+      var rows = DIST[host.dataset.dist] || [];
+      var max = rows.reduce(function (a, r) { return Math.max(a, r.v); }, 0);
+      rows.forEach(function (r) {
+        var d = document.createElement("div");
+        d.className = "dist-row";
+        d.innerHTML =
+          '<div class="dist-top"><span class="n">' + r.n + '</span><span class="v">' + pct(r.v) + "</span></div>" +
+          '<div class="dist-track"><i data-w="' + (r.v / max * 100) + '"></i></div>';
+        host.appendChild(d);
+      });
+    });
+  }
+
+  renderBench();
+  renderDist();
+
+  /* Balken füllen sich, sobald sie sichtbar werden */
+  var fillObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      $$("[data-w]", en.target).forEach(function (el) { el.style.width = el.dataset.w + "%"; });
+      $$("[data-fill]", en.target).forEach(function (el) { el.style.width = el.dataset.fill + "%"; });
+      fillObs.unobserve(en.target);
+    });
+  }, { threshold: 0.2 });
+  $$(".bench-metric, .dist-card, .funnel-card-aus").forEach(function (el) { fillObs.observe(el); });
+  $$(".aus-hero-card, .kpi-grid").forEach(function (el) { countObs.observe(el); });
+
+  /* ---------- Repost-Slider ---------- */
+  (function initSlider() {
+    var slider = $("#repostSlider");
+    if (!slider) return;
+    var track = $("#slTrack"), dots = $("#slDots");
+    var items = $$(".sl-item", track);
+    var prev = $(".sl-nav.prev", slider), next = $(".sl-nav.next", slider);
+    var idx = 0;
+
+    // Ab 761px sind alle Reposts sichtbar, der aktive wird hervorgehoben.
+    // Darunter klassisches Durchschieben, ein Repost pro Ansicht.
+    function isFocus() { return window.innerWidth > 760; }
+    function maxIdx() { return items.length - 1; }
+
+    function buildDots() {
+      dots.innerHTML = "";
+      for (var i = 0; i <= maxIdx(); i++) {
+        (function (i) {
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "sl-dot" + (i === idx ? " on" : "");
+          b.setAttribute("aria-label", "Repost " + (i + 1));
+          b.addEventListener("click", function () { idx = i; update(); });
+          dots.appendChild(b);
+        })(i);
+      }
+    }
+    function update() {
+      idx = Math.min(Math.max(idx, 0), maxIdx());
+      var focus = isFocus();
+      slider.classList.toggle("focus", focus);
+      if (focus) {
+        track.style.transform = "";
+        track.style.width = "";
+      } else {
+        track.style.width = (items.length * 100) + "%";
+        track.style.transform = "translateX(-" + (idx * (100 / items.length)) + "%)";
+      }
+      items.forEach(function (it, i) { it.classList.toggle("is-active", i === idx); });
+      $$(".sl-dot", dots).forEach(function (d, i) { d.classList.toggle("on", i === idx); });
+      prev.disabled = idx === 0;
+      next.disabled = idx === maxIdx();
+    }
+    prev.addEventListener("click", function () { idx--; update(); });
+    next.addEventListener("click", function () { idx++; update(); });
+    slider.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { idx--; update(); }
+      if (e.key === "ArrowRight") { idx++; update(); }
+    });
+
+    // Touch-Swipe
+    var x0 = null;
+    track.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { idx += dx < 0 ? 1 : -1; update(); }
+      x0 = null;
+    }, { passive: true });
+
+    var lastFocus = isFocus();
+    window.addEventListener("resize", function () {
+      if (isFocus() !== lastFocus) { lastFocus = isFocus(); update(); }
+    });
+
+    // Klick auf einen inaktiven Repost holt ihn nach vorn
+    items.forEach(function (it, i) {
+      it.addEventListener("click", function () { if (isFocus()) { idx = i; update(); } });
+    });
+
+    buildDots();
+    update();
+  })();
 
   /* kick off reveals */
   runReveal();

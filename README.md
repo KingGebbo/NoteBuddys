@@ -21,6 +21,30 @@ eigener Webspace) ausliefern.
 - **Anfrage-Funnel** (mehrstufiges Formular, verzweigt nach Schüler / Studenten)
 - **Tab „Kontakt"** mit Gabriel Hilbrig (Foto im Kreis, E-Mail, Telefon)
 
+### Reiter „Auswertungen"
+
+Zeigt anhand einer echten Kundenkampagne (EnBW Energie Baden-Württemberg AG,
+Wintersemester 25/26), was Kunden nach jeder Kampagne als Report bekommen:
+
+- KPI-Kacheln mit animierten Zählern
+- Detailtabelle wie im Original-Report
+- Benchmark-Grafik: Ihr Wert gegen Note Buddy's-Durchschnitt, dazu der
+  Branchendurchschnitt als neutrale Referenz
+- Aufteilung des Versands nach Regionen und Fachrichtungen
+- Interaktions-Trichter auf einer gemeinsamen Skala
+- Slider mit echten Social-Media-Reposts plus Upsell-Button für
+  Social-Media-Platzierungen
+- Fazit-Karten (Kampagne Status, Performance, Empfehlung) und Kontaktabschluss
+
+**Reposts austauschen:** Die Bilder liegen unter `assets/reposts/repost-1.jpg`
+bis `repost-3.jpg` (Hochformat 9:16). Einfach durch neue Dateien mit denselben
+Namen ersetzen. Sollen mehr oder weniger Bilder gezeigt werden, die `figure.sl-item`
+Blöcke in `index.html` ergänzen bzw. entfernen, der Slider zählt automatisch mit.
+
+**Zahlen ändern:** Benchmarks und Verteilungen stehen als `BENCH` und `DIST`
+oben im Auswertungs-Abschnitt von `assets/script.js`, die Tabellen- und
+KPI-Werte direkt im Markup der View `#view-auswertungen`.
+
 ## Dateien
 
 ```
