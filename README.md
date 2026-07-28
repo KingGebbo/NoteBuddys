@@ -23,64 +23,40 @@ eigener Webspace) ausliefern.
 
 ### Reiter „Auswertungen"
 
-Zeigt anhand einer echten Kundenkampagne (EnBW Energie Baden-Württemberg AG,
-Wintersemester 25/26), was Kunden nach jeder Kampagne als Report bekommen:
+Klickt ein Kunde auf „Auswertungen", kommt er auf eine Auswahlseite mit allen
+Firmen. Nach Eingabe des Passworts öffnet sich die persönliche Auswertung im
+gleichen Aufbau wie die EnBW-Beispielauswertung:
 
-- KPI-Kacheln mit animierten Zählern
-- Detailtabelle wie im Original-Report
-- Benchmark-Grafik: Ihr Wert gegen Note Buddy's-Durchschnitt, dazu der
-  Branchendurchschnitt als neutrale Referenz
-- Aufteilung des Versands nach Regionen und Fachrichtungen
-- Interaktions-Trichter auf einer gemeinsamen Skala
-- Slider mit echten Social-Media-Reposts plus Upsell-Button für
-  Social-Media-Platzierungen
-- Fazit-Karten (Kampagne Status, Performance, Empfehlung) und Kontaktabschluss
+- KPI-Kacheln, Detailtabelle, Benchmark-Grafik, Trichter
+- Infobox „Infos zum Versand", wenn für den Kunden hinterlegt
+- Repost-Slider bzw. Platzhalter, solange keine Bilder vorliegen
+- Upsell-Button für Social-Media-Platzierungen, Fazit und Kontaktabschluss
 
-**Reposts austauschen:** Die Bilder liegen unter `assets/reposts/repost-1.jpg`
-bis `repost-3.jpg` (Hochformat 9:16). Einfach durch neue Dateien mit denselben
-Namen ersetzen. Sollen mehr oder weniger Bilder gezeigt werden, die `figure.sl-item`
-Blöcke in `index.html` ergänzen bzw. entfernen, der Slider zählt automatisch mit.
+Über den Button „Beispiel ansehen" ist die EnBW-Auswertung ohne Passwort
+erreichbar, als Referenz für Interessenten.
 
-**Zahlen ändern:** Benchmarks und Verteilungen stehen als `BENCH` und `DIST`
-oben im Auswertungs-Abschnitt von `assets/script.js`, die Tabellen- und
-KPI-Werte direkt im Markup der View `#view-auswertungen`.
+#### Passwörter und Verschlüsselung
 
-## Dateien
+Das Passwort ist der Firmenname, Gross- und Kleinschreibung sowie zusätzliche
+Leerzeichen spielen keine Rolle.
 
-```
-index.html          Seiteninhalt (Marketing- und Kontakt-Ansicht)
-assets/styles.css   Design (Logo-Türkis + Orange als Kontrast)
-assets/script.js    Interaktionen, Targeting-Explorer, Funnel, Mailversand
-assets/gabriel.png  Foto von Gabriel Hilbrig  ← siehe unten
-```
+Die Kundendaten liegen **verschlüsselt** in `assets/reports.json`
+(AES-256-GCM, Schlüssel via PBKDF2 aus dem Passwort). Im öffentlichen
+Repository stehen damit nur die Firmennamen, keine Zahlen. Entschlüsselt wird
+erst im Browser, nachdem das richtige Passwort eingegeben wurde.
 
-## Foto von Gabriel hinzufügen
+> Hinweis: Da alle Firmennamen auf der Auswahlseite stehen, sind die Passwörter
+> für Besucher der Seite erkennbar. Für echte Vertraulichkeit sind individuelle
+> Passwörter oder Vercels Deployment Protection nötig. Siehe `INFOS-BENOETIGT.md`.
 
-Auf der Kontakt-Seite wird `assets/gabriel.png` im Kreis angezeigt. Solange die
-Datei fehlt, erscheinen automatisch die Initialen „GH". Einfach das Portraitfoto
-als `assets/gabriel.png` ablegen (quadratisch sieht am besten aus).
+#### Daten pflegen
 
-## Mailversand des Formulars
+1. `tools/campaigns.source.json` bearbeiten (Klartext, liegt bewusst **nicht** im Git,
+   siehe `.gitignore`)
+2. `node tools/build-reports.js` ausführen
+3. Die neu erzeugte `assets/reports.json` committen
 
-Das Anfrage-Formular sendet die Angaben automatisch per E-Mail an
-**gabriel.hilbrig@notebuddys.de**. Der Versand läuft über
-[FormSubmit](https://formsubmit.co) — kein eigener Server nötig.
+**Repost-Bilder** eines Kunden unter `assets/reposts/<slug>/` ablegen und im
+Feld `reposts_bilder` der jeweiligen Kampagne eintragen.
 
-**Einmalige Aktivierung:** Beim allerersten abgeschickten Formular sendet
-FormSubmit eine Bestätigungs-E-Mail an gabriel.hilbrig@notebuddys.de. Den Link
-darin **einmal anklicken** — danach werden alle weiteren Anfragen automatisch
-zugestellt.
-
-Fällt der automatische Versand aus (z. B. kein Netz), zeigt das Formular einen
-Button „Anfrage per E-Mail senden", der das E-Mail-Programm mit allen Angaben
-vorausgefüllt öffnet. So geht keine Anfrage verloren.
-
-Die Empfängeradresse lässt sich oben in `assets/script.js` anpassen
-(`RECIPIENT`). Alternativ kann statt FormSubmit ein anderer Dienst (z. B.
-Web3Forms) oder ein eigener Endpunkt über `FORM_ENDPOINT` eingebunden werden.
-
-## Design
-
-Farben aus dem Logo: Türkis `#4fb8c4` als Markenfarbe, `#ff7a29` als
-Orange-Kontrast. Ruhiges, hochwertiges Layout mit viel Weißraum und dezenten
-Bewegungen (Reveal beim Scrollen, animierte Zähler, Feder-Übergänge).
+Was aktuell noch an Daten und Bildern fehlt, steht in **`INFOS-BENOETIGT.md`**.

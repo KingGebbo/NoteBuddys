@@ -303,338 +303,61 @@
 </main>
 
 <!-- ============================================================
-     VIEW: AUSWERTUNGEN
+     VIEW: AUSWERTUNGEN  (Auswahl -> Passwort -> Report)
      ============================================================ -->
 <div class="view" id="view-auswertungen">
 
-  <!-- ============ HERO ============ -->
-  <section class="aus-hero">
+  <!-- ---------- Schritt 1: Firma auswaehlen ---------- -->
+  <section class="aus-select" id="ausSelect">
     <div class="wrap">
-      <div class="aus-hero-grid">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Kunden-Login</span>
+        <h2>Ihre Kampagnen-Auswertung.</h2>
+        <p>Wählen Sie Ihr Unternehmen aus und geben Sie anschließend Ihr Passwort ein. Sie sehen dann alle Kennzahlen Ihrer Kampagne.</p>
+      </div>
+
+      <div class="firm-search reveal d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" id="firmSearch" class="input" placeholder="Unternehmen suchen …" autocomplete="off" aria-label="Unternehmen suchen" />
+      </div>
+
+      <div class="firm-grid reveal d1" id="firmGrid"><!-- per JS --></div>
+      <p class="firm-empty" id="firmEmpty" hidden>Kein Unternehmen gefunden. Bitte prüfen Sie die Schreibweise oder melden Sie sich bei uns.</p>
+
+      <div class="demo-hint reveal d2">
         <div>
-          <span class="eyebrow reveal">Kampagnen-Report</span>
-          <h1 class="reveal d1">Sie sehen genau, <span class="grad">was Ihre Kampagne bewirkt</span>.</h1>
-          <p class="aus-lead reveal d2">Nach jeder Kampagne erhalten Sie einen ausführlichen Report: Reichweite, Interaktionen, Benchmarks im Marktvergleich, echte Social-Media-Reposts und eine klare Empfehlung für den nächsten Schritt.</p>
-          <div class="hero-cta reveal d3">
-            <a href="#report" class="btn btn-primary btn-lg">Beispiel-Auswertung ansehen
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
-            </a>
-            <a href="#anfrage" class="btn btn-ghost btn-lg" data-scroll-anfrage>Kampagne anfragen</a>
-          </div>
+          <b>Sie sind noch kein Kunde?</b>
+          <span>Sehen Sie sich eine vollständige Beispiel-Auswertung an, ohne Passwort.</span>
         </div>
-        <aside class="aus-hero-card reveal d2">
-          <div class="ahc-top">
-            <span class="ahc-badge">Echte Kundenkampagne</span>
-            <span class="ahc-status">final</span>
-          </div>
-          <h3>EnBW Energie<br>Baden-Württemberg AG</h3>
-          <p class="ahc-sub">Collegeblock-Kampagne · Wintersemester 25/26</p>
-          <div class="ahc-stats">
-            <div><b data-count="3000">0</b><span>Platzierungen</span></div>
-            <div><b data-count="30000">0</b><span>Impressionen</span></div>
-            <div><b data-count="231">0</b><span>Interaktionen</span></div>
-          </div>
-        </aside>
+        <button type="button" class="btn btn-ghost" id="demoBtn">Beispiel ansehen</button>
       </div>
     </div>
   </section>
 
-  <!-- ============ KPI ============ -->
-  <section id="report" class="aus-kpi-sec">
+  <!-- ---------- Schritt 2: Passwort ---------- -->
+  <section class="aus-gate" id="ausGate" hidden>
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Performance Wintersemester 25/26</span>
-        <h2>Die Kennzahlen auf einen Blick.</h2>
-        <p>Alle Werte stammen aus dem Original-Report der Kampagne von EnBW Energie Baden-Württemberg AG.</p>
-      </div>
-
-      <div class="kpi-grid">
-        <article class="kpi reveal">
-          <span class="kpi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h13v18H6a2 2 0 01-2-2z"/><path d="M9 3v18"/></svg></span>
-          <b data-count="3000">0</b>
-          <span class="kpi-lbl">Collegeblöcke gebucht</span>
-        </article>
-        <article class="kpi reveal d1">
-          <span class="kpi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></span>
-          <b data-count="3000">0</b>
-          <span class="kpi-lbl">verschickt</span>
-        </article>
-        <article class="kpi reveal d2">
-          <span class="kpi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
-          <b data-count="30000">0</b>
-          <span class="kpi-lbl">Impressionen</span>
-        </article>
-        <article class="kpi reveal d3">
-          <span class="kpi-ic accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></span>
-          <b data-count="75">0</b>
-          <span class="kpi-lbl">QR-Code-Scans</span>
-        </article>
-        <article class="kpi reveal">
-          <span class="kpi-ic accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg></span>
-          <b data-count="93">0</b>
-          <span class="kpi-lbl">Social-Media-Reposts</span>
-        </article>
-        <article class="kpi reveal d1">
-          <span class="kpi-ic accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.5.5l3-3a5 5 0 00-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 00-7.5-.5l-3 3a5 5 0 007 7L12 19"/></svg></span>
-          <b data-count="27843">0</b>
-          <span class="kpi-lbl">Landingpage-Aufrufe</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TABELLE ============ -->
-  <section class="aus-table-sec">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Detailtabelle</span>
-        <h2>Alle Werte im Detail.</h2>
-      </div>
-
-      <div class="report-card reveal d1">
-        <div class="report-card-head">
-          <h3>Note Buddy's · Collegeblöcke</h3>
-          <span class="rc-pill">Wintersemester 25/26</span>
-        </div>
-        <div class="table-scroll">
-          <table class="report-table">
-            <caption class="sr-only">Kennzahlen der Collegeblock-Kampagne</caption>
-            <thead>
-              <tr><th scope="col">Anz. gebucht</th><th scope="col">Anz. verschickt</th><th scope="col">Impressionen</th><th scope="col">QR-Code-Scans</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><b>3.000</b> <span class="unit">Platzierungen</span></td><td><b>3.000</b></td><td><b>30.000</b></td><td><b>75</b></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-split">
-          <div class="table-scroll">
-            <table class="report-table">
-              <caption>Social Media Reposts</caption>
-              <thead><tr><th scope="col">Anz. Reposts</th><th scope="col">Impressionen</th></tr></thead>
-              <tbody><tr><td><b>93</b></td><td><b>7.905</b></td></tr></tbody>
-            </table>
-          </div>
-          <div class="table-scroll">
-            <table class="report-table">
-              <caption>Landingpage</caption>
-              <thead><tr><th scope="col">Anz. Aufrufe</th><th scope="col">Anz. Klicks</th></tr></thead>
-              <tbody><tr><td><b>27.843</b></td><td><b>63</b></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-
-        <p class="report-note">Wussten Sie schon? Der Collegeblock ist das Lerntool Nummer 1 der jungen Zielgruppe. Pro Monat erhalten wir ca. 5.000 bis 6.000 neue Anmeldungen für unsere Blöcke.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BENCHMARKS ============ -->
-  <section class="aus-bench">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Benchmarks</span>
-        <h2>Deutlich über dem Marktniveau.</h2>
-        <p>Jede Kennzahl wird gegen den Branchendurchschnitt und unseren eigenen Durchschnitt gestellt. So sehen Sie sofort, wo Ihre Kampagne steht.</p>
-      </div>
-
-      <div class="bench-card reveal d1">
-        <div class="bench-legend">
-          <span class="lg"><i class="sw sw-ref"></i>Branchendurchschnitt <em>Referenz</em></span>
-          <span class="lg"><i class="sw sw-nb"></i>Note Buddy's-Durchschnitt</span>
-          <span class="lg"><i class="sw sw-you"></i>Ihr Wert</span>
-        </div>
-
-        <div class="bench-rows" id="benchRows"><!-- gerendert per JS --></div>
-
-        <p class="bench-foot">Werte in Prozent der 3.000 verschickten Collegeblöcke.</p>
-      </div>
-
-      <div class="factor-grid">
-        <article class="factor reveal">
-          <span class="f-num">15,5<em>×</em></span>
-          <span class="f-lbl">mehr Social-Media-Reposts als der Branchendurchschnitt</span>
-        </article>
-        <article class="factor reveal d1">
-          <span class="f-num">7<em>×</em></span>
-          <span class="f-lbl">mehr Landingpage-Aufrufe als der Branchendurchschnitt</span>
-        </article>
-        <article class="factor reveal d2">
-          <span class="f-num">50<em>×</em></span>
-          <span class="f-lbl">mehr QR-Code-Scans als der Branchendurchschnitt</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ VERTEILUNG + FUNNEL ============ -->
-  <section class="aus-dist">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Aufteilung Versand</span>
-        <h2>Wohin die Blöcke gegangen sind.</h2>
-        <p>Jede Kampagne wird nach Region und Fachrichtung ausgesteuert und im Report transparent aufgeschlüsselt.</p>
-      </div>
-
-      <div class="dist-grid">
-        <article class="dist-card reveal">
-          <h3>Aufteilung nach Regionen</h3>
-          <div class="dist-bars" data-dist="regionen"></div>
-        </article>
-        <article class="dist-card reveal d1">
-          <h3>Aufteilung nach Fachrichtungen</h3>
-          <div class="dist-bars" data-dist="fach"></div>
-        </article>
-      </div>
-
-      <article class="funnel-card-aus reveal d1">
-        <h3>Von der Platzierung zur Interaktion</h3>
-        <p class="fun-intro">Alle Werte auf einer Skala: Anteil an den 3.000 verschickten Collegeblöcken.</p>
-        <div class="fun-steps">
-          <div class="fun-step">
-            <div class="fun-row"><span class="fun-name">Collegeblöcke verschickt</span><span class="fun-val">3.000 <em>100 %</em></span></div>
-            <div class="fun-track"><i class="fun-bar" data-fill="100"></i></div>
-          </div>
-          <div class="fun-step">
-            <div class="fun-row"><span class="fun-name">Direkte Interaktionen</span><span class="fun-val">231 <em>7,7 %</em></span></div>
-            <div class="fun-track"><i class="fun-bar accent" data-fill="7.7"></i></div>
-          </div>
-          <div class="fun-sub">
-            <div class="fun-step">
-              <div class="fun-row"><span class="fun-name">Social-Media-Reposts</span><span class="fun-val">93 <em>3,1 %</em></span></div>
-              <div class="fun-track"><i class="fun-bar thin" data-fill="3.1"></i></div>
-            </div>
-            <div class="fun-step">
-              <div class="fun-row"><span class="fun-name">QR-Code-Scans</span><span class="fun-val">75 <em>2,5 %</em></span></div>
-              <div class="fun-track"><i class="fun-bar thin" data-fill="2.5"></i></div>
-            </div>
-            <div class="fun-step">
-              <div class="fun-row"><span class="fun-name">Landingpage-Klicks</span><span class="fun-val">63 <em>2,1 %</em></span></div>
-              <div class="fun-track"><i class="fun-bar thin" data-fill="2.1"></i></div>
-            </div>
-          </div>
-        </div>
-        <p class="fun-note">Dazu kommen <b>30.000 Impressionen</b>, also rund 10 Sichtkontakte je verschicktem Block. Impressionen werden separat ausgewiesen, weil sie eine andere Einheit als die Blöcke sind.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ============ REPOSTS SLIDER ============ -->
-  <section class="aus-reposts">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Social Media Reposts</span>
-        <h2>Ihre Kampagne, geteilt von der Zielgruppe.</h2>
-        <p>Studierende werden dazu aufgerufen, den Erhalt Ihrer Blöcke auf Social Media mit uns zu teilen, und haben daraufhin die Chance, spannende Gewinne zu gewinnen. Jeder Repost ist zusätzliche, organische Reichweite.</p>
-      </div>
-
-      <div class="slider reveal d1" id="repostSlider">
-        <button class="sl-nav prev" type="button" aria-label="Vorheriger Repost">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      <form class="gate-card" id="gateForm" autocomplete="off">
+        <button type="button" class="link-back" id="gateBack">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          Andere Firma wählen
         </button>
-
-        <div class="sl-viewport">
-          <div class="sl-track" id="slTrack">
-            <figure class="sl-item">
-              <img src="assets/reposts/repost-1.jpg" alt="Instagram-Story: Collegeblock der Kampagne gerade angekommen" loading="lazy" />
-              <figcaption>„Gerade angekommen" · Instagram Story</figcaption>
-            </figure>
-            <figure class="sl-item">
-              <img src="assets/reposts/repost-2.jpg" alt="Instagram-Story mit dem Collegeblock der Kampagne" loading="lazy" />
-              <figcaption>Repost aus der Zielgruppe · Instagram Story</figcaption>
-            </figure>
-            <figure class="sl-item">
-              <img src="assets/reposts/repost-3.jpg" alt="Instagram-Story mit dem Collegeblock und Markierung von notebuddys" loading="lazy" />
-              <figcaption>Markierung @notebuddys · Instagram Story</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <button class="sl-nav next" type="button" aria-label="Nächster Repost">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-      </div>
-
-      <div class="sl-dots" id="slDots" role="tablist" aria-label="Reposts"></div>
-
-      <div class="upsell reveal d1">
-        <div class="up-copy">
-          <span class="up-eyebrow">Noch mehr Sichtbarkeit</span>
-          <h3>Sie haben Interesse an Platzierungen auf Social Media?</h3>
-          <p>Wir bringen Ihre Marke zusätzlich in die Feeds und Stories unserer Community. Sprechen Sie uns an, wir erstellen Ihnen ein passendes Paket.</p>
-        </div>
-        <a href="#anfrage" class="btn btn-primary btn-lg" data-scroll-anfrage>Social-Media-Paket anfragen
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
+        <span class="gate-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+        </span>
+        <h3 id="gateName">Firma</h3>
+        <p class="gate-sub">Diese Auswertung ist geschützt. Bitte geben Sie Ihr Passwort ein.</p>
+        <label class="sr-only" for="gatePw">Passwort</label>
+        <input type="password" class="input" id="gatePw" placeholder="Passwort" autocomplete="current-password" />
+        <div class="err" id="gateErr"></div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="gateSubmit">Auswertung öffnen</button>
+        <p class="gate-help">Passwort vergessen? <a href="mailto:gabriel.hilbrig@notebuddys.de">Schreiben Sie uns</a>, wir helfen sofort weiter.</p>
+      </form>
     </div>
   </section>
 
-  <!-- ============ FAZIT ============ -->
-  <section class="aus-fazit">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Resümee</span>
-        <h2>Das Fazit zur Kampagne.</h2>
-        <p>Jeder Report schließt mit einer klaren Einordnung und einer konkreten Empfehlung für die nächste Kampagne.</p>
-      </div>
-
-      <div class="fazit-grid">
-        <article class="fazit-card reveal">
-          <span class="fz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <h3>Kampagne Status</h3>
-          <ul class="fz-list">
-            <li><span class="dot live"></span>Sommersemester 25 <em>aktiv</em></li>
-            <li><span class="dot done"></span>Wintersemester 25/26 <em>final</em></li>
-          </ul>
-        </article>
-        <article class="fazit-card reveal d1">
-          <span class="fz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></span>
-          <h3>Performance</h3>
-          <p>Nach Abschluss der Kampagne unterbreiten wir Ihnen Vorschläge zur Optimierung der Performance.</p>
-        </article>
-        <article class="fazit-card reveal d2 highlight">
-          <span class="fz-ic accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.2 6.4.6-4.9 4.3 1.5 6.4L12 16.2 6.4 19.5l1.5-6.4L3 8.8l6.4-.6z"/></svg></span>
-          <h3>Unsere Empfehlung</h3>
-          <p>Optimierungsvorschläge zu Performance und Kosten: Rahmenvertrag und Ergänzung um weitere Formate.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ KONTAKT CTA ============ -->
-  <section class="aus-contact">
-    <div class="wrap">
-      <div class="cta-inner reveal">
-        <h2>Buchen Sie ein Gespräch zur Besprechung der Auswertung.</h2>
-        <p>Sie haben Fragen zu einem Report oder möchten Ihre eigene Kampagne starten? Wir nehmen uns Zeit für Sie.</p>
-
-        <div class="contact-duo">
-          <a class="cd-card" href="mailto:gabriel.hilbrig@notebuddys.de">
-            <span class="cd-avatar"><img src="assets/gabriel.png" alt="Gabriel Hilbrig" onerror="this.style.display='none';this.parentElement.classList.add('fallback');" /></span>
-            <span class="cd-meta">
-              <b>Gabriel Hilbrig</b>
-              <span>Co-Founder</span>
-              <span class="cd-mail">gabriel.hilbrig@notebuddys.de</span>
-              <span class="cd-tel">+49 176 84894678</span>
-            </span>
-          </a>
-          <a class="cd-card" href="mailto:niclas.weisl@notebuddys.de">
-            <span class="cd-avatar initials">NW</span>
-            <span class="cd-meta">
-              <b>Niclas Weisl</b>
-              <span>Co-Founder</span>
-              <span class="cd-mail">niclas.weisl@notebuddys.de</span>
-              <span class="cd-tel">+49 151 27042752</span>
-            </span>
-          </a>
-        </div>
-
-        <a href="#anfrage" class="btn btn-primary btn-lg" data-scroll-anfrage>Kampagne anfragen</a>
-      </div>
-    </div>
-  </section>
+  <!-- ---------- Schritt 3: Report (wird per JS gerendert) ---------- -->
+  <div id="ausReport" hidden></div>
 </div>
 
 <!-- ============================================================

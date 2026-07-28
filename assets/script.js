@@ -630,101 +630,473 @@
   render();
 
   /* =====================================================
-     AUSWERTUNGEN: Benchmarks, Verteilung, Funnel, Slider
+     AUSWERTUNGEN
+     Schritt 1 Firma waehlen, Schritt 2 Passwort, Schritt 3 Report.
+     Die Kundendaten liegen in assets/reports.json verschluesselt
+     (AES-256-GCM, Schluessel via PBKDF2 aus dem Passwort). Erst mit
+     dem richtigen Passwort werden sie im Browser entschluesselt.
   ===================================================== */
 
-  /* Benchmark data (Quelle: Kampagnen-Report).
-     "Branchendurchschnitt" ist eine neutrale Referenz, keine Serie:
-     eigener Musterfüllung + immer direkt beschriftet. */
-  var BENCH = [
-    { metric: "Social-Media-Reposts", ref: 0.2,  nb: 0.8, you: 3.1 },
-    { metric: "Landingpage-Aufrufe",  ref: 0.3,  nb: 0.9, you: 2.1 },
-    { metric: "QR-Code-Scans",        ref: 0.05, nb: 0.6, you: 2.5 }
-  ];
+  var BENCH_REF = { reposts: 0.2, lp: 0.3, qr: 0.05 };   // Branchendurchschnitt
+  var BENCH_NB  = { reposts: 0.8, lp: 0.9, qr: 0.6 };    // Note Buddy's-Durchschnitt
+  var MAIL_REF  = { oeffnung: 20, klick: 2 };            // Branchendurchschnitt Mailing
 
-  var DIST = {
-    regionen: [
-      { n: "Ort 4", v: 34.5 }, { n: "Ort 2", v: 32.7 },
-      { n: "Ort 1", v: 21.8 }, { n: "Ort 3", v: 10.9 }
-    ],
-    fach: [
-      { n: "Energietechnik", v: 35.6 }, { n: "Elektrotechnik", v: 32.9 },
-      { n: "Energiesystemtechnik", v: 28.8 }, { n: "Sonstiges", v: 2.7 }
-    ]
-  };
+  var reportsData = null;
+  var selSlug = null;
 
-  function pct(v) { return String(v).replace(".", ",") + " %"; }
+  function pctTxt(v, digits) {
+    if (v === null || v === undefined) return "–";
+    return v.toFixed(digits === undefined ? 1 : digits).replace(".", ",") + " %";
+  }
+  function num(v) { return (v === null || v === undefined) ? "–" : fmt(v); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
 
-  function renderBench() {
-    var host = $("#benchRows");
-    if (!host) return;
-    var max = 3.4; // gemeinsame Skala für alle Metriken (eine Achse)
-    BENCH.forEach(function (m) {
-      var box = document.createElement("div");
-      box.className = "bench-metric";
-      var rows = [
-        { cls: "ref", name: "Branchendurchschnitt", v: m.ref },
-        { cls: "nb",  name: "Note Buddy's-Ø",       v: m.nb },
-        { cls: "you", name: "Ihr Wert",             v: m.you }
+  /* ---------- Schritt 1: Firmenliste ---------- */
+  function initSelect() {
+    var grid = $("#firmGrid");
+    if (!grid || !reportsData) return;
+    grid.innerHTML = "";
+    reportsData.kampagnen.forEach(function (k) {
+      if (k.oeffentlich) return;               // Beispiel laeuft ueber den Demo-Button
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "firm-card";
+      b.dataset.name = k.name.toLowerCase();
+      b.innerHTML =
+        '<span class="fc-name">' + esc(k.name) + "</span>" +
+        '<span class="fc-lock">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>' +
+          "Passwort" +
+        "</span>";
+      b.addEventListener("click", function () { openGate(k.slug, k.name); });
+      grid.appendChild(b);
+    });
+
+    var search = $("#firmSearch");
+    search.addEventListener("input", function () {
+      var q = search.value.trim().toLowerCase();
+      var shown = 0;
+      $$(".firm-card", grid).forEach(function (c) {
+        var hit = !q || c.dataset.name.indexOf(q) > -1;
+        c.hidden = !hit;
+        if (hit) shown++;
+      });
+      $("#firmEmpty").hidden = shown > 0;
+    });
+  }
+
+  function showStep(step) {
+    $("#ausSelect").hidden = step !== "select";
+    $("#ausGate").hidden = step !== "gate";
+    $("#ausReport").hidden = step !== "report";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(runReveal, 40);
+  }
+
+  /* ---------- Schritt 2: Passwort ---------- */
+  function openGate(slug, name) {
+    selSlug = slug;
+    $("#gateName").textContent = name;
+    $("#gatePw").value = "";
+    $("#gateErr").classList.remove("show");
+    showStep("gate");
+    setTimeout(function () { $("#gatePw").focus(); }, 300);
+  }
+
+  function b64ToBuf(b64) {
+    var bin = atob(b64), buf = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+    return buf;
+  }
+
+  function normalizePw(pw) {
+    return String(pw).trim().toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function decryptReport(tresor, password, rounds) {
+    var subtle = window.crypto && window.crypto.subtle;
+    if (!subtle) return Promise.reject(new Error("insecure-context"));
+    var enc = new TextEncoder();
+    return subtle.importKey("raw", enc.encode(normalizePw(password)), "PBKDF2", false, ["deriveKey"])
+      .then(function (base) {
+        return subtle.deriveKey(
+          { name: "PBKDF2", salt: b64ToBuf(tresor.salt), iterations: rounds, hash: "SHA-256" },
+          base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]
+        );
+      })
+      .then(function (key) {
+        return subtle.decrypt({ name: "AES-GCM", iv: b64ToBuf(tresor.iv) }, key, b64ToBuf(tresor.data));
+      })
+      .then(function (plain) { return JSON.parse(new TextDecoder().decode(plain)); });
+  }
+
+  function initGate() {
+    var form = $("#gateForm");
+    if (!form) return;
+    $("#gateBack").addEventListener("click", function () { showStep("select"); });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var pw = $("#gatePw").value;
+      var err = $("#gateErr");
+      var btn = $("#gateSubmit");
+      var entry = reportsData.kampagnen.filter(function (k) { return k.slug === selSlug; })[0];
+      if (!entry || !pw) { err.textContent = "Bitte geben Sie Ihr Passwort ein."; err.classList.add("show"); return; }
+
+      err.classList.remove("show");
+      btn.disabled = true;
+      var label = btn.textContent;
+      btn.textContent = "Wird geprüft …";
+
+      decryptReport(entry.tresor, pw, reportsData.runden)
+        .then(function (daten) {
+          renderReport(daten);
+          showStep("report");
+        })
+        .catch(function (ex) {
+          if (ex && ex.message === "insecure-context") {
+            err.textContent = "Verschlüsselung steht nur über https zur Verfügung. Bitte öffnen Sie die Seite über notebuddys.de.";
+          } else {
+            err.textContent = "Das Passwort stimmt nicht. Ihr Passwort ist Ihr Firmenname, genau wie in der Liste.";
+          }
+          err.classList.add("show");
+        })
+        .then(function () { btn.disabled = false; btn.textContent = label; });
+    });
+  }
+
+  /* ---------- Schritt 3: Report rendern ---------- */
+  function renderReport(d) {
+    var host = $("#ausReport");
+    var v = d.verschickt;
+    var rate = function (x) { return (v && x !== null && x !== undefined) ? (x / v * 100) : null; };
+    var rRepost = rate(d.reposts), rLp = rate(d.lpKlicks), rQr = rate(d.qrScans);
+    var interakt = ["reposts", "qrScans", "lpKlicks"].reduce(function (a, k) {
+      return a + (typeof d[k] === "number" ? d[k] : 0);
+    }, 0);
+    // Benchmarks und Trichter nur zeigen, wenn es ueberhaupt Block-Interaktionen gab.
+    // Reine Mailing-Kampagnen wuerden sonst ueberall 0 % anzeigen.
+    var interaktionenVorhanden = ((d.reposts || 0) + (d.qrScans || 0) + (d.lpKlicks || 0)) > 0;
+    var hatBlockDaten = !!v && interaktionenVorhanden;
+
+    var html = "";
+
+    /* Kopf */
+    html +=
+      '<section class="aus-hero">' +
+        '<div class="wrap">' +
+          '<button type="button" class="link-back" id="repBack">' +
+            '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>' +
+            "Zurück zur Übersicht" +
+          "</button>" +
+          '<div class="aus-hero-grid">' +
+            "<div>" +
+              '<span class="eyebrow reveal">Kampagnen-Report</span>' +
+              '<h1 class="reveal d1">' + esc(d.name) + "</h1>" +
+              '<p class="aus-lead reveal d2">Alle Kennzahlen Ihrer Kampagne auf einen Blick: Reichweite, Interaktionen, Benchmarks im Marktvergleich und unsere Empfehlung für den nächsten Schritt.</p>' +
+            "</div>" +
+            '<aside class="aus-hero-card reveal d2">' +
+              '<div class="ahc-top">' +
+                '<span class="ahc-badge">' + esc(d.produkt || "Kampagne") + "</span>" +
+                (d.status ? '<span class="ahc-status">' + esc(d.status) + "</span>" : "") +
+              "</div>" +
+              "<h3>" + esc(d.name) + "</h3>" +
+              '<p class="ahc-sub">' + esc(d.semester || "Aktuelle Kampagne") + "</p>" +
+              '<div class="ahc-stats">' +
+                "<div><b>" + num(d.verschickt) + "</b><span>verschickt</span></div>" +
+                "<div><b>" + num(d.impressionen) + "</b><span>Impressionen</span></div>" +
+                "<div><b>" + (hatBlockDaten ? fmt(interakt) : "–") + "</b><span>Interaktionen</span></div>" +
+              "</div>" +
+            "</aside>" +
+          "</div>" +
+        "</div>" +
+      "</section>";
+
+    /* Infobox Versand */
+    if (d.versandInfo) {
+      html +=
+        '<section class="aus-infobox-sec"><div class="wrap">' +
+          '<div class="infobox reveal">' +
+            '<span class="ib-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v6"/></svg></span>' +
+            "<div><b>Infos zum Versand</b><p>" + esc(d.versandInfo) + "</p></div>" +
+          "</div>" +
+        "</div></section>";
+    }
+
+    /* KPI */
+    html += '<section class="aus-kpi-sec"><div class="wrap">' +
+      '<div class="section-head reveal"><span class="eyebrow">Performance</span>' +
+      "<h2>Die Kennzahlen auf einen Blick.</h2></div>" +
+      '<div class="kpi-grid">';
+
+    function kpi(val, label, accent, delay) {
+      return '<article class="kpi reveal' + (delay ? " d" + delay : "") + '">' +
+        '<span class="kpi-ic' + (accent ? " accent" : "") + '">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>' +
+        "</span><b>" + val + '</b><span class="kpi-lbl">' + label + "</span></article>";
+    }
+    html += kpi(esc(d.gebucht || "–"), "gebucht", false, 0);
+    html += kpi(num(d.verschickt), "verschickt", false, 1);
+    html += kpi(num(d.impressionen), "Impressionen", false, 2);
+    html += kpi(num(d.qrScans), "QR-Code-Scans", true, 3);
+    html += kpi(num(d.reposts), "Social-Media-Reposts", true, 0);
+    html += kpi(num(d.lpAufrufe), "Landingpage-Aufrufe", true, 1);
+    if (d.mailing && d.mailing.oeffnungsrate !== null && d.mailing.oeffnungsrate !== undefined) {
+      html += kpi(pctTxt(d.mailing.oeffnungsrate), "Öffnungsrate " + esc(d.mailing.label || "Mailings"), false, 2);
+      html += kpi(pctTxt(d.mailing.klickrate), "Klickrate " + esc(d.mailing.label || "Mailings"), false, 3);
+    }
+    if (d.banner) {
+      html += kpi(num(d.banner.ausspielungen), "Banner-Ausspielungen", false, 2);
+      html += kpi(num(d.banner.klicks), "Banner-Klicks", false, 3);
+    }
+    html += "</div></div></section>";
+
+    /* Tabelle */
+    html += '<section class="aus-table-sec"><div class="wrap">' +
+      '<div class="section-head reveal"><span class="eyebrow">Detailtabelle</span><h2>Alle Werte im Detail.</h2></div>' +
+      '<div class="report-card reveal d1">' +
+        '<div class="report-card-head"><h3>Note Buddy\'s · ' + esc(d.produkt || "Kampagne") + "</h3>" +
+        (d.semester ? '<span class="rc-pill">' + esc(d.semester) + "</span>" : "") + "</div>" +
+        '<div class="table-scroll"><table class="report-table">' +
+          "<thead><tr><th>Anz. gebucht</th><th>Anz. verschickt</th><th>Impressionen</th><th>QR-Code-Scans</th></tr></thead>" +
+          "<tbody><tr><td><b>" + esc(d.gebucht || "–") + "</b></td><td><b>" + num(d.verschickt) +
+          "</b></td><td><b>" + num(d.impressionen) + "</b></td><td><b>" + num(d.qrScans) + "</b></td></tr></tbody>" +
+        "</table></div>" +
+        '<div class="table-split">' +
+          '<div class="table-scroll"><table class="report-table"><caption>Social Media Reposts</caption>' +
+            "<thead><tr><th>Anz. Reposts</th><th>Impressionen</th></tr></thead>" +
+            "<tbody><tr><td><b>" + num(d.reposts) + "</b></td><td><b>" + num(d.repostImpressionen) + "</b></td></tr></tbody></table></div>" +
+          '<div class="table-scroll"><table class="report-table"><caption>Landingpage</caption>' +
+            "<thead><tr><th>Anz. Aufrufe</th><th>Anz. Klicks</th></tr></thead>" +
+            "<tbody><tr><td><b>" + num(d.lpAufrufe) + "</b></td><td><b>" + num(d.lpKlicks) + "</b></td></tr></tbody></table></div>" +
+        "</div>";
+    if (d.mailing) {
+      html += '<div class="table-scroll" style="margin-top:8px"><table class="report-table"><caption>' +
+        esc(d.mailing.label || "Mailings") + "</caption>" +
+        "<thead><tr><th>Öffnungsrate</th><th>Klickrate</th></tr></thead><tbody><tr><td><b>" +
+        pctTxt(d.mailing.oeffnungsrate) + "</b></td><td><b>" + pctTxt(d.mailing.klickrate) +
+        "</b></td></tr></tbody></table></div>";
+      if (d.mailing.hinweis) html += '<p class="report-note">' + esc(d.mailing.hinweis) + "</p>";
+    }
+    if ((d.produkt || "").indexOf("Collegeblöcke") > -1) {
+      html += '<p class="report-note">Wussten Sie schon? Der Collegeblock ist das Lerntool Nummer 1 der jungen Zielgruppe. Pro Monat erhalten wir ca. 5.000 bis 6.000 neue Anmeldungen für unsere Blöcke.</p>';
+    }
+    html += "</div></div></section>";
+
+    /* Benchmarks */
+    if (hatBlockDaten) {
+      html += '<section class="aus-bench"><div class="wrap">' +
+        '<div class="section-head reveal"><span class="eyebrow">Benchmarks</span><h2>Ihre Kampagne im Marktvergleich.</h2>' +
+        "<p>Jede Kennzahl steht neben dem Branchendurchschnitt und unserem eigenen Durchschnitt.</p></div>" +
+        '<div class="bench-card reveal d1">' +
+          '<div class="bench-legend">' +
+            '<span class="lg"><i class="sw sw-ref"></i>Branchendurchschnitt <em>Referenz</em></span>' +
+            '<span class="lg"><i class="sw sw-nb"></i>Note Buddy\'s-Durchschnitt</span>' +
+            '<span class="lg"><i class="sw sw-you"></i>Ihr Wert</span>' +
+          "</div><div class='bench-rows'>";
+
+      var metriken = [
+        { t: "Social-Media-Reposts", ref: BENCH_REF.reposts, nb: BENCH_NB.reposts, you: rRepost },
+        { t: "Landingpage-Klicks",   ref: BENCH_REF.lp,      nb: BENCH_NB.lp,      you: rLp },
+        { t: "QR-Code-Scans",        ref: BENCH_REF.qr,      nb: BENCH_NB.qr,      you: rQr }
       ];
-      var html = "<h4>" + m.metric + "</h4>";
-      rows.forEach(function (r) {
-        html +=
-          '<div class="bench-bar-row">' +
-            '<span class="bbr-name">' + r.name + "</span>" +
-            '<span class="bbr-track">' +
-              '<i class="bbr-fill ' + r.cls + '" data-w="' + (r.v / max * 100) + '"></i>' +
-              '<span class="bbr-val">' + pct(r.v) + "</span>" +
-            "</span>" +
-          "</div>";
+      var max = metriken.reduce(function (a, m) { return Math.max(a, m.you || 0, m.nb); }, 1) * 1.15;
+      metriken.forEach(function (m) {
+        html += '<div class="bench-metric"><h4>' + m.t + "</h4>";
+        [["ref", "Branchendurchschnitt", m.ref], ["nb", "Note Buddy's-Ø", m.nb], ["you", "Ihr Wert", m.you]]
+          .forEach(function (r) {
+            var val = r[2];
+            html += '<div class="bench-bar-row"><span class="bbr-name">' + r[1] + "</span>" +
+              '<span class="bbr-track"><i class="bbr-fill ' + r[0] + '" data-w="' +
+              (val === null ? 0 : (val / max * 100)) + '"></i>' +
+              '<span class="bbr-val">' + (val === null ? "–" : pctTxt(val, val < 1 ? 2 : 1)) + "</span></span></div>";
+          });
+        html += "</div>";
       });
-      box.innerHTML = html;
-      host.appendChild(box);
-    });
+      html += '</div><p class="bench-foot">Werte in Prozent der ' + fmt(v) + " verschickten Sendungen.</p></div>";
+
+      /* Faktoren */
+      html += '<div class="factor-grid">';
+      [[rRepost, BENCH_REF.reposts, "mehr Social-Media-Reposts als der Branchendurchschnitt"],
+       [rLp, BENCH_REF.lp, "mehr Landingpage-Klicks als der Branchendurchschnitt"],
+       [rQr, BENCH_REF.qr, "mehr QR-Code-Scans als der Branchendurchschnitt"]]
+        .forEach(function (f, i) {
+          if (f[0] === null || !f[0]) return;
+          var faktor = f[0] / f[1];
+          html += '<article class="factor reveal' + (i ? " d" + i : "") + '"><span class="f-num">' +
+            (faktor >= 10 ? Math.round(faktor) : faktor.toFixed(1).replace(".", ",")) +
+            "<em>×</em></span>" + '<span class="f-lbl">' + f[2] + "</span></article>";
+        });
+      html += "</div></div></section>";
+    }
+
+    /* Mailing-Vergleich */
+    if (d.mailing && d.mailing.oeffnungsrate) {
+      html += '<section class="aus-dist"><div class="wrap">' +
+        '<div class="section-head reveal"><span class="eyebrow">Mailings</span><h2>Ihre Mailings im Vergleich.</h2></div>' +
+        '<div class="dist-grid">' +
+          '<article class="dist-card reveal"><h3>Öffnungsrate</h3><div class="dist-bars">' +
+            distRow("Ihr Wert", d.mailing.oeffnungsrate, 60) +
+            distRow("Branchendurchschnitt", MAIL_REF.oeffnung, 60) +
+          "</div></article>" +
+          '<article class="dist-card reveal d1"><h3>Klickrate</h3><div class="dist-bars">' +
+            distRow("Ihr Wert", d.mailing.klickrate, 7) +
+            distRow("Branchendurchschnitt", MAIL_REF.klick, 7) +
+          "</div></article>" +
+        "</div></div></section>";
+    }
+
+    /* Verteilung (nur wenn vorhanden) */
+    if (d.verteilung) {
+      html += '<section class="aus-dist"><div class="wrap">' +
+        '<div class="section-head reveal"><span class="eyebrow">Aufteilung Versand</span><h2>Wohin die Blöcke gegangen sind.</h2></div>' +
+        '<div class="dist-grid">' +
+          '<article class="dist-card reveal"><h3>Aufteilung nach Regionen</h3><div class="dist-bars">' +
+            d.verteilung.regionen.map(function (r) { return distRow(r.n, r.v, 40); }).join("") +
+          "</div></article>" +
+          '<article class="dist-card reveal d1"><h3>Aufteilung nach Fachrichtungen</h3><div class="dist-bars">' +
+            d.verteilung.fach.map(function (r) { return distRow(r.n, r.v, 40); }).join("") +
+          "</div></article>" +
+        "</div></div></section>";
+    }
+
+    /* Trichter */
+    if (hatBlockDaten) {
+      html += '<section class="aus-dist"><div class="wrap"><article class="funnel-card-aus reveal">' +
+        "<h3>Von der Platzierung zur Interaktion</h3>" +
+        '<p class="fun-intro">Alle Werte auf einer Skala: Anteil an den ' + fmt(v) + " verschickten Sendungen.</p>" +
+        '<div class="fun-steps">' +
+          funStep("Sendungen verschickt", fmt(v), "100 %", 100, "") +
+          funStep("Direkte Interaktionen", fmt(interakt), pctTxt(interakt / v * 100), interakt / v * 100, "accent") +
+          '<div class="fun-sub">' +
+            funStep("Social-Media-Reposts", num(d.reposts), pctTxt(rRepost), rRepost || 0, "thin") +
+            funStep("QR-Code-Scans", num(d.qrScans), pctTxt(rQr), rQr || 0, "thin") +
+            funStep("Landingpage-Klicks", num(d.lpKlicks), pctTxt(rLp), rLp || 0, "thin") +
+          "</div>" +
+        "</div>" +
+        (d.impressionen ? '<p class="fun-note">Dazu kommen <b>' + fmt(d.impressionen) +
+          " Impressionen</b>, also rund " + Math.round(d.impressionen / v) +
+          " Sichtkontakte je Sendung. Impressionen werden separat ausgewiesen, weil sie eine andere Einheit sind.</p>" : "") +
+        "</article></div></section>";
+    }
+
+    /* Reposts */
+    var bilder = d.reposts_bilder || [];
+    html += '<section class="aus-reposts"><div class="wrap">' +
+      '<div class="section-head reveal"><span class="eyebrow">Social Media Reposts</span>' +
+      "<h2>Ihre Kampagne, geteilt von der Zielgruppe.</h2>" +
+      "<p>Studierende werden dazu aufgerufen, den Erhalt Ihrer Blöcke auf Social Media mit uns zu teilen, und haben daraufhin die Chance, spannende Gewinne zu gewinnen. Jeder Repost ist zusätzliche, organische Reichweite.</p></div>";
+
+    if (bilder.length) {
+      html += '<div class="slider reveal d1" id="repostSlider">' +
+        '<button class="sl-nav prev" type="button" aria-label="Vorheriger Repost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>' +
+        '<div class="sl-viewport"><div class="sl-track" id="slTrack">' +
+        bilder.map(function (src, i) {
+          return '<figure class="sl-item"><img src="' + esc(src) + '" alt="Social-Media-Repost ' + (i + 1) +
+            '" loading="lazy" /><figcaption>Repost aus der Zielgruppe · Instagram Story</figcaption></figure>';
+        }).join("") +
+        "</div></div>" +
+        '<button class="sl-nav next" type="button" aria-label="Nächster Repost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>' +
+        '</div><div class="sl-dots" id="slDots"></div>';
+    } else {
+      html += '<div class="repost-placeholder reveal d1">' +
+        '<div class="rp-cards">' +
+          '<span class="rp-card"></span><span class="rp-card"></span><span class="rp-card"></span>' +
+        "</div>" +
+        (d.reposts
+          ? "<div><b>Die Bilder Ihrer Reposts werden gerade aufbereitet.</b>" +
+            "<p>Insgesamt haben wir <b>" + num(d.reposts) + " Reposts</b> mit <b>" + num(d.repostImpressionen) +
+            " Impressionen</b> für Sie erfasst. Die Bilder ergänzen wir hier in Kürze.</p></div>"
+          : "<div><b>Für diese Kampagne liegen uns noch keine Reposts vor.</b>" +
+            "<p>Sobald Studierende Ihre Blöcke auf Social Media teilen, erscheinen die Beiträge hier.</p></div>") + "</div>";
+    }
+
+    html += '<div class="upsell reveal d1"><div class="up-copy">' +
+      '<span class="up-eyebrow">Noch mehr Sichtbarkeit</span>' +
+      "<h3>Sie haben Interesse an Platzierungen auf Social Media?</h3>" +
+      "<p>Wir bringen Ihre Marke zusätzlich in die Feeds und Stories unserer Community. Sprechen Sie uns an, wir erstellen Ihnen ein passendes Paket.</p></div>" +
+      '<a href="mailto:gabriel.hilbrig@notebuddys.de?subject=' +
+      encodeURIComponent("Interesse an Social-Media-Platzierungen (" + d.name + ")") +
+      '" class="btn btn-primary btn-lg">Social-Media-Paket anfragen' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+      "</div></div></section>";
+
+    /* Fazit */
+    html += '<section class="aus-fazit"><div class="wrap">' +
+      '<div class="section-head reveal"><span class="eyebrow">Resümee</span><h2>Das Fazit zur Kampagne.</h2></div>' +
+      '<div class="fazit-grid">' +
+        '<article class="fazit-card reveal"><span class="fz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>' +
+          "<h3>Kampagne Status</h3><p>" +
+          esc(d.versandInfo ? d.versandInfo : "Ihre Kampagne läuft nach Plan. Sobald weitere Teilmengen versendet sind, aktualisieren wir diese Auswertung.") +
+          "</p></article>" +
+        '<article class="fazit-card reveal d1"><span class="fz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></span>' +
+          "<h3>Performance</h3><p>Nach Abschluss der Kampagne unterbreiten wir Ihnen Vorschläge zur Optimierung der Performance.</p></article>" +
+        '<article class="fazit-card reveal d2 highlight"><span class="fz-ic accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.2 6.4.6-4.9 4.3 1.5 6.4L12 16.2 6.4 19.5l1.5-6.4L3 8.8l6.4-.6z"/></svg></span>' +
+          "<h3>Unsere Empfehlung</h3><p>Optimierungsvorschläge zu Performance und Kosten: Rahmenvertrag und Ergänzung um weitere Formate.</p></article>" +
+      "</div></div></section>";
+
+    /* Kontakt */
+    html += '<section class="aus-contact"><div class="wrap"><div class="cta-inner reveal">' +
+      "<h2>Buchen Sie ein Gespräch zur Besprechung der Auswertung.</h2>" +
+      "<p>Sie haben Fragen zu Ihrem Report oder möchten die nächste Kampagne planen? Wir nehmen uns Zeit für Sie.</p>" +
+      '<div class="contact-duo">' +
+        '<a class="cd-card" href="mailto:gabriel.hilbrig@notebuddys.de">' +
+          '<span class="cd-avatar"><img src="assets/gabriel.png" alt="Gabriel Hilbrig" onerror="this.style.display=\'none\'" /></span>' +
+          '<span class="cd-meta"><b>Gabriel Hilbrig</b><span>Co-Founder</span>' +
+          '<span class="cd-mail">gabriel.hilbrig@notebuddys.de</span><span class="cd-tel">+49 176 84894678</span></span></a>' +
+        '<a class="cd-card" href="mailto:niclas.weisl@notebuddys.de">' +
+          '<span class="cd-avatar initials">NW</span>' +
+          '<span class="cd-meta"><b>Niclas Weisl</b><span>Co-Founder</span>' +
+          '<span class="cd-mail">niclas.weisl@notebuddys.de</span><span class="cd-tel">+49 151 27042752</span></span></a>' +
+      "</div></div></div></section>";
+
+    host.innerHTML = html;
+
+    $("#repBack").addEventListener("click", function () { showStep("select"); });
+    activateReport(host);
   }
 
-  function renderDist() {
-    $$("[data-dist]").forEach(function (host) {
-      var rows = DIST[host.dataset.dist] || [];
-      var max = rows.reduce(function (a, r) { return Math.max(a, r.v); }, 0);
-      rows.forEach(function (r) {
-        var d = document.createElement("div");
-        d.className = "dist-row";
-        d.innerHTML =
-          '<div class="dist-top"><span class="n">' + r.n + '</span><span class="v">' + pct(r.v) + "</span></div>" +
-          '<div class="dist-track"><i data-w="' + (r.v / max * 100) + '"></i></div>';
-        host.appendChild(d);
-      });
-    });
+  function distRow(name, value, max) {
+    return '<div class="dist-row"><div class="dist-top"><span class="n">' + esc(name) +
+      '</span><span class="v">' + pctTxt(value) + "</span></div>" +
+      '<div class="dist-track"><i data-w="' + Math.min(value / max * 100, 100) + '"></i></div></div>';
   }
 
-  renderBench();
-  renderDist();
+  function funStep(name, val, pct, width, cls) {
+    return '<div class="fun-step"><div class="fun-row"><span class="fun-name">' + name +
+      '</span><span class="fun-val">' + val + " <em>" + pct + "</em></span></div>" +
+      '<div class="fun-track"><i class="fun-bar ' + cls + '" data-fill="' + width + '"></i></div></div>';
+  }
 
-  /* Balken füllen sich, sobald sie sichtbar werden */
-  var fillObs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      $$("[data-w]", en.target).forEach(function (el) { el.style.width = el.dataset.w + "%"; });
-      $$("[data-fill]", en.target).forEach(function (el) { el.style.width = el.dataset.fill + "%"; });
-      fillObs.unobserve(en.target);
-    });
-  }, { threshold: 0.2 });
-  $$(".bench-metric, .dist-card, .funnel-card-aus").forEach(function (el) { fillObs.observe(el); });
-  $$(".aus-hero-card, .kpi-grid").forEach(function (el) { countObs.observe(el); });
+  /* Balken fuellen, Zaehler starten, Slider aktivieren */
+  function activateReport(host) {
+    var fillObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        $$("[data-w]", en.target).forEach(function (el) { el.style.width = el.dataset.w + "%"; });
+        $$("[data-fill]", en.target).forEach(function (el) { el.style.width = el.dataset.fill + "%"; });
+        fillObs.unobserve(en.target);
+      });
+    }, { threshold: 0.2 });
+    $$(".bench-metric, .dist-card, .funnel-card-aus", host).forEach(function (el) { fillObs.observe(el); });
+    initSlider(host);
+    setTimeout(runReveal, 60);
+  }
 
   /* ---------- Repost-Slider ---------- */
-  (function initSlider() {
-    var slider = $("#repostSlider");
+  function initSlider(scope) {
+    var slider = $("#repostSlider", scope);
     if (!slider) return;
-    var track = $("#slTrack"), dots = $("#slDots");
+    var track = $("#slTrack", scope), dots = $("#slDots", scope);
     var items = $$(".sl-item", track);
     var prev = $(".sl-nav.prev", slider), next = $(".sl-nav.next", slider);
     var idx = 0;
 
-    // Ab 761px sind alle Reposts sichtbar, der aktive wird hervorgehoben.
-    // Darunter klassisches Durchschieben, ein Repost pro Ansicht.
-    function isFocus() { return window.innerWidth > 760; }
+    function isFocus() { return window.innerWidth > 760 && items.length > 1; }
     function maxIdx() { return items.length - 1; }
 
     function buildDots() {
@@ -743,14 +1115,15 @@
       idx = Math.min(Math.max(idx, 0), maxIdx());
       var focus = isFocus();
       slider.classList.toggle("focus", focus);
-      if (focus) {
-        track.style.transform = "";
-        track.style.width = "";
-      } else {
+      if (focus) { track.style.transform = ""; track.style.width = ""; }
+      else {
         track.style.width = (items.length * 100) + "%";
         track.style.transform = "translateX(-" + (idx * (100 / items.length)) + "%)";
       }
-      items.forEach(function (it, i) { it.classList.toggle("is-active", i === idx); });
+      items.forEach(function (it, i) {
+        it.classList.toggle("is-active", i === idx);
+        it.style.flexBasis = focus ? "" : (100 / items.length) + "%";
+      });
       $$(".sl-dot", dots).forEach(function (d, i) { d.classList.toggle("on", i === idx); });
       prev.disabled = idx === 0;
       next.disabled = idx === maxIdx();
@@ -761,8 +1134,6 @@
       if (e.key === "ArrowLeft") { idx--; update(); }
       if (e.key === "ArrowRight") { idx++; update(); }
     });
-
-    // Touch-Swipe
     var x0 = null;
     track.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
     track.addEventListener("touchend", function (e) {
@@ -771,20 +1142,39 @@
       if (Math.abs(dx) > 40) { idx += dx < 0 ? 1 : -1; update(); }
       x0 = null;
     }, { passive: true });
-
     var lastFocus = isFocus();
     window.addEventListener("resize", function () {
       if (isFocus() !== lastFocus) { lastFocus = isFocus(); update(); }
     });
-
-    // Klick auf einen inaktiven Repost holt ihn nach vorn
     items.forEach(function (it, i) {
       it.addEventListener("click", function () { if (isFocus()) { idx = i; update(); } });
     });
-
     buildDots();
     update();
-  })();
+  }
+
+  /* ---------- Start ---------- */
+  if ($("#firmGrid")) {
+    fetch("assets/reports.json")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        reportsData = data;
+        initSelect();
+        initGate();
+        var demo = $("#demoBtn");
+        if (demo) {
+          demo.addEventListener("click", function () {
+            var d = reportsData.kampagnen.filter(function (k) { return k.oeffentlich; })[0];
+            if (d) { renderReport(d.daten); showStep("report"); }
+          });
+        }
+      })
+      .catch(function () {
+        var g = $("#firmGrid");
+        if (g) g.innerHTML = '<p class="firm-empty" style="display:block">Die Auswertungen konnten nicht geladen werden. Bitte laden Sie die Seite neu.</p>';
+      });
+  }
+
 
   /* kick off reveals */
   runReveal();

@@ -1,0 +1,313 @@
+{
+  "generiert": "2026-07-28",
+  "runden": 210000,
+  "kampagnen": [
+    {
+      "slug": "enbw",
+      "name": "EnBW Energie Baden-Württemberg AG",
+      "oeffentlich": true,
+      "daten": {
+        "slug": "enbw",
+        "name": "EnBW Energie Baden-Württemberg AG",
+        "semester": "Wintersemester 25/26",
+        "status": "final",
+        "produkt": "Collegeblöcke",
+        "gebucht": "3.000 Platzierungen",
+        "verschickt": 3000,
+        "impressionen": 30000,
+        "qrScans": 75,
+        "reposts": 93,
+        "repostImpressionen": 7905,
+        "lpAufrufe": 27843,
+        "lpKlicks": 63,
+        "mailing": null,
+        "banner": null,
+        "versandInfo": null,
+        "reposts_bilder": [
+          "assets/reposts/repost-1.jpg",
+          "assets/reposts/repost-2.jpg",
+          "assets/reposts/repost-3.jpg"
+        ],
+        "verteilung": {
+          "regionen": [
+            {
+              "n": "Ort 4",
+              "v": 34.5
+            },
+            {
+              "n": "Ort 2",
+              "v": 32.7
+            },
+            {
+              "n": "Ort 1",
+              "v": 21.8
+            },
+            {
+              "n": "Ort 3",
+              "v": 10.9
+            }
+          ],
+          "fach": [
+            {
+              "n": "Energietechnik",
+              "v": 35.6
+            },
+            {
+              "n": "Elektrotechnik",
+              "v": 32.9
+            },
+            {
+              "n": "Energiesystemtechnik",
+              "v": 28.8
+            },
+            {
+              "n": "Sonstiges",
+              "v": 2.7
+            }
+          ]
+        },
+        "hinweise": []
+      }
+    },
+    {
+      "slug": "westpress-dfs",
+      "name": "Westpress für DFS",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "tGCuUZfy4lBQZpwuUm/DfA==",
+        "iv": "pH1bxrNFQZSIEQ3+",
+        "data": "yWE91Fv+rfGWSsAONzOSZ1hqzDtgmbx9MnPx0AVqnNjQWaJBDQIcBYG4lQu9F9QukbFUNmUg+rQkTYfIZ5rd4/awDIJ5oC6xysFIXbdT+bze86JHpwjS73LbOH+jRwEv1NzUD89qAyTaJbkdyK9FkBoNAHJ/PZ/FaUFoMRQqNwsdIM7yId2hCPZ32U4tDnYSNlFZOQuP85tfK7fzpfKGofD7T11812QFvW5/jd354Yg6g6IYEwgsKpu0CBJKx11bnVKceY/0xA5bPJ3TAWdRmmkc3RFswz7BXPn6JJmimKgkuI+Emwhy0Q8hROWsvALSpOhVnFmIbAzinassyTWzRFXoUyX/aSr2YEanqjHDIFDN2HuFN0aBEHKBZSCA32HlQJXIN/3PlAnTXTHy063heZ4gmPOUvBQr02ffKD+xtFyt9yxN4PprlAZ/JaAL"
+      }
+    },
+    {
+      "slug": "landwirtschaftskammer-nrw",
+      "name": "Landwirtschaftskammer NRW",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "CpTZ7S6wsSII2AC0CFv/Eg==",
+        "iv": "2wTBDTsKy2Qq3MMx",
+        "data": "XLltFDDckgUtG2qCzW4g0O8nRQ4ttTLg3p451DuZ2CAjmws1ysw3cGHnwtEgfdsWFlbeTZ1K/7YHUY3pC81xKMzG45HksIHqQa1hV4SdNI2ceAOfCfZTFiB7962h7eSkitsLLSYcBhOATZ8ED+dQ28Kvx4WDrohC//Y6Gh7V0CY6vKe5kWXvc8srMfUyS3P6BtKussvzsXSgmvFv+yXpzbcBscUHf+Rh34u0aRyMnkOWek2TmmXX2dyWX0pl7IbBZLthXB0IKZRwqyuVfu6vxS5yreLHLdfCB1DlNynK+wNXCVAwBGFSD6o1VVp79fV/GokfJ3Jc6oyYCsSsUMZP4jqfMhvW4V1XgLXnBNu6MkamFj9xXLRgt3Z50KUd2sgQeQ4KHq1Q3Hg/r607r+0w8NT0OlTMGhAARvleNa9XosRa7gEEkT0YbctKcFilhj5zqpBKdjwrEwQkhnTPGdtXFPyw0ulN2gmP8y3pQpJ75AaQ50puPQC9u7p9ak0f1k+lZFm+Ry2y3pB/VrgjJ1OS4nTntki5IhnSdP+TK1kfZ0wEu/uBINsbLQ=="
+      }
+    },
+    {
+      "slug": "waldorf-institut-witten-annen",
+      "name": "Waldorf Institut Witten Annen",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "ra349nTnw8XkMhp90J2FAQ==",
+        "iv": "uWHSGqMz6vYZsNZv",
+        "data": "oGaQ4xpEUKU/poyXVjjX7yLt/TdjyUKQ/8/MloZSG3HCP+edJ3EeQNmoBrlB5J4czjalPmhQRoB5H+J+QvGciTuiY40WiSSkC/r+fHR9LE7UKBCKxFZ5S4pTBevNrPAA/8suapFSPJA7AtbX18VZtlHV8p5TX4XDkZ1GNrD825PPMEMYYasnr9Jkb8T7wbJ65+TTHbqmgI7Lpqu89T/8OGPPhsuH8vuY1cMmM9mMMxfRYycGXJnztCITY5nt297CddM2ZviyTLAtKGqnTY0fnDvH/UA1q713RTV/KJbyQ7uIEam+WqzsELYd/LSFnTXDyOEQk7a4ecEwkmMS9g/+sNue38OUPB0vO+YE77BTpdUSh1KFUrRO4IvZ22IjWXV7eJFG2tiT8Ts5aKQDtcw6Rh2X6Tx9FGpydhVtKTFM2Af5OcykooFAtPuKAWNO97uVWPHy8Dm1P54CTKNCApvjegr7Gp2XYQhORR/jLizAum1hg1YKkSkuh0GPVSBxLcHv79/EIEuLhLe16fv2HDIYLjkPzwU/LjGF5gas4DRwJOfAqoDPUbiWOI99yQE2+JW8cuD2V/wNJ+3HUB1tW7buUS4H48nbIla4EjJEjgh0qoyk6RG6w1c5JNwQvaL1vn7YFVntwk3yv2MJhiV6R4oE4fn2EyiL/u3/zD70j9iBWgxMI9nJinqdKSkpmRqq"
+      }
+    },
+    {
+      "slug": "selektiv-media-rheinmetall",
+      "name": "Selektiv Media für Rheinmetall",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "k+PU+JGfmtgXaFiRa1fXVw==",
+        "iv": "kxoM9Gr13EcGn8Ui",
+        "data": "df7YF2Acifc/E3DEGCbTyqwmaGUDlxBTim5FmaP7ix/Isf9sfK89VL5+qFyWws4U2O9CcWIDmQvjiP64Y+MAUXf9nUmfBsSaLWAcGJox8dwvs2eMI72vlk8S05qSwX03Xkxi4qk7X0zaY5PyINusapTR/G9HcM1ujrLBjILI77Ai2doQhOG88Jpabg6tRq/3ZhZSBUqp6umoUM2JLtckOi2voMkGPFSIqEvc9th5ZqetZr8H5CIL9kPE2mZrwlEZCXsF/OB1FBxD1vjGSlQ1bs+BSR3vuzsbW5KJ0M2g2+FIhRAhkO6bX1ata+Jgg+6U2yq7VgtkD+2dch4ge4BRcMtc4oKMiR2Q/McZeeYv1kOR+7trsYu85L9P34ye9TG//4hM32mUKAvGUuMpcpMApMAum43Vs4rmD71UPlPzSGCgzemXxVxmfyRjbjhzp+u+8ztiLtfV3g9bGNLwOqAYN+6dbx8wkyCVGnAY4q36IIcaUuo/Lnlwh/+f2zqXKp2i2MN6nnjAs6NiCARbXu3ITlmsAqgeyt277eityD/tTAYpXPHUxm6gKDHJsNAQ"
+      }
+    },
+    {
+      "slug": "leue-nill",
+      "name": "LEUE & NILL GmbH + Co. KG",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "DKAnuKPyO1ZfogrsJgO/wg==",
+        "iv": "+iztNPbY7lVuv7ZB",
+        "data": "LJnr+hVdZhVgRzMcZ5JmbqCx/YvpuzwZvq35z5RyxRMjCY3UnLIjc7/f9IHLCjLDPw2lIUyRKx9kFdtB1LjwA+jdRjFfRBC2blAA05+8WYaNGKjx0K3n8QmfREjeq+h0PWNfOCbfi8L/Bq0NTAY7nMz1w1MeUNFfLek06yA9OYfHVskP8kg4aoEZeHbLgCyB26a2ma/9gdTEfYV66a8HfeT1d1N5FRFu29OrcblRao5DYMvasB1nwjG9XWmYlC8JLc52aNSe+7xyuSTIvVcrhDk743BnKJmfn/8fYe56WdPzGpJtpSw+4hvph4NlEMyh2BIzl4NZZMkBZLVXpQKO2ZVyH+3geoicioJOp/1X5fXEtVjibxRaphuhygzR5keSUlD+MOIVbZaX1FDry0o4WjG57taEV8ATmvbDrnS/O2rm8AXzQIDLjszVdIQ3PoaawTXC/xlEo+DeY9bOsF8zBXLG3TBGLyM63OEVHKmFQKzDBWinYqxMF7NLCYoy5hDuHQUA7FMH/5fmALg="
+      }
+    },
+    {
+      "slug": "fischer-hydroforming",
+      "name": "fischer-Hydroforming GmbH",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "3rVwBbccjq7NcuMvRhqBgA==",
+        "iv": "zvinsa0cKr6qX3uA",
+        "data": "rYcHxa5kXwqwHakgIhkcHJNADKLEbE7G60EE8Kq6AuDZrMSxxkdsdQSDhqehChY0VbniIh3bvYdjhs6PTCQ3cONW3fwqjx4anng4HIkg92nrNR4nfB6ODQxvwY6VIIJV1/PWFBGT/g8exgCU12ND+hVk/F3qOSFCmFJpObR++/3KKxySXxYpK818nss1uej9MDAOIexKUdx0R9b6w5yQqJ2ddnFzSk99rwXU85gyAycaY5YpmfqEn4GNB/qYsJadl2ioGLE6jT/p/Jai/qQbXrvTdXX/Y2Ue1epx899q4XCLdzyBL6jrfRRkwSDtEy9+DPDwVed6o3mXAXgKRQHNLIrFyObvM0iIhdaOWPUY0holyOVi80efDpqNoOLnfULmaNCmCOwEQmXsxB32bMSEuvxP26U2pQ/bF4WkNnwXu23INfQmHARaubOrAzDNhz99PSXDR/12LIU="
+      }
+    },
+    {
+      "slug": "hochschule-magdeburg-stendal",
+      "name": "Hochschule Magdeburg-Stendal",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "pfhq9gLb9VVDFUDHc+RLpw==",
+        "iv": "m+0yHsa/yuDmJ4HK",
+        "data": "y/1qg7YGInPkNzHxTjO92hWGI+hd1fn6WyPZZcEUdqkDeD1qt1+RX5bohHZOTdA4SLmYc0SLg4VLo9yctBSD2cIH92PL9ZlxyYyxm9X+HykUN0JRNQHOlCBHazA4y3ICjWA1C9sXj1gV6upyxQb5o4IWXaQ7SlaAb4sCjeNrR7x7XlIhA14aWDt/M0ukVZoYIrU+LAxxb5YSB9MmSLPCgf8KVCBLw4SeHvsKs9LvpZJRTGThpUZcyKj3C4Anppip7W+92xCx2bBH3pyBYvvP5w8Jgw6Us6T+Y+3YOgeIAqQni63xzSJMRotgmOafvNj8vAtMvcWIoe7u9TN2BsL8Sr9UdK+4FOSrEFPKrouEFgvbDh16CieUjCUqkhuyX8HRNbda4fByT87ISnwclrclrAtZpysVpMsRFlmOcIStSTHctIe+J9xgv9HOpEStxb2QKC1UcplNHtu0Y9DSz+O4NlDuwphim2AGBqIvAm44NhUDWkZUL9aHuyAvqY907npDHeCtuton9xL2Xz0wttWryagoW7miZahvShAYNsbErNWY"
+      }
+    },
+    {
+      "slug": "ofd-hessen",
+      "name": "OFD Hessen",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "dRr9zeJs5K0erHc/bCJCfg==",
+        "iv": "hyCyRpM4EXIQ0DLd",
+        "data": "vNUOxoZdgJOSVulol2cHORaOn9GrM3iXnuywGujg6un3SXdvyMnIeaD/KPqtkyxx0uUMptUGRqZqCFa0Qy3uDl6oGi0j6SzhRG+BNY7nzmw2E2SOX8+ahLiCtXniYdir7YuqWHLFLyguo0JJ+O6Ppq+rks4ewKgAt8CsUpN9ihbXf3J307P3uRO6N0kmpY2/tHJtMp1ymnxZPCLgZ51+3te0ffmWYG5R2N7jgdXaVj4pKGSvV/8LTvoZG6rUEcmgzVApzAREOB0v3yF3vSrfx1rgdW6FNCBIF1WYOHnf3BQ2OBwg1EGLpshvdtt5vF195e1dI8d/sfjYlt3mG4nU1FhuA+XEiHyi89OnwL5ffVx3tsLApqiUOoQRJr+r/dCoLxfj6d/sRrQOpCROL6GVGP0oDlhy+sqNcZMSeuSkd2XZHTWu/cHwXKAoFbW+KH9ayNH6gGWPZwRdepWkzOQ7AhjGU431w9K+IjY1eA+j2OIijl9ByksozPyPq4YM"
+      }
+    },
+    {
+      "slug": "bosch-rexroth",
+      "name": "Bosch Rexroth",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "l/7Mi0vj20QJ/yd6sAajwQ==",
+        "iv": "cotdPAerrckoMJWk",
+        "data": "d2pqAhqQGiy9Ot+Y0ANACb3XllNLVcoPDAgTC5ILqRLSvfXu/l78zHcWbS8DoOyWXJxp9MX2xJkZFtgStoUqiPJnkb5872zt21igqKZCt3mBgk3fGXjv2jDs8K+XpQ/QGLEzVbTH/dtKUVcKIUJuCxogYnMREbmOBJup7I1KaZzPJECkq0wJ1ZR+NeecG3h/CwnsgJlx2rjdKUcGOLz+NcP1R3eK1BiOWVyc1kaFAu+tz50832N2VcfNlQqxmTReJrq6c4/S0dGNTkmK7DbPS9z5Nt4Flx4+5ptQtQD0V5alhxSrK8SJiUiyg4vquPvzb+i2+kf2XDiQC+6iDvzPhbGZIHOG+I4dIU36vFfzAV/HGRrbGhYIArh4pm849DutWGF8C+8aj0bYZ8fzQRsTeoRb/EFMcveIucwiUrWasWLtvS8nY0SD+LXEn/VU+HuiQx+E3b39RpHHl0PtOSgljKFTBfa1DnQU6PjLLKDbJgWWSrL2tMjz9re7GQ/frNrHw31boWNNBSjXP63FAWcdockotwsZ4qbGjHSseldBi40JYsl6aMnTlFjPybXRR4gjJ5e0y4phkXmHCcnDTY+uUllX9w+Bcoh9HODqs+ClIy0="
+      }
+    },
+    {
+      "slug": "hochschule-polizei-brandenburg",
+      "name": "Hochschule der Polizei des Landes Brandenburg",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "b3YIZaojTPauszO/YtbadQ==",
+        "iv": "Oe0X7oG11cvyY2uu",
+        "data": "yo/im2s5ZcEmmrUtjzEKrDLAqMGVhLCUQn1LUTYoO0g4azuX5oPrA/oOsvIF1s16sUPw4zfZREX8lXSYGEat96FxKdIWbrl1Xqkr3AElhD9bdYkgF14U6PZ6CUSy9M59Hj4zDVb9eE8rpYxmw14GigFotOtMAtsBtg2Ghbtgkmlznpv3nkkwb6rIvlp8H8GGOI5F89hBSNQeb07WFepTMxhzUc25DEHRWIOm4v2FNI0wqreTYvbKRWHoZmf7iNFo+VQbrCgc/Laqsu0iYoYhNLzopX8YNkjOM4P5NY9XVz+FUnHYaKR80Ex/EOBhWXRidWF7RrvvHJiWBdRYo6DOiuD0mwUam8yI2n6s2Hw3YYAST0LsPWe6KU5j8j1YHRRraF2iu1WnzvNxSj9ZYv02+Uv6f9BskSnsIXFI9IkG6JiZbWhcphn1cnOy7o9KsYspSbEEdTa9XUT645/lQvH8ugYqUN+FLVLESo8eR3cMzaBI2P3yjKS9E1wA5jQarpMVOQCaIZ4SbfhaPPIO4Gc5MlWi1kpTZyrCh4Ki9ZoXp2P0i6oHZQxDIZO5+ReU3s1aNqqM9xGSW20Qwj5I5gp+"
+      }
+    },
+    {
+      "slug": "aareal-bank",
+      "name": "Aareal Bank",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "cAd8tn0S2+gFpKCnywQCJg==",
+        "iv": "+oEH4NgDwIHlf2YF",
+        "data": "/3ZeLP4i/BtcyjQReSxUSyLqEAqaienfwdEygY1248Hznu6WDtp7lt0zoswoJKqow0ux3M9o2CjelXZO/FxhvrlFxtfC74jRHO2phdQvdZke0lU4oeP+zC5isnOPeX7hcrCSk1KBdLAxKigpogKpi2K8Byv00uiCWFJzh00Ny9edFNxuY7DgTzkylaymxT5JvNgT1x7Ad0YKWtTksyWpxuZUNwgQMfQXUNmxQP+mu3BNFCvN/o33ctRmtujLWg/U7UJpn1i2bkOpgSxs8gQIZos72guT7U7FFkc4gJ8zIQks63cfgXYmHUR7kBaHRaFHzhAHGcbBUW08IwjsisQVi/sKW/++BLKR8ugdi/8kJ1DAlwkKeGAwzaA/9ZDXIObTwPVKiC1wqrbEx6je3N69TZpRi98dlW0TLxU="
+      }
+    },
+    {
+      "slug": "vpv-versicherung",
+      "name": "VPV Versicherung",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "II13z2PDnYm01aggiEQUXg==",
+        "iv": "bI0u5/XF+cB+kj/X",
+        "data": "SY7RwIEJY8FXA/DJwMcWHG3yiTV/+ttnm2hsJ75hafzxIN0SvO6BGm9MWGfaUPUd9kPhtyfCOOxIvNohemMQ6QeE9MzToPiPtdJ6IRUxwxLeyfzzleEMz+gDPUKv2qiX3WmqdU2POcBfQqKwT8RSo55PMl3WSQ5yQj1sjGjqr2lQyBRg1A/RMH4anDNZrFTM6jP/Foib8e+7QtGT6pyPG51iJ2ibYZBjzQS8AiifzXhWreE52Gjnd0XSh0sju10yQSrx2urxfjJoYWw2bacN8Q2kqFz0zhsL/IkXSQDn3HV0bymaZoqaIecq/tH3T6lGV1PWcamiJD1rUhlc+mQ7LS7gBAJFzaqZs2kMS0bYwGppkcTXfDKbOCd7OtrANRwcQd+moUSNfx5ui0ZCDz1BJjb2DZVhCoOttRhMdniW9GFfdil/3KKvDQFzSOCLbk3asyOvx/NRBxZDr1l/p2s0FnDAGIZXg15b/wWBBiJ3rPb9ecQYoWSt3uBiSfWmNlFjw0IJPZXAEAAVPHwJcYct4Ro4+lAGnWsOdriIR8BqN3Kzig=="
+      }
+    },
+    {
+      "slug": "thyssen-krupp",
+      "name": "Thyssen Krupp",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "lgY1mh7Y4Qlin+NfF5qnmg==",
+        "iv": "KIQczg4X6TN6I5Mp",
+        "data": "VXH2L4yZUxHaLWFEuuo3DadENDOcY9czgqK1Mu+W5g12qYcQ1olK5IP8nV+I4XYMXMbsZiG3DgfVoO10lQwV1gf9yqIbJ5i26moaZ3FcTkmc9mvP8879fB4xVTY3HG0zZmhLeHnWDrBuVa1DziRaI9kr4XIGEJytJAuwrFwa/LptA4J8uTjI4E5FY5Qw/8UZM/kM9nckMc7qpP2O8OOTHJMZZBccoSZww4l4AhvezL4zzIH6ViokDs/uTsgbzyYYye3b+lhy1idOc/7AqRLINEYMxNuCXApkNH60kEJdxMpaBzCw9wh60t6g3sL0snjXHf8XLTZv1uRXxF80WM+GkzYPovQpIqyMwZ2c6l/gEphv6xz2L39X7xQyhYVjo2ifVyRI63z9SzRZRNQRN/EX9ql/5hQo42929XI/KShcpZJm6D5VzakcVEDEqCArXJGQ3twvDsmrQ5O0YInZ7xLOw0pdw2nu+yaUM+fgdOYJwozhyrxBxkUFy0Q7vnSHXAnUi8EYJljvzA+zA068L2JUh3YoXkcxF+3YdnpJjOZYurhLoWEk0WVFF/aHptkJDArQtr6Aw25Umd8KasZBdKyCzFTkJRw35n292EtD4g=="
+      }
+    },
+    {
+      "slug": "stadt-coesfeld",
+      "name": "Stadt Coesfeld",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "wV8QGLWYW8gxCGDMnTaOAA==",
+        "iv": "m/Or9jSmgBoQhxYS",
+        "data": "zjrC/p76KNJ6RI0TVT6JTyS/yaMfwlHFiBkEx7oczkyp+tdFMxcPPVBhiuFnqHWpzhm4vWagAuLafv0wo6H11Mn9QR8LKCxPqZOm8onufGJ24tVcKWJoxyEy5V4RPsBVuYRSeMhrVYle9A4jLfVwCC2HA1w6GCHzTvDOHNrvW998pcvl1bkhcRZdu4ZmZt0bs4NIdfL8HlF2j1uPAzFaLD6Sv4nw5rWMchZasETt5575HCY1GgCQv7VVqvOGNl4GcqFeU4v/2yyAalgMGVI2rznxhIn2Rtv1pMhWlec4eljfmZMplH/00KKG1ilAS75dTiquFXHlFcu3uIqBclB22AN4Si9rkOSXPLruOPf/ykkcm75SGnB7kwFRFuEVMd+VA3HypoeqysGgRdyCZ+kUmlrpNLfzXEL6rkqQRlsew6Hz5ktgu8BwbQZVkIzDdhzwO2V3bqR+UZH7Ln7zRZWaoNqS1ijyzZBzNSB5jAyeU7YIE1f3D/w9/cGUBN/VhG42kCNA3l79xwR3S+mwsI8edBX4bjOknWsmB5dAvvkmTqPeQsc="
+      }
+    },
+    {
+      "slug": "dlrg",
+      "name": "DLRG",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "j0J4LZ1rsoyA8AiS/kP6Mg==",
+        "iv": "HFmQL4Ya3wOAzyI0",
+        "data": "N3qL7DKAZv+CGgCgZ7QZI63jhyhWYExYXxOsrMdVQQBApYGn2yT7QezqfRKzin6RA+/LCrHTNTwAXro4L2JJj2Z5EuxUuY2d/h7neDEbqsQ0y2r8v1Z08h3vSHCasWHDW1/uigKmKdv/2agwjMMnvT1rRyNSDa7ZYqs6cqSi+NhXGVrlzGGjm/jOBu+Y/DjDPFMqPnRQLeKZ3d1NXlmTlOT8BBiNmJGEKf9WzUkxPoM6vZqgHLGsXGUUY7hfBHvjBdUuy+CctCSSb96t1BizsYNoalp7CZ6RErb8yGAIc+6/cVNIAjrzNpV+11GfnV4oMcjFo6KKl88heGf8V/hPL7C4DWoViKIZ+RifPlb+JoOZzhlXk5b5lEWPd6orny24qJH27IEwUgRV10gJIL71Tcl5xHP8akThkgffrvF0dePwVpQb+0UImBqettbCE4P9J2FLlQTIFoenOM5H+SYGRHZUeQcwqdb0NuV1Pvj2g0w8Gk7AgQX3uzwB8smXwL0WiMac7vKqqxaMaeO6vAwvoSwCwkzaC5gmBWmIB+7sOS8s794PJ1BDb+kVUJyMSflwTgzpCkfP8AROe0Oduob5s+cbcgddAsA2lHtR4vyI3U5bGtJBNcScG2mPvbCcxazZuXTtcACFjfe10jK4D4LcCLmos0ugqZ5rO/GDbV8HMiWOKi5RCth7/1hsqrybBhDT2C8SXMJHeucZGaDOh9AmZVQXTura/sBcw7fOZqWkOWGsi3oQG7gk4aPcrhCalEK+VskkSEXW6ATeGqrPbdvDNEPLsnjjYV/OKkc9BnEgPsDsSvw795wp8O5eSpIj/51N1oOBOlP2ASSRZH97KR7f"
+      }
+    },
+    {
+      "slug": "westnetz",
+      "name": "Westnetz",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "zK3qxCkaKok7xGEacGUgew==",
+        "iv": "LYrE4ieILx9P9fGh",
+        "data": "HkI1klbtMW9CVGMHJucDBHgeyl/B2swW2LOyxMz74QwG0mS69aRPh7Oi3LneCRpHPACFOP34Ot3M2a9zj33tV3FUZDf8x3HaxSPUfFIzpxf1EsBvc/INvcFgDBLqeuNlgUyWUkm40nDlfvCrkUlGdr13LZpmrB0R2GihwxBGT1RKwCLp4thjcWXY82zg//kGbGPvhtq/BXCj0qWMssldGnh2nswpa8Wtw65KHeZ+ABKhhA0DGVj5uNbz0WZlD5BzxXsottFbk3a0ErSDwJnuYsdEcZvB0KWyFXTq1FSJK9Zkc3ooSwW2NNIx06cSxQXugqR/N1Sk79cQXuUSYxb/o8q1frqG25L102G2EuiNr0JtrI9Ui0xqGcCrYB9sxshAsFD7sZyZML/5Ke2vxug91cT9xXu4pm5VqgnMrQYM0w7hxOwn1nuCXoLqeEzs1hEkmGfY2jF6bNH9grW/pHvX+UbmC39SsMohTHWgNHOw2d3LF6QdTEpIsFI="
+      }
+    },
+    {
+      "slug": "bundeswehr-hannover",
+      "name": "Bundeswehr Hannover",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "Ta13YMTfdv03vSCpkv7kIA==",
+        "iv": "GkpN2ZnDlqReBQcZ",
+        "data": "NYZ34vtZDSVXuiX9tP2pbujJr3MKe84pKFBfjDQaVXxR/dQuZDc5Edd9vPcTSzgdl490cz/7dj0+ebIAti25sY95yI2IBXl0iN9U4ODqulw0Ug5sK3avgmpskwNnh0S99RiRhptXfVA44AuJnc0aR0cPYGmeCQZO62ZW1t81vOl4h+2AXNgMWtUdNej9knT25A2u7U2Z2Pkr8m4gzJLnxaKxioUdNAfQUmCpl2urkLYX60dn9qum82zERdvZiT5WNEhQmuc2lZR66J2SSLmmcD0vHpewyM6Dygl2+7Zq9E8XTKFpkNEVxhAXP7njz5NZRePeXTaPwMVzasCjTsDgLzQD7O3KlHFs6EJbWSKS0XF9L8OVKzrCip0VAs+qY4e1swm0bFUQODvTKpSGHKEDCzRGU0DU6A8Xg+Cs1DyD/xWF5ylni4bf5d6BF+p72836R8RPrmeAWSmQ7o6/STxIAvDqnaf3Z7ymwgLR94eJbmjHuD2gcXo4LrellWM8HfNVaFjDzr9Fkiog"
+      }
+    },
+    {
+      "slug": "tuev-hessen",
+      "name": "TÜV Technische Überwachung Hessen GmbH",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "uD5Fokb/4J9KS2ccOYKbjw==",
+        "iv": "ECYzpedQVwMrc4dU",
+        "data": "aIt226sHLYF+RALCZ8JXgJlUaiJ3DltgHPLLqahjnG/iaUKSJaq1MKsLpS2HJwjcI4tU7rtZTE7CNBJB3fYxVMvscf5v1H8nNARaMVLed71UjBTmyu7OeKYRiw8R0Cde+njtyU2xW0+948UXEuuRVcQSftLGGEhAbBXtHB5ehHSqyB6JmscEGpXg+dgTiVH1fUPKEl3XXcZvXUmVNi3yj08svFcCmTEMGRJUNT7LNFIthFcQWpRwMAnit1auNj6n3J+B31Dw3JySlicDa6ExcaaXXo1Yvv31I2TxboJJo06z0/LteuqJRC+Oc5Cd5M7YXSJ6THUz0hLgNqaUfe6fE187wT0FFxVN6ncw/MOcD554ysKTZjkdP/q5q0n4gLX7b824UGRiFA6IS729KSSd0nbhu2wNmv4TWutynWw6fb73uW+Tknemi0f7p9Wtw1gC5OmX94NOQB86gOeo0NcNokChAsZYOg3UW1Tq0SOdl0vgdz5fdFEPtxHI1k6wD6Ul1eXT359AMbMz6DK/GOSjROjYf+E="
+      }
+    },
+    {
+      "slug": "vrm-service",
+      "name": "VRM Service GmbH & Co. KG",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "1Dqps5hEVaTXolwxqDfTjw==",
+        "iv": "WhZnQ5fV74HEqARO",
+        "data": "2Tk2wPYnC5H39EOmm9XDnQ6SnX/Awn+XjwzjK3hLu9eGDtGyfIJY19jKXSDAtI7D58LRZXbl6DjLtbownh7qWvpF1zMOQDGJ2DEh/WR6Hl++KZAtKa+CTm1F+liNc4MqWbja8+hlDNyr5+eKaN8FuziRIigGSdOHyVkh7bfFGPoE3KRPbEjEYBp5/Oq1KkPKyHrc1NWGSCxKl7Quov4qj19BQ8G60uqSk3W+gDsjXKC9Uwhyrg+Wwq6iajgSwPGhLQEuJyHLTeii5C5lIETCVTuD37Q/cbUNYYn5tlmS2IZcV6oM+Zk29IEWIk7OeT0WRvoOyBDx7Y7G8QTlqb9Dky5KOIzviEFGS7jeP4QmNk+LhkI3CuOZuVM4zjZqx9D4YWZ4vOeA2y3ZWoqQWkGy2xKH4Dl8xIEC8eQ3F7PmVmhhVv/h815AnO+ypitUG31y9buSrIUbDrRukPYgFgk7U4R3yFAFGMCoTW9latnvngbKpSk8+oBKUP4qaI+3BmB9ku63"
+      }
+    },
+    {
+      "slug": "ministerium-justiz-mv",
+      "name": "Ministerium für Justiz, Gleichstellung und Verbraucherschutz Mecklenburg-Vorpommern",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "bUw1PC3fQutx1tz135hkDg==",
+        "iv": "qes158zTsuZvZXni",
+        "data": "nCsdXLXt2iMhvNnbC9Iqp1RMLgZLqxds/2nXRhJlFLMhkjlxc6TkS/4AhW/OzHmBjx5DSG7T9I2tHa63hpgQDrA7ziCp0Pm8QoMBl+o7J8iKrvDIIuQe0XFSrskYUvWAdApo6Wvkm1GxArmgX3xv8YJXru3NAtfbIiJlaF3bnP40dNG6emPVFsYyUSpILHlr83SgA2hOjzRMsTxBiDEqH6JpCU7hYkLC6oJQqXJ5ypuIm3frrhBU0jRpJ2FIAF182ibVb0u21zcC3Gnb22PT1tC5O5V7ZVLKxLAl9OOxukiGiKZAglTV/QOaszEeljRhyrO8IrfYCeFe41/8XfopaSNc0Xa9a0UAruNTk+tPhI/zhEfmlXDYvzsmGZHITsGedBAep1wcMm00KUhEpDAFbkRDdaJVqlBZAEseaRpaROyfzmsmski/76cyhMzHwUWaRUkeTdVDsH9ZPmkXbhuIQ+ip0yCypUrRuHsBXxY1barnEPsnSZWaG7JDwceV3KaUHsSdd5g3MeA/j1gJQGAYNFovXtG7ITOs+d6eMlBOJxb1+PZJTAOMWAPpqaeU1BatPrWAcTkxGrDIH8us/KltbxhoX2ypLCo="
+      }
+    },
+    {
+      "slug": "dhl",
+      "name": "DHL",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "I9k4BuFxTf6mH/ujUCaBQg==",
+        "iv": "Ofjgm/wKuzaNcSJS",
+        "data": "OfiBvOQ6NlRLGPoekAGwAjwWwydJBvralspQWgJ70Gh2yVFfEiE7pNPTBJXyxF8pP8L2ny/rxpDgJ1ZgDWc8xu9D10Pai9RErCzKcgA3ieUEUQjsqENk/LEXvjCLEO9s75/OVq7u5LHBAPbkTT87RzzsBv/EwTgHhIa40prL8FPuGrSEqtc9c7pV+r4SjlBxz5/rQzFTyyRE74b4+P8/2frQb7whiI5OLaFMUk263Ol93asXA9XKvWKQDcKjAGjyfRiEoaDp8KOCK/33TDFb98nR1R7N9n1N1nzq4UOACCc60dqlF9Nsd6BsKd1D2WcYe+EdbWA8adhpCq3nL0Xthnt8BTCDbAXjicJ8Rg5IcFiJul14KIW8sWn6v9dvbydkCKhBq81xcoo6++KCZF6IrhQIu1Fi96ooOf4DZCLezCRudCQRmpPZkK5A+yRc6n+YaPxwWcTC53pFU6YaoAteWxA8ajQAttVQAqeDOidoR4o="
+      }
+    },
+    {
+      "slug": "evg-martens",
+      "name": "EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "rlWEnmnL1z7ckqOBORguIw==",
+        "iv": "ErBQU1rs+ty8XUHX",
+        "data": "BCxpa/B95SZotVz3TtlyRhH0afVGvH2KAdGS/Vt34t1DZ3qvKQQlXb5MKBnkjXBQTrfzgNrqIUx0gi5kXHSBEEm+DFnjhXohrLPXvFMbX6qorix7cqVsPygMa8WSVmN+54KOYlFxsGxEf7ltRkm70kqzctsjMwu0KPUYbcEKbhBHOdd/X2HCDvFumTD66UpKKfBYGaR5utQJ7rChVPsxWaPErqlxlLQm6UQBCV1Q1pF5HVgmif8ikzr3X0xq42c7DtQC7PPAFbM3nPsCzsrxebundEC/NvnGXwRwoIknZUEWjbLZavXZ+Heq7PDEmD3A27nuIbs42IGIz2smX9iQ6t+jWjbLco8D4BqO9Pciv+PgM1vO5yr9iKUbOF7xKvcGkD9/Eh1PsktdZlJyDFovGBd4yMImB79+fTipXbQUJI2YACSMAHMSbFxdICWH/5EJGbJ7GiYzn0dh7DGnGzicc1AUX3baXhbftQK2oOZUqseUEq0tC0NLQ6m0+Kv5NRuU3+qwKmqvzbLBqeJCiXbpCYEQGezz9T/mV4WUAph+8gbbD1NAfAFOV9o5050="
+      }
+    },
+    {
+      "slug": "stadt-frankfurt",
+      "name": "Stadt Frankfurt",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "GiI84pHAX7QSZhkJDNH+VA==",
+        "iv": "I6XSs7vdGD71O/Gc",
+        "data": "xDzGkuOxzaLAueRB02KkgszIsGTjfaHrznC/8UGkeCISXeeCn+jHkKdwqDADMgMC+aTPGXOtWxPJ5A/CjN6YWd/Ncy0jSfKi72BLG2T0Qy0YakltIwIoIEvXJw1gHVsLzluol1S+8vj85TSu4+jvCwXra1WcqcpwHCYBpgljSsOMqWoLjEavQeSsseQr8lWxIk5i5+0Oym609pIjgLDYKBq/I4BYexuDNuUGDaBiVspqjwFDyjfnZ3VxrXdzWaGVGCl5EkWeNEu+X6mB4xG4AG6+qbnyy/CjGLClwJg34nWAMd+u8AwGZFQFFZWxpDPD4OXHEkp9qJ5hjsLV+fPWOJFQLDgVPdlg144D7njuH3sTtis5AlNk3HS54D7+m1uD/CeccOYDbNkRRDzlA92+mzQoWVvpsDr139v86gsa3kUFUe2HIBKSuRsDwU2qSN1tyuAYxZmz3vgU3KLz+Pmi+lJZh70mwg91g+0ENzlLOQ=="
+      }
+    },
+    {
+      "slug": "baeckerei-kraus",
+      "name": "Bäckerei Kraus",
+      "geschuetzt": true,
+      "tresor": {
+        "salt": "J42U8u3wzhZkYAAJU5XrRA==",
+        "iv": "Ee9OAcPY5Z743BYq",
+        "data": "TIPwcbteoo2hfE/gX7+5PJiDwCFovUDPpKjboaUU2vIzbDC9qNnTBLlpova2kYVVihbDKK1zkTiwxyXA76frv6UqNZCjDOMp4465/IO1VtzYZ+DCQLBz37jAXzVLaPOFRGGhMqJhOf1xdVIHjFVhdSZzCM17cZbhgxV8N/ZDWRa+UrWH2xkl8BikdNImTzma4iK35y/Lh1CiRY19tor+P9ZqcPTNm9PeNUGYMevq02Tyuohr0EtO3nWjjtlR/bgYB3eaOcPh495CpWi9XpjNj2LBgDOeusVv8QN/RQtF1IEYsEZoH9eb83U4NPC3dIzIHB5U/e1jXJt6TAJcTcPCFD38KshJwHzy91l728A4BHZcsYB7HdtFDd2wqNt5JIEeq7OI7R3V5mefOJ6mmOiOZUiO+AsBBHFD0MKH/n0Ahil9/QhgrdfUp+0ycfUZkfk7gGMO1fNNdhkksKfbzeN4E6pbJXn2SP+h5U5qrpGX63RrXKYewNU+zngXPgICZsg="
+      }
+    }
+  ]
+}
