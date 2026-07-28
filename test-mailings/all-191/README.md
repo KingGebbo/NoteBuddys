@@ -43,3 +43,16 @@ build/                 prep.py · research_wf.js · render_all.py · data.py (1�
 - CI-Farben aus dem Logo abgeleitet; Graustufen-/Schwarz-Logos (z. B. Hirmer,
   Appelrath, CHRIST, Daimler Truck) laufen bewusst als elegantes Anthrazit.
 - Noch **kein Mailversand** — reine PDF-Deliverables.
+
+## JPGs (zum Einbetten in die E-Mail)
+
+`build/render_jpg.py` rendert dieselben Mailings als JPG (nicht aus dem PDF konvertiert,
+sondern direkt aus dem Template — dadurch scharf und ohne Rand):
+
+- **1280 px breit** (2× von 640 px Mailbreite) → scharf auch auf Retina-Displays, ~300–470 KB.
+- Daraus per Downscale eine **640-px-Variante** (~90–170 KB) für schnellere Ladezeit im Mailclient.
+- Dateiname identisch zum PDF: `Mailing-<NNN>-<Firma>.jpg` → Zuordnung über
+  `../drafts/drafts_zuordnung.csv` (Spalte `PDF-Mockup`, gleicher Name mit .jpg).
+
+Bauen: `cd build && python3 render_jpg.py` (schreibt nach `jpg/`).
+Die JPG-Dateien selbst liegen nicht im Repo (ca. 76 MB) — sie sind jederzeit reproduzierbar.
