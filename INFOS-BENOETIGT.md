@@ -122,3 +122,42 @@ Die Passwörter sind wie gewünscht die Firmennamen. Zwei Dinge solltest du dazu
 2. **Die Daten selbst sind verschlüsselt** (AES-256). Im öffentlichen GitHub-Repository stehen nur die Firmennamen im Klartext, keine Zahlen. Ohne Passwort ist aus den Dateien nichts auszulesen.
 
 Alternativ kann Vercel die ganze Seite mit einem echten Serverschutz versehen (Settings → Deployment Protection). Das ist die sicherste Variante.
+
+---
+
+## 8. Direktlinks für den Mailversand
+
+Die Auswertung ist jetzt unter einer eigenen Adresse erreichbar:
+
+**https://note-buddys.vercel.app/auswertungen**
+
+Zusätzlich hat jeder Kunde einen Direktlink, der gleich die Passwortabfrage seiner Firma öffnet. Den kannst du direkt in die Mail an den Kunden setzen:
+
+| Kunde | Direktlink | Passwort |
+|---|---|---|
+| Westpress für DFS | https://note-buddys.vercel.app/auswertungen/westpress-dfs | Westpress für DFS |
+| Landwirtschaftskammer NRW | https://note-buddys.vercel.app/auswertungen/landwirtschaftskammer-nrw | Landwirtschaftskammer NRW |
+| Waldorf Institut Witten Annen | https://note-buddys.vercel.app/auswertungen/waldorf-institut-witten-annen | Waldorf Institut Witten Annen |
+| Selektiv Media für Rheinmetall | https://note-buddys.vercel.app/auswertungen/selektiv-media-rheinmetall | Selektiv Media für Rheinmetall |
+| LEUE & NILL GmbH + Co. KG | https://note-buddys.vercel.app/auswertungen/leue-nill | LEUE & NILL GmbH + Co. KG |
+| fischer-Hydroforming GmbH | https://note-buddys.vercel.app/auswertungen/fischer-hydroforming | fischer-Hydroforming GmbH |
+| Hochschule Magdeburg-Stendal | https://note-buddys.vercel.app/auswertungen/hochschule-magdeburg-stendal | Hochschule Magdeburg-Stendal |
+| OFD Hessen | https://note-buddys.vercel.app/auswertungen/ofd-hessen | OFD Hessen |
+| Bosch Rexroth | https://note-buddys.vercel.app/auswertungen/bosch-rexroth | bosch rexroth |
+| Hochschule der Polizei des Landes Brandenburg | https://note-buddys.vercel.app/auswertungen/hochschule-polizei-brandenburg | Hochschule der Polizei des Landes Brandenburg |
+| Aareal Bank | https://note-buddys.vercel.app/auswertungen/aareal-bank | Aareal Bank |
+| VPV Versicherung | https://note-buddys.vercel.app/auswertungen/vpv-versicherung | VPV Versicherung |
+| Thyssen Krupp | https://note-buddys.vercel.app/auswertungen/thyssen-krupp | Thyssen Krupp |
+| Stadt Coesfeld | https://note-buddys.vercel.app/auswertungen/stadt-coesfeld | Stadt Coesfeld |
+| DLRG | https://note-buddys.vercel.app/auswertungen/dlrg | DLRG |
+| Westnetz | https://note-buddys.vercel.app/auswertungen/westnetz | Westnetz |
+| Bundeswehr Hannover | https://note-buddys.vercel.app/auswertungen/bundeswehr-hannover | Bundeswehr Hannover |
+| TÜV Technische Überwachung Hessen GmbH | https://note-buddys.vercel.app/auswertungen/tuev-hessen | TÜV Technische Überwachung Hessen GmbH |
+| VRM Service GmbH & Co. KG | https://note-buddys.vercel.app/auswertungen/vrm-service | VRM Service GmbH & Co. KG |
+| Ministerium für Justiz, Gleichstellung und Verbraucherschutz Mecklenburg-Vorpommern | https://note-buddys.vercel.app/auswertungen/ministerium-justiz-mv | Ministerium für Justiz, Gleichstellung und Verbraucherschutz Mecklenburg-Vorpommern |
+| DHL | https://note-buddys.vercel.app/auswertungen/dhl | DHL |
+| EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG | https://note-buddys.vercel.app/auswertungen/evg-martens | EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG |
+| Stadt Frankfurt | https://note-buddys.vercel.app/auswertungen/stadt-frankfurt | Stadt Frankfurt |
+| Bäckerei Kraus | https://note-buddys.vercel.app/auswertungen/baeckerei-kraus | Bäckerei Kraus |
+
+Die Startseite bleibt unter `/`, die Kontaktseite ist unter `/kontakt` erreichbar.

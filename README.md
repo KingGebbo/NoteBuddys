@@ -21,6 +21,21 @@ eigener Webspace) ausliefern.
 - **Anfrage-Funnel** (mehrstufiges Formular, verzweigt nach Schüler / Studenten)
 - **Tab „Kontakt"** mit Gabriel Hilbrig (Foto im Kreis, E-Mail, Telefon)
 
+### Adressen (URLs)
+
+| Seite | Adresse |
+|---|---|
+| Startseite | `/` |
+| Auswertungen (Auswahl) | `/auswertungen` |
+| Auswertung eines Kunden | `/auswertungen/<slug>` |
+| Kontakt | `/kontakt` |
+
+Diese Adressen sind direkt aufrufbar und per Mail verschickbar. Möglich macht das
+`vercel.json`: Vercel liefert für diese Pfade `index.html` aus, das Routing im
+Browser wählt daraufhin die passende Ansicht (siehe `applyPath()` in
+`assets/script.js`). Deshalb müssen alle Asset-Pfade absolut bleiben (`/assets/...`),
+sonst laden sie unter `/auswertungen/<slug>` nicht.
+
 ### Reiter „Auswertungen"
 
 Klickt ein Kunde auf „Auswertungen", kommt er auf eine Auswahlseite mit allen

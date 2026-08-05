@@ -47,9 +47,48 @@
       if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     mnav.classList.remove("open");
+    if (!opts.silent) pushPath(pathForView(name));
     if (!opts.keepScroll) window.scrollTo({ top: 0, behavior: "smooth" });
     // re-trigger reveals for newly shown view
     setTimeout(runReveal, 40);
+  }
+
+  /* =====================================================
+     ROUTING
+     /auswertungen und /kontakt sind echte, verlinkbare URLs.
+     Vercel liefert dafuer index.html aus (siehe vercel.json),
+     hier wird daraus die passende Ansicht gewaehlt.
+  ===================================================== */
+  function pathForView(name) {
+    if (name === "auswertungen") return "/auswertungen";
+    if (name === "kontakt") return "/kontakt";
+    return "/";
+  }
+
+  function canRoute() {
+    return window.history && window.history.pushState &&
+      (location.protocol === "http:" || location.protocol === "https:");
+  }
+
+  function pushPath(path) {
+    if (!canRoute()) return;
+    if (location.pathname === path) return;
+    try { history.pushState({ path: path }, "", path + location.hash); } catch (e) { /* egal */ }
+  }
+
+  function applyPath(push) {
+    var parts = location.pathname.replace(/^\/+|\/+$/g, "").split("/");
+    var first = (parts[0] || "").toLowerCase();
+    if (first === "auswertungen") {
+      setView("auswertungen", { silent: true, keepScroll: true });
+      // /auswertungen/<slug> springt direkt zur Passwortabfrage der Firma
+      var slug = parts[1] ? decodeURIComponent(parts[1]).toLowerCase() : null;
+      if (slug) { pendingSlug = slug; applyPendingSlug(); }
+      else { pendingSlug = null; showStep("select"); }
+      return;
+    }
+    if (first === "kontakt") { setView("kontakt", { silent: true, keepScroll: true }); return; }
+    setView("marketing", { silent: true, keepScroll: true });
   }
 
   $$(".tab-btn").forEach(function (b) {
@@ -60,7 +99,19 @@
   $$("[data-view-link]").forEach(function (a) {
     a.addEventListener("click", function (e) {
       var target = a.dataset.viewLink;
-      var hash = a.getAttribute("href");
+      var hash = a.getAttribute("href") || "";
+      // Echte Pfade (/auswertungen, /kontakt, /) intern aufloesen statt neu zu laden
+      if (hash.charAt(0) === "/") {
+        e.preventDefault();
+        if (!$("#view-" + target).classList.contains("active")) {
+          setView(target, { keepScroll: true });
+        } else {
+          pushPath(pathForView(target));
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        mnav.classList.remove("open");
+        return;
+      }
       if (!$("#view-" + target).classList.contains("active")) {
         e.preventDefault();
         setView(target, { keepScroll: true });
@@ -643,6 +694,7 @@
 
   var reportsData = null;
   var selSlug = null;
+  var pendingSlug = null;
 
   function pctTxt(v, digits) {
     if (v === null || v === undefined) return "–";
@@ -698,8 +750,9 @@
   }
 
   /* ---------- Schritt 2: Passwort ---------- */
-  function openGate(slug, name) {
+  function openGate(slug, name, silent) {
     selSlug = slug;
+    if (!silent) pushPath("/auswertungen/" + slug);
     $("#gateName").textContent = name;
     $("#gatePw").value = "";
     $("#gateErr").classList.remove("show");
@@ -737,7 +790,7 @@
   function initGate() {
     var form = $("#gateForm");
     if (!form) return;
-    $("#gateBack").addEventListener("click", function () { showStep("select"); });
+    $("#gateBack").addEventListener("click", function () { pushPath("/auswertungen"); showStep("select"); });
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -1045,7 +1098,7 @@
       "<p>Sie haben Fragen zu Ihrem Report oder möchten die nächste Kampagne planen? Wir nehmen uns Zeit für Sie.</p>" +
       '<div class="contact-duo">' +
         '<a class="cd-card" href="mailto:gabriel.hilbrig@notebuddys.de">' +
-          '<span class="cd-avatar"><img src="assets/gabriel.png" alt="Gabriel Hilbrig" onerror="this.style.display=\'none\'" /></span>' +
+          '<span class="cd-avatar"><img src="/assets/gabriel.png" alt="Gabriel Hilbrig" onerror="this.style.display=\'none\'" /></span>' +
           '<span class="cd-meta"><b>Gabriel Hilbrig</b><span>Co-Founder</span>' +
           '<span class="cd-mail">gabriel.hilbrig@notebuddys.de</span><span class="cd-tel">+49 176 84894678</span></span></a>' +
         '<a class="cd-card" href="mailto:niclas.weisl@notebuddys.de">' +
@@ -1056,7 +1109,7 @@
 
     host.innerHTML = html;
 
-    $("#repBack").addEventListener("click", function () { showStep("select"); });
+    $("#repBack").addEventListener("click", function () { pushPath("/auswertungen"); showStep("select"); });
     activateReport(host);
   }
 
@@ -1155,12 +1208,13 @@
 
   /* ---------- Start ---------- */
   if ($("#firmGrid")) {
-    fetch("assets/reports.json")
+    fetch("/assets/reports.json")
       .then(function (r) { return r.json(); })
       .then(function (data) {
         reportsData = data;
         initSelect();
         initGate();
+        applyPendingSlug();
         var demo = $("#demoBtn");
         if (demo) {
           demo.addEventListener("click", function () {
@@ -1175,6 +1229,19 @@
       });
   }
 
+
+  function applyPendingSlug() {
+    if (!pendingSlug || !reportsData) return;
+    var treffer = reportsData.kampagnen.filter(function (k) { return k.slug === pendingSlug; })[0];
+    pendingSlug = null;
+    if (!treffer) return;
+    if (treffer.oeffentlich) { renderReport(treffer.daten); showStep("report"); }
+    else { openGate(treffer.slug, treffer.name, true); }
+  }
+
+  /* Startzustand aus der Adresszeile ableiten, Vor/Zurueck unterstuetzen */
+  applyPath();
+  window.addEventListener("popstate", function () { applyPath(); });
 
   /* kick off reveals */
   runReveal();

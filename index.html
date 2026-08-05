@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;650;700;780;800;820&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="/assets/styles.css" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234fb8c4'/%3E%3Cpath d='M14 20c8-3 14-1 18 2 4-3 10-5 18-2v26c-8-3-14-1-18 2-4-3-10-5-18-2z' fill='white'/%3E%3C/svg%3E" />
 <!-- Vercel Web Analytics (static-site integration; served automatically when deployed on Vercel) -->
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
@@ -21,7 +21,7 @@
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top" data-view-link="marketing" aria-label="Note Buddy's Startseite">
+    <a class="brand" href="/" data-view-link="marketing" aria-label="Note Buddy's Startseite">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 64 64" width="40" height="40" fill="none">
           <path d="M8 18c9-4 17-2 24 3 7-5 15-7 24-3v30c-9-4-17-2-24 3-7-5-15-7-24-3z" fill="#8a8f92" opacity=".55"/>
@@ -40,8 +40,8 @@
       <a href="#leistung" data-view-link="marketing">Leistung</a>
       <a href="#targeting" data-view-link="marketing">Targeting</a>
       <a href="#ablauf" data-view-link="marketing">Ablauf</a>
-      <a href="#" data-view-link="auswertungen" data-nav="auswertungen">Auswertungen</a>
-      <a href="#" data-view-link="kontakt" data-nav="kontakt">Kontakt</a>
+      <a href="/auswertungen" data-view-link="auswertungen" data-nav="auswertungen">Auswertungen</a>
+      <a href="/kontakt" data-view-link="kontakt" data-nav="kontakt">Kontakt</a>
     </nav>
 
     <div class="nav-actions">
@@ -56,8 +56,8 @@
     <a href="#leistung" data-view-link="marketing">Leistung</a>
     <a href="#targeting" data-view-link="marketing">Targeting</a>
     <a href="#ablauf" data-view-link="marketing">Ablauf</a>
-    <a href="#" data-view-link="auswertungen">Auswertungen</a>
-    <a href="#" data-view-link="kontakt">Kontakt</a>
+    <a href="/auswertungen" data-view-link="auswertungen">Auswertungen</a>
+    <a href="/kontakt" data-view-link="kontakt">Kontakt</a>
     <a href="#anfrage" class="btn btn-primary btn-block" data-scroll-anfrage>Anfrage starten</a>
   </div>
 </header>
@@ -369,7 +369,7 @@
       <div class="kontakt-card reveal">
         <div class="avatar">
           <div class="inner">
-            <img src="assets/gabriel.png" alt="Gabriel Hilbrig" id="gabrielPhoto"
+            <img src="/assets/gabriel.png" alt="Gabriel Hilbrig" id="gabrielPhoto"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
             <span class="initials" style="display:none;">GH</span>
           </div>
@@ -419,7 +419,7 @@
           <li><a href="#vorteile" data-view-link="marketing">Vorteile</a></li>
           <li><a href="#leistung" data-view-link="marketing">Leistung</a></li>
           <li><a href="#targeting" data-view-link="marketing">Targeting</a></li>
-          <li><a href="#" data-view-link="auswertungen">Auswertungen</a></li>
+          <li><a href="/auswertungen" data-view-link="auswertungen">Auswertungen</a></li>
           <li><a href="#anfrage" data-view-link="marketing" data-scroll-anfrage>Anfrage starten</a></li>
         </ul>
       </div>
@@ -439,6 +439,6 @@
   </div>
 </footer>
 
-<script src="assets/script.js"></script>
+<script src="/assets/script.js"></script>
 </body>
 </html>
