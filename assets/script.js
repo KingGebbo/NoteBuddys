@@ -935,10 +935,32 @@
         "</b></td></tr></tbody></table></div>";
       if (d.mailing.hinweis) html += '<p class="report-note">' + esc(d.mailing.hinweis) + "</p>";
     }
+    if (d.landingpageBild) {
+      html += '<figure class="lp-shot">' +
+        '<img src="' + esc(d.landingpageBild) + '" alt="Ihre Platzierung auf der Note Buddy\'s Landingpage" loading="lazy" />' +
+        "<figcaption>Ihre Platzierung auf der Note Buddy's Landingpage</figcaption></figure>";
+    }
     if ((d.produkt || "").indexOf("Collegeblöcke") > -1) {
       html += '<p class="report-note">Wussten Sie schon? Der Collegeblock ist das Lerntool Nummer 1 der jungen Zielgruppe. Pro Monat erhalten wir ca. 5.000 bis 6.000 neue Anmeldungen für unsere Blöcke.</p>';
     }
     html += "</div></div></section>";
+
+    /* Empfehlung QR-Code, wenn keine Scans erfasst wurden */
+    if (d.qrEmpfehlung) {
+      html += '<section class="aus-infobox-sec"><div class="wrap">' +
+        '<div class="infobox qr reveal">' +
+          '<span class="ib-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></span>' +
+          "<div><b>Unsere Empfehlung: platzieren Sie einen QR-Code</b>" +
+          "<p>Für diese Kampagne liegen uns keine QR-Code-Scans vor. Ein QR-Code auf Ihrer Anzeige macht messbar, wie viele Studierende direkt von der Platzierung auf Ihre Seite springen. " +
+          "Als Bestandskunde stellen wir Ihnen dafür <b>Note Buddy's Analytics</b> bei Ihrer nächsten Kampagne <b>kostenfrei</b> zur Verfügung.</p>" +
+          '<a class="ib-cta" href="mailto:gabriel.hilbrig@notebuddys.de?subject=' +
+          encodeURIComponent("Note Buddy's Analytics für die nächste Kampagne (" + d.name + ")") +
+          '">Note Buddy\'s Analytics für die Folgekampagne anfragen' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+          "</div>" +
+        "</div>" +
+      "</div></section>";
+    }
 
     /* Benchmarks */
     if (hatBlockDaten) {

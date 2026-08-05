@@ -785,3 +785,18 @@ textarea.input { resize: vertical; min-height: 96px; }
   .demo-hint, .infobox, .repost-placeholder { flex-direction: column; align-items: flex-start; }
   .demo-hint .btn { width: 100%; justify-content: center; }
 }
+
+/* QR-Empfehlung und Landingpage-Screenshot */
+.infobox.qr { background: var(--brand-tint-2); border-color: #d8eef1; }
+.infobox.qr .ib-ic { color: var(--brand-700); }
+.ib-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
+  font-weight: 640; font-size: 15px; color: var(--accent-600);
+  border-bottom: 2px solid transparent; transition: border-color .2s, gap .3s var(--ease-spring);
+}
+.ib-cta svg { width: 17px; height: 17px; }
+.ib-cta:hover { border-color: var(--accent); gap: 12px; }
+
+.lp-shot { margin: 24px 0 0; }
+.lp-shot img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
+.lp-shot figcaption { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
