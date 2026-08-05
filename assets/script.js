@@ -1084,20 +1084,27 @@
 
     /* Reposts */
     var bilder = d.reposts_bilder || [];
+    var videos = d.reposts_videos || [];
     html += '<section class="aus-reposts"><div class="wrap">' +
       '<div class="section-head reveal"><span class="eyebrow">Social Media Reposts</span>' +
       "<h2>Ihre Kampagne, geteilt von der Zielgruppe.</h2>" +
       "<p>Studierende werden dazu aufgerufen, den Erhalt Ihrer Blöcke auf Social Media mit uns zu teilen, und haben daraufhin die Chance, spannende Gewinne zu gewinnen. Jeder Repost ist zusätzliche, organische Reichweite.</p></div>";
 
-    if (bilder.length) {
+    if (bilder.length || videos.length) {
+      var items = videos.map(function (v) {
+        return '<figure class="sl-item is-video" data-video="' + esc(v.id) + '">' +
+          '<button type="button" class="sl-play" aria-label="Video abspielen">' +
+            '<img src="' + esc(v.thumb) + '" alt="Video-Repost aus der Zielgruppe" loading="lazy" />' +
+            '<span class="sl-play-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>' +
+          "</button>" +
+          "<figcaption>" + esc(v.titel || "Video") + " · Repost aus der Zielgruppe</figcaption></figure>";
+      }).concat(bilder.map(function (src, i) {
+        return '<figure class="sl-item"><img src="' + esc(src) + '" alt="Social-Media-Repost ' + (i + 1) +
+          '" loading="lazy" /><figcaption>Repost aus der Zielgruppe · Instagram Story</figcaption></figure>';
+      })).join("");
       html += '<div class="slider reveal d1" id="repostSlider">' +
         '<button class="sl-nav prev" type="button" aria-label="Vorheriger Repost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>' +
-        '<div class="sl-viewport"><div class="sl-track" id="slTrack">' +
-        bilder.map(function (src, i) {
-          return '<figure class="sl-item"><img src="' + esc(src) + '" alt="Social-Media-Repost ' + (i + 1) +
-            '" loading="lazy" /><figcaption>Repost aus der Zielgruppe · Instagram Story</figcaption></figure>';
-        }).join("") +
-        "</div></div>" +
+        '<div class="sl-viewport"><div class="sl-track" id="slTrack">' + items + "</div></div>" +
         '<button class="sl-nav next" type="button" aria-label="Nächster Repost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>' +
         '</div><div class="sl-dots" id="slDots"></div>';
     } else {
@@ -1194,7 +1201,7 @@
     var prev = $(".sl-nav.prev", slider), next = $(".sl-nav.next", slider);
     var idx = 0;
 
-    function isFocus() { return window.innerWidth > 760 && items.length > 1; }
+    function isFocus() { return window.innerWidth > 760 && items.length > 1 && items.length <= 4; }
     function maxIdx() { return items.length - 1; }
 
     function buildDots() {
@@ -1222,6 +1229,7 @@
         it.classList.toggle("is-active", i === idx);
         it.style.flexBasis = focus ? "" : (100 / items.length) + "%";
       });
+      slider.style.setProperty("--sl-count", items.length);
       $$(".sl-dot", dots).forEach(function (d, i) { d.classList.toggle("on", i === idx); });
       prev.disabled = idx === 0;
       next.disabled = idx === maxIdx();
@@ -1245,7 +1253,24 @@
       if (isFocus() !== lastFocus) { lastFocus = isFocus(); update(); }
     });
     items.forEach(function (it, i) {
-      it.addEventListener("click", function () { if (isFocus()) { idx = i; update(); } });
+      it.addEventListener("click", function () { if (isFocus() && i !== idx) { idx = i; update(); } });
+      var play = $(".sl-play", it);
+      if (play) {
+        play.addEventListener("click", function (e) {
+          // Im Fokus-Modus holt der erste Klick das Video nach vorn, erst dann wird abgespielt
+          if (isFocus() && i !== idx) { idx = i; update(); return; }
+          e.stopPropagation();
+          var id = it.dataset.video;
+          var frame = document.createElement("iframe");
+          frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) +
+            "?autoplay=1&rel=0&modestbranding=1";
+          frame.title = "Video-Repost";
+          frame.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+          frame.setAttribute("allowfullscreen", "");
+          frame.className = "sl-frame";
+          play.replaceWith(frame);
+        });
+      }
     });
     buildDots();
     update();

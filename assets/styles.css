@@ -612,7 +612,9 @@ textarea.input { resize: vertical; min-height: 96px; }
 .slider.focus .sl-viewport { overflow: visible; }
 .slider.focus .sl-track { transform: none !important; width: auto !important; justify-content: center; gap: 22px; }
 .slider.focus .sl-item {
-  flex: 0 0 296px; padding: 0; opacity: .5; transform: scale(.92);
+  /* Breite passt sich an die Anzahl an, damit auch 4 Kacheln nebeneinander passen */
+  flex: 0 0 calc((100% - (var(--sl-count, 3) - 1) * 22px) / var(--sl-count, 3));
+  max-width: 320px; padding: 0; opacity: .5; transform: scale(.92);
   transition: opacity .5s var(--ease-spring), transform .5s var(--ease-spring);
 }
 .slider.focus .sl-item.is-active { opacity: 1; transform: scale(1.04); }
@@ -808,3 +810,36 @@ textarea.input { resize: vertical; min-height: 96px; }
 .infobox.mail .btn { margin-top: 16px; }
 .mail-date { margin-top: 20px; font-size: 14.5px; color: var(--muted); }
 .mail-date b { color: var(--ink); }
+
+/* Video-Reposts im Slider */
+.sl-play {
+  position: relative; display: block; width: 100%; max-width: 330px; padding: 0;
+  border: 0; background: none; border-radius: var(--radius); overflow: hidden;
+}
+.sl-play img {
+  width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: var(--radius);
+  border: 1px solid var(--line); box-shadow: var(--shadow-lg); background: #0d353b;
+}
+.sl-play::after {
+  content: ""; position: absolute; inset: 0; border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(13,53,59,.10), rgba(13,53,59,.45));
+  transition: background .3s;
+}
+.sl-play:hover::after { background: linear-gradient(180deg, rgba(13,53,59,.05), rgba(13,53,59,.30)); }
+.sl-play-ic {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  width: 62px; height: 62px; border-radius: 50%; background: rgba(255,255,255,.94);
+  color: var(--accent-600); display: grid; place-items: center; z-index: 1;
+  box-shadow: 0 10px 30px rgba(16,38,43,.35);
+  transition: transform .35s var(--ease-spring), background .25s;
+}
+.sl-play-ic svg { width: 28px; height: 28px; margin-left: 3px; }
+.sl-play:hover .sl-play-ic { transform: translate(-50%,-50%) scale(1.08); background: #fff; }
+.sl-frame {
+  width: 100%; max-width: 330px; aspect-ratio: 9 / 16; border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg); background: #000; display: block;
+}
+.sl-item.is-video figcaption::before {
+  content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); margin-right: 7px; vertical-align: middle;
+}

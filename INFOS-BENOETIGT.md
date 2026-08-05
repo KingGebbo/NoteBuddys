@@ -4,6 +4,8 @@ Stand: 05.08.2026, nach der Mailing-Aktualisierung.
 
 ## Erledigt in dieser Runde
 
+- Zwei YouTube Shorts eingebunden: **Aareal Bank** und **Selektiv Media für Rheinmetall**. Sie erscheinen als erste Kachel im Repost-Slider mit Play-Button.
+
 - Mailing-Werte aus der Tabelle übernommen, die alten Platzhalter sind raus
 - Neue Spalte **Zeitpunkt** eingebaut: erscheint in der Mailing-Tabelle und unter dem Mailing-Vergleich
 - Bei 5 Firmen mit „Ausstehend" erscheint jetzt der Hinweis, dass wir die Inhalte brauchen, mit Button zum Upload-Formular
@@ -39,7 +41,7 @@ Stand: 05.08.2026, nach der Mailing-Aktualisierung.
 
 ---
 
-## 2. Repost-Bilder fehlen für 12 Kunden
+## 2. Repost-Bilder und Videos fehlen für 12 Kunden
 
 - Landwirtschaftskammer NRW
 - Hochschule Magdeburg-Stendal
