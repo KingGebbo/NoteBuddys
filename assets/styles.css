@@ -753,7 +753,8 @@ textarea.input { resize: vertical; min-height: 96px; }
 }
 .ib-ic { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: #fff; color: var(--accent-600); flex: none; }
 .ib-ic svg { width: 22px; height: 22px; }
-.infobox b { display: block; font-size: 16px; margin-bottom: 4px; }
+.infobox > div > b:first-child { display: block; font-size: 16px; margin-bottom: 4px; }
+.infobox p b { display: inline; font-size: inherit; color: var(--ink); }
 .infobox p { color: var(--ink-2); font-size: 15px; }
 
 /* ---------- Repost-Platzhalter ---------- */
@@ -800,3 +801,10 @@ textarea.input { resize: vertical; min-height: 96px; }
 .lp-shot { margin: 24px 0 0; }
 .lp-shot img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
 .lp-shot figcaption { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
+
+/* Mailing: ausstehend und Versandzeitpunkt */
+.infobox.mail { background: var(--surface); border-color: var(--line); }
+.infobox.mail .ib-ic { color: var(--brand-700); }
+.infobox.mail .btn { margin-top: 16px; }
+.mail-date { margin-top: 20px; font-size: 14.5px; color: var(--muted); }
+.mail-date b { color: var(--ink); }

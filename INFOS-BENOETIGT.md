@@ -1,18 +1,45 @@
 # Was ich noch von dir brauche
 
-Stand: 05.08.2026. Sheet-Werte und Social-Media-Bilder sind eingepflegt.
+Stand: 05.08.2026, nach der Mailing-Aktualisierung.
 
 ## Erledigt in dieser Runde
 
-- Alle Werte aus der Google-Tabelle aktualisiert (u. a. Landingpage-Aufrufe jetzt 31.576, Waldorf korrigiert, DLRG gebucht 10.000)
-- QR-Code-Scans ergänzt: Bosch Rexroth 93, VPV 78, DLRG 260, Stadt Frankfurt 19
-- Social-Media-Reposts für **13 Kunden** aus dem Drive-Ordner eingebunden (je 3 Bilder)
-- Bei 16 Kunden ohne QR-Scans erscheint jetzt die Empfehlung inkl. kostenfreiem Note Buddy's Analytics für die Folgekampagne
-- 4 Landingpage-Screenshots (Westpress, Leue & Nill, VPV, Waldorf) als eigene Abbildung im Report ergänzt
+- Mailing-Werte aus der Tabelle übernommen, die alten Platzhalter sind raus
+- Neue Spalte **Zeitpunkt** eingebaut: erscheint in der Mailing-Tabelle und unter dem Mailing-Vergleich
+- Bei 5 Firmen mit „Ausstehend" erscheint jetzt der Hinweis, dass wir die Inhalte brauchen, mit Button zum Upload-Formular
+
+### Mailings mit Werten
+
+| Kunde | Öffnungsrate | Klickrate | Zeitpunkt |
+|---|---|---|---|
+| Landwirtschaftskammer NRW | 53,3 % | 5,4 % | fehlt |
+| Waldorf Institut Witten Annen | 54,4 % | 5,5 % | 24.03.2026 |
+| Hochschule Magdeburg-Stendal | 54,5 % | 5,6 % | 01.05.2026 |
+| Westnetz | 55,6 % | 5,7 % | fehlt |
+| Bundeswehr Hannover | 55,1 % | 5,2 % | fehlt |
+| Bäckerei Kraus | 55,1 % | 5,2 % | 25.07.2026 |
+
+### Mailings ausstehend (mit Upload-Button)
+
+- LEUE & NILL GmbH + Co. KG
+- OFD Hessen
+- Thyssen Krupp
+- EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG
+- Stadt Frankfurt
+
+> **Bitte gegenprüfen:** Bei **EVG Martens** und **Stadt Frankfurt** steht in der Kopfzeile „Mailings - Ausstehend", in den Zellen stehen aber noch Werte (54,50 % / 5,60 %). Ich habe die Kopfzeile als maßgeblich genommen und beide als ausstehend gesetzt, weil du gesagt hast, dass die alten Werte Platzhalter waren. Sag Bescheid, falls die Werte doch echt sind.
 
 ---
 
-## 1. Repost-Bilder fehlen noch für 12 Kunden
+## 1. Versandzeitpunkt fehlt noch bei
+
+- Landwirtschaftskammer NRW
+- Westnetz
+- Bundeswehr Hannover
+
+---
+
+## 2. Repost-Bilder fehlen für 12 Kunden
 
 - Landwirtschaftskammer NRW
 - Hochschule Magdeburg-Stendal
@@ -27,11 +54,11 @@ Stand: 05.08.2026. Sheet-Werte und Social-Media-Bilder sind eingepflegt.
 - EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG
 - Stadt Frankfurt
 
-Im Drive-Ordner liegen außerdem zwei Ordner, zu denen es keine Auswertungsseite gibt: **DAAD** und **Sparkasse Düsseldorf**. Beide stehen nicht auf deiner Kundenliste. Sag Bescheid, wenn ich dafür ebenfalls Seiten anlegen soll.
+Im Drive-Ordner liegen zusätzlich **DAAD** und **Sparkasse Düsseldorf**, die nicht auf deiner Kundenliste stehen. Sag Bescheid, ob ich dafür Seiten anlegen soll.
 
 ---
 
-## 2. QR-Code-Scans fehlen weiterhin bei 16 Kunden
+## 3. QR-Code-Scans fehlen bei 16 Kunden
 
 - Westpress für DFS
 - Landwirtschaftskammer NRW
@@ -50,11 +77,11 @@ Im Drive-Ordner liegen außerdem zwei Ordner, zu denen es keine Auswertungsseite
 - EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG
 - Bäckerei Kraus
 
-Diese Kunden sehen im Report die Empfehlung zur QR-Code-Platzierung. Sobald du Zahlen hast, trage ich sie ein.
+Diese Kunden sehen die Empfehlung zur QR-Code-Platzierung inklusive kostenfreiem Note Buddy's Analytics.
 
 ---
 
-## 3. Kunden ganz ohne Kennzahlen
+## 4. Kunden ganz ohne Kennzahlen
 
 - Hochschule der Polizei des Landes Brandenburg
 - TÜV Technische Überwachung Hessen GmbH
@@ -63,18 +90,17 @@ Diese Kunden sehen im Report die Empfehlung zur QR-Code-Platzierung. Sobald du Z
 
 ---
 
-## 4. Offene Rückfragen
+## 5. Weitere offene Punkte
 
 | Kunde | Frage |
 |---|---|
 | DHL | Gebucht steht auf `0`, verschickt wurden `750`. Wie viele waren gebucht? |
-| Thyssen Krupp | Mailings sind als ausstehend markiert, Öffnungs- und Klickrate fehlen. |
 | DLRG | Zahlen zum 2x Social-Media-Retargeting fehlen noch. |
 | alle | Welches Semester soll im Report stehen? Aktuell steht dort „Aktuelle Kampagne". |
 
 ---
 
-## 5. Direktlinks für den Mailversand
+## 6. Direktlinks für den Mailversand
 
 | Kunde | Direktlink | Passwort |
 |---|---|---|
@@ -105,6 +131,6 @@ Diese Kunden sehen im Report die Empfehlung zur QR-Code-Platzierung. Sobald du Z
 
 ---
 
-## 6. Hinweis zum Passwortschutz
+## 7. Hinweis zum Passwortschutz
 
 Die Passwörter sind die Firmennamen und stehen alle auf der Auswahlseite. Wer die Liste sieht, kann jede Auswertung öffnen. Für echte Vertraulichkeit empfehle ich individuelle Passwörter oder Vercels Deployment Protection. Die Daten selbst sind verschlüsselt (AES-256).

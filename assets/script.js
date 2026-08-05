@@ -692,6 +692,9 @@
   var BENCH_NB  = { reposts: 0.8, lp: 0.9, qr: 0.6 };    // Note Buddy's-Durchschnitt
   var MAIL_REF  = { oeffnung: 20, klick: 2 };            // Branchendurchschnitt Mailing
 
+  // Formular, ueber das Kunden die Inhalte fuer ein ausstehendes Mailing hochladen
+  var MAILING_UPLOAD_URL = "https://forms.monday.com/forms/2fd9d9d67c9f4485f12c4cb4dc4139e2?r=use1";
+
   var reportsData = null;
   var selSlug = null;
   var pendingSlug = null;
@@ -927,13 +930,14 @@
             "<thead><tr><th>Anz. Aufrufe</th><th>Anz. Klicks</th></tr></thead>" +
             "<tbody><tr><td><b>" + num(d.lpAufrufe) + "</b></td><td><b>" + num(d.lpKlicks) + "</b></td></tr></tbody></table></div>" +
         "</div>";
-    if (d.mailing) {
+    if (d.mailing && !d.mailing.ausstehend) {
       html += '<div class="table-scroll" style="margin-top:8px"><table class="report-table"><caption>' +
         esc(d.mailing.label || "Mailings") + "</caption>" +
-        "<thead><tr><th>Öffnungsrate</th><th>Klickrate</th></tr></thead><tbody><tr><td><b>" +
-        pctTxt(d.mailing.oeffnungsrate) + "</b></td><td><b>" + pctTxt(d.mailing.klickrate) +
-        "</b></td></tr></tbody></table></div>";
-      if (d.mailing.hinweis) html += '<p class="report-note">' + esc(d.mailing.hinweis) + "</p>";
+        "<thead><tr><th>Öffnungsrate</th><th>Klickrate</th>" +
+        (d.mailing.zeitpunkt ? "<th>Zeitpunkt</th>" : "") + "</tr></thead><tbody><tr><td><b>" +
+        pctTxt(d.mailing.oeffnungsrate) + "</b></td><td><b>" + pctTxt(d.mailing.klickrate) + "</b></td>" +
+        (d.mailing.zeitpunkt ? "<td><b>" + esc(d.mailing.zeitpunkt) + "</b></td>" : "") +
+        "</tr></tbody></table></div>";
     }
     if (d.landingpageBild) {
       html += '<figure class="lp-shot">' +
@@ -957,6 +961,22 @@
           encodeURIComponent("Note Buddy's Analytics für die nächste Kampagne (" + d.name + ")") +
           '">Note Buddy\'s Analytics für die Folgekampagne anfragen' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+          "</div>" +
+        "</div>" +
+      "</div></section>";
+    }
+
+    /* Mailing ausstehend: Inhalte werden noch benoetigt */
+    if (d.mailing && d.mailing.ausstehend) {
+      html += '<section class="aus-infobox-sec"><div class="wrap">' +
+        '<div class="infobox mail reveal">' +
+          '<span class="ib-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>' +
+          "<div><b>Ihr Mailing steht noch aus</b>" +
+          "<p>Für den Versand Ihres Mailings benötigen wir noch die Inhalte von Ihnen, also Text, Bilder und den gewünschten Link. " +
+          "Laden Sie alles bequem über unser Formular hoch, danach stimmen wir den Versandtermin mit Ihnen ab.</p>" +
+          '<a class="btn btn-primary" href="' + MAILING_UPLOAD_URL + '" target="_blank" rel="noopener">' +
+          "Inhalte für das Mailing hochladen" +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>' +
           "</div>" +
         "</div>" +
       "</div></section>";
@@ -1010,7 +1030,7 @@
     }
 
     /* Mailing-Vergleich */
-    if (d.mailing && d.mailing.oeffnungsrate) {
+    if (d.mailing && d.mailing.oeffnungsrate && !d.mailing.ausstehend) {
       html += '<section class="aus-dist"><div class="wrap">' +
         '<div class="section-head reveal"><span class="eyebrow">Mailings</span><h2>Ihre Mailings im Vergleich.</h2></div>' +
         '<div class="dist-grid">' +
@@ -1022,7 +1042,10 @@
             distRow("Ihr Wert", d.mailing.klickrate, 7) +
             distRow("Branchendurchschnitt", MAIL_REF.klick, 7) +
           "</div></article>" +
-        "</div></div></section>";
+        "</div>" +
+        (d.mailing.zeitpunkt ? '<p class="mail-date">Versandzeitpunkt des Mailings: <b>' +
+          esc(d.mailing.zeitpunkt) + "</b></p>" : "") +
+        "</div></section>";
     }
 
     /* Verteilung (nur wenn vorhanden) */
