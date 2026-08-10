@@ -943,11 +943,6 @@
         (d.mailing.zeitpunkt ? "<td><b>" + esc(d.mailing.zeitpunkt) + "</b></td>" : "") +
         "</tr></tbody></table></div>";
     }
-    if (d.landingpageBild) {
-      html += '<figure class="lp-shot">' +
-        '<img src="' + esc(d.landingpageBild) + '" alt="Ihre Platzierung auf der Note Buddy\'s Landingpage" loading="lazy" />' +
-        "<figcaption>Ihre Platzierung auf der Note Buddy's Landingpage</figcaption></figure>";
-    }
     if ((d.produkt || "").indexOf("Collegeblöcke") > -1) {
       html += '<p class="report-note">Wussten Sie schon? Der Collegeblock ist das Lerntool Nummer 1 der jungen Zielgruppe. Pro Monat erhalten wir ca. 5.000 bis 6.000 neue Anmeldungen für unsere Blöcke.</p>';
     }
@@ -1071,17 +1066,18 @@
     if (hatBlockDaten) {
       html += '<section class="aus-dist"><div class="wrap"><article class="funnel-card-aus reveal">' +
         "<h3>Von der Platzierung zur Interaktion</h3>" +
-        '<p class="fun-intro">Alle Werte als Anteil an den ' + fmt(v) + " verschickten Sendungen.</p>" +
-        '<div class="fun-steps">' +
-          funStep("Direkte Interaktionen", fmt(interakt), pctTxt(interakt / v * 100), interakt / v * 100, "accent") +
-          '<div class="fun-sub">' +
-            funStep("Social-Media-Reposts", num(d.reposts), pctTxt(rRepost), rRepost || 0, "thin") +
-            funStep("QR-Code-Scans", num(d.qrScans), pctTxt(rQr), rQr || 0, "thin") +
-            funStep("Landingpage-Klicks", num(d.lpKlicks), pctTxt(rLp), rLp || 0, "thin") +
-            (mailKlicks !== null
-              ? funStep("Mailing-Klicks", fmt(mailKlicks), pctTxt(d.mailing.klickrate), d.mailing.klickrate, "thin")
-              : "") +
+        '<div class="ia-grid">' +
+          '<div class="ia-total">' +
+            '<span class="ia-num">' + fmt(interakt) + "</span>" +
+            '<span class="ia-lbl">Direkte Interaktionen</span>' +
+            '<span class="ia-sub">' + pctTxt(interakt / v * 100) + " der " + fmt(v) + " verschickten Sendungen</span>" +
           "</div>" +
+          donutChart([
+            { label: "Social-Media-Reposts", value: d.reposts,  color: "var(--c-repost)" },
+            { label: "QR-Code-Scans",        value: d.qrScans,  color: "var(--c-qr)" },
+            { label: "Landingpage-Klicks",   value: d.lpKlicks, color: "var(--c-lp)" },
+            { label: "Mailing-Klicks",       value: mailKlicks, color: "var(--c-mail)" }
+          ]) +
         "</div>" +
         (d.impressionen ? '<p class="fun-note">Dazu kommen <b>' + fmt(d.impressionen) +
           " Impressionen</b>, also rund " + Math.round(d.impressionen / v) +
@@ -1161,7 +1157,8 @@
           '<span class="cd-meta"><b>Gabriel Hilbrig</b><span>Co-Founder</span>' +
           '<span class="cd-mail">gabriel.hilbrig@notebuddys.de</span><span class="cd-tel">+49 176 84894678</span></span></a>' +
         '<a class="cd-card" href="mailto:niclas.weisl@notebuddys.de">' +
-          '<span class="cd-avatar initials">NW</span>' +
+          '<span class="cd-avatar"><img src="/assets/niclas.jpg" alt="Niclas Weisl" ' +
+            'onerror="this.replaceWith(document.createTextNode(\'NW\'))" /></span>' +
           '<span class="cd-meta"><b>Niclas Weisl</b><span>Co-Founder</span>' +
           '<span class="cd-mail">niclas.weisl@notebuddys.de</span><span class="cd-tel">+49 151 27042752</span></span></a>' +
       "</div></div></div></section>";
@@ -1176,6 +1173,44 @@
     return '<div class="dist-row"><div class="dist-top"><span class="n">' + esc(name) +
       '</span><span class="v">' + pctTxt(value) + "</span></div>" +
       '<div class="dist-track"><i data-w="' + Math.min(value / max * 100, 100) + '"></i></div></div>';
+  }
+
+  /* Ringdiagramm der Interaktionen.
+     Farben folgen fest der Kennzahl, nie ihrer Groesse. Palette mit dem
+     dataviz-Validator geprueft (Helligkeit, Chroma, Farbsehschwaechen,
+     Kontrast, alle Paare). Jede Kategorie ist zusaetzlich beschriftet. */
+  function donutChart(kategorien) {
+    var teile = kategorien.filter(function (k) { return typeof k.value === "number" && k.value > 0; });
+    var summe = teile.reduce(function (a, k) { return a + k.value; }, 0);
+    if (!summe) return "";
+
+    var r = 68, breite = 28, U = 2 * Math.PI * r, luecke = 3, versatz = 0, segmente = "";
+    teile.forEach(function (k) {
+      var anteil = k.value / summe;
+      var laenge = Math.max(anteil * U - (teile.length > 1 ? luecke : 0), 1);
+      segmente +=
+        '<circle class="dn-seg" cx="100" cy="100" r="' + r + '" fill="none" stroke="' + k.color +
+        '" stroke-width="' + breite + '" stroke-dasharray="' + laenge + " " + (U - laenge) +
+        '" stroke-dashoffset="' + (-versatz) + '"><title>' + esc(k.label) + ": " + fmt(k.value) +
+        " (" + pctTxt(anteil * 100) + ")</title></circle>";
+      versatz += anteil * U;
+    });
+
+    var legende = teile.map(function (k) {
+      return '<li><i style="background:' + k.color + '"></i>' +
+        '<span class="lg-name">' + esc(k.label) + "</span>" +
+        '<span class="lg-val">' + fmt(k.value) + "</span>" +
+        '<span class="lg-pct">' + pctTxt(k.value / summe * 100) + "</span></li>";
+    }).join("");
+
+    return '<div class="ia-chart">' +
+        '<svg viewBox="0 0 200 200" class="donut" role="img" aria-label="Aufteilung der Interaktionen">' +
+          '<g transform="rotate(-90 100 100)">' + segmente + "</g>" +
+          '<text x="100" y="95" class="dn-mid">' + fmt(summe) + "</text>" +
+          '<text x="100" y="116" class="dn-cap">Interaktionen</text>' +
+        "</svg>" +
+      "</div>" +
+      '<ul class="ia-legend">' + legende + "</ul>";
   }
 
   function funStep(name, val, pct, width, cls) {

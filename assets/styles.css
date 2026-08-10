@@ -800,9 +800,6 @@ textarea.input { resize: vertical; min-height: 96px; }
 .ib-cta svg { width: 17px; height: 17px; }
 .ib-cta:hover { border-color: var(--accent); gap: 12px; }
 
-.lp-shot { margin: 24px 0 0; }
-.lp-shot img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
-.lp-shot figcaption { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
 
 /* Mailing: ausstehend und Versandzeitpunkt */
 .infobox.mail { background: var(--surface); border-color: var(--line); }
@@ -849,4 +846,43 @@ textarea.input { resize: vertical; min-height: 96px; }
   margin-top: 12px; padding: 12px 16px; border-radius: var(--radius-sm);
   background: #fff; border: 1px solid #d8eef1;
   font-weight: 600; color: var(--brand-ink); font-size: 15px;
+}
+
+/* =========================================================
+   Interaktionen: absolute Zahl plus Ringdiagramm
+   Palette pro Kennzahl, geprueft mit dem dataviz-Validator
+   (light mode, --pairs all: alle Checks bestanden)
+   ========================================================= */
+:root {
+  --c-repost: #0e9aa8;
+  --c-qr:     #f26417;
+  --c-lp:     #5b6bd6;
+  --c-mail:   #a8442f;
+}
+
+.ia-grid { display: grid; grid-template-columns: minmax(180px,1fr) 200px minmax(240px,1.2fr); gap: 34px; align-items: center; }
+.ia-total { display: flex; flex-direction: column; gap: 2px; }
+.ia-num { font-size: clamp(44px, 6vw, 62px); font-weight: 820; letter-spacing: -.03em; line-height: 1; color: var(--accent-600); font-variant-numeric: tabular-nums; }
+.ia-lbl { font-size: 17px; font-weight: 650; color: var(--ink); margin-top: 8px; }
+.ia-sub { font-size: 14px; color: var(--muted); }
+
+.ia-chart { display: grid; place-items: center; }
+.donut { width: 100%; max-width: 200px; height: auto; }
+.dn-seg { transition: opacity .25s, stroke-width .25s; }
+.donut:hover .dn-seg { opacity: .45; }
+.donut .dn-seg:hover { opacity: 1; stroke-width: 32; }
+.dn-mid { text-anchor: middle; font-size: 30px; font-weight: 800; fill: var(--ink); font-family: var(--font); }
+.dn-cap { text-anchor: middle; font-size: 11px; fill: var(--muted); font-family: var(--font); letter-spacing: .04em; }
+
+.ia-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.ia-legend li { display: grid; grid-template-columns: 14px 1fr auto auto; align-items: center; gap: 10px; font-size: 14.5px; }
+.ia-legend i { width: 14px; height: 14px; border-radius: 4px; }
+.ia-legend .lg-name { color: var(--ink-2); }
+.ia-legend .lg-val { font-weight: 750; color: var(--ink); font-variant-numeric: tabular-nums; }
+.ia-legend .lg-pct { color: var(--muted); font-size: 13px; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 860px) {
+  .ia-grid { grid-template-columns: 1fr; gap: 26px; justify-items: center; text-align: center; }
+  .ia-total { align-items: center; }
+  .ia-legend { width: 100%; max-width: 360px; }
 }

@@ -4,6 +4,9 @@ Stand: 05.08.2026, nach der Mailing-Aktualisierung.
 
 ## Erledigt in dieser Runde
 
+- Landingpage-Screenshots **komplett entfernt** (waren nur bei 4 Kunden vorhanden)
+- „Von der Platzierung zur Interaktion": jetzt die **absolute Zahl** der direkten Interaktionen plus **Ringdiagramm** mit der Aufteilung auf Reposts, QR-Scans, Landingpage- und Mailing-Klicks
+
 - **14 YouTube Shorts** eingebunden, je als erste Kachel im Repost-Slider
 - Trichter „Von der Platzierung zur Interaktion": Zeile „Sendungen verschickt" entfernt, dafür sind jetzt **Mailing-Klicks** Teil der direkten Interaktionen (berechnet aus Klickrate x Versandmenge)
 - QR-Empfehlung: das Analytics-Angebot steht jetzt in einer eigenen, sauber gesetzten Zeile
@@ -148,3 +151,11 @@ Die Passwörter sind die Firmennamen und stehen alle auf der Auswahlseite. Wer d
 - **Sparkasse Düsseldorf**: Für dieses Video (`0OCwfjjim6A`) gibt es keine Auswertungsseite, die Firma steht nicht auf deiner Kundenliste. Sag Bescheid, ob ich eine Seite anlegen soll, dann brauche ich noch die Kampagnenzahlen.
 - **Mailing-Menge**: Für die Mailing-Klicks rechne ich mit der verschickten Menge als Grundlage (z. B. Westnetz: 3.000 x 5,7 %% = 171 Klicks). Falls die Mailing-Menge von der Blockmenge abweicht, sag mir die richtige Zahl.
 - Diese Kunden haben bisher **nur ein Video, aber keine Repost-Bilder**: OFD Hessen, Westnetz
+
+---
+
+## Foto von Niclas Weisl fehlt noch
+
+Das Bild aus dem Chat kam bei mir nur als Vorschau an, nicht als Datei. Die Kontaktkarte ist aber schon vorbereitet: Sobald die Datei als **`assets/niclas.jpg`** im Repository liegt, erscheint sie automatisch im Kreis. Bis dahin stehen dort die Initialen „NW".
+
+**So lieferst du sie:** entweder direkt auf GitHub in den Ordner `assets` hochladen (Add file, Upload files) und in `niclas.jpg` umbenennen, oder in den Drive-Ordner legen, dann hole ich sie mir. Quadratisch sieht am besten aus.
