@@ -4,6 +4,10 @@ Stand: 05.08.2026, nach der Mailing-Aktualisierung.
 
 ## Erledigt in dieser Runde
 
+- **14 YouTube Shorts** eingebunden, je als erste Kachel im Repost-Slider
+- Trichter „Von der Platzierung zur Interaktion": Zeile „Sendungen verschickt" entfernt, dafür sind jetzt **Mailing-Klicks** Teil der direkten Interaktionen (berechnet aus Klickrate x Versandmenge)
+- QR-Empfehlung: das Analytics-Angebot steht jetzt in einer eigenen, sauber gesetzten Zeile
+
 - Zwei YouTube Shorts eingebunden: **Aareal Bank** und **Selektiv Media für Rheinmetall**. Sie erscheinen als erste Kachel im Repost-Slider mit Play-Button.
 
 - Mailing-Werte aus der Tabelle übernommen, die alten Platzhalter sind raus
@@ -136,3 +140,11 @@ Diese Kunden sehen die Empfehlung zur QR-Code-Platzierung inklusive kostenfreiem
 ## 7. Hinweis zum Passwortschutz
 
 Die Passwörter sind die Firmennamen und stehen alle auf der Auswahlseite. Wer die Liste sieht, kann jede Auswertung öffnen. Für echte Vertraulichkeit empfehle ich individuelle Passwörter oder Vercels Deployment Protection. Die Daten selbst sind verschlüsselt (AES-256).
+
+---
+
+## Neu: offene Punkte aus dieser Runde
+
+- **Sparkasse Düsseldorf**: Für dieses Video (`0OCwfjjim6A`) gibt es keine Auswertungsseite, die Firma steht nicht auf deiner Kundenliste. Sag Bescheid, ob ich eine Seite anlegen soll, dann brauche ich noch die Kampagnenzahlen.
+- **Mailing-Menge**: Für die Mailing-Klicks rechne ich mit der verschickten Menge als Grundlage (z. B. Westnetz: 3.000 x 5,7 %% = 171 Klicks). Falls die Mailing-Menge von der Blockmenge abweicht, sag mir die richtige Zahl.
+- Diese Kunden haben bisher **nur ein Video, aber keine Repost-Bilder**: OFD Hessen, Westnetz

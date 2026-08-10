@@ -831,12 +831,16 @@
     var v = d.verschickt;
     var rate = function (x) { return (v && x !== null && x !== undefined) ? (x / v * 100) : null; };
     var rRepost = rate(d.reposts), rLp = rate(d.lpKlicks), rQr = rate(d.qrScans);
+    // Mailing-Klicks aus Klickrate und Versandmenge, wenn ein Mailing gelaufen ist.
+    // Grundlage ist die verschickte Menge, weil das Sheet keine eigene Mailing-Menge fuehrt.
+    var mailKlicks = (d.mailing && !d.mailing.ausstehend && d.mailing.klickrate && v)
+      ? Math.round(v * d.mailing.klickrate / 100) : null;
     var interakt = ["reposts", "qrScans", "lpKlicks"].reduce(function (a, k) {
       return a + (typeof d[k] === "number" ? d[k] : 0);
-    }, 0);
+    }, 0) + (mailKlicks || 0);
     // Benchmarks und Trichter nur zeigen, wenn es ueberhaupt Block-Interaktionen gab.
     // Reine Mailing-Kampagnen wuerden sonst ueberall 0 % anzeigen.
-    var interaktionenVorhanden = ((d.reposts || 0) + (d.qrScans || 0) + (d.lpKlicks || 0)) > 0;
+    var interaktionenVorhanden = ((d.reposts || 0) + (d.qrScans || 0) + (d.lpKlicks || 0) + (mailKlicks || 0)) > 0;
     var hatBlockDaten = !!v && interaktionenVorhanden;
 
     var html = "";
@@ -955,8 +959,9 @@
         '<div class="infobox qr reveal">' +
           '<span class="ib-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></span>' +
           "<div><b>Unsere Empfehlung: platzieren Sie einen QR-Code</b>" +
-          "<p>Für diese Kampagne liegen uns keine QR-Code-Scans vor. Ein QR-Code auf Ihrer Anzeige macht messbar, wie viele Studierende direkt von der Platzierung auf Ihre Seite springen. " +
-          "Als Bestandskunde stellen wir Ihnen dafür <b>Note Buddy's Analytics</b> bei Ihrer nächsten Kampagne <b>kostenfrei</b> zur Verfügung.</p>" +
+          "<p>Für diese Kampagne liegen uns keine QR-Code-Scans vor. Ein QR-Code auf Ihrer Anzeige macht messbar, " +
+          "wie viele Studierende direkt von der Platzierung auf Ihre Seite springen.</p>" +
+          '<p class="ib-offer">Als Bestandskunde erhalten Sie Note Buddy\'s Analytics bei Ihrer nächsten Kampagne kostenfrei.</p>' +
           '<a class="ib-cta" href="mailto:gabriel.hilbrig@notebuddys.de?subject=' +
           encodeURIComponent("Note Buddy's Analytics für die nächste Kampagne (" + d.name + ")") +
           '">Note Buddy\'s Analytics für die Folgekampagne anfragen' +
@@ -1066,14 +1071,16 @@
     if (hatBlockDaten) {
       html += '<section class="aus-dist"><div class="wrap"><article class="funnel-card-aus reveal">' +
         "<h3>Von der Platzierung zur Interaktion</h3>" +
-        '<p class="fun-intro">Alle Werte auf einer Skala: Anteil an den ' + fmt(v) + " verschickten Sendungen.</p>" +
+        '<p class="fun-intro">Alle Werte als Anteil an den ' + fmt(v) + " verschickten Sendungen.</p>" +
         '<div class="fun-steps">' +
-          funStep("Sendungen verschickt", fmt(v), "100 %", 100, "") +
           funStep("Direkte Interaktionen", fmt(interakt), pctTxt(interakt / v * 100), interakt / v * 100, "accent") +
           '<div class="fun-sub">' +
             funStep("Social-Media-Reposts", num(d.reposts), pctTxt(rRepost), rRepost || 0, "thin") +
             funStep("QR-Code-Scans", num(d.qrScans), pctTxt(rQr), rQr || 0, "thin") +
             funStep("Landingpage-Klicks", num(d.lpKlicks), pctTxt(rLp), rLp || 0, "thin") +
+            (mailKlicks !== null
+              ? funStep("Mailing-Klicks", fmt(mailKlicks), pctTxt(d.mailing.klickrate), d.mailing.klickrate, "thin")
+              : "") +
           "</div>" +
         "</div>" +
         (d.impressionen ? '<p class="fun-note">Dazu kommen <b>' + fmt(d.impressionen) +
