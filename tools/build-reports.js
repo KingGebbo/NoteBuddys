@@ -66,7 +66,22 @@ function main() {
 
   fs.writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
 
+  // Echte Dateien fuer jede Adresse erzeugen. Damit funktionieren
+  // /auswertungen und /auswertungen/<slug> auch dann direkt im Browser,
+  // wenn der Host keine Rewrites auswertet.
+  const seite = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
+  const routen = ["auswertungen", "kontakt"].concat(
+    out.kampagnen.filter(function (k) { return !k.oeffentlich; })
+      .map(function (k) { return "auswertungen/" + k.slug; })
+  );
+  routen.forEach(function (r) {
+    const ordner = path.join(ROOT, r);
+    fs.mkdirSync(ordner, { recursive: true });
+    fs.writeFileSync(path.join(ordner, "index.html"), seite);
+  });
+
   const geschuetzt = out.kampagnen.filter(function (k) { return k.geschuetzt; }).length;
+  console.log("  " + routen.length + " Adressen als Dateien erzeugt");
   console.log("assets/reports.json geschrieben");
   console.log("  " + out.kampagnen.length + " Kampagnen, davon " + geschuetzt + " passwortgeschuetzt");
   console.log("  Groesse: " + (fs.statSync(OUT).size / 1024).toFixed(1) + " KB");

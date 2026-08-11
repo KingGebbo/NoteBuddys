@@ -1,2 +1,3 @@
 node_modules/
 tools/campaigns.source.json
+scratch_*.js

@@ -835,12 +835,13 @@
     // Grundlage ist die verschickte Menge, weil das Sheet keine eigene Mailing-Menge fuehrt.
     var mailKlicks = (d.mailing && !d.mailing.ausstehend && d.mailing.klickrate && v)
       ? Math.round(v * d.mailing.klickrate / 100) : null;
+    var bannerKlicks = (d.banner && d.banner.klicks) ? d.banner.klicks : null;
     var interakt = ["reposts", "qrScans", "lpKlicks"].reduce(function (a, k) {
       return a + (typeof d[k] === "number" ? d[k] : 0);
-    }, 0) + (mailKlicks || 0);
+    }, 0) + (mailKlicks || 0) + (bannerKlicks || 0);
     // Benchmarks und Trichter nur zeigen, wenn es ueberhaupt Block-Interaktionen gab.
     // Reine Mailing-Kampagnen wuerden sonst ueberall 0 % anzeigen.
-    var interaktionenVorhanden = ((d.reposts || 0) + (d.qrScans || 0) + (d.lpKlicks || 0) + (mailKlicks || 0)) > 0;
+    var interaktionenVorhanden = ((d.reposts || 0) + (d.qrScans || 0) + (d.lpKlicks || 0) + (mailKlicks || 0) + (bannerKlicks || 0)) > 0;
     var hatBlockDaten = !!v && interaktionenVorhanden;
 
     var html = "";
@@ -982,8 +983,23 @@
       "</div></section>";
     }
 
-    /* Benchmarks */
-    if (hatBlockDaten) {
+    /* Benchmarks. Kennzahlen ohne Datengrundlage entfallen, Mailing- und
+       Bannerwerte stehen mit im Marktvergleich. */
+    var benchMetriken = [
+      { t: "Social-Media-Reposts", ref: BENCH_REF.reposts, nb: BENCH_NB.reposts, you: rRepost },
+      { t: "Landingpage-Klicks",   ref: BENCH_REF.lp,      nb: BENCH_NB.lp,      you: rLp },
+      { t: "QR-Code-Scans",        ref: BENCH_REF.qr,      nb: BENCH_NB.qr,      you: rQr }
+    ].filter(function (m) { return m.you; });
+    if (d.mailing && !d.mailing.ausstehend && d.mailing.oeffnungsrate) {
+      benchMetriken.push({ t: "Öffnungsrate Mailing", ref: MAIL_REF.oeffnung, nb: null, you: d.mailing.oeffnungsrate });
+      benchMetriken.push({ t: "Klickrate Mailing",    ref: MAIL_REF.klick,    nb: null, you: d.mailing.klickrate });
+    }
+    if (d.banner && d.banner.benchmark) {
+      benchMetriken.push({ t: d.banner.label || "Banner", ref: d.banner.benchmark.branche,
+                           nb: d.banner.benchmark.nb, you: d.banner.benchmark.ihrWert });
+    }
+
+    if (benchMetriken.length) {
       html += '<section class="aus-bench"><div class="wrap">' +
         '<div class="section-head reveal"><span class="eyebrow">Benchmarks</span><h2>Ihre Kampagne im Marktvergleich.</h2>' +
         "<p>Jede Kennzahl steht neben dem Branchendurchschnitt und unserem eigenen Durchschnitt.</p></div>" +
@@ -994,27 +1010,44 @@
             '<span class="lg"><i class="sw sw-you"></i>Ihr Wert</span>' +
           "</div><div class='bench-rows'>";
 
-      var metriken = [
-        { t: "Social-Media-Reposts", ref: BENCH_REF.reposts, nb: BENCH_NB.reposts, you: rRepost },
-        { t: "Landingpage-Klicks",   ref: BENCH_REF.lp,      nb: BENCH_NB.lp,      you: rLp },
-        { t: "QR-Code-Scans",        ref: BENCH_REF.qr,      nb: BENCH_NB.qr,      you: rQr }
-      ];
-      var max = metriken.reduce(function (a, m) { return Math.max(a, m.you || 0, m.nb); }, 1) * 1.15;
-      metriken.forEach(function (m) {
-        html += '<div class="bench-metric"><h4>' + m.t + "</h4>";
+      benchMetriken.forEach(function (m) {
+        // eigene Skala je Metrik, sonst erdruecken die Mailing-Prozente den Rest
+        var max = Math.max(m.you || 0, m.nb || 0, m.ref || 0) * 1.2;
+        html += '<div class="bench-metric"><h4>' + esc(m.t) + "</h4>";
         [["ref", "Branchendurchschnitt", m.ref], ["nb", "Note Buddy's-Ø", m.nb], ["you", "Ihr Wert", m.you]]
           .forEach(function (r) {
             var val = r[2];
+            if (val === null || val === undefined) return;
             html += '<div class="bench-bar-row"><span class="bbr-name">' + r[1] + "</span>" +
-              '<span class="bbr-track"><i class="bbr-fill ' + r[0] + '" data-w="' +
-              (val === null ? 0 : (val / max * 100)) + '"></i>' +
-              '<span class="bbr-val">' + (val === null ? "–" : pctTxt(val, val < 1 ? 2 : 1)) + "</span></span></div>";
+              '<span class="bbr-track"><i class="bbr-fill ' + r[0] + '" data-w="' + (val / max * 100) + '"></i>' +
+              '<span class="bbr-val">' + pctTxt(val, val < 1 ? 2 : 1) + "</span></span></div>";
           });
         html += "</div>";
       });
-      html += '</div><p class="bench-foot">Werte in Prozent der ' + fmt(v) + " verschickten Sendungen.</p></div>";
+      html += '</div><p class="bench-foot">Reposts, Landingpage-Klicks und QR-Scans in Prozent der ' +
+        (v ? fmt(v) + " verschickten Sendungen" : "Versandmenge") +
+        ". Mailing-Werte beziehen sich auf die versendeten Mailings.</p></div>";
+
+      if (d.mailing && !d.mailing.ausstehend && d.mailing.oeffnungsrate) {
+        html += '<div class="mail-detail reveal d1"><div class="md-copy">' +
+            "<h3>Ihr Mailing im Detail</h3>" +
+            '<div class="md-stats">' +
+              "<div><b>" + num(d.mailing.menge) + "</b><span>Mailings versendet</span></div>" +
+              "<div><b>" + num(d.mailing.oeffnungen) + "</b><span>Öffnungen</span></div>" +
+              "<div><b>" + num(d.mailing.klicks) + "</b><span>Klicks</span></div>" +
+            "</div>" +
+            (d.mailing.zeitpunkt ? '<p class="md-date">Versendet am <b>' + esc(d.mailing.zeitpunkt) + "</b></p>" : "") +
+          "</div>" +
+          (d.mailing.bild
+            ? '<figure class="laptop"><div class="lp-screen"><img src="' + esc(d.mailing.bild) +
+              '" alt="Ansicht Ihres Mailings" loading="lazy" /></div><div class="lp-foot"></div>' +
+              "<figcaption>So sah Ihr Mailing im Postfach aus</figcaption></figure>"
+            : "") +
+        "</div>";
+      }
 
       /* Faktoren */
+      if (hatBlockDaten) {
       html += '<div class="factor-grid">';
       [[rRepost, BENCH_REF.reposts, "mehr Social-Media-Reposts als der Branchendurchschnitt"],
        [rLp, BENCH_REF.lp, "mehr Landingpage-Klicks als der Branchendurchschnitt"],
@@ -1026,26 +1059,9 @@
             (faktor >= 10 ? Math.round(faktor) : faktor.toFixed(1).replace(".", ",")) +
             "<em>×</em></span>" + '<span class="f-lbl">' + f[2] + "</span></article>";
         });
-      html += "</div></div></section>";
-    }
-
-    /* Mailing-Vergleich */
-    if (d.mailing && d.mailing.oeffnungsrate && !d.mailing.ausstehend) {
-      html += '<section class="aus-dist"><div class="wrap">' +
-        '<div class="section-head reveal"><span class="eyebrow">Mailings</span><h2>Ihre Mailings im Vergleich.</h2></div>' +
-        '<div class="dist-grid">' +
-          '<article class="dist-card reveal"><h3>Öffnungsrate</h3><div class="dist-bars">' +
-            distRow("Ihr Wert", d.mailing.oeffnungsrate, 60) +
-            distRow("Branchendurchschnitt", MAIL_REF.oeffnung, 60) +
-          "</div></article>" +
-          '<article class="dist-card reveal d1"><h3>Klickrate</h3><div class="dist-bars">' +
-            distRow("Ihr Wert", d.mailing.klickrate, 7) +
-            distRow("Branchendurchschnitt", MAIL_REF.klick, 7) +
-          "</div></article>" +
-        "</div>" +
-        (d.mailing.zeitpunkt ? '<p class="mail-date">Versandzeitpunkt des Mailings: <b>' +
-          esc(d.mailing.zeitpunkt) + "</b></p>" : "") +
-        "</div></section>";
+      html += "</div>";
+      }
+      html += "</div></section>";
     }
 
     /* Verteilung (nur wenn vorhanden) */
@@ -1076,7 +1092,8 @@
             { label: "Social-Media-Reposts", value: d.reposts,  color: "var(--c-repost)" },
             { label: "QR-Code-Scans",        value: d.qrScans,  color: "var(--c-qr)" },
             { label: "Landingpage-Klicks",   value: d.lpKlicks, color: "var(--c-lp)" },
-            { label: "Mailing-Klicks",       value: mailKlicks, color: "var(--c-mail)" }
+            { label: "Mailing-Klicks",       value: mailKlicks, color: "var(--c-mail)" },
+            { label: "myessay-Banner-Klicks", value: bannerKlicks, color: "var(--c-banner)" }
           ]) +
         "</div>" +
         (d.impressionen ? '<p class="fun-note">Dazu kommen <b>' + fmt(d.impressionen) +
@@ -1085,9 +1102,10 @@
         "</article></div></section>";
     }
 
-    /* Reposts */
+    /* Reposts, nur wenn Bilder, Videos oder Repost-Zahlen vorliegen */
     var bilder = d.reposts_bilder || [];
     var videos = d.reposts_videos || [];
+    if (bilder.length || videos.length || d.reposts) {
     html += '<section class="aus-reposts"><div class="wrap">' +
       '<div class="section-head reveal"><span class="eyebrow">Social Media Reposts</span>' +
       "<h2>Ihre Kampagne, geteilt von der Zielgruppe.</h2>" +
@@ -1132,6 +1150,7 @@
       '" class="btn btn-primary btn-lg">Social-Media-Paket anfragen' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
       "</div></div></section>";
+    }
 
     /* Fazit */
     html += '<section class="aus-fazit"><div class="wrap">' +

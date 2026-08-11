@@ -1,9 +1,5 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
-    { "source": "/auswertungen", "destination": "/index.html" },
-    { "source": "/auswertungen/:slug", "destination": "/index.html" },
-    { "source": "/kontakt", "destination": "/index.html" }
+    { "source": "/((?!assets/|favicon|_vercel).*)", "destination": "/index.html" }
   ]
 }
