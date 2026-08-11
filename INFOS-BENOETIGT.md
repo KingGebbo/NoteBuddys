@@ -4,6 +4,9 @@ Stand: 11.08.2026
 
 ## Erledigt in dieser Runde
 
+- Alle vier fehlenden Bilder aus dem Drive eingebaut (Niclas, 2 Mailings, myessay-Banner)
+- Bei reinen Mailing-Kunden entfallen jetzt auch QR-Hinweis, leere Kacheln und Block-Tabelle
+
 - **Direktlinks repariert**: `/auswertungen/<kunde>` sind jetzt echte Dateien im Repository und funktionieren im Browser auch beim direkten Aufruf, unabhängig von Vercel-Einstellungen
 - Alle geänderten Sheet-Werte übernommen (Westpress, Stadt Coesfeld, Magdeburg-Stendal, Thyssen, Waldorf, Rheinmetall, VRM, Landwirtschaftskammer)
 - **Netze BW** neu angelegt, mit Reposts aus dem ENBW-Ordner und Video
@@ -14,18 +17,15 @@ Stand: 11.08.2026
 
 ---
 
-## 1. Bilder, die ich noch brauche
+## 1. Bilder: alle eingebaut
 
-Diese kamen nur als Vorschau im Chat an, ich kann sie daraus nicht als Datei speichern. Bitte in den Drive-Ordner legen oder auf GitHub hochladen:
+Aus dem Drive übernommen und eingebunden:
 
-| Was | Wohin |
-|---|---|
-| **Foto Niclas Weisl** | `assets/niclas.jpg` |
-| **Mailing Landwirtschaftskammer NRW** | Drive-Ordner der Firma |
-| **Mailing Waldorf Institut** | Drive-Ordner der Firma |
-| **myessay-Banner Rheinmetall** | Drive-Ordner Rheinmetall |
-
-Aus Drive habe ich mir die Mailings von **Bäckerei Kraus** und **Magdeburg-Stendal** bereits geholt.
+- **Foto Niclas Weisl** steht jetzt im Kreis auf allen Kontaktkarten
+- **Mailing Landwirtschaftskammer NRW** im Laptop-Mockup
+- **Mailing Waldorf Institut** im Laptop-Mockup
+- **myessay-Banner Rheinmetall** unter dem Marktvergleich, mit Ausspielungen und Klicks
+- (zuvor schon: Mailings Bäckerei Kraus und Magdeburg-Stendal)
 
 ---
 

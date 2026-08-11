@@ -836,6 +836,8 @@
     var mailKlicks = (d.mailing && !d.mailing.ausstehend && d.mailing.klickrate && v)
       ? Math.round(v * d.mailing.klickrate / 100) : null;
     var bannerKlicks = (d.banner && d.banner.klicks) ? d.banner.klicks : null;
+    // Reine Mailing-Kampagnen zeigen keine Block-Kennzahlen
+    var hatBloecke = (d.produkt || "").indexOf("Collegeblöcke") > -1;
     var interakt = ["reposts", "qrScans", "lpKlicks"].reduce(function (a, k) {
       return a + (typeof d[k] === "number" ? d[k] : 0);
     }, 0) + (mailKlicks || 0) + (bannerKlicks || 0);
@@ -900,12 +902,12 @@
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>' +
         "</span><b>" + val + '</b><span class="kpi-lbl">' + label + "</span></article>";
     }
-    html += kpi(esc(d.gebucht || "–"), "gebucht", false, 0);
-    html += kpi(num(d.verschickt), "verschickt", false, 1);
-    html += kpi(num(d.impressionen), "Impressionen", false, 2);
-    html += kpi(num(d.qrScans), "QR-Code-Scans", true, 3);
-    html += kpi(num(d.reposts), "Social-Media-Reposts", true, 0);
-    html += kpi(num(d.lpAufrufe), "Landingpage-Aufrufe", true, 1);
+    if (d.gebucht) html += kpi(esc(d.gebucht), "gebucht", false, 0);
+    if (d.verschickt) html += kpi(num(d.verschickt), "verschickt", false, 1);
+    if (d.impressionen) html += kpi(num(d.impressionen), "Impressionen", false, 2);
+    if (d.qrScans) html += kpi(num(d.qrScans), "QR-Code-Scans", true, 3);
+    if (d.reposts) html += kpi(num(d.reposts), "Social-Media-Reposts", true, 0);
+    if (d.lpAufrufe) html += kpi(num(d.lpAufrufe), "Landingpage-Aufrufe", true, 1);
     if (d.mailing && d.mailing.oeffnungsrate !== null && d.mailing.oeffnungsrate !== undefined) {
       html += kpi(pctTxt(d.mailing.oeffnungsrate), "Öffnungsrate " + esc(d.mailing.label || "Mailings"), false, 2);
       html += kpi(pctTxt(d.mailing.klickrate), "Klickrate " + esc(d.mailing.label || "Mailings"), false, 3);
@@ -922,15 +924,19 @@
       '<div class="report-card reveal d1">' +
         '<div class="report-card-head"><h3>Note Buddy\'s · ' + esc(d.produkt || "Kampagne") + "</h3>" +
         (d.semester ? '<span class="rc-pill">' + esc(d.semester) + "</span>" : "") + "</div>" +
-        '<div class="table-scroll"><table class="report-table">' +
-          "<thead><tr><th>Anz. gebucht</th><th>Anz. verschickt</th><th>Impressionen</th><th>QR-Code-Scans</th></tr></thead>" +
-          "<tbody><tr><td><b>" + esc(d.gebucht || "–") + "</b></td><td><b>" + num(d.verschickt) +
-          "</b></td><td><b>" + num(d.impressionen) + "</b></td><td><b>" + num(d.qrScans) + "</b></td></tr></tbody>" +
-        "</table></div>" +
+        (hatBloecke
+          ? '<div class="table-scroll"><table class="report-table">' +
+              "<thead><tr><th>Anz. gebucht</th><th>Anz. verschickt</th><th>Impressionen</th><th>QR-Code-Scans</th></tr></thead>" +
+              "<tbody><tr><td><b>" + esc(d.gebucht || "–") + "</b></td><td><b>" + num(d.verschickt) +
+              "</b></td><td><b>" + num(d.impressionen) + "</b></td><td><b>" + num(d.qrScans) + "</b></td></tr></tbody>" +
+            "</table></div>"
+          : "") +
         '<div class="table-split">' +
-          '<div class="table-scroll"><table class="report-table"><caption>Social Media Reposts</caption>' +
-            "<thead><tr><th>Anz. Reposts</th><th>Impressionen</th></tr></thead>" +
-            "<tbody><tr><td><b>" + num(d.reposts) + "</b></td><td><b>" + num(d.repostImpressionen) + "</b></td></tr></tbody></table></div>" +
+          (d.reposts
+            ? '<div class="table-scroll"><table class="report-table"><caption>Social Media Reposts</caption>' +
+              "<thead><tr><th>Anz. Reposts</th><th>Impressionen</th></tr></thead>" +
+              "<tbody><tr><td><b>" + num(d.reposts) + "</b></td><td><b>" + num(d.repostImpressionen) + "</b></td></tr></tbody></table></div>"
+            : "") +
           '<div class="table-scroll"><table class="report-table"><caption>Landingpage</caption>' +
             "<thead><tr><th>Anz. Aufrufe</th><th>Anz. Klicks</th></tr></thead>" +
             "<tbody><tr><td><b>" + num(d.lpAufrufe) + "</b></td><td><b>" + num(d.lpKlicks) + "</b></td></tr></tbody></table></div>" +
@@ -1027,6 +1033,22 @@
       html += '</div><p class="bench-foot">Reposts, Landingpage-Klicks und QR-Scans in Prozent der ' +
         (v ? fmt(v) + " verschickten Sendungen" : "Versandmenge") +
         ". Mailing-Werte beziehen sich auf die versendeten Mailings.</p></div>";
+
+      if (d.banner) {
+        html += '<div class="mail-detail reveal d1"><div class="md-copy">' +
+            "<h3>Ihr " + esc(d.banner.label || "Banner") + " im Detail</h3>" +
+            '<div class="md-stats">' +
+              "<div><b>" + num(d.banner.ausspielungen) + "</b><span>Ausspielungen</span></div>" +
+              "<div><b>" + num(d.banner.klicks) + "</b><span>Klicks</span></div>" +
+            "</div>" +
+          "</div>" +
+          (d.banner.bild
+            ? '<figure class="laptop"><div class="lp-screen"><img src="' + esc(d.banner.bild) +
+              '" alt="Ansicht Ihres Banners" loading="lazy" /></div><div class="lp-foot"></div>' +
+              "<figcaption>So war Ihr Banner auf myessay platziert</figcaption></figure>"
+            : "") +
+        "</div>";
+      }
 
       if (d.mailing && !d.mailing.ausstehend && d.mailing.oeffnungsrate) {
         html += '<div class="mail-detail reveal d1"><div class="md-copy">' +
