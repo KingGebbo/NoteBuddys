@@ -4,6 +4,8 @@ Stand: 11.08.2026
 
 ## Erledigt in dieser Runde
 
+- **Übersicht `/auswertungen` ist jetzt passwortgeschützt** (`NB12345678!`). Die Kundenliste ist zusätzlich verschlüsselt, es steht kein Firmenname mehr im Klartext in den Dateien. Direktlinks funktionieren unverändert ohne dieses Passwort.
+
 - Alle vier fehlenden Bilder aus dem Drive eingebaut (Niclas, 2 Mailings, myessay-Banner)
 - Bei reinen Mailing-Kunden entfallen jetzt auch QR-Hinweis, leere Kacheln und Block-Tabelle
 

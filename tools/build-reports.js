@@ -20,6 +20,11 @@ const OUT = path.join(ROOT, "assets", "reports.json");
 
 const PBKDF2_ROUNDS = 210000;
 
+/* Passwort fuer die Uebersichtsseite. Schuetzt die Liste aller Kunden,
+   damit ein Kunde nicht sieht, welche anderen Firmen eine Auswertung haben.
+   Die einzelnen Auswertungen bleiben zusaetzlich mit dem Firmennamen geschuetzt. */
+const UEBERSICHT_PASSWORT = "NB12345678!";
+
 /** Passwoerter tolerant vergleichen: Gross/Kleinschreibung und Leerraum egal. */
 function normalizePassword(pw) {
   return String(pw).trim().toLowerCase().replace(/\s+/g, " ");
@@ -60,9 +65,19 @@ function main() {
       eintrag.geschuetzt = true;
       // Passwort ist der Firmenname, sofern nichts anderes hinterlegt ist.
       eintrag.tresor = encrypt(payload, passwort || name);
+      // Der Name steht nicht im Klartext in der Datei, sonst waere die
+      // Kundenliste trotz Passwortschutz der Uebersicht auslesbar.
+      delete eintrag.name;
     }
     out.kampagnen.push(eintrag);
   });
+
+  // Verschluesselte Kundenliste fuer die Uebersichtsseite
+  out.uebersicht = encrypt(
+    src.kampagnen.filter(function (k) { return !k.public; })
+      .map(function (k) { return { slug: k.slug, name: k.name }; }),
+    UEBERSICHT_PASSWORT
+  );
 
   fs.writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
 

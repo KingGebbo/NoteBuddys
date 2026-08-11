@@ -84,7 +84,7 @@
       // /auswertungen/<slug> springt direkt zur Passwortabfrage der Firma
       var slug = parts[1] ? decodeURIComponent(parts[1]).toLowerCase() : null;
       if (slug) { pendingSlug = slug; applyPendingSlug(); }
-      else { pendingSlug = null; showStep("select"); }
+      else { pendingSlug = null; showStep(kundenListe ? "select" : "access"); }
       return;
     }
     if (first === "kontakt") { setView("kontakt", { silent: true, keepScroll: true }); return; }
@@ -698,6 +698,8 @@
   var reportsData = null;
   var selSlug = null;
   var pendingSlug = null;
+  var kundenListe = null;          // erst nach Eingabe des Zugangspassworts
+  var ZUGANG_KEY = "nb_uebersicht_frei";
 
   function pctTxt(v, digits) {
     if (v === null || v === undefined) return "–";
@@ -713,10 +715,9 @@
   /* ---------- Schritt 1: Firmenliste ---------- */
   function initSelect() {
     var grid = $("#firmGrid");
-    if (!grid || !reportsData) return;
+    if (!grid || !kundenListe) return;
     grid.innerHTML = "";
-    reportsData.kampagnen.forEach(function (k) {
-      if (k.oeffentlich) return;               // Beispiel laeuft ueber den Demo-Button
+    kundenListe.forEach(function (k) {
       var b = document.createElement("button");
       b.type = "button";
       b.className = "firm-card";
@@ -745,6 +746,8 @@
   }
 
   function showStep(step) {
+    var acc = $("#ausAccess");
+    if (acc) acc.hidden = step !== "access";
     $("#ausSelect").hidden = step !== "select";
     $("#ausGate").hidden = step !== "gate";
     $("#ausReport").hidden = step !== "report";
@@ -756,7 +759,7 @@
   function openGate(slug, name, silent) {
     selSlug = slug;
     if (!silent) pushPath("/auswertungen/" + slug);
-    $("#gateName").textContent = name;
+    $("#gateName").textContent = name || "Ihre Auswertung";
     $("#gatePw").value = "";
     $("#gateErr").classList.remove("show");
     showStep("gate");
@@ -793,7 +796,10 @@
   function initGate() {
     var form = $("#gateForm");
     if (!form) return;
-    $("#gateBack").addEventListener("click", function () { pushPath("/auswertungen"); showStep("select"); });
+    $("#gateBack").addEventListener("click", function () {
+      pushPath("/auswertungen");
+      showStep(kundenListe ? "select" : "access");
+    });
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -1206,7 +1212,10 @@
 
     host.innerHTML = html;
 
-    $("#repBack").addEventListener("click", function () { pushPath("/auswertungen"); showStep("select"); });
+    $("#repBack").addEventListener("click", function () {
+      pushPath("/auswertungen");
+      showStep(kundenListe ? "select" : "access");
+    });
     activateReport(host);
   }
 
@@ -1359,13 +1368,64 @@
     update();
   }
 
+  /* ---------- Zugang zur Uebersicht ---------- */
+  function initAccess() {
+    var form = $("#accessForm");
+    if (!form) return;
+
+    function freischalten(liste) {
+      kundenListe = liste;
+      try { sessionStorage.setItem(ZUGANG_KEY, "1"); } catch (e) { /* egal */ }
+      initSelect();
+    }
+
+    // In derselben Sitzung nicht erneut fragen
+    var schonFrei = false;
+    try { schonFrei = sessionStorage.getItem(ZUGANG_KEY) === "1"; } catch (e) { /* egal */ }
+    if (schonFrei) {
+      decryptReport(reportsData.uebersicht, "NB12345678!", reportsData.runden)
+        .then(function (liste) { freischalten(liste); if ($("#ausAccess").hidden === false) showStep("select"); })
+        .catch(function () { try { sessionStorage.removeItem(ZUGANG_KEY); } catch (e) {} });
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var pw = $("#accessPw").value;
+      var err = $("#accessErr");
+      var btn = $("#accessSubmit");
+      if (!pw) { err.textContent = "Bitte geben Sie das Zugangspasswort ein."; err.classList.add("show"); return; }
+      err.classList.remove("show");
+      btn.disabled = true;
+      var label = btn.textContent;
+      btn.textContent = "Wird geprüft …";
+
+      decryptReport(reportsData.uebersicht, pw, reportsData.runden)
+        .then(function (liste) { freischalten(liste); showStep("select"); })
+        .catch(function (ex) {
+          err.textContent = (ex && ex.message === "insecure-context")
+            ? "Verschlüsselung steht nur über https zur Verfügung. Bitte öffnen Sie die Seite über notebuddys.de."
+            : "Das Zugangspasswort stimmt nicht.";
+          err.classList.add("show");
+        })
+        .then(function () { btn.disabled = false; btn.textContent = label; });
+    });
+
+    var demo = $("#demoBtnPublic");
+    if (demo) {
+      demo.addEventListener("click", function () {
+        var pub = reportsData.kampagnen.filter(function (k) { return k.oeffentlich; })[0];
+        if (pub) { renderReport(pub.daten); showStep("report"); }
+      });
+    }
+  }
+
   /* ---------- Start ---------- */
   if ($("#firmGrid")) {
     fetch("/assets/reports.json")
       .then(function (r) { return r.json(); })
       .then(function (data) {
         reportsData = data;
-        initSelect();
+        initAccess();
         initGate();
         applyPendingSlug();
         var demo = $("#demoBtn");
@@ -1386,10 +1446,18 @@
   function applyPendingSlug() {
     if (!pendingSlug || !reportsData) return;
     var treffer = reportsData.kampagnen.filter(function (k) { return k.slug === pendingSlug; })[0];
+    var slug = pendingSlug;
     pendingSlug = null;
     if (!treffer) return;
-    if (treffer.oeffentlich) { renderReport(treffer.daten); showStep("report"); }
-    else { openGate(treffer.slug, treffer.name, true); }
+    if (treffer.oeffentlich) { renderReport(treffer.daten); showStep("report"); return; }
+    // Der Firmenname steht nicht im Klartext in der Datei. Ist die Uebersicht
+    // bereits offen, kennen wir ihn, sonst zeigt das Gate einen neutralen Titel.
+    var name = null;
+    if (kundenListe) {
+      var e = kundenListe.filter(function (k) { return k.slug === slug; })[0];
+      if (e) name = e.name;
+    }
+    openGate(slug, name, true);
   }
 
   /* Startzustand aus der Adresszeile ableiten, Vor/Zurueck unterstuetzen */

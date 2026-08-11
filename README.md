@@ -52,24 +52,39 @@ erreichbar, als Referenz für Interessenten.
 
 #### Passwörter und Verschlüsselung
 
-Das Passwort ist der Firmenname, Gross- und Kleinschreibung sowie zusätzliche
-Leerzeichen spielen keine Rolle.
+Es gibt **zwei Ebenen**:
 
-Die Kundendaten liegen **verschlüsselt** in `assets/reports.json`
-(AES-256-GCM, Schlüssel via PBKDF2 aus dem Passwort). Im öffentlichen
-Repository stehen damit nur die Firmennamen, keine Zahlen. Entschlüsselt wird
-erst im Browser, nachdem das richtige Passwort eingegeben wurde.
+| Zugang | Passwort | Wozu |
+|---|---|---|
+| Übersicht `/auswertungen` | `NB12345678!` | schützt die Liste aller Kunden |
+| Einzelne Auswertung | Firmenname | schützt die Zahlen des Kunden |
 
-> Hinweis: Da alle Firmennamen auf der Auswahlseite stehen, sind die Passwörter
-> für Besucher der Seite erkennbar. Für echte Vertraulichkeit sind individuelle
-> Passwörter oder Vercels Deployment Protection nötig. Siehe `INFOS-BENOETIGT.md`.
+Wer einen **Direktlink** `/auswertungen/<slug>` hat, braucht das Übersichtspasswort
+nicht und kommt direkt zur Passwortabfrage seiner Firma.
+
+Auch die **Kundenliste selbst** ist verschlüsselt. In `assets/reports.json` steht
+kein Firmenname im Klartext, ein Kunde kann also nicht auslesen, welche anderen
+Firmen eine Auswertung haben.
+
+Beim Firmennamen als Passwort spielen Gross- und Kleinschreibung sowie
+zusätzliche Leerzeichen keine Rolle.
+
+Technisch: AES-256-GCM, Schlüssel via PBKDF2-SHA256 mit 210.000 Runden.
+Entschlüsselt wird erst im Browser, nach Eingabe des richtigen Passworts.
+Da WebCrypto einen sicheren Kontext braucht, funktioniert das über https,
+nicht beim Öffnen der Dateien per `file://`.
 
 #### Daten pflegen
 
 1. `tools/campaigns.source.json` bearbeiten (Klartext, liegt bewusst **nicht** im Git,
    siehe `.gitignore`)
 2. `node tools/build-reports.js` ausführen
-3. Die neu erzeugte `assets/reports.json` committen
+3. Die neu erzeugte `assets/reports.json` und die Ordner der Adressen committen
+
+> **Wichtig:** `node tools/build-reports.js` auch nach jeder Änderung an
+> `index.html` ausführen. Der Befehl erzeugt für jede Adresse eine Kopie der
+> Seite (`auswertungen/index.html`, `auswertungen/<slug>/index.html`, …). Ohne
+> den Lauf bleiben diese Kopien auf dem alten Stand.
 
 **Repost-Bilder** eines Kunden unter `assets/reposts/<slug>/` ablegen und im
 Feld `reposts_bilder` der jeweiligen Kampagne eintragen.

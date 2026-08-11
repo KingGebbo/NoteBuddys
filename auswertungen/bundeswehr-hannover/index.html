@@ -307,8 +307,34 @@
      ============================================================ -->
 <div class="view" id="view-auswertungen">
 
+  <!-- ---------- Schritt 0: Zugang zur Übersicht ---------- -->
+  <section class="aus-gate" id="ausAccess">
+    <div class="wrap">
+      <form class="gate-card" id="accessForm" autocomplete="off">
+        <span class="gate-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+        </span>
+        <h3>Auswertungen</h3>
+        <p class="gate-sub">Dieser Bereich ist geschützt. Bitte geben Sie das Zugangspasswort ein.</p>
+        <label class="sr-only" for="accessPw">Zugangspasswort</label>
+        <input type="password" class="input" id="accessPw" placeholder="Zugangspasswort" autocomplete="current-password" />
+        <div class="err" id="accessErr"></div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="accessSubmit">Übersicht öffnen</button>
+        <p class="gate-help">Sie haben einen Direktlink zu Ihrer Auswertung? Dann brauchen Sie dieses Passwort nicht.</p>
+      </form>
+
+      <div class="demo-hint reveal" style="max-width:460px;margin:26px auto 0;">
+        <div>
+          <b>Sie sind noch kein Kunde?</b>
+          <span>Sehen Sie sich eine vollständige Beispiel-Auswertung an, ohne Passwort.</span>
+        </div>
+        <button type="button" class="btn btn-ghost" id="demoBtnPublic">Beispiel ansehen</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ---------- Schritt 1: Firma auswaehlen ---------- -->
-  <section class="aus-select" id="ausSelect">
+  <section class="aus-select" id="ausSelect" hidden>
     <div class="wrap">
       <div class="section-head center reveal">
         <span class="eyebrow">Kunden-Login</span>
