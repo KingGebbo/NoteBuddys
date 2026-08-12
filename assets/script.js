@@ -61,6 +61,7 @@
   ===================================================== */
   function pathForView(name) {
     if (name === "auswertungen") return "/auswertungen";
+    if (name === "myessay") return "/myessay";
     if (name === "kontakt") return "/kontakt";
     return "/";
   }
@@ -87,6 +88,7 @@
       else { pendingSlug = null; showStep(kundenListe ? "select" : "access"); }
       return;
     }
+    if (first === "myessay") { setView("myessay", { silent: true, keepScroll: true }); return; }
     if (first === "kontakt") { setView("kontakt", { silent: true, keepScroll: true }); return; }
     setView("marketing", { silent: true, keepScroll: true });
   }
@@ -1459,6 +1461,173 @@
     }
     openGate(slug, name, true);
   }
+
+  /* =====================================================
+     MYESSAY.IO
+     Interaktive Ringdiagramme: beim Ueberfahren zeigt die Mitte,
+     wie viele Nutzende hinter dem Prozentsatz stehen.
+  ===================================================== */
+  var ME_USER = 120000;   // aktive Studierende auf myessay.io
+
+  /* Reichweite nach Fachrichtung. Gesellschafts- und Sozialwissenschaften
+     um 5 Punkte reduziert, Wirtschaft um dieselben 5 Punkte erhoeht. */
+  var ME_FIELDS = [
+    { n: "Gesellschafts- und Sozialwissenschaften", v: 21.5 },
+    { n: "Wirtschaft",                              v: 20.7 },
+    { n: "Ingenieurwissenschaften",                 v: 17.0 },
+    { n: "Naturwissenschaften",                     v: 10.3 },
+    { n: "Medizin und Gesundheitswesen",            v: 10.2 },
+    { n: "Informatikwissenschaften",                v: 9.0 },
+    { n: "Recht",                                   v: 6.5 },
+    { n: "Sprach- und Kulturwissenschaften",        v: 3.8 },
+    { n: "Beamte",                                  v: 1.0 }
+  ];
+
+  var ME_IMPR = [
+    { n: "Banner im Dashboard", v: 28000, c: "var(--mc-1)" },
+    { n: "Video Ads im Editor", v: 17000, c: "var(--mc-2)" },
+    { n: "Job Listings",        v: 5000,  c: "var(--mc-3)" }
+  ];
+  var ME_CONV = [
+    { n: "Klicks auf Banner",   v: 900, c: "var(--mc-1)" },
+    { n: "Klicks auf Video",    v: 450, c: "var(--mc-2)" },
+    { n: "Bewerbungen auf Stellen", v: 300, c: "var(--mc-3)" }
+  ];
+  var ME_FACH = [
+    { n: "Wirtschaft",           v: 50, c: "var(--mc-1)" },
+    { n: "IT",                   v: 25, c: "var(--mc-2)" },
+    { n: "Ingenieurwissenschaften", v: 25, c: "var(--mc-3)" }
+  ];
+  var ME_EXP = [
+    { n: "Master",       v: 40, c: "var(--mc-1)" },
+    { n: "Bachelor",     v: 25, c: "var(--mc-2)" },
+    { n: "Absolventen",  v: 25, c: "var(--mc-3)" },
+    { n: "Doktoranden",  v: 10, c: "var(--mc-4)" }
+  ];
+  var ME_REGIONEN = [
+    { n: "RWTH Aachen",    v: 25 },
+    { n: "Universität zu Köln", v: 20 },
+    { n: "TU München",     v: 20 },
+    { n: "Universität Mannheim", v: 20 },
+    { n: "Universität Bonn", v: 10 },
+    { n: "ETH Zürich",     v: 5 }
+  ];
+
+  /* Ein Blauverlauf fuer die Fachrichtungen: bei neun Kategorien lassen sich
+     keine neun Farbtoene mehr sicher unterscheiden, deshalb traegt hier die
+     Beschriftung die Identitaet und die Farbe nur die Groesse. */
+  function blauStufe(i, n) {
+    var hell = 78, dunkel = 34;
+    var l = hell - (hell - dunkel) * (i / Math.max(n - 1, 1));
+    return "hsl(217 82% " + l.toFixed(1) + "%)";
+  }
+
+  function meDonut(hostId, legendeId, daten, opt) {
+    var host = $("#" + hostId), leg = $("#" + legendeId);
+    if (!host) return;
+    opt = opt || {};
+    var summe = daten.reduce(function (a, d) { return a + d.v; }, 0);
+    var r = 68, breite = 26, U = 2 * Math.PI * r, off = 0, luecke = daten.length > 1 ? 3 : 0;
+    var segs = "";
+    daten.forEach(function (d, i) {
+      var anteil = d.v / summe;
+      var len = Math.max(anteil * U - luecke, 1);
+      d._farbe = d.c || blauStufe(i, daten.length);
+      segs += '<circle class="seg" data-i="' + i + '" cx="100" cy="100" r="' + r +
+        '" fill="none" stroke="' + d._farbe + '" stroke-width="' + breite +
+        '" stroke-dasharray="' + len + " " + (U - len) + '" stroke-dashoffset="' + (-off) + '"></circle>';
+      off += anteil * U;
+    });
+    host.innerHTML =
+      '<svg viewBox="0 0 200 200" class="me-donut" role="img" aria-label="Aufteilung">' +
+        '<g transform="rotate(-90 100 100)">' + segs + "</g>" +
+        '<text x="100" y="97" class="dn-main"></text>' +
+        '<text x="100" y="116" class="dn-note"></text>' +
+      "</svg>";
+
+    var svg = $("svg", host), mitte = $(".dn-main", host), unten = $(".dn-note", host);
+    function ruhe() {
+      svg.classList.remove("dim");
+      $$(".seg", svg).forEach(function (s) { s.classList.remove("on"); });
+      mitte.textContent = opt.mitte || fmt(summe);
+      unten.textContent = opt.mitteText || "gesamt";
+      if (leg) $$("li", leg).forEach(function (l) { l.style.background = ""; });
+    }
+    function zeige(i) {
+      var d = daten[i];
+      svg.classList.add("dim");
+      $$(".seg", svg).forEach(function (s) { s.classList.toggle("on", +s.dataset.i === i); });
+      // Prozente werden auf Nutzerzahlen umgerechnet, absolute Werte bleiben absolut
+      mitte.textContent = opt.basis ? fmt(d.v / 100 * opt.basis) : fmt(d.v);
+      unten.textContent = opt.basis ? "Studierende · " + pctTxt(d.v) : d.n;
+    }
+    $$(".seg", svg).forEach(function (s) {
+      s.addEventListener("mouseenter", function () { zeige(+s.dataset.i); });
+      s.addEventListener("mouseleave", ruhe);
+    });
+
+    if (leg) {
+      leg.innerHTML = daten.map(function (d, i) {
+        return '<li data-i="' + i + '"><i style="background:' + d._farbe + '"></i>' +
+          '<span class="lg-n">' + esc(d.n) + "</span>" +
+          '<span class="lg-p">' + (opt.basis ? pctTxt(d.v) : fmt(d.v)) + "</span></li>";
+      }).join("");
+      $$("li", leg).forEach(function (li) {
+        li.addEventListener("mouseenter", function () { zeige(+li.dataset.i); });
+        li.addEventListener("mouseleave", ruhe);
+      });
+    }
+    ruhe();
+  }
+
+  function meBars(hostId, daten) {
+    var host = $("#" + hostId);
+    if (!host) return;
+    var max = daten.reduce(function (a, d) { return Math.max(a, d.v); }, 0);
+    host.innerHTML = daten.map(function (d) {
+      return '<div class="me-bar-row"><div class="top"><span class="n">' + esc(d.n) +
+        '</span><span class="v">' + pctTxt(d.v) + "</span></div>" +
+        '<div class="me-bar-track"><i data-w="' + (d.v / max * 100) + '"></i></div></div>';
+    }).join("");
+  }
+
+  function initMyessay() {
+    if (!$("#meFields")) return;
+
+    // Logo-Band, doppelt fuer den nahtlosen Lauf
+    var unis = [
+      ["rwth-aachen.png", "RWTH Aachen"], ["tum.jpg", "TU München"],
+      ["uni-koeln.jpg", "Universität zu Köln"], ["uni-mannheim.webp", "Universität Mannheim"],
+      ["tu-darmstadt.webp", "TU Darmstadt"], ["uni-bonn.webp", "Universität Bonn"],
+      ["kit.png", "Karlsruher Institut für Technologie"], ["eth-zuerich.jpg", "ETH Zürich"],
+      ["whu.svg", "WHU"]
+    ];
+    var track = $("#logoTrack");
+    if (track) {
+      var eine = unis.map(function (u) {
+        return '<img src="/assets/myessay/unis/' + u[0] + '" alt="' + esc(u[1]) + '" loading="lazy" />';
+      }).join("");
+      track.innerHTML = eine + eine;
+    }
+
+    meDonut("meFields", "meFieldsLegend", ME_FIELDS, { basis: ME_USER, mitte: fmt(ME_USER), mitteText: "Studierende" });
+    meDonut("meImpr", "meImprLegend", ME_IMPR, { mitteText: "Impressionen" });
+    meDonut("meConv", "meConvLegend", ME_CONV, { mitteText: "Interaktionen" });
+    meDonut("meFach", "meFachLegend", ME_FACH, { basis: 100, mitte: "100 %", mitteText: "der Zielgruppe" });
+    meDonut("meExp", "meExpLegend", ME_EXP, { basis: 100, mitte: "100 %", mitteText: "der Zielgruppe" });
+    meBars("meRegionen", ME_REGIONEN);
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        $$("[data-w]", en.target).forEach(function (el) { el.style.width = el.dataset.w + "%"; });
+        obs.unobserve(en.target);
+      });
+    }, { threshold: 0.2 });
+    $$("#meRegionen").forEach(function (el) { obs.observe(el); });
+    $$(".me-hero-card, .case-stats").forEach(function (el) { countObs.observe(el); });
+  }
+  initMyessay();
 
   /* Startzustand aus der Adresszeile ableiten, Vor/Zurueck unterstuetzen */
   applyPath();

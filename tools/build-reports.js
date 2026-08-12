@@ -85,7 +85,7 @@ function main() {
   // /auswertungen und /auswertungen/<slug> auch dann direkt im Browser,
   // wenn der Host keine Rewrites auswertet.
   const seite = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
-  const routen = ["auswertungen", "kontakt"].concat(
+  const routen = ["auswertungen", "kontakt", "myessay"].concat(
     out.kampagnen.filter(function (k) { return !k.oeffentlich; })
       .map(function (k) { return "auswertungen/" + k.slug; })
   );
