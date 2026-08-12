@@ -1610,6 +1610,47 @@
       track.innerHTML = eine + eine;
     }
 
+    // Bilder-Slider mit Produktansichten
+    var shots = [
+      { f: "video-1.jpg", t: "Video Ads auf myessay.io von TÜV Hessen" },
+      { f: "video-2.jpg", t: "Video Ads im Editor von TÜV Hessen" },
+      { f: "banner.jpg",  t: "Banner-Werbung auf myessay.io von REPLY AG" },
+      { f: "jobs.jpg",    t: "Job Listing auf myessay.io vom DLR" }
+    ];
+    var track = $("#shotTrack"), dots = $("#shotDots"), rail = $("#shotRail");
+    if (track) {
+      track.innerHTML = shots.map(function (b) {
+        return '<figure class="shot"><img src="/assets/myessay/slider/' + b.f + '" alt="' + esc(b.t) +
+          '" loading="lazy" /><figcaption>' + esc(b.t) + "</figcaption></figure>";
+      }).join("");
+      var items = $$(".shot", track), idx = 0;
+      dots.innerHTML = items.map(function (_, i) {
+        return '<button type="button" class="shot-dot' + (i ? "" : " on") + '" data-i="' + i +
+          '" aria-label="Bild ' + (i + 1) + '"></button>';
+      }).join("");
+      function zeige() {
+        idx = Math.min(Math.max(idx, 0), items.length - 1);
+        track.style.transform = "translateX(-" + (idx * 100) + "%)";
+        $$(".shot-dot", dots).forEach(function (d, i) { d.classList.toggle("on", i === idx); });
+        $(".shot-nav.prev", rail).disabled = idx === 0;
+        $(".shot-nav.next", rail).disabled = idx === items.length - 1;
+      }
+      $(".shot-nav.prev", rail).addEventListener("click", function () { idx--; zeige(); });
+      $(".shot-nav.next", rail).addEventListener("click", function () { idx++; zeige(); });
+      $$(".shot-dot", dots).forEach(function (d) {
+        d.addEventListener("click", function () { idx = +d.dataset.i; zeige(); });
+      });
+      var x0 = null;
+      track.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener("touchend", function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) { idx += dx < 0 ? 1 : -1; zeige(); }
+        x0 = null;
+      }, { passive: true });
+      zeige();
+    }
+
     meDonut("meFields", "meFieldsLegend", ME_FIELDS, { basis: ME_USER, mitte: fmt(ME_USER), mitteText: "Studierende" });
     meDonut("meImpr", "meImprLegend", ME_IMPR, { mitteText: "Impressionen" });
     meDonut("meConv", "meConvLegend", ME_CONV, { mitteText: "Interaktionen" });
