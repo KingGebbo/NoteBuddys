@@ -31,11 +31,7 @@ Aus dem Drive übernommen und eingebunden:
 
 ---
 
-## 2. Zwei Punkte zum Gegenprüfen
-
-**Video Ng8ygKjoT24**: Das hattest du zuerst Westnetz zugeordnet, jetzt Netze BW. Ich habe es zu **Netze BW** verschoben, Westnetz hat damit aktuell keine Medien mehr. Stimmt das so?
-
-**Netze BW und EnBW**: Netze BW gehört zur EnBW, die Repost-Bilder liegen im selben Drive-Ordner und die Zahlen ähneln sich stark (3.000 Blöcke). Die öffentliche EnBW-Beispielauswertung und die neue Netze-BW-Seite zeigen damit praktisch dieselbe Kampagne. Soll die EnBW-Demo bleiben oder durch eine neutrale Beispielauswertung ersetzt werden?
+## 2. Ein Punkt zum Gegenprüfen
 
 **Magdeburg-Stendal**: Im Sheet stehen 20,25 Reposts und 1.721,25 Impressionen. Ich habe auf 20 und 1.721 gerundet.
 

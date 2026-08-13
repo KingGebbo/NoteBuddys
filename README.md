@@ -40,15 +40,16 @@ sonst laden sie unter `/auswertungen/<slug>` nicht.
 
 Klickt ein Kunde auf „Auswertungen", kommt er auf eine Auswahlseite mit allen
 Firmen. Nach Eingabe des Passworts öffnet sich die persönliche Auswertung im
-gleichen Aufbau wie die EnBW-Beispielauswertung:
+gleichen Aufbau wie die Beispielauswertung:
 
 - KPI-Kacheln, Detailtabelle, Benchmark-Grafik, Trichter
 - Infobox „Infos zum Versand", wenn für den Kunden hinterlegt
 - Repost-Slider bzw. Platzhalter, solange keine Bilder vorliegen
 - Upsell-Button für Social-Media-Platzierungen, Fazit und Kontaktabschluss
 
-Über den Button „Beispiel ansehen" ist die EnBW-Auswertung ohne Passwort
-erreichbar, als Referenz für Interessenten.
+Über den Button „Beispiel ansehen" ist eine anonymisierte Auswertung ohne
+Passwort erreichbar („Beispiel Kunde"), als Referenz für Interessenten. Sie
+trägt bewusst keinen echten Firmennamen.
 
 #### Passwörter und Verschlüsselung
 
