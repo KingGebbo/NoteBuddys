@@ -4,6 +4,7 @@ Stand: 13.08.2026
 
 ## Erledigt in dieser Runde
 
+- **DHL Mailings ergänzt**: 15.000 Stück, Versand Juni bis August 26, 56,5 % Öffnungs- und 5,6 % Klickrate. Steht im Marktvergleich, in der Tabelle und als „Ihr Mailing im Detail" mit 8.475 Öffnungen und 840 Klicks
 - **DHL aktualisiert**: neue Werte aus dem Sheet (21.000 verschickt, 210.000 Impressionen, 504 Reposts, 42.840 Repost-Impressionen, 567 Landingpage-Klicks) und die vier Reposts aus dem Drive eingebaut
 - **Netze BW** zeigt jetzt seine Reposts und das YouTube-Short (die Dateien lagen schon da, waren aber nicht verknüpft); Westnetz führt damit keine Medien mehr
 - **Beispielauswertung anonymisiert**: heißt jetzt „Beispiel Kunde", kein echter Firmenname mehr im Text
@@ -81,6 +82,7 @@ Aus dem Drive übernommen und eingebunden:
 - Waldorf Institut Witten Annen
 - Westnetz
 - Bundeswehr Hannover
+- DHL
 
 ---
 
@@ -88,7 +90,8 @@ Aus dem Drive übernommen und eingebunden:
 
 | Kunde | Frage |
 |---|---|
-| DHL | Gebucht sind laut Sheet auch **25.000 Mailings + 15.000 Junior**, es stehen aber keine Mailing-Werte drin. Sind die Mailings noch ausstehend? Dann baue ich den Mailing-Block mit Upload-Link ein. |
+| DHL | **Öffnungsrate bitte bestätigen.** Du hast mir **56,50 %** geschrieben, in der DHL-Zeile im Sheet steht aber **54,50 %** (die 56,50 % stehen eine Zeile tiefer bei EVG Martens). Ich habe deine **56,50 %** eingebaut. |
+| DHL | Gebucht sind laut Sheet 25.000 Mailings, versendet wurden laut deiner Angabe 15.000. Passt das so, oder folgen noch 10.000? |
 | DLRG | Zahlen zum 2x Social-Media-Retargeting fehlen. |
 | VRM Service | Du hast angekündigt, dass Repost-Infos folgen. |
 | Sparkasse Düsseldorf, DAAD | Videos bzw. Bilder in Drive, aber keine Kundenliste und keine Zahlen. Seiten anlegen? |

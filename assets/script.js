@@ -839,10 +839,15 @@
     var v = d.verschickt;
     var rate = function (x) { return (v && x !== null && x !== undefined) ? (x / v * 100) : null; };
     var rRepost = rate(d.reposts), rLp = rate(d.lpKlicks), rQr = rate(d.qrScans);
-    // Mailing-Klicks aus Klickrate und Versandmenge, wenn ein Mailing gelaufen ist.
-    // Grundlage ist die verschickte Menge, weil das Sheet keine eigene Mailing-Menge fuehrt.
-    var mailKlicks = (d.mailing && !d.mailing.ausstehend && d.mailing.klickrate && v)
-      ? Math.round(v * d.mailing.klickrate / 100) : null;
+    // Mailing-Klicks, wenn ein Mailing gelaufen ist. Bevorzugt die hinterlegte
+    // absolute Zahl, sonst aus Klickrate und Mailing-Menge. Grundlage ist die
+    // Mailing-Menge, nicht die Block-Menge: die beiden koennen abweichen.
+    var mailBasis = (d.mailing && d.mailing.menge) || v;
+    var mailKlicks = null;
+    if (d.mailing && !d.mailing.ausstehend) {
+      if (typeof d.mailing.klicks === "number") mailKlicks = d.mailing.klicks;
+      else if (d.mailing.klickrate && mailBasis) mailKlicks = Math.round(mailBasis * d.mailing.klickrate / 100);
+    }
     var bannerKlicks = (d.banner && d.banner.klicks) ? d.banner.klicks : null;
     // Reine Mailing-Kampagnen zeigen keine Block-Kennzahlen
     var hatBloecke = (d.produkt || "").indexOf("Collegeblöcke") > -1;
@@ -1067,7 +1072,12 @@
               "<div><b>" + num(d.mailing.oeffnungen) + "</b><span>Öffnungen</span></div>" +
               "<div><b>" + num(d.mailing.klicks) + "</b><span>Klicks</span></div>" +
             "</div>" +
-            (d.mailing.zeitpunkt ? '<p class="md-date">Versendet am <b>' + esc(d.mailing.zeitpunkt) + "</b></p>" : "") +
+            /* Einzelnes Datum -> "Versendet am", Zeitraum -> "Versand" */
+            (d.mailing.zeitpunkt
+              ? '<p class="md-date">' +
+                (/^\d{1,2}\.\d{1,2}\.\d{2,4}$/.test(String(d.mailing.zeitpunkt).trim()) ? "Versendet am <b>" : "Versand <b>") +
+                esc(d.mailing.zeitpunkt) + "</b></p>"
+              : "") +
           "</div>" +
           (d.mailing.bild
             ? '<figure class="laptop"><div class="lp-screen"><img src="' + esc(d.mailing.bild) +
