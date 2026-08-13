@@ -904,13 +904,14 @@
       "<h2>Die Kennzahlen auf einen Blick.</h2></div>" +
       '<div class="kpi-grid">';
 
-    function kpi(val, label, accent, delay) {
-      return '<article class="kpi reveal' + (delay ? " d" + delay : "") + '">' +
+    /* lang = laengerer Text statt einer Zahl, wird kleiner gesetzt */
+    function kpi(val, label, accent, delay, lang) {
+      return '<article class="kpi reveal' + (delay ? " d" + delay : "") + (lang ? " kpi-lang" : "") + '">' +
         '<span class="kpi-ic' + (accent ? " accent" : "") + '">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>' +
         "</span><b>" + val + '</b><span class="kpi-lbl">' + label + "</span></article>";
     }
-    if (d.gebucht) html += kpi(esc(d.gebucht), "gebucht", false, 0);
+    if (d.gebucht) html += kpi(esc(d.gebucht), "gebucht", false, 0, String(d.gebucht).length > 14);
     if (d.verschickt) html += kpi(num(d.verschickt), "verschickt", false, 1);
     if (d.impressionen) html += kpi(num(d.impressionen), "Impressionen", false, 2);
     if (d.qrScans) html += kpi(num(d.qrScans), "QR-Code-Scans", true, 3);

@@ -1,8 +1,12 @@
 # Was ich noch von dir brauche
 
-Stand: 11.08.2026
+Stand: 13.08.2026
 
 ## Erledigt in dieser Runde
+
+- **DHL aktualisiert**: neue Werte aus dem Sheet (21.000 verschickt, 210.000 Impressionen, 504 Reposts, 42.840 Repost-Impressionen, 567 Landingpage-Klicks) und die vier Reposts aus dem Drive eingebaut
+- **Netze BW** zeigt jetzt seine Reposts und das YouTube-Short (die Dateien lagen schon da, waren aber nicht verknüpft); Westnetz führt damit keine Medien mehr
+- **Beispielauswertung anonymisiert**: heißt jetzt „Beispiel Kunde", kein echter Firmenname mehr im Text
 
 - **Übersicht `/auswertungen` ist jetzt passwortgeschützt** (`NB12345678!`). Die Kundenliste ist zusätzlich verschlüsselt, es steht kein Firmenname mehr im Klartext in den Dateien. Direktlinks funktionieren unverändert ohne dieses Passwort.
 
@@ -37,7 +41,7 @@ Aus dem Drive übernommen und eingebunden:
 
 ---
 
-## 3. Repost-Medien fehlen noch für 13 Kunden
+## 3. Repost-Medien fehlen noch für 11 Kunden
 
 - Landwirtschaftskammer NRW
 - Hochschule Magdeburg-Stendal
@@ -48,10 +52,8 @@ Aus dem Drive übernommen und eingebunden:
 - TÜV Technische Überwachung Hessen GmbH
 - VRM Service GmbH & Co. KG
 - Ministerium für Justiz, Gleichstellung und Verbraucherschutz Mecklenburg-Vorpommern
-- DHL
 - EVG Elektro-Vertriebs-Gesellschaft Martens GmbH & Co. KG
 - Stadt Frankfurt
-- Netze BW
 
 ---
 
@@ -86,7 +88,7 @@ Aus dem Drive übernommen und eingebunden:
 
 | Kunde | Frage |
 |---|---|
-| DHL | Gebucht steht auf `0`, verschickt wurden `750`. |
+| DHL | Gebucht sind laut Sheet auch **25.000 Mailings + 15.000 Junior**, es stehen aber keine Mailing-Werte drin. Sind die Mailings noch ausstehend? Dann baue ich den Mailing-Block mit Upload-Link ein. |
 | DLRG | Zahlen zum 2x Social-Media-Retargeting fehlen. |
 | VRM Service | Du hast angekündigt, dass Repost-Infos folgen. |
 | Sparkasse Düsseldorf, DAAD | Videos bzw. Bilder in Drive, aber keine Kundenliste und keine Zahlen. Seiten anlegen? |

@@ -517,6 +517,8 @@ textarea.input { resize: vertical; min-height: 96px; }
 .kpi-ic svg { width: 22px; height: 22px; }
 .kpi b { display: block; font-size: 38px; font-weight: 820; letter-spacing: -.03em; line-height: 1.05; color: var(--ink); }
 .kpi-lbl { font-size: 14.5px; color: var(--muted); }
+/* Kachel mit laengerem Text statt einer Zahl: kleiner setzen, damit sie die Reihe nicht aufblaeht */
+.kpi.kpi-lang b { font-size: 20px; line-height: 1.35; letter-spacing: -.01em; margin-bottom: 4px; }
 
 /* ---------- Tabelle ---------- */
 .report-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 30px; }
