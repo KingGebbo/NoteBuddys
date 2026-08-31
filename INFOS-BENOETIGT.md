@@ -1,8 +1,10 @@
 # Was ich noch von dir brauche
 
-Stand: 13.08.2026
+Stand: 31.08.2026
 
 ## Erledigt in dieser Runde
+
+- **Rheinmetall, myessay-Banner aktualisiert**: die Platzhalter sind raus, aus dem Sheet kommen jetzt **50.000 Ausspielungen** (vorher 12.000) und **1.350 Klicks** (vorher 312). Alles, was darauf aufbaut, rechnet mit: die Interaktionen steigen von 1.170 auf **2.208**, der Ring „Von der Platzierung zur Interaktion" weist die Banner-Klicks jetzt mit 61,1 % als größten Anteil aus (Reposts 23,1 %, Landingpage-Klicks 15,7 %), und im Marktvergleich steht die Banner-Klickrate bei **2,7 %** gegen 0,25 % Branche und 1 % Note Buddy's.
 
 - **DHL Mailings ergänzt**: 15.000 Stück, Versand Juni bis August 26, 56,5 % Öffnungs- und 5,6 % Klickrate. Steht im Marktvergleich, in der Tabelle und als „Ihr Mailing im Detail" mit 8.475 Öffnungen und 840 Klicks
 - **DHL aktualisiert**: neue Werte aus dem Sheet (21.000 verschickt, 210.000 Impressionen, 504 Reposts, 42.840 Repost-Impressionen, 567 Landingpage-Klicks) und die vier Reposts aus dem Drive eingebaut
@@ -19,7 +21,7 @@ Stand: 13.08.2026
 - **Netze BW** neu angelegt, mit Reposts aus dem ENBW-Ordner und Video
 - Mailing-Werte stehen jetzt **im Marktvergleich**; darunter „Ihr Mailing im Detail" mit absoluten Zahlen (Versendet, Öffnungen, Klicks) und dem Mailing im Laptop-Mockup
 - Bei reinen Mailing-Kunden entfallen Reposts- und QR-Werte komplett, die Repost-Sektion wird ausgeblendet
-- Rheinmetall: myessay-Banner-Klicks zählen zu den Interaktionen und stehen im Marktvergleich (2,6 % gegen 0,25 % Branche und 1 % Note Buddy's)
+- Rheinmetall: myessay-Banner-Klicks zählen zu den Interaktionen und stehen im Marktvergleich (inzwischen 2,7 % gegen 0,25 % Branche und 1 % Note Buddy's)
 - OFD Hessen: Video aus den Reposts entfernt
 
 ---
