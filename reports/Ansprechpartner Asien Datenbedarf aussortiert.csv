@@ -1,0 +1,17 @@
+﻿Art,Firma,Name,E_Mail,Status_vorher,BEC_Event,Quelle
+Person,ByteDance,Ge Zhang,zhangge.eli@bytedance.com,gefunden,"mailbox_does_not_exist (Testlauf), danach blacklisted",https://arxiv.org/html/2604.02368v1
+Person,ByteDance,Wenhao Huang,huang.wenhao@bytedance.com,gefunden,mailbox_does_not_exist,https://arxiv.org/html/2604.02368v1
+Person,Tencent,Lu Shan,shanlu@tencent.com,"abgeleitet (Muster, 2 Belege)",mailbox_does_not_exist,https://arxiv.org/html/2405.08748v1
+Person,Moonshot AI (Kimi) / Novascent Pte. Ltd.,Shengling Ma,mashengling@moonshot.cn,"abgeleitet (Muster, 5 Belege)",mailbox_does_not_exist,https://arxiv.org/html/2502.13189
+Person,Baichuan (百川智能),Bingning Wang,daniel@baichuan-inc.com,gefunden,mailbox_does_not_exist,https://arxiv.org/pdf/2502.12671
+Person,Baichuan (百川智能),Wang Xiaochuan (im Paper: Xiaochuan Wang),wangxiaochuan@baichuan-inc.com,"abgeleitet (Muster, 5 Belege)",mailbox_does_not_exist,https://arxiv.org/pdf/2410.08565
+Person,Upstage,Jiyoon Han,jiyoon.han@upstage.ai,"abgeleitet (Muster, 5 Belege)",mailbox_does_not_exist,https://arxiv.org/html/2312.15166
+Person,Upstage,Namhyeok Kim,namhyeok.kim@upstage.ai,"abgeleitet (Muster, 5 Belege)",mailbox_does_not_exist,https://arxiv.org/html/2312.15166
+Person,Flitto (Korea),Jin Kim,jin.kim@flitto.com,"abgeleitet (Muster, 2 Belege)",mailbox_does_not_exist,https://welcon.kocca.kr/emp/store/flitto2012
+Person,"Crowdworks (크라우드웍스, Korea, KOSDAQ)",JunHo Lee,junho.lee@crowdworks.kr,"abgeleitet (schwach, 1 Beleg)",mailbox_does_not_exist,https://career.snu.ac.kr/media/download/34580/1/file
+allgemein,ByteDance,,scm-public@bytedance.com,allgemein,mailbox_does_not_exist,https://lf3-ea.bytetos.com/obj/eaoffice/p2p-supplier-portal-fe/static/js/home-page-home-page.7c9d8a98.js
+allgemein,"Shengshu Technology (生数科技, Vidu)",,support@vidu.com,allgemein,mailbox_does_not_exist,https://www.vidu.com/
+allgemein,"Shengshu Technology (生数科技, Vidu)",,support@vidu.cn,allgemein,mailbox_does_not_exist,https://www.vidu.com/
+allgemein,"Shengshu Technology (生数科技, Vidu)",,support@vidu.studio,allgemein,mailbox_does_not_exist,https://www.vidu.com/
+allgemein,"Shengshu Technology (生数科技, Vidu)",,platform@vidu.com,allgemein,mailbox_does_not_exist,https://platform.vidu.com/
+allgemein,"Shengshu Technology (生数科技, Vidu)",,platform@vidu.cn,allgemein,mailbox_does_not_exist,https://platform.vidu.cn/
