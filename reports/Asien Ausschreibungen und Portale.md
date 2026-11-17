@@ -19,6 +19,12 @@
 - **Empfehlung:** 5 × Aktiv verfolgen, 14 × Beobachten, 33 × Nicht verfolgen, 4 × Ausschluss.
 - Die aktiven und zu beobachtenden Treffer stehen zusätzlich im Monday-Board „Asia Sales Pipeline“, Gruppe „Neue Bedarfe: Ausschreibungen & Portale“.
 
+## Dubletten-Prüfung
+
+- **Gegen die Lead-Liste (87 Kontakte, 26 Firmen):** Keine der neuen Organisationen steht dort. 5 Treffer betreffen bestehende Leads und werden dort vermerkt statt neu angelegt: KO06 → Flitto, KO10 → Crowdworks, GU04 → HUMAIN, PO04 → Alibaba. Bei GU02 (Gesundheitsbehörde Abu Dhabi) ist M42 betroffen; die Behörde selbst bleibt als Regulierer ein eigener Eintrag.
+- **Innerhalb der Treffer:** zusammengeführt wurden KO04 → KO01 (beides NICT, ein Weg über die NICT-Qualifikation) und CH06 → CH05 (beides Nationale Datenbehörde). Gleiche Quell-URLs (eine NICT-Zuschlagsliste, ein Sina-Artikel) belegen verschiedene Aufträge und sind keine Dubletten.
+- **Gegen frühere Recherche-Notizen:** Einige Organisationen wurden dort als Marktteilnehmer erwähnt (Datatang, DataBaker, transcosmos, AI Verify/AI Singapore, Nationale Datenbehörde, SDAIA, NIA, MODA, LLM-jp/AISI). Die hier belegten Ausschreibungen, Zuschläge und Programme sind neu.
+
 ## Neue Bedarfsmuster für PathWize
 
 ### 1. Öffentliche Sprach- und LLM-Evaluationsaufträge in Japan mit offenem Zugang für ausländische Bieter
@@ -65,27 +71,27 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 
 ## Aktiv verfolgen und beobachten
 
-| # | Status | Prio | Fit | Land | Auftraggeber / Firma | Titel | EU-Bezug | Zugang | Nächster Schritt |
-|---|---|---|---|---|---|---|---|---|---|
-| GU01 | Aktiv verfolgen | A | 4 | Singapur | AI Verify Foundation (gemeinnützige Tochter der IMDA) | [Akkreditierungsprogramm für externe KI-Prüfdienstleister](https://aiverifyfoundation.sg/tester-accreditation/) | plausibel abgeleitet | als Subunternehmer | In den nächsten vier Wochen ein Angebot „Fachexperten für Ground Truth und Kalibrierung von LLM-Judges (Medizin, Finanzen)“ an die akkreditierten Firmen richten, zuerst PwC Singapore (AI Hub) und Knovel Engineering, dann AIDX Tech; Resaro und Vulcan nur nach projektbezogenem Defense- und Cyber-Screening. Über das AI-TAP-Formular nach der vollständigen Liste akkreditierter Firmen fragen; keine eigene Akkreditierung ohne Geschäftstätigkeit in Singapur. |
-| KO01 | Aktiv verfolgen | A | 4 | Japan | NICT (National Institute of Information and Communications Technology), Auftrag an Lionbridge International Unlimited Company (Dublin, Irland) | [Erstellung mehrsprachiger LLM-Evaluationsdaten, Haushaltsjahr 2026](https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf) | plausibel abgeleitet | direkt | Bis Ende 2026 die NICT-Qualifikation (競争参加資格) bei shikaku-shinsa@ml.nict.go.jp anfragen und klären, welche Nachweise eine EU-Firma anstelle japanischer Steuerbescheinigungen einreicht; alternativ 全省庁統一資格 über das 調達ポータル. Ab Dezember 2026 das e-Bid-System (werktags 8–20 Uhr JST) und die JETRO-Datenbank auf Folgeausschreibungen zu 多言語LLM評価 prüfen und Angebotsunterlagen mit einem japanischsprachigen Partner vorbereiten. |
-| PO01 | Aktiv verfolgen | B | 3 | CN (Nexdata mit US-Telefonnummer) | Datatang (数据堂), Auslandsmarke Nexdata | [Nexdata veröffentlicht 11 mehrsprachige Sprachsynthese-Datensätze](https://www.nexdata.ai/company/news/1481?fromPage=1) | belegt | als Subunternehmer | Über das Partnerformular oder das Europa-Vertriebsteam Kontakt aufnehmen, Ziel: Aufnahme ins Lieferantenverzeichnis (供应商入库) für EU-Sprach-QA, Annotation und Expertenaufgaben bei Auslandsprojekten. Vorher Endkunden prüfen (1260H, Destillationswarnung vom 08.09.2026) und den DSGVO-Datenfluss klären. |
-| KO06 | Aktiv verfolgen | C | 2 | Südkorea | 국립국어원 (National Institute of Korean Language), Auftrag an 경희대학교 산학협력단 (Kyung Hee University) und Flitto | [Aufbau von Korpora Koreanisch–Fremdsprachen 2026](https://www.ddaily.co.kr/page/view/2026041309234106389) | nicht belegt | über Partner | Im bestehenden Flitto-Kontakt Russisch- und Englisch-QA erwähnen; Ausschreibungen des 국립국어원 für 2027 über sankun.com beobachten. |
-| KO14 | Aktiv verfolgen | C | 2 | Japan | IPA / AI Safety Institute Japan (AISI) | [Rechenumgebung für den Aufbau eines KI-Sicherheitsbenchmarks; Weiterentwicklung und Verbreitung der AISI-Evaluationsumgebung; Studie und Pilotbewertung zu neuer Konformitätsbewertung für KI](https://www.ipa.go.jp/choutatsu/nyusatsu/2026/nyusatsu20260601-3.html) | nicht belegt | als Subunternehmer | Nach Erwerb der 全省庁統一資格 die IPA-Ausschreibungsseite mitbeobachten; Cyber-Ausschreibungen ausschließen. |
-| CH01 | Beobachten | C | 2 | China | 上海库帕思科技有限公司 und 上海市人工智能行业协会 (Ausrichter WAIC-2026-Korpusforum; Leitung WAIC-Organisationskomitee) | [Öffentliche Korpus-Betriebsplattform 2.0 (mit Plattform für Expertenerfahrungs-Korpora und Experten-Crowdsourcing-Netzwerk); Sammelaufruf „DARE GO“ für domänenübergreifende hochwertige Korpora](https://www.cnfin.com/hg-lb/detail/20260719/4442624_1.html) | nicht belegt | unklar | Beobachten. Erst bei veröffentlichten Teilnahmebedingungen für ausländische Experten erneut prüfen; vorher Eigentümer und Listenstatus von 上海库帕思 klären. |
-| GU02 | Beobachten | C | 2 | Vereinigte Arabische Emirate (Abu Dhabi) | Department of Health – Abu Dhabi (DoH) | [Rahmenwerk für Forschung und Betrieb von KI-Kliniker-Systemen](https://tradearabia.com/News/488291/DoH-publishes-AI-Clinician-Framework) | nicht belegt | über Partner | Beobachten: Folge-Policies der DoH zu Evidenz und Schwellen. Im bestehenden M42-Kontakt (Lead-Liste) die Hypothese ärztlicher Evaluation für AI-Clinician-Zulassungen ansprechen. |
-| GU03 | Beobachten | C | 2 | Saudi-Arabien | Saudi Data & AI Authority (SDAIA) | [Entwurf der Richtlinie für verantwortungsvolle KI](https://www.cliffordchance.com/content/dam/cliffordchance/briefings/2026/11/responsible-ai-policy-shift-guiding-regime-supervisory-one.pdf) | nicht belegt | unklar | Beobachten: Endfassung und Akkreditierungskriterien für Drittprüfer. Die PDPL-Controller-Registrierung nur bei Verarbeitung saudischer personenbezogener Daten angehen; Sicherheitstests mit Cyber-Charakter ausklammern. |
-| KO04 | Beobachten | C | 2 | Japan | NICT, Aufträge an サン・フレア (Sun Flare Co.) und アッペンジャパン (Appen Japan) | [Bewertung maschineller Übersetzung EN↔JA und ZH↔JA; Bewertung von MT auf Chunk-Ebene; Aufbau englisch-japanischer Paralleldaten für die Suchevaluation; Fehlerannotation von MT-Ausgaben auf Span-Ebene](https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf) | nicht belegt | unklar | Beobachten; nur aufgreifen, wenn die NICT MT-Bewertung mit europäischen Sprachpaaren ausschreibt. |
-| PO02 | Beobachten | C | 2 | CN | 标贝科技 DataBaker (标贝(北京)科技有限公司) | [„Biaobei Yicai“, Crowd-App für Sprachaufnahmen; Version 1.4.60 ergänzt Thai, Französisch, Spanisch und Portugiesisch](https://apps.apple.com/cn/app/id1578619623) | plausibel abgeleitet | unklar | Beobachten. Nur zusammen mit der Datatang-Ansprache nach europäischen Sprachprojekten fragen; vorher Listen-Check von DataBaker. |
-| PO03 | Beobachten | C | 2 | JP | APTO (株式会社APTO), Plattformen harBest und harBest Expert | [harBest Expert: Plattform für KI-Datenerstellung und -verwaltung mit Fachexperten](https://apto.co.jp/services/harbest-expert/) | nicht belegt | unklar | Beobachten. Nur bei einem konkreten Projekt mit europäischen Sprachen oder westlichem Fachkontext über https://apto.co.jp/contact/ eine Partnerschaft anfragen. |
-| PO10 | Beobachten | C | 2 | JP | transcosmos | [transcosmos startet KI-Trainings- und Annotationsdienste mit Personal aus Japan und ASEAN](https://www.prnewswire.com/news-releases/transcosmos-launches-ai-training-and-annotation-services--leveraging-talent-across-japan-and-asean-302649409.html) | nicht belegt | über Partner | Beobachten: Kündigt transcosmos europäische Sprachen an, eine Partnerschaft prüfen. |
-| CH03 | Beobachten | C | 1 | China | 上海外国语大学 语言科学研究院 (Shanghai International Studies University, Institute of Language Sciences) | [Aufruf 2026: Aufbau mehrsprachiger Korpora an der SISU](https://ilas-en.shisu.edu.cn/23/db/c18280a205787/page.htm) | belegt | unklar | Beobachten: im Januar 2027 prüfen, ob eine neue Runde erscheint (Wiederholung nicht belegt). Kein aktiver Schritt. |
-| CH05 | Beobachten | C | 1 | China | 国家数据局 (National Data Administration, NDA) | [Umsetzungsplan zum Aufbau hochwertiger Branchendatensätze](https://www.yicai.com/news/103220242.html) | nicht belegt | unklar | Beobachten: Ausführungsregeln zur gegenseitigen Anerkennung grenzüberschreitender Datensätze. Kein aktiver Schritt. |
-| CH06 | Beobachten | C | 1 | China | 国家数据局 (NDA) – 数据标注先行先试工作推进会 | [NDA-Arbeitstreffen zum Annotations-Pilotprogramm: Netzwerk von Annotationsexperten nach Branchen, Bedarfslandkarte für Datensätze](https://www.cnfin.com/hg-lb/detail/20261031/4489285_1.html) | nicht belegt | unklar | Beobachten: die Bedarfslandkarte der Pilotstädte bei Veröffentlichung auf mehrsprachige Posten prüfen. |
-| CH12 | Beobachten | C | 1 | China | 北京市经济和信息化局 (Wirtschafts- und IT-Behörde Peking) | [Öffentlicher Aufruf an Erbringer für Bedarfslisten hochwertiger Datensätze (KI für neue Industrialisierung), 1. und 3. Charge 2026](https://www.ncsti.gov.cn/kjdt/tzgg/202607/t20260701_250587.html) | nicht belegt | über Partner | Beobachten; nur aufgreifen, wenn ein Pekinger Partner einen Datensatz mit Expertenbedarf übernimmt. |
-| KO13 | Beobachten | C | 1 | Japan | MEXT / NII (国立情報学研究所, LLM-jp, LLMC) | [Programm zum Aufbau eines F&E-Zentrums für Transparenz und Verlässlichkeit generativer KI (Bericht für Haushaltsjahr 2025)](https://www.mext.go.jp/content/20260730-mxt_jyohoka01-000051299_02.pdf) | nicht belegt | unklar | Beobachten (NII-Beschaffungsseite); kein aktiver Schritt. |
-| KO17 | Beobachten | C | 1 | Taiwan | MODA 數位產業署, AI產品與系統評測中心 (AIEC) | [Taiwans staatliches Evaluationszentrum für KI-Produkte: LLM-Bewertungen](https://ec.ltn.com.tw/article/breakingnews/5424675) | nicht belegt | unklar | Beobachten. |
-| KO18 | Beobachten | C | 1 | Hongkong | HKGAI (Hong Kong Generative AI R&D Center, InnoHK, unter Leitung der HKUST) | [Strategie zur globalen Expansion der HKGAI-Großmodelle](https://www.chinadailyhk.com/article/636776) | nicht belegt | unklar | Beobachten; vor jedem Kontakt den China-Bezug prüfen. |
+| # | Status | Prio | Fit | Land | Auftraggeber / Firma | Titel | EU-Bezug | Zugang | Zuordnung | Nächster Schritt |
+|---|---|---|---|---|---|---|---|---|---|---|
+| GU01 | Aktiv verfolgen | A | 4 | Singapur | AI Verify Foundation (gemeinnützige Tochter der IMDA) | [Akkreditierungsprogramm für externe KI-Prüfdienstleister](https://aiverifyfoundation.sg/tester-accreditation/) | plausibel abgeleitet | als Subunternehmer | neu | In den nächsten vier Wochen ein Angebot „Fachexperten für Ground Truth und Kalibrierung von LLM-Judges (Medizin, Finanzen)“ an die akkreditierten Firmen richten, zuerst PwC Singapore (AI Hub) und Knovel Engineering, dann AIDX Tech; Resaro und Vulcan nur nach projektbezogenem Defense- und Cyber-Screening. Über das AI-TAP-Formular nach der vollständigen Liste akkreditierter Firmen fragen; keine eigene Akkreditierung ohne Geschäftstätigkeit in Singapur. |
+| KO01 | Aktiv verfolgen | A | 4 | Japan | NICT (National Institute of Information and Communications Technology), Auftrag an Lionbridge International Unlimited Company (Dublin, Irland) | [Erstellung mehrsprachiger LLM-Evaluationsdaten, Haushaltsjahr 2026](https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf) | plausibel abgeleitet | direkt | neu | Bis Ende 2026 die NICT-Qualifikation (競争参加資格) bei shikaku-shinsa@ml.nict.go.jp anfragen und klären, welche Nachweise eine EU-Firma anstelle japanischer Steuerbescheinigungen einreicht; alternativ 全省庁統一資格 über das 調達ポータル. Ab Dezember 2026 das e-Bid-System (werktags 8–20 Uhr JST) und die JETRO-Datenbank auf Folgeausschreibungen zu 多言語LLM評価 prüfen und Angebotsunterlagen mit einem japanischsprachigen Partner vorbereiten. |
+| PO01 | Aktiv verfolgen | B | 3 | CN (Nexdata mit US-Telefonnummer) | Datatang (数据堂), Auslandsmarke Nexdata | [Nexdata veröffentlicht 11 mehrsprachige Sprachsynthese-Datensätze](https://www.nexdata.ai/company/news/1481?fromPage=1) | belegt | als Subunternehmer | neu | Über das Partnerformular oder das Europa-Vertriebsteam Kontakt aufnehmen, Ziel: Aufnahme ins Lieferantenverzeichnis (供应商入库) für EU-Sprach-QA, Annotation und Expertenaufgaben bei Auslandsprojekten. Vorher Endkunden prüfen (1260H, Destillationswarnung vom 08.09.2026) und den DSGVO-Datenfluss klären. |
+| KO06 | Aktiv verfolgen | C | 2 | Südkorea | 국립국어원 (National Institute of Korean Language), Auftrag an 경희대학교 산학협력단 (Kyung Hee University) und Flitto | [Aufbau von Korpora Koreanisch–Fremdsprachen 2026](https://www.ddaily.co.kr/page/view/2026041309234106389) | nicht belegt | über Partner | Flitto (bestehender Lead, Kontakte Simon Lee, Jin Kim, Mayumi Shinya) | Im bestehenden Flitto-Kontakt Russisch- und Englisch-QA erwähnen; Ausschreibungen des 국립국어원 für 2027 über sankun.com beobachten. |
+| KO14 | Aktiv verfolgen | C | 2 | Japan | IPA / AI Safety Institute Japan (AISI) | [Rechenumgebung für den Aufbau eines KI-Sicherheitsbenchmarks; Weiterentwicklung und Verbreitung der AISI-Evaluationsumgebung; Studie und Pilotbewertung zu neuer Konformitätsbewertung für KI](https://www.ipa.go.jp/choutatsu/nyusatsu/2026/nyusatsu20260601-3.html) | nicht belegt | als Subunternehmer | neu | Nach Erwerb der 全省庁統一資格 die IPA-Ausschreibungsseite mitbeobachten; Cyber-Ausschreibungen ausschließen. |
+| CH01 | Beobachten | C | 2 | China | 上海库帕思科技有限公司 und 上海市人工智能行业协会 (Ausrichter WAIC-2026-Korpusforum; Leitung WAIC-Organisationskomitee) | [Öffentliche Korpus-Betriebsplattform 2.0 (mit Plattform für Expertenerfahrungs-Korpora und Experten-Crowdsourcing-Netzwerk); Sammelaufruf „DARE GO“ für domänenübergreifende hochwertige Korpora](https://www.cnfin.com/hg-lb/detail/20260719/4442624_1.html) | nicht belegt | unklar | neu | Beobachten. Erst bei veröffentlichten Teilnahmebedingungen für ausländische Experten erneut prüfen; vorher Eigentümer und Listenstatus von 上海库帕思 klären. |
+| GU02 | Beobachten | C | 2 | Vereinigte Arabische Emirate (Abu Dhabi) | Department of Health – Abu Dhabi (DoH) | [Rahmenwerk für Forschung und Betrieb von KI-Kliniker-Systemen](https://tradearabia.com/News/488291/DoH-publishes-AI-Clinician-Framework) | nicht belegt | über Partner | M42 (bestehender Lead) – DoH ist Regulierer, eigener Eintrag | Beobachten: Folge-Policies der DoH zu Evidenz und Schwellen. Im bestehenden M42-Kontakt (Lead-Liste) die Hypothese ärztlicher Evaluation für AI-Clinician-Zulassungen ansprechen. |
+| GU03 | Beobachten | C | 2 | Saudi-Arabien | Saudi Data & AI Authority (SDAIA) | [Entwurf der Richtlinie für verantwortungsvolle KI](https://www.cliffordchance.com/content/dam/cliffordchance/briefings/2026/11/responsible-ai-policy-shift-guiding-regime-supervisory-one.pdf) | nicht belegt | unklar | neu | Beobachten: Endfassung und Akkreditierungskriterien für Drittprüfer. Die PDPL-Controller-Registrierung nur bei Verarbeitung saudischer personenbezogener Daten angehen; Sicherheitstests mit Cyber-Charakter ausklammern. |
+| KO04 | Beobachten | C | 2 | Japan | NICT, Aufträge an サン・フレア (Sun Flare Co.) und アッペンジャパン (Appen Japan) | [Bewertung maschineller Übersetzung EN↔JA und ZH↔JA; Bewertung von MT auf Chunk-Ebene; Aufbau englisch-japanischer Paralleldaten für die Suchevaluation; Fehlerannotation von MT-Ausgaben auf Span-Ebene](https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf) | nicht belegt | unklar | zusammengeführt mit KO01 | Beobachten; nur aufgreifen, wenn die NICT MT-Bewertung mit europäischen Sprachpaaren ausschreibt. |
+| PO02 | Beobachten | C | 2 | CN | 标贝科技 DataBaker (标贝(北京)科技有限公司) | [„Biaobei Yicai“, Crowd-App für Sprachaufnahmen; Version 1.4.60 ergänzt Thai, Französisch, Spanisch und Portugiesisch](https://apps.apple.com/cn/app/id1578619623) | plausibel abgeleitet | unklar | neu | Beobachten. Nur zusammen mit der Datatang-Ansprache nach europäischen Sprachprojekten fragen; vorher Listen-Check von DataBaker. |
+| PO03 | Beobachten | C | 2 | JP | APTO (株式会社APTO), Plattformen harBest und harBest Expert | [harBest Expert: Plattform für KI-Datenerstellung und -verwaltung mit Fachexperten](https://apto.co.jp/services/harbest-expert/) | nicht belegt | unklar | neu | Beobachten. Nur bei einem konkreten Projekt mit europäischen Sprachen oder westlichem Fachkontext über https://apto.co.jp/contact/ eine Partnerschaft anfragen. |
+| PO10 | Beobachten | C | 2 | JP | transcosmos | [transcosmos startet KI-Trainings- und Annotationsdienste mit Personal aus Japan und ASEAN](https://www.prnewswire.com/news-releases/transcosmos-launches-ai-training-and-annotation-services--leveraging-talent-across-japan-and-asean-302649409.html) | nicht belegt | über Partner | neu | Beobachten: Kündigt transcosmos europäische Sprachen an, eine Partnerschaft prüfen. |
+| CH03 | Beobachten | C | 1 | China | 上海外国语大学 语言科学研究院 (Shanghai International Studies University, Institute of Language Sciences) | [Aufruf 2026: Aufbau mehrsprachiger Korpora an der SISU](https://ilas-en.shisu.edu.cn/23/db/c18280a205787/page.htm) | belegt | unklar | neu | Beobachten: im Januar 2027 prüfen, ob eine neue Runde erscheint (Wiederholung nicht belegt). Kein aktiver Schritt. |
+| CH05 | Beobachten | C | 1 | China | 国家数据局 (National Data Administration, NDA) | [Umsetzungsplan zum Aufbau hochwertiger Branchendatensätze](https://www.yicai.com/news/103220242.html) | nicht belegt | unklar | neu | Beobachten: Ausführungsregeln zur gegenseitigen Anerkennung grenzüberschreitender Datensätze. Kein aktiver Schritt. |
+| CH06 | Beobachten | C | 1 | China | 国家数据局 (NDA) – 数据标注先行先试工作推进会 | [NDA-Arbeitstreffen zum Annotations-Pilotprogramm: Netzwerk von Annotationsexperten nach Branchen, Bedarfslandkarte für Datensätze](https://www.cnfin.com/hg-lb/detail/20261031/4489285_1.html) | nicht belegt | unklar | zusammengeführt mit CH05 | Beobachten: die Bedarfslandkarte der Pilotstädte bei Veröffentlichung auf mehrsprachige Posten prüfen. |
+| CH12 | Beobachten | C | 1 | China | 北京市经济和信息化局 (Wirtschafts- und IT-Behörde Peking) | [Öffentlicher Aufruf an Erbringer für Bedarfslisten hochwertiger Datensätze (KI für neue Industrialisierung), 1. und 3. Charge 2026](https://www.ncsti.gov.cn/kjdt/tzgg/202607/t20260701_250587.html) | nicht belegt | über Partner | neu | Beobachten; nur aufgreifen, wenn ein Pekinger Partner einen Datensatz mit Expertenbedarf übernimmt. |
+| KO13 | Beobachten | C | 1 | Japan | MEXT / NII (国立情報学研究所, LLM-jp, LLMC) | [Programm zum Aufbau eines F&E-Zentrums für Transparenz und Verlässlichkeit generativer KI (Bericht für Haushaltsjahr 2025)](https://www.mext.go.jp/content/20260730-mxt_jyohoka01-000051299_02.pdf) | nicht belegt | unklar | neu | Beobachten (NII-Beschaffungsseite); kein aktiver Schritt. |
+| KO17 | Beobachten | C | 1 | Taiwan | MODA 數位產業署, AI產品與系統評測中心 (AIEC) | [Taiwans staatliches Evaluationszentrum für KI-Produkte: LLM-Bewertungen](https://ec.ltn.com.tw/article/breakingnews/5424675) | nicht belegt | unklar | neu | Beobachten. |
+| KO18 | Beobachten | C | 1 | Hongkong | HKGAI (Hong Kong Generative AI R&D Center, InnoHK, unter Leitung der HKUST) | [Strategie zur globalen Expansion der HKGAI-Großmodelle](https://www.chinadailyhk.com/article/636776) | nicht belegt | unklar | neu | Beobachten; vor jedem Kontakt den China-Bezug prüfen. |
 
 ## Portale und Registrierungen, die sich lohnen
 
@@ -119,6 +125,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Ausschreibung auf Japanisch. Bieter brauchen die gesamtstaatliche Qualifikation 全省庁統一資格 (役務) oder eine NICT-eigene Qualifikation. Für die NICT-Qualifikation werden japanische Nachweise verlangt, etwa Registerauszug und Steuerbescheinigungen. Wie Lionbridge die Qualifikation erlangt hat, ist nicht belegt. Die Vergabe erfolgt nach Bewertungsverfahren (総合評価).
 - **Kontakt (öffentlich):** NICT 財務部契約室 契約管理グループ 参加資格申請窓口, shikaku-shinsa@ml.nict.go.jp (auf https://www.nict.go.jp/tender/sanka-sikaku.html bestätigt)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft). Japanische Staatsbehörde, keine Exportkontroll-Signale.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Bis Ende 2026 die NICT-Qualifikation (競争参加資格) bei shikaku-shinsa@ml.nict.go.jp anfragen und klären, welche Nachweise eine EU-Firma anstelle japanischer Steuerbescheinigungen einreicht; alternativ 全省庁統一資格 über das 調達ポータル. Ab Dezember 2026 das e-Bid-System (werktags 8–20 Uhr JST) und die JETRO-Datenbank auf Folgeausschreibungen zu 多言語LLM評価 prüfen und Angebotsunterlagen mit einem japanischsprachigen Partner vorbereiten.
 - **Quelle:** https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf (selbst geöffnet)
 
@@ -135,6 +142,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Für die Mitarbeit an Staatsprojekten gilt in NIA-Ausschreibungen eine Regel, nach der Personal grundsätzlich koreanischer Nationalität sein muss. Ausländische Muttersprachler sind dort für Sprachdaten nur mit Genehmigung zugelassen (siehe frühere Notizen). Ob dieselbe Regel für dieses Projekt des Instituts für koreanische Sprache gilt, ist nicht geprüft.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** Flitto (bestehender Lead, Kontakte Simon Lee, Jin Kim, Mayumi Shinya)
 - **Nächster Schritt:** Im bestehenden Flitto-Kontakt Russisch- und Englisch-QA erwähnen; Ausschreibungen des 국립국어원 für 2027 über sankun.com beobachten.
 - **Quelle:** https://www.ddaily.co.kr/page/view/2026041309234106389 (selbst geöffnet)
 
@@ -151,6 +159,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Gesamtstaatliche Qualifikation 全省庁統一資格 (Region Kanto/Koshinetsu) nötig; Unterlagen auf Japanisch; Leistungsbeschreibung nur an Bieter.
 - **Kontakt (öffentlich):** IPA AISI-Gruppe, aisi-kobo@ipa.go.jp; Vertragsgruppe fa-bid-kt@ipa.go.jp (beide auf den Ausschreibungsseiten veröffentlicht)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft). Cyber-Ausschreibungen der IPA (z. B. KI-Cyberübungen 13.04.2026) ausgeschlossen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nach Erwerb der 全省庁統一資格 die IPA-Ausschreibungsseite mitbeobachten; Cyber-Ausschreibungen ausschließen.
 - **Quelle:** https://www.ipa.go.jp/choutatsu/nyusatsu/2026/nyusatsu20260601-3.html (selbst geöffnet)
 
@@ -167,6 +176,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Japanisch auf Arbeitsniveau ist nötig, da Japanisch immer eine Sprachseite ist. Direktgebote unterliegen den NICT-Qualifikationsregeln.
 - **Kontakt (öffentlich):** NICT 財務部契約室 契約管理グループ 参加資格申請窓口, shikaku-shinsa@ml.nict.go.jp (auf https://www.nict.go.jp/tender/sanka-sikaku.html bestätigt)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft). Appen Japan ist nicht Appen China aus der bestehenden Liste.
+- **Zuordnung:** zusammengeführt mit KO01
 - **Nächster Schritt:** Beobachten; nur aufgreifen, wenn die NICT MT-Bewertung mit europäischen Sprachpaaren ausschreibt.
 - **Quelle:** https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf (selbst geöffnet)
 
@@ -183,6 +193,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Keine offene Ausschreibung; akademischer Kooperationsweg; Datensätze sind japanischsprachig.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten (NII-Beschaffungsseite); kein aktiver Schritt.
 - **Quelle:** https://www.mext.go.jp/content/20260730-mxt_jyohoka01-000051299_02.pdf (selbst geöffnet)
 
@@ -199,6 +210,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Keine Ausschreibung gefunden; nur Snippets.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten.
 - **Quelle:** https://ec.ltn.com.tw/article/breakingnews/5424675 (nur Snippet)
 
@@ -215,6 +227,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Keine Ausschreibungen sichtbar; HKGAI- und HKPC-Seiten nur per JavaScript, nicht lesbar.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** HKGAI ist nicht in der Destillationswarnung vom 08.09.2026 genannt; Entity-List- und 1260H-Status nicht geprüft. Hongkong- und China-Bezug (Betrieb auf chinesischen Chips, grenzüberschreitende Datenflüsse mit dem Festland) vor Zusammenarbeit prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten; vor jedem Kontakt den China-Bezug prüfen.
 - **Quelle:** https://www.chinadailyhk.com/article/636776 (selbst geöffnet)
 
@@ -231,6 +244,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Sprachen und Leistungsumfang stehen nicht in der Zuschlagsliste. Für direkte Gebote gelten dieselben Qualifikationshürden wie im Eintrag oben.
 - **Kontakt (öffentlich):** NICT 財務部契約室 契約管理グループ 参加資格申請窓口, shikaku-shinsa@ml.nict.go.jp (auf https://www.nict.go.jp/tender/sanka-sikaku.html bestätigt)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht separat verfolgen; über die NICT-Qualifikation aus KO01 abdecken und Korpusausschreibungen mitbeobachten.
 - **Quelle:** https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur7.pdf (selbst geöffnet)
 
@@ -247,6 +261,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Es handelt sich um Arbeitnehmerüberlassung (派遣). Dafür braucht der Bieter eine japanische Überlassungslizenz, und die Kräfte sind beim Verleiher angestellt. Einsatz vermutlich vor Ort bei der NICT, der Ort ist für diese Aufträge nicht belegt. Direkter Zugang für PathWize ist praktisch ausgeschlossen.
 - **Kontakt (öffentlich):** NICT 財務部契約室 契約管理グループ 参加資格申請窓口, shikaku-shinsa@ml.nict.go.jp (auf https://www.nict.go.jp/tender/sanka-sikaku.html bestätigt)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht direkt verfolgen. In der Runde für Haushaltsjahr 2027 (Verträge nach Vorjahresmuster Mitte Januar; Ableitung) im e-Bid-System prüfen, ob Sprachdaten auch als Werkvertrag (請負) statt als Leiharbeit ausgeschrieben werden.
 - **Quelle:** https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf (selbst geöffnet)
 
@@ -263,6 +278,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Niedrige Preise je Einheit; Wettbewerb mit japanischen Sprachdienstleistern; Unterauftragsbedingungen nicht bekannt.
 - **Kontakt (öffentlich):** NICT 財務部契約室 契約管理グループ 参加資格申請窓口, shikaku-shinsa@ml.nict.go.jp (auf https://www.nict.go.jp/tender/sanka-sikaku.html bestätigt)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen; nur im NICT-Monitoring mitlaufen lassen.
 - **Quelle:** https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur8.pdf (selbst geöffnet)
 
@@ -279,6 +295,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Nur koreanische Konsortien; koreanisches NPKI-Unternehmenszertifikat, Gewerbe- und Steuernachweise; Unterlagen nur als HWP.
 - **Kontakt (öffentlich):** NIA, Tel. 053-230-4216, hyuna@nia.or.kr (Runde 1); AI-Datenprojektteam, Tel. 053-230-4227 (Runde 2)
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen; Gewinnerkonsortien nur als Marktinformation.
 - **Quelle:** https://www.aihub.or.kr/aihubnews/bsnspblanc/view.do?currMenu=133&topMenu=103&nttSn=10535 (selbst geöffnet)
 
@@ -295,6 +312,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Nur koreanische KMU mit Software-Unternehmensregistrierung (Code 1468) und Direktproduktionsnachweis; Unteraufträge unzulässig (하도급 불가).
 - **Kontakt (öffentlich):** NIA, 강현아, Tel. 053-230-4216
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://www.aihub.or.kr/aihubnews/bsnspblanc/view.do?currMenu=133&topMenu=103&nttSn=10547 (selbst geöffnet)
 
@@ -311,6 +329,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Koreanische Konsortien, NPKI, voraussichtlich Nationalitätsregel für Personal (in anderer NIA-Ausschreibung belegt, hier nicht geprüft).
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://www.aihub.or.kr/aihubnews/bsnspblanc/view.do?currMenu=133&topMenu=103&nttSn=10539 (selbst geöffnet)
 
@@ -327,6 +346,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Koreanische Sprache, Nationalitätsregeln im NIA-Rahmen möglich.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** Crowdworks (bestehender Lead)
 - **Nächster Schritt:** Nicht verfolgen; in der Crowdworks-Lead-Akte vermerken.
 - **Quelle:** https://byline.network/2026/07/7-453/ (selbst geöffnet)
 
@@ -343,6 +363,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Koreanische Firmenregistrierung; Gewinner nicht gefunden.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen; Gewinner nur als Marktinformation.
 - **Quelle:** https://m.ddaily.co.kr/page/view/2026040217485913739 (selbst geöffnet)
 
@@ -359,6 +380,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Nur nicht-Cyber-Teile wären zulässig; koreanischsprachig; keine Ausschreibung gefunden.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft). Cybersicherheitsteil ausschließen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen; Cyber-Anteil bleibt ausgeschlossen.
 - **Quelle:** https://www.boannews.com/news/articleView.html?idxno=138623 (selbst geöffnet)
 
@@ -375,6 +397,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** GENIAC- und Post-5G-Ausschreibungen verlangen in der Regel einen japanischen Lead-Antragsteller mit F&E-Standort in Japan (frühere Notizen); Antrag über Jグランツ.
 - **Kontakt (öffentlich):** NEDO AI・ロボット部, pj_domain_koubo3@nedo.go.jp
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (japanischer Lead nötig, Frist 16.12.2026).
 - **Quelle:** https://www.nedo.go.jp/koubo/CD2_100456.html (selbst geöffnet)
 
@@ -391,6 +414,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Taiwanische Vergabe (Verhandlungsverfahren mit öffentlicher Auswahl), Mandarin-Dokumentation; Plattform-IT statt Datenarbeit.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Keine Firma aus der Destillationswarnung (NSA/FBI/CISA, 08.09.2026) und keine bekannte Listung auf Entity List oder 1260H (nicht einzeln gegen die Listen geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://www-api.moda.gov.tw/OpenData/Files/19596 (selbst geöffnet)
 
@@ -407,6 +431,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Ausgeschlossen (Cybersecurity).
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** AUSSCHLUSS Cybersecurity. Sun Flare ist für Nicht-Cyber-MT-Evaluation trotzdem ein möglicher Partner.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Ausschluss Cybersecurity).
 - **Quelle:** https://www.nict.go.jp/tender/pdf/rakusatsu_ekimur7.pdf (selbst geöffnet)
 
@@ -423,6 +448,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Ausgeschlossen (Verteidigung).
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** AUSSCHLUSS Verteidigung und Militär.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Ausschluss Verteidigung).
 - **Quelle:** https://www.etnews.com/20261002000184 (nur Snippet)
 
@@ -441,6 +467,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Die eigene Akkreditierung verlangt ein 'commitment of business activity in Singapore' und ein Angebot technischer GenAI-Tests, nicht nur Datenlieferung. Ob ausländische Firmen zugelassen sind, sagt die Seite nicht. Für eine Subunternehmerschaft bei akkreditierten Firmen ist keine formale Hürde bekannt.
 - **Kontakt (öffentlich):** Interessensbekundung über das Kontaktformular https://aiverifyfoundation.sg/contact-us/?topic=aitap. Im IMDA-Annex zitiert: Yifan Jia (CEO, AIDX Tech), Seah Hee Chuan (CEO, Knovel Engineering), Anthony Dias (Partner, AI Hub Lead, PwC Singapore), April Chin (Co-CEO, Resaro), Alex Leung (Co-founder, Vulcan).
 - **Compliance:** Resaro hat laut Vor-Notizen auch Regierungs- und Verteidigungskunden; jedes Projekt vorab auf Defense- oder Cyber-Bezug prüfen. Red-Teaming mit Cyber-Charakter (Prompt Injection, Datenabfluss) nicht übernehmen, nur fachliche Qualitäts- und Safety-Bewertung. Keine Firma auf der Entity List beteiligt.
+- **Zuordnung:** neu
 - **Nächster Schritt:** In den nächsten vier Wochen ein Angebot „Fachexperten für Ground Truth und Kalibrierung von LLM-Judges (Medizin, Finanzen)“ an die akkreditierten Firmen richten, zuerst PwC Singapore (AI Hub) und Knovel Engineering, dann AIDX Tech; Resaro und Vulcan nur nach projektbezogenem Defense- und Cyber-Screening. Über das AI-TAP-Formular nach der vollständigen Liste akkreditierter Firmen fragen; keine eigene Akkreditierung ohne Geschäftstätigkeit in Singapur.
 - **Quelle:** https://aiverifyfoundation.sg/tester-accreditation/ (selbst geöffnet)
 
@@ -457,6 +484,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Forschung nur im regulierten Abu-Dhabi-Rahmen mit DoH-Genehmigung; Gesundheitsdaten bleiben in den VAE; Bewertungsschwellen noch nicht veröffentlicht; teils Arabisch nötig. DoH selbst kauft hier nichts ein, Käufer sind die Entwickler.
 - **Kontakt (öffentlich):** Öffentlich zitiert: Mansoor Ibrahim Al Mansoori (Chairman, DoH) und Dr. Noura Khamis Al Ghaithi (Undersecretary, DoH). Keine Projektkontaktadresse veröffentlicht.
 - **Compliance:** Patientendaten unterliegen dem VAE-Gesundheitsdatenrecht; remote nur mit pseudonymisierten Fällen arbeiten. Kein Entity-List-Bezug.
+- **Zuordnung:** M42 (bestehender Lead) – DoH ist Regulierer, eigener Eintrag
 - **Nächster Schritt:** Beobachten: Folge-Policies der DoH zu Evidenz und Schwellen. Im bestehenden M42-Kontakt (Lead-Liste) die Hypothese ärztlicher Evaluation für AI-Clinician-Zulassungen ansprechen.
 - **Quelle:** https://tradearabia.com/News/488291/DoH-publishes-AI-Clinician-Framework (selbst geöffnet)
 
@@ -473,6 +501,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Nur ein Entwurf, Details können sich ändern. Wer als akkreditierter Drittprüfer zugelassen wird, ist offen; lokale Präsenz ist wahrscheinlich, aber nicht belegt. PDPL und Datenhaltung im Königreich; Behördenaufträge laufen über Etimad mit RHQ-Pflicht.
 - **Kontakt (öffentlich):** Kein Programmkontakt veröffentlicht.
 - **Compliance:** PDPL: SDAIA öffnete am 08.10.2026 die Controller-Registrierung für Organisationen außerhalb Saudi-Arabiens (Clyde & Co). Bei Verarbeitung personenbezogener Daten aus dem Königreich die Registrierungspflicht prüfen; Strafen bis 5 Mio. SAR. Sicherheitstests mit Cyber-Charakter ausklammern.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten: Endfassung und Akkreditierungskriterien für Drittprüfer. Die PDPL-Controller-Registrierung nur bei Verarbeitung saudischer personenbezogener Daten angehen; Sicherheitstests mit Cyber-Charakter ausklammern.
 - **Quelle:** https://www.cliffordchance.com/content/dam/cliffordchance/briefings/2026/11/responsible-ai-policy-shift-guiding-regime-supervisory-one.pdf (selbst geöffnet)
 
@@ -489,6 +518,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Arabische Patienteninteraktion, Gesundheitsdaten im Königreich (PDPL); HUMAIN vergibt Evaluation laut Vor-Notizen an regionale Anbieter (aiXplain).
 - **Kontakt (öffentlich):** Keine Kontakte im Artikel.
 - **Compliance:** HUMAIN entwickelte humain-m3 mit MiniMax (China, laut Vor-Notizen): Destillations- und Datenabflussrisiko gemäß Warnung vom 08.09.2026 vor jeder Zusammenarbeit prüfen. PDPL.
+- **Zuordnung:** HUMAIN (bestehender Lead)
 - **Nächster Schritt:** In der HUMAIN-Lead-Akte als offene Frage vermerken; nicht separat verfolgen.
 - **Quelle:** https://www.middleeastainews.com/p/saudi-to-launch-worlds-largest-ai (selbst geöffnet)
 
@@ -505,6 +535,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Förderung nur für indische Einrichtungen; Fokus auf indische Sprachen; DPDPA; Daten bevorzugt über AIKosh und Bhashini.
 - **Kontakt (öffentlich):** Keiner im Artikel.
 - **Compliance:** Deepfake-Forensik-Projekte nicht verfolgen, falls sicherheitsbehördlich genutzt (nicht belegt). Sarvams Domäne 'doctrine' ist laut Vor-Notizen Defense-nah und ausgeschlossen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://www.cxodigitalpulse.com/indiaai-mission-backs-13-responsible-ai-projects-20-sovereign-ai-models-sanctions-93-lakh-gpu-hours/ (selbst geöffnet)
 
@@ -521,6 +552,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Angebot über CPPP; indische Registrierung wahrscheinlich (für diese RFE nicht geprüft; die Bhashini-RFE von 2024 schloss Tochterfirmen ausländischer Unternehmen ausdrücklich aus). Frist abgelaufen.
 - **Kontakt (öffentlich):** Nicht im Artikel; amtliche Dokumente auf eprocure.gov.in.
 - **Compliance:** Projekte für Sicherheitsbehörden ausschließen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://www.internationalnewsandviews.com/meity-ai-empanelment-2026-government-ai-projects-tender-407004-2/ (selbst geöffnet)
 
@@ -537,6 +569,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Unbezahlt; nur südostasiatische Sprachen.
 - **Kontakt (öffentlich):** Zitiert: Dr. Leslie Teo (Senior Director of AI Products, AI Singapore). Laut Suchsnippet sealion@aisingapore.org für das Trainingsprogramm.
 - **Compliance:** Keine Auffälligkeiten.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (unbezahlt, nur südostasiatische Sprachen).
 - **Quelle:** https://aisingapore.org/news/sea-lion-inspires-community-to-build-ai-solutions-that-solve-real-world-challenges-in-southeast-asia/ (selbst geöffnet)
 
@@ -555,6 +588,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Es gibt kein Lieferantenportal, nur ein Vertriebspartner-Formular. Sprecher und Annotatoren für Katalogdaten werden meist projektweise und billig beschafft; das Preisniveau chinesischer Datenhändler liegt unter EU-Experten-Sätzen.
 - **Kontakt (öffentlich):** Partner-Kontaktformular „Get in Touch“ auf https://www.nexdata.ai/company/partners; allgemeine Telefonnummer +1 (626) 594-5598 (Footer der Partnerseite)
 - **Compliance:** Laut lokaler Listenprüfung steht Datatang weder auf der 1260H-Liste (10.06.2026) noch auf der Entity List (eCFR, 09.11.2026). Gegen Datatang ist keine Destillationswarnung vermerkt. Die Endkunden der Daten (gegebenenfalls Labs mit Destillationsvorwürfen und der Warnung vom 08.09.2026) sind vor Vertragsschluss zu prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Über das Partnerformular oder das Europa-Vertriebsteam Kontakt aufnehmen, Ziel: Aufnahme ins Lieferantenverzeichnis (供应商入库) für EU-Sprach-QA, Annotation und Expertenaufgaben bei Auslandsprojekten. Vorher Endkunden prüfen (1260H, Destillationswarnung vom 08.09.2026) und den DSGVO-Datenfluss klären.
 - **Quelle:** https://www.nexdata.ai/company/news/1481?fromPage=1 (selbst geöffnet)
 
@@ -571,6 +605,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Die App richtet sich an Einzelpersonen. Eine Firmenanbindung ist nicht beschrieben, und Registrierung und Auszahlung setzen vermutlich chinesische Konten voraus (nicht geprüft). Die Aufgabensprachen sind nicht bestätigt.
 - **Kontakt (öffentlich):** In der Quelle keiner; Anbieter laut App Store: 标贝(北京)科技有限公司
 - **Compliance:** DataBaker ist in den lokalen Listenprüfungen nicht enthalten. Vor dem Kontakt gegen 1260H und Entity List prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten. Nur zusammen mit der Datatang-Ansprache nach europäischen Sprachprojekten fragen; vorher Listen-Check von DataBaker.
 - **Quelle:** https://apps.apple.com/cn/app/id1578619623 (selbst geöffnet)
 
@@ -587,6 +622,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Die Registrierungsseite ist nur auf Japanisch. Ein Partner- oder Lieferantenprogramm ist nicht beschrieben, die Firma ist klein, und die Projektsteuerung läuft auf Japanisch.
 - **Kontakt (öffentlich):** Kontaktformular https://apto.co.jp/contact/
 - **Compliance:** Japanisches Unternehmen; keine US-Listen-Bezüge bekannt (nicht formal geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten. Nur bei einem konkreten Projekt mit europäischen Sprachen oder westlichem Fachkontext über https://apto.co.jp/contact/ eine Partnerschaft anfragen.
 - **Quelle:** https://apto.co.jp/services/harbest-expert/ (selbst geöffnet)
 
@@ -603,6 +639,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Der Fokus liegt auf CJK und eigenen Beschäftigten. Ein Partnerprogramm ist nicht beschrieben.
 - **Kontakt (öffentlich):** Website https://www.trans-cosmos.co.jp/english/ (in der Mitteilung kein Fachkontakt)
 - **Compliance:** Japanisches börsennotiertes Unternehmen; keine Listenbezüge bekannt.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten: Kündigt transcosmos europäische Sprachen an, eine Partnerschaft prüfen.
 - **Quelle:** https://www.prnewswire.com/news-releases/transcosmos-launches-ai-training-and-annotation-services--leveraging-talent-across-japan-and-asean-302649409.html (selbst geöffnet)
 
@@ -619,6 +656,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Die Arbeit findet vor Ort in Hangzhou statt, und die Anzeige ist abgelaufen. Die Agentur vermittelt nur Einzelpersonen, der Endkunde ist nicht genannt.
 - **Kontakt (öffentlich):** Nur das Firmenprofil des Personaldienstleisters auf eChinaCities
 - **Compliance:** Alibaba Group steht auf der 1260H-Liste (10.06.2026). Der lokale Bericht vermerkt in der Destillationsspalte die NSA/FBI/CISA-Warnung vom September 2026.
+- **Zuordnung:** Alibaba (bestehender Lead)
 - **Nächster Schritt:** Nicht aktiv verfolgen, bis die Grundsatzentscheidung zu 1260H-Firmen vorliegt; Befund in der bestehenden Alibaba-Lead-Akte vermerken.
 - **Quelle:** https://jobs.echinacities.com/jobchapter/1355077709 (selbst geöffnet)
 
@@ -635,6 +673,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Einsatz vor Ort in Xi'an mit Chinesischkenntnissen; die Anzeige ist abgelaufen, der Endkunde nicht genannt.
 - **Kontakt (öffentlich):** Nur das Firmenprofil des Recruiters auf eChinaCities; Bewerbung nur für registrierte Nutzer
 - **Compliance:** Endkunde unbekannt. Sprach-KI-Firmen auf der Entity List (z. B. iFlytek) wären ausgeschlossen, daher den Endkunden vor jeder Mitwirkung klären.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://jobs.echinacities.com/jobchapter/1355103747 (selbst geöffnet)
 
@@ -651,6 +690,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Das Preisniveau von 2.000–4.000 CNY liegt weit unter EU-Sätzen. Zielgruppe sind chinesische Hochschulabsolventen, der Endkunde ist unbekannt.
 - **Kontakt (öffentlich):** In der Quelle nur der Firmenname
 - **Compliance:** Endkunde unbekannt; vor Mitwirkung gegen die Entity List prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://campus.niuqizp.com/job-vYm5anzLz.html (selbst geöffnet)
 
@@ -667,6 +707,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Sehr niedriges Preisniveau; die Firma steht am Ende der Lieferkette (Tier 3).
 - **Kontakt (öffentlich):** In der Quelle keiner außer dem Firmennamen
 - **Compliance:** Dieselbe Anzeige sucht Annotation in Uigurisch und Tibetisch. Das ist ein Reputations- und Menschenrechtsrisiko: Vor einer Zusammenarbeit klären, wofür die Daten genutzt werden.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Reputationsrisiko).
 - **Quelle:** https://m-pre.zhaopin.com/jobs/CC646557020J40828403713.htm (selbst geöffnet)
 
@@ -683,6 +724,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Die Rekrutierung richtet sich an das Inland („面向全国“). Eine chinesische Gesellschaft und chinesische Zahlungswege sind wahrscheinlich nötig (nicht geprüft).
 - **Kontakt (öffentlich):** Geschäftskontakt crowdtest@baidu.com (auf test.baidu.com veröffentlicht)
 - **Compliance:** Baidu steht auf der 1260H-Liste (10.06.2026), nicht auf der Entity List. Vor jeder Zusammenarbeit ist eine Compliance-Freigabe nötig.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen, bis die Grundsatzentscheidung zu 1260H-Firmen vorliegt.
 - **Quelle:** https://test.baidu.com/mark/home/newRecruit (selbst geöffnet)
 
@@ -699,6 +741,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Das Programm zielt auf inländische Experten. Die Quelle ist Eigenveröffentlichung, und www.talentsai.cn ließ sich nicht auflösen.
 - **Kontakt (öffentlich):** Im Artikel keiner
 - **Compliance:** Der genannte Kunde GLM (Zhipu/Z.ai) steht auf der Entity List, daher sind Lieferungen ausgeschlossen, die zu Zhipu fließen könnten. DeepSeek ist im NDAA FY2026 namentlich genannt. Gegen DeepSeek und Kimi/Moonshot gibt es Destillationsvorwürfe und die Warnung vom 08.09.2026.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Wettbewerber; Kunden mit Entity-List- und Warnungsbezug).
 - **Quelle:** https://36kr.com/p/4066741666944128 (selbst geöffnet)
 
@@ -715,6 +758,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Wettbewerber, Einsatz vor Ort, Seite nicht mehr abrufbar.
 - **Kontakt (öffentlich):** keiner
 - **Compliance:** Endkunde unbekannt; vor jeder Mitwirkung prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://jobs.eu.lever.co/lionbridge/61a06934-d660-4ac4-bbf2-f215443e7e12 (nur Snippet)
 
@@ -733,6 +777,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Wer am Expertennetz teilnehmen darf und wie, ist nicht veröffentlicht. Plattform und Korpora sind auf China ausgerichtet; Datenexportregeln gelten. Ein Betreiber der Plattform 2.0 wird im Artikel nicht genannt.
 - **Kontakt (öffentlich):** Keiner im Beleg. Ausrichter: 上海库帕思科技有限公司, 上海市人工智能行业协会.
 - **Compliance:** 库帕思 und der Verband stehen auf keiner der im Briefing genannten US-Listen; ein eigener Listencheck fehlt. Shanghai AI Lab ist in Vorrunden Mitveranstalter von 库帕思-Foren, sein Listenstatus ist hier nicht geprüft.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten. Erst bei veröffentlichten Teilnahmebedingungen für ausländische Experten erneut prüfen; vorher Eigentümer und Listenstatus von 上海库帕思 klären.
 - **Quelle:** https://www.cnfin.com/hg-lb/detail/20260719/4442624_1.html (selbst geöffnet)
 
@@ -749,6 +794,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Antragsberechtigt sind nur chinesische Hochschulangehörige (Schlüsselprojekte nur mit hohem Titel). Die Beträge sind gering. Urheberrecht und Herkunft der Nicht-Internet-Daten müssen belegt werden. Die Frist 2026 ist abgelaufen.
 - **Kontakt (öffentlich):** E-Mail 2019376@shisu.edu.cn; Institut für Sprachwissenschaften SISU, Hongkou: +86-21-3537 2364 / +86-21-3537 2393; Songjiang: +86-21-6770 1865
 - **Compliance:** Für SISU ist kein US-Listeneintrag bekannt; nicht eigens geprüft.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten: im Januar 2027 prüfen, ob eine neue Runde erscheint (Wiederholung nicht belegt). Kein aktiver Schritt.
 - **Quelle:** https://ilas-en.shisu.edu.cn/23/db/c18280a205787/page.htm (selbst geöffnet)
 
@@ -765,6 +811,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Expertenzertifizierung und Beschaffung sind national ausgerichtet; ein Zugang für Ausländer ist nicht geregelt. Datenexport und gegenseitige Anerkennung sind erst angekündigt.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Staatliches Programm; nicht gelistet. Die Kettenführer (z. B. Baidu, China Unicom) sind einzeln zu prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten: Ausführungsregeln zur gegenseitigen Anerkennung grenzüberschreitender Datensätze. Kein aktiver Schritt.
 - **Quelle:** https://www.yicai.com/news/103220242.html (selbst geöffnet)
 
@@ -781,6 +828,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Inländisches Industriepolitik-Instrument; keine Angaben zur Teilnahme ausländischer Experten.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** unkritisch
+- **Zuordnung:** zusammengeführt mit CH05
 - **Nächster Schritt:** Beobachten: die Bedarfslandkarte der Pilotstädte bei Veröffentlichung auf mehrsprachige Posten prüfen.
 - **Quelle:** https://www.cnfin.com/hg-lb/detail/20261031/4489285_1.html (selbst geöffnet)
 
@@ -797,6 +845,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Registrierung in Peking ist Pflicht; der Schwerpunkt liegt auf Industrie; die Bedarfslisten sind nicht öffentlich lesbar.
 - **Kontakt (öffentlich):** E-Mail szcyc@jxj.beijing.gov.cn; 于老师 Tel. 55520871; 魏老师 Tel. 55520876 (Vorwahl Peking 010)
 - **Compliance:** unkritisch
+- **Zuordnung:** neu
 - **Nächster Schritt:** Beobachten; nur aufgreifen, wenn ein Pekinger Partner einen Datensatz mit Expertenbedarf übernimmt.
 - **Quelle:** https://www.ncsti.gov.cn/kjdt/tzgg/202607/t20260701_250587.html (selbst geöffnet)
 
@@ -813,6 +862,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners. Sehr niedriger Stückpreis und kurze Lieferfrist (30 Tage). Gefordert ist die Übertragung der Rechte weltweit und unbefristet.
 - **Kontakt (öffentlich):** Vergabestelle 东方国际招标有限责任公司 laut Bericht; Kontaktdaten sind im Beleg nicht genannt.
 - **Compliance:** US-Listenstatus der Tsinghua University in dieser Session nicht geprüft. Vor einer Subunternehmerrolle prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen. Den Zuschlag nur als Marktinformation notieren, falls er über BidsFactory sichtbar wird.
 - **Quelle:** https://finance.sina.cn/2026-10-20/detail-inivwpzf7753487.d.html (selbst geöffnet)
 
@@ -829,6 +879,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Bisher nur Plan, keine Ausschreibung. Die Basis wird mit chinesischen Konzernen aufgebaut (laut Jamestown, nur Snippet, mit Baidu AI Cloud Haikou). Für Datenflüsse in die EU gelten DSGVO und chinesische Exportregeln gleichermaßen.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Falls Baidu der Partner ist: Baidu steht seit 10.06.2026 auf der 1260H-Liste (Vorrunde). Der Plan selbst ist unkritisch.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen. Als Wettbewerbssignal beobachten; Baidu-Bezug der Haikou-Basis (1260H) beachten.
 - **Quelle:** https://www.cls.cn/detail/2433459 (selbst geöffnet)
 
@@ -845,6 +896,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners. Aktuell nur Hardware.
 - **Kontakt (öffentlich):** Vergabestelle 陕西开源招标有限公司 (Shaanxi Kaiyuan Bidding Co., Ltd.) laut BidsFactory; das Original auf ccgp.gov.cn ist gesperrt (403).
 - **Compliance:** Kein US-Listenstatus bekannt; nicht geprüft.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://bidsfactory.com/en/tenders/-china_ccgp-9c2112371d9aa82b (selbst geöffnet)
 
@@ -861,6 +913,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Reputation prüfen: Daten in Minderheitensprachen (Verwendungszweck nicht belegt). US-Listenstatus nicht geprüft.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen, auch nicht als Partnerquelle, solange der Verwendungszweck der Minderheitensprachdaten unklar ist.
 - **Quelle:** https://finance.sina.cn/2026-10-20/detail-inivwpzf7753487.d.html (selbst geöffnet)
 
@@ -877,6 +930,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** nicht geprüft
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://finance.sina.cn/2026-10-20/detail-inivwpzf7753487.d.html (selbst geöffnet)
 
@@ -893,6 +947,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Staatliches Institut des MIIT; US-Listenstatus nicht geprüft.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://finance.sina.cn/2026-10-20/detail-inivwpzf7753487.d.html (selbst geöffnet)
 
@@ -909,6 +964,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Baidu steht seit 10.06.2026 auf der 1260H-Liste (Vorrunde, Federal Register). Nicht in der Destillationswarnung vom 08.09.2026.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Baidu auf 1260H, Industriedaten).
 - **Quelle:** https://finance.sina.cn/2026-10-20/detail-inivwpzf7753487.d.html (selbst geöffnet)
 
@@ -925,6 +981,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Listing nur für registrierte Anbieter mit Konformitätsprüfung; Sprache der Daten nicht genannt; Werbeartikel.
 - **Kontakt (öffentlich):** keiner im Beleg
 - **Compliance:** Unkritisch, soweit bekannt.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://m.tech.china.com/articles/20260313/202603131823817.html (selbst geöffnet)
 
@@ -941,6 +998,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Inhalt nicht verifiziert; vermutlich nur für lokale Firmen.
 - **Kontakt (öffentlich):** keiner
 - **Compliance:** unkritisch
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen; bei lesbarer Quelle erneut prüfen.
 - **Quelle:** https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_12828115.html (nur Snippet)
 
@@ -957,6 +1015,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Chinesisches Vergaberecht: Art. 10 und Art. 22 Regierungsbeschaffungsgesetz (inländische Leistungen, chinesische Lizenz/Registrierung); E-Bidding nur mit Registrierung und CA-Schlüssel (数字身份认证锁) auf der Plattform; Datenexportregeln (数据出境). Direktgebot einer EU-Firma faktisch ausgeschlossen, Weg nur als Subunternehmer eines chinesischen Gewinners. Gesundheitsdaten unterliegen strengen Lokalisierungsregeln.
 - **Kontakt (öffentlich):** nicht gesehen (Seite gesperrt)
 - **Compliance:** Staatsbehörde; nicht geprüft.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen.
 - **Quelle:** https://www.ccgp.gov.cn/cggg/zygg/gkzb/202606/t20260605_26693542.htm (nur Snippet)
 
@@ -973,6 +1032,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Die Lokalisierung von Gesundheitsdaten verhindert praktisch jede Arbeit aus dem Ausland. Die Quelle ist schlecht lesbar.
 - **Kontakt (öffentlich):** keiner
 - **Compliance:** US-Listenstatus von China Unicom in dieser Session nicht geprüft; vor einem Kontakt gegen 1260H und NS-CMIC prüfen.
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Lokalisierung von Gesundheitsdaten).
 - **Quelle:** https://m.c114.com.cn/w119-1312081.html (selbst geöffnet)
 
@@ -989,6 +1049,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Ausschluss
 - **Kontakt (öffentlich):** keiner
 - **Compliance:** AUSSCHLUSS: Defense/Militär
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Ausschluss).
 - **Quelle:** https://beijing.jianyu360.cn/jybx/20260508_26050751780834.html (selbst geöffnet)
 
@@ -1005,6 +1066,7 @@ MSIT und NIA finanzieren 2026 Benchmark-, Reasoning- und Upcycling-Daten sowie d
 - **Hürden:** Ausschluss
 - **Kontakt (öffentlich):** keiner
 - **Compliance:** AUSSCHLUSS: Defense/Militär. Die NUDT steht auf der US Entity List (allgemein bekannt, hier nicht neu geprüft).
+- **Zuordnung:** neu
 - **Nächster Schritt:** Nicht verfolgen (Ausschluss).
 - **Quelle:** https://www.nudt.edu.cn/docs/2026-04/efa4649df78f48ae9a354dbd781762b3.docx (nur Snippet)
 
