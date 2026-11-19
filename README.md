@@ -87,6 +87,13 @@ nicht beim Öffnen der Dateien per `file://`.
 > Seite (`auswertungen/index.html`, `auswertungen/<slug>/index.html`, …). Ohne
 > den Lauf bleiben diese Kopien auf dem alten Stand.
 
+Optionale Felder je Kampagne:
+
+- `logo`: Pfad zum Kundenlogo (z. B. `/assets/logos/dhl.svg`), erscheint neben dem Namen im Kopf
+- `aufteilung`: Infoblock „Infos zur Kampagne" direkt unter dem Kopf. Zeigt, wie sich das
+  Volumen auf mehrere Bereiche verteilt (`bereiche`: `name`, `zielgruppe`, `bloecke`,
+  `verschickt`, `mailings`, `fach`), dazu `titel`, `text`, `hinweis`, `mailingsVersendet`
+
 **Repost-Bilder** eines Kunden unter `assets/reposts/<slug>/` ablegen und im
 Feld `reposts_bilder` der jeweiligen Kampagne eintragen.
 

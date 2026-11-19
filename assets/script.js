@@ -872,7 +872,9 @@
           '<div class="aus-hero-grid">' +
             "<div>" +
               '<span class="eyebrow reveal">Kampagnen-Report</span>' +
-              '<h1 class="reveal d1">' + esc(d.name) + "</h1>" +
+              '<h1 class="reveal d1' + (d.logo ? " has-logo" : "") + '">' +
+                (d.logo ? '<img class="aus-logo" src="' + esc(d.logo) + '" alt="Logo ' + esc(d.name) + '" />' : "") +
+                "<span>" + esc(d.name) + "</span></h1>" +
               '<p class="aus-lead reveal d2">Alle Kennzahlen Ihrer Kampagne auf einen Blick: Reichweite, Interaktionen, Benchmarks im Marktvergleich und unsere Empfehlung für den nächsten Schritt.</p>' +
             "</div>" +
             '<aside class="aus-hero-card reveal d2">' +
@@ -891,6 +893,11 @@
           "</div>" +
         "</div>" +
       "</section>";
+
+    /* Aufteilung des Gesamtvolumens auf mehrere Bereiche (z. B. GROW, LEAD, Schüler) */
+    if (d.aufteilung && d.aufteilung.bereiche && d.aufteilung.bereiche.length) {
+      html += renderAufteilung(d.aufteilung);
+    }
 
     /* Infobox Versand */
     if (d.versandInfo) {
@@ -1230,6 +1237,74 @@
       showStep(kundenListe ? "select" : "access");
     });
     activateReport(host);
+  }
+
+  /* Infos-Aufstellung: wie sich das gebuchte Volumen auf die Bereiche verteilt */
+  function renderAufteilung(a) {
+    var farben = ["var(--c-nb)", "var(--c-lp)", "var(--c-you)", "var(--c-mail)"];
+    var sum = function (k) {
+      return a.bereiche.reduce(function (s, b) { return s + (typeof b[k] === "number" ? b[k] : 0); }, 0);
+    };
+    var bloecke = sum("bloecke"), mailings = sum("mailings"), verschickt = sum("verschickt");
+    var anteil = function (b) { return bloecke ? b.bloecke / bloecke * 100 : 0; };
+    // 31,25 % nicht auf 31,3 % runden, sonst ergeben die Anteile keine 100 %
+    var anteilTxt = function (b) {
+      var w = anteil(b);
+      return pctTxt(w, Math.abs(w * 10 - Math.round(w * 10)) < 1e-9 ? 1 : 2);
+    };
+
+    var html = '<section class="aus-split"><div class="wrap">' +
+      '<div class="section-head reveal"><span class="eyebrow">Infos zur Kampagne</span>' +
+      "<h2>" + esc(a.titel || "So verteilt sich das Gesamtvolumen.") + "</h2>" +
+      (a.text ? "<p>" + esc(a.text) + "</p>" : "") + "</div>";
+
+    /* Gesamtsumme und gestapelter Balken */
+    html += '<div class="split-total reveal d1">' +
+      '<div class="st-nums">' +
+        "<div><b>" + fmt(bloecke) + "</b><span>Collegeblöcke gebucht</span></div>" +
+        (verschickt ? "<div><b>" + fmt(verschickt) + "</b><span>Collegeblöcke verschickt</span></div>" : "") +
+        (mailings ? "<div><b>" + fmt(mailings) + "</b><span>Mailings gebucht</span></div>" : "") +
+        (a.mailingsVersendet ? "<div><b>" + fmt(a.mailingsVersendet) + "</b><span>Mailings versendet</span></div>" : "") +
+      "</div>" +
+      '<div class="st-bar" role="img" aria-label="Anteil der Bereiche am gebuchten Volumen: ' +
+        esc(a.bereiche.map(function (b) { return b.name + " " + anteilTxt(b); }).join(", ")) + '">' +
+        a.bereiche.map(function (b, i) {
+          return '<i style="width:' + anteil(b) + "%;background:" + farben[i % farben.length] + '"></i>';
+        }).join("") +
+      "</div>" +
+      '<div class="st-legend">' +
+        a.bereiche.map(function (b, i) {
+          return '<span><i class="sw" style="background:' + farben[i % farben.length] + '"></i>' +
+            esc(b.name) + " <b>" + anteilTxt(b) + "</b></span>";
+        }).join("") +
+      "</div></div>";
+
+    /* Ein Steckbrief je Bereich */
+    html += '<div class="split-grid">';
+    a.bereiche.forEach(function (b, i) {
+      var farbe = farben[i % farben.length];
+      html += '<article class="split-card reveal' + (i ? " d" + Math.min(i, 3) : "") + '" style="--sc:' + farbe + '">' +
+        '<div class="sc-head"><h3>' + esc(b.name) + "</h3>" +
+          '<span class="sc-share">' + anteilTxt(b) + " des Volumens</span></div>" +
+        (b.zielgruppe ? '<p class="sc-target">' + esc(b.zielgruppe) + "</p>" : "") +
+        '<dl class="sc-facts">' +
+          "<div><dt>Collegeblöcke gebucht</dt><dd>" + num(b.bloecke) + "</dd></div>" +
+          (typeof b.verschickt === "number" ? "<div><dt>Collegeblöcke verschickt</dt><dd>" + num(b.verschickt) + "</dd></div>" : "") +
+          (typeof b.mailings === "number" ? "<div><dt>Mailings gebucht</dt><dd>" + num(b.mailings) + "</dd></div>" : "") +
+        "</dl>" +
+        (b.fach && b.fach.length
+          ? '<div class="sc-fach"><span class="sc-fach-t">Fachbereiche</span>' +
+            b.fach.map(function (f) {
+              return '<div class="sc-fach-row"><span>' + esc(f.n) + "</span><b>" + pctTxt(f.v, 0) + "</b>" +
+                '<span class="sc-fach-track"><i style="width:' + f.v + '%"></i></span></div>';
+            }).join("") + "</div>"
+          : "") +
+        "</article>";
+    });
+    html += "</div>";
+    if (a.hinweis) html += '<p class="split-note reveal">' + esc(a.hinweis) + "</p>";
+    html += "</div></section>";
+    return html;
   }
 
   function distRow(name, value, max) {
