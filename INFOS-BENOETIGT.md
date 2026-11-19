@@ -6,6 +6,7 @@ Stand: 19.11.2026
 
 - **DHL vervollständigt**: DHL-Logo im Kopf, neuer Block „Infos zur Kampagne" mit der Aufteilung des Volumens auf GROW (12.500 Blöcke + 12.500 Mailings), LEAD (12.500 + 12.500) und Schüler (15.000 + 15.000), jeweils mit Targeting laut Angeboten 26-30322/-30323/-30324
 - **DHL auf 80 % Erfüllung**: 32.000 von 40.000 Collegeblöcken verschickt, 20.000 Mailings versendet. Alle Quoten unverändert, die absoluten Werte daraus neu berechnet (320.000 Impressionen, 768 Reposts, 65.280 Repost-Impressionen, 48.116 Landingpage-Aufrufe, 864 Landingpage-Klicks, 11.300 Öffnungen, 1.120 Mailing-Klicks)
+- **DHL gebucht** jetzt „25.000 Platzierungen + 25.000 Mailings + 15.000 Junior + 15.000 Mailings", Mailing-Versand „Juni, Juli, August und November 26"
 
 - **DHL Mailings ergänzt**: 15.000 Stück, Versand Juni bis August 26, 56,5 % Öffnungs- und 5,6 % Klickrate. Steht im Marktvergleich, in der Tabelle und als „Ihr Mailing im Detail" mit 8.475 Öffnungen und 840 Klicks
 - **DHL aktualisiert**: neue Werte aus dem Sheet (21.000 verschickt, 210.000 Impressionen, 504 Reposts, 42.840 Repost-Impressionen, 567 Landingpage-Klicks) und die vier Reposts aus dem Drive eingebaut
@@ -94,8 +95,6 @@ Aus dem Drive übernommen und eingebunden:
 | Kunde | Frage |
 |---|---|
 | DHL | **Öffnungsrate bitte bestätigen.** Du hast mir **56,50 %** geschrieben, in der DHL-Zeile im Sheet steht aber **54,50 %** (die 56,50 % stehen eine Zeile tiefer bei EVG Martens). Ich habe deine **56,50 %** eingebaut. |
-| DHL | Laut Schüler-Angebot gehören zu den 15.000 Junior-Blöcken auch 15.000 Mailings, gebucht wären damit 40.000 Mailings. So steht es jetzt im Infoblock. Bitte bestätigen. |
-| DHL | Versandzeitraum der Mailings steht jetzt auf „ab Juni 26". Genauen Zeitraum bitte nachreichen. |
 | DLRG | Zahlen zum 2x Social-Media-Retargeting fehlen. |
 | VRM Service | Du hast angekündigt, dass Repost-Infos folgen. |
 | Sparkasse Düsseldorf, DAAD | Videos bzw. Bilder in Drive, aber keine Kundenliste und keine Zahlen. Seiten anlegen? |
